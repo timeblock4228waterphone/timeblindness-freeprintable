@@ -23,6 +23,7 @@ TL:DR the one to look at for the first 2 is
 1-a-low-spoon-checklist
 
 
+
 ( the older version have the wrong range of number)
 
 Rule #1: Always round down. Grab the nearest block behind the current time (6-9-breakd... p. 4).Rule #2: Pick only ONE system. The sheet contains 9 options so you don't have to flip pages, but you should only look at one at a time (6-9-breakd... p. 2).Rule #3: Print and fold. Print the file, fold it to fit your wallet, and consider laminating it with packing tape for durability.
