@@ -18,7 +18,10 @@ if you there is an issue put it in the issue button
 
 
  / \\
-IMPORTANT CORRECTION on jun 16 2026 Minute half:  1 first half :1–:30, 2nd half  :31–:60
+TL:DR the one to look at for the first 2 is 
+7-Time_Blindness_Multi_Tool.pdf
+1-a-low-spoon-checklist
+
 
 ( the older version have the wrong range of number)
 
@@ -100,7 +103,7 @@ it can fit into a wallet if you fold it. this one is the only one to print if yo
 [8 Arrow Time not needed ](./8-(not-needed-arrowtime-level-hard).pdf) This one arrow time you can plug into ai and it decode for you. the reason it so long is because the isntruction for ai that you plug and and quesiton for the time it is and what it decode to be. It is not for everyday thing to use it for personally when i go to the library on bicycle and need to write down the time with little time.=( jun 17 updated for easier reading)
 
 
-[9 Mental Stimming PDF](./mental-stimming.(1).pdf)
+
 
 
 
