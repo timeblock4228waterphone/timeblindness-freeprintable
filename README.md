@@ -61,7 +61,6 @@ it account for high level and low level
 
 
 
-there are 8 printable 1 extra.
 
 # Time Blindness Printable
 
@@ -94,6 +93,10 @@ look at this one first to undersand the wallet
 
 
 [7 School or Work](./7-Time_Blindness_Multi_Tool.pdf) ( this one you print if you had to choose one )
+
+
+
+[one thing extra](./stevephonesceen.pdf)
 
 Size Update july 14 this has an update where it says 19-24 instead of 19-00
 UPDATE June 8 there is cheat sheet for it
