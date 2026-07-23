@@ -154,7 +154,7 @@ if you dont want to click on a random
 link write this bro let me write longer so you dont have to click on it :to google you 
 
 google How to Make a Paper Table Football | Flick Football | Origami Step by Step Tutorial. the knot to use to tie is is slip knot and use two thread instead of one to tie it is stronger
-Kyrin Crafts if you dont want to click on link. then at tie a thread at the tail like this and fold it you can swing it around. or if hard to know how to use make it and give to an kid that can handle string and they will know how to swing it . the kid hold the thread and swing it .. <img width="4032" height="3024" alt="steve-fear-is-tomato" src="https://github.com/user-attachments/assets/1f7ff8e7-72d5-49b3-bd67-dff969a8fa6b" />
+Kyrin Crafts if you dont want to click on link. then at tie a thread at the tail like this and fold it you can swing it around. or if hard to know how to use make it and give to an kid that can handle string and they will know how to swing it . the kid hold the thread and swing it .. <img width="931" height="693" alt="steve-fear-is-tomato" src="https://github.com/user-attachments/assets/330270a7-d0a5-4c5e-847e-66a5476b8bb9" />
 
 l
 
@@ -187,14 +187,15 @@ here is the finish one
 
 
 
-<img width="2942" height="1872" alt="steve-is-here" src="https://github.com/user-attachments/assets/e7a03582-c00a-4e7d-9b7e-3c8b08dd1d9c" />
-l
+<img width="1099" height="694" alt="steve-is-here" src="https://github.com/user-attachments/assets/ec76e3de-2b55-4ddb-b474-4175caba0ab3" />
 
 
 
 
 
-<img width="414" height="472" alt="steve-fly-away" src="https://github.com/user-attachments/assets/585ac3cb-dde6-4925-8243-e307226a9e36" />
+
+<img width="614" height="696" alt="steve-fly-away" src="https://github.com/user-attachments/assets/8dc30187-9908-4289-8ed4-2c64b004dc62" />
+
 
 
 
