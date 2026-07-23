@@ -52,7 +52,8 @@ for low enegry look at 6 unit one  or the stick man and the task check off one
 
 
 It helps you see where you are in the day, understand the next few hours, and track time using AM/PM, 24-hour time, grids, and clock references.
-<img width="1700" height="2200" alt="Time-compass-for-time-blindness docx-1" src="https://github.com/user-attachments/assets/c67123e4-53cf-4711-8ce4-3d6044339982" />
+<img width="525" height="618" alt="stevewantachickentoeat" src="https://github.com/user-attachments/assets/36d17cda-9638-4a26-96b0-6644f2efdcba" />
+
 
 How it works it is works with your energy level with time.
 it account for high level and low level
