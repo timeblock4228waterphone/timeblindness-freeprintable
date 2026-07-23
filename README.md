@@ -74,7 +74,7 @@ this one you just need to know 4 hours group in day
 
 
 [3 pattern](./3-shape-time-recognition.pdf) (start here)
-( update june 16 it i change the stickman into shape that much easier to understand
+
 
 [4 Time Blindness 1](./4_Time_Blindness_Grid_Calculator.pdf) 
 the link now works for 4 and 5sorry that it link to an non existat link
@@ -83,7 +83,7 @@ the link now works for 4 and 5sorry that it link to an non existat link
 this is needed to know the next step. 
 
 [6 Easy on Eyes](./6_9_breakdown_of_multi_tool.pdf) 
-UPDATE there is cheat sheet for breakdown of wallet
+
 
 
 [school or work look at this](./7-the-backbone-of-wallet.pdf)
@@ -94,6 +94,7 @@ look at this one first to undersand the wallet
 
 [7 School or Work](./7-Time_Blindness_Multi_Tool.pdf) ( this one you print if you had to choose one )
 
+yup
 
 
 [one thing extra](./stevephonesceen.pdf)
@@ -117,9 +118,7 @@ it can fit into a wallet if you fold it. this one is the only one to print if yo
 this one is low energy way to keep track of expense.
 
 
-UPDATE ( jun 8 2026 it been updated to say 1-30 to 31-59 in the not math required wallet one and wallet one 
-for it instead of 
-5-30 to 35-00
+
 
  
 
