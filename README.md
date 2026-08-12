@@ -98,7 +98,7 @@ look at this one first to undersand the wallet
 yup
 
 
-[one thing extra](./stevephonesceen.jpg)
+[one thing extra](./Timeblindness-phonescreen.jpg)
 
 Size Update july 14 this has an update where it says 19-24 instead of 19-00
 UPDATE June 8 there is cheat sheet for it
