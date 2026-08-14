@@ -18,6 +18,8 @@ if you there is an issue put it in the issue button
 
 
  / \\
+
+(((( Number 1 rule is how to read all this is read the files how you read a facebook post picture first intrustin later ))) it would make much easer to readd)
 TL:DR the one to look at for the first 2 is 
 7-Time_Blindness_Multi_Tool.pdf
 1-a-low-spoon-checklist
