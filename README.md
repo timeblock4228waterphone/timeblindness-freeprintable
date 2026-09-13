@@ -5,6 +5,8 @@
 #ADHD anchor Time-Blindness-Printable Public Domain
 # neurodiversity time friendly tool.
 
+loook at the newest issue to see what the problem i need to fix it for so.
+
 
 
 if you there is an issue put it in the issue button 
