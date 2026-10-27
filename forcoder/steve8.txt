@@ -137,3 +137,5 @@ It is important slow down to be more accuarte 1. Decide which arrow is Hour (lef
 6. Draw 
 Important hour 1-6 is above the line. Hour 7-12 below the line hour 13-18 is above the line hour19-24 ( 24 
 is 00.) is below the line.minute 5-30 is above the line minute 35-60( 60 =00) below the line
+
+rember it need 5 space apart
