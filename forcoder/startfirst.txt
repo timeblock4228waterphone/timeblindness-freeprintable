@@ -33,11 +33,11 @@ okay
 
 4=4 or 16 hours
 
-5=5 or 7 hours
+5=5 or 17 hours
 
-6=6 or18 hours
+6=6 or12hours
 
-7=7or 19 hours
+7=7or 13 hours
 
 8=8or 20 hours
 
