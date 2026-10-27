@@ -3,8 +3,17 @@ make a literally plug this into google.
 this version it makes it so time it highlight and it seprated
 
 make a 3 by 4 grid two version of it
-
-ask ai what time it is now
+like this two verson
+Hours Grid:
+1,2,3
+4,5,6
+7,8,9
+10,11,12
+Minutes Grid:
+5,10,15
+20,25,30
+35,40,45
+50,55,00
 
 ( for who reread it read it slowly and check twice)
 
@@ -12,15 +21,7 @@ those are hours
 
 write 1-12 like
 
-this 1,2,3 top.
 
-4,5,6,
-
-next, down, 7 ,8,9
-
-then down
-
-bottom, 10, 11,12.
 
 okay
 
@@ -176,15 +177,6 @@ in the same grid
 
 now the second version you write
 
-below are minute
-
-5,10,15
-
-then, 20,25,30
-
-then, 35,40,45
-
-then,50,55,00
 
 great you got this
 
@@ -218,31 +210,7 @@ is 5=5,6,7,8,9
 
 00=00,01,02,03,04.
 
-below are hours
 
-1=13
-
-2=14
-
-3=15
-
-4=16
-
-5=17
-
-6=18
-
-7=19
-
-8=20
-
-9=21
-
-10=22
-
-11=23
-
-12=00
 
 ( remove the 13hours up to 23 hours and00 hours)
 
