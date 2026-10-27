@@ -75,8 +75,11 @@ okay there is 2 by 4 square. 1,2,3,4 top, and 5,6,7,8, square, 1:30= 1 sq,2:15=2
 
 ↗↑=3:00,↗←=3:45,↙ ↓=4:30,↓→=5:15,↘↑=6:00, =↘ ← =6:45 
 
-the face show ↖ ↓ ,↑→  ,↗↑   ,↗←  
-↙ ↓  ,↓→  ,↘↑   ,↘ ← 
+the face show↖ ↓=1:30,
+
+↑→=2:15,
+
+↗↑=3:00,↗←=3:45,↙ ↓=4:30,↓→=5:15,↘↑=6:00, =↘ ← =6:45 
 
 remove the clock if there is image of clock in it
 
