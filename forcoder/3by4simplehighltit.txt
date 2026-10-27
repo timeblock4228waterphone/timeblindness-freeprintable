@@ -18,6 +18,8 @@ now ignor that
 
 in the same grid
 
+slowly make sure the postion is correct each time
+
 write 1,5 First one, 2,10, next 3,15
 
 the bottom one is 4,20 then, 5, 25, then next ,6,30
