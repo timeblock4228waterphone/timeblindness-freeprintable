@@ -1,0 +1,95 @@
+copy and paste it show
+
+make a 3 by 4 grid
+
+write 1-12 like
+
+this 1,2,3 top.
+
+4,5,6,
+
+next, down, 7 ,8,9
+
+then down
+
+bottom, 10, 11,12\
+
+now ignor that
+
+in the same grid
+
+write 1,5 First one, 2,10, next 3,15
+
+the bottom one is 4,20 then, 5, 25, then next ,6,30
+
+bottom, 7, 35, then 8, 40 then, 9 ,45
+
+bottom, is 10,50 then, 11, 55 then 12, 00
+
+great you got this
+
+( next remember the minute is
+
+5,10,15,20,25,30,35,40,45,50,55,00
+
+how to round down
+
+is 5=5,6,7,8,9
+
+.10=10,11,12,13,14
+
+.15=15,16,17,18,19.
+
+20=20,21,22,23,24.
+
+25=25,26,27,28,29
+
+30=30,31,32,33,34
+
+.35=35,36,37,38,39.
+
+40=40,41,42,43,44.
+
+45=45,46,47,48,49.
+
+50=50,51,52,53,54.
+
+55=55,56,57,58,59.
+
+00=00,01,02,03,04.
+
+1=13
+
+2=14
+
+3=15
+
+4=16
+
+5=17
+
+6=18
+
+7=19
+
+8=20
+
+9=21
+
+10=22
+
+11=23
+
+12=00
+
+( remove the 13hours up to 23 hours and00 hours)
+
+write the time now and higlight it now hours and minute
+
+show only write 1,5 First one, 2,10, next 3,15
+
+the bottom one is 4,20 then, 5, 25, then next ,6,30
+
+bottom, 7, 35, then 8, 40 then, 9 ,45
+
+bottom, is 10,50 then, 11, 55 then 12, 00
