@@ -1,8 +1,8 @@
-System Prompt Recipe: The 3x4 Grid-Clock App
+
 
 Objective
 
-Build a web application that displays a custom sequence of times mapped onto a physical 3x4 number grid. The grid must highlight the current hour box and display a directional arrow inside that box based on the minutes.
+build a custom sequence of times mapped onto a physical 3x4 number grid. The grid must highlight the current hour box and display a directional arrow inside that box based on the minutes.
 
 The Visual Layout (The 3x4 Grid)
 
@@ -157,4 +157,4 @@ remeber
 
 12=00
 
-oh and most imporatnant part make it 3 across and 4 down remember 3 accross and 4 down ( remove any clocks)
+oh and most imporatnant part make it 3 across and 4 down remember 3 accross and 4 down ( remove any clocks) what wouold it be if it this curreccnt time
