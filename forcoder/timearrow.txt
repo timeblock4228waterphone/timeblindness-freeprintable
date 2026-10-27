@@ -1,0 +1,128 @@
+(1:30 )=1:30-2:14 
+(2:15 )= 2:15-2:59 
+(3:00)= 3:00-3:44 
+(3:45)=3:45-4:29 
+(4:30)=4:30-5:14 
+(5:15) =5:15-5:59 
+(6:00)=6:00-6:44 
+(6:45)=6:45-7:29 
+(7:30)=7:30-8:14 
+(8:15)=8:15-8:59 
+(9:00)=9:00-9:44 
+(9:45)=9:45-10:29 
+(10:30)=10:30-11:14 
+(11:15)=11:15-11:59 
+(12:00)=12:00-12:44 
+(12:45)=12:45-13:29 
+(13:30)=13:30-14:14 
+(14:15)=14:15-14:59 
+(15:00)=15:00-15:44 
+(15:45)=15:45-16:29 
+(16:30)=16:30-17:14 
+(17:15) =17:15-17:59 
+(18:00)=18:00-18:44 
+(18:45)=18:45-19:29 
+(19:30)=19:30-20:14 
+(20:15)=20:15-20:59 
+(21:00)=21:00-21:44 
+(21:45)=21:45-22:29 
+(22:30)=22:30-23:14 
+(23:15)=23:15-23:59 
+(00:00)=00:00-00:44 
+(00:45)=00:45-01:29 
+Option 
+
+1:30=7:30=13:30=19:30 
+2:15=8:15=14:15=20:15 
+3:00=9:00=15:00=21:00 
+3:45=9:45=15:45=21:45 
+4:30=10:30=16:30=22:30 
+5:15=11:15=17:15=23:15 
+6:00=12:00=18:00=00:00 
+6:45=12:45=18:45=00:45 
+
+8 option is 
+1:30,2:15,3:00,3:45,4:30,5:15,6:00,6:45 
+
+ 
+
+Rember  
+
+Only option is  
+
+1:30,2:15,3:00,3:45,4:30,5:15,6:00,6:45 
+
+import math 
+
+ 
+Step 1: Find your Time Block 
+
+Look at your current real-world time and find which of the 32 time blocks it fits into. 
+
+Example: If your clock says 23:08, it falls into the 22:30–23:14 block. 
+
+Step 2: Convert to the Base 8-Option Time 
+
+Take the block you found in Step 1 and change it to its matching 8-Option Time using your conversion rule chart: 
+
+1:30, 7:30, 13:30, 19:30 → 1:30 
+
+2:15, 8:15, 14:15, 20:15 → 2:15 
+
+3:00, 9:00, 15:00, 21:00 → 3:00 
+
+3:45, 9:45, 15:45, 21:45 → 3:45 
+
+4:30, 10:30, 16:30, 22:30 → 4:30 
+
+5:15, 11:15, 17:15, 23:15 → 5:15 
+
+6:00, 12:00, 18:00, 00:00 → 6:00 
+
+6:45, 12:45, 18:45, 00:45 → 6:45 
+
+Example: Since 23:08 sits in the 22:30 block, your Base Option Time is 4:30. 
+
+ 
+
+Step 3: Find the Hour Glyph 
+
+Take the hour number from your Base Option Time (1, 2, 3, 4, 5, or 6) and match it to its arrow companion: 
+
+1 → ↖ 1 
+
+2 → ↑ 2 
+
+3 → ↗ 3 
+
+4 → ↙ 4 
+
+5 → ↓ 5 
+
+6 → ↘ 6 
+
+Example: For 4:30, the hour number is 4, which gives you ↙ 4. 
+
+ 
+
+Step 4: Find the Minute Glyph 
+
+Take the minute number from your Base Option Time (:00, :15, :30, or :45) and match it to its special companion rule: 
+
+If the minutes are :00 → ↑ 0 
+
+If the minutes are :15 → → 15 
+
+If the minutes are :30 → ↓ 30 
+
+If the minutes are :45 → ← 45 
+
+Example: For 4:30, the minute number is 30, which gives you ↓ 30. 
+
+ 
+
+Final Result 
+
+Put the Hour Glyph and the Minute Glyph side-by-side. 
+
+Example: 23:08 becomes ↙ 4      ↓ 30
