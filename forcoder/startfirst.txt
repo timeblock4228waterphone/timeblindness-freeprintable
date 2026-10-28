@@ -23,42 +23,17 @@ those are hours
 write 1-12 like
 
 okay
-
-1=1or13 hours
-
-2=2or14 hours
-
-3=3 or15 hours
-
-4=4 or 16 hours
-
-5=5 or 17 hours
-
-6=6 or12hours
-
-7=7or 13 hours
-
-8=8or 20 hours
-
-9=9 or 21 hours
-
-10=10 or 22 hours.
-
-11= 11or 23 hours
-
-12=12 or 00 hours
+for hous
+13→1, 14→2, 15→3, 16→4, 17→5, 18→6, 19→7, 20→8, 21→9, 22→10, 23→11, 00→12
 
 (
 
-in the same grid
 
-now the second version you write
 
 
 
 ( next remember the minute is
 
-5,10,15,20,25,30,35,40,45,50,55,00
 
 how to round down
 
@@ -80,19 +55,7 @@ now highlight minute and hours by 4 grid two version of it
 
 those are hours
 
-write 1-12 like
 
-this 1,2,3 top.
-
-4,5,6,
-
-next, down, 7 ,8,9
-
-then down
-
-bottom, 10, 11,12.
-
-okay
 
 1=1or13 hours
 
@@ -122,13 +85,11 @@ okay
 
 in the same grid
 
-now the second version you write
 
-great you got this
 
-( next remember the minute is
 
-5,10,15,20,25,30,35,40,45,50,55,00
+
+
 
 how to round down
 
