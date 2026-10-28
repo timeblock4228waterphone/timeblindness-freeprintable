@@ -1,18 +1,25 @@
-make a literally plug this into google.
+make a 3 acroos by 4 down grid two version of it
 
-this version it makes it so time it highlight and it seprated
-
-make a 3 by 4 grid two version of it
 like this two verson
+
 Hours Grid:
+
 1,2,3
+
 4,5,6
+
 7,8,9
+
 10,11,12
+
 Minutes Grid:
+
 5,10,15
+
 20,25,30
+
 35,40,45
+
 50,55,00
 
 ( for who reread it read it slowly and check twice)
@@ -20,8 +27,6 @@ Minutes Grid:
 those are hours
 
 write 1-12 like
-
-
 
 okay
 
@@ -99,9 +104,6 @@ is 5=5,6,7,8,9
 
 below are hours
 
-
-
-
 ( remove the 13hours up to 23 hours and00 hours)
 
 first type a smile emoji with the time now
@@ -156,7 +158,6 @@ in the same grid
 
 now the second version you write
 
-
 great you got this
 
 ( next remember the minute is
@@ -189,12 +190,10 @@ is 5=5,6,7,8,9
 
 00=00,01,02,03,04.
 
-
-
 ( remove the 13hours up to 23 hours and00 hours)
 
 first type a smile emoji with the time now
 
 write the time now and higlight or put emoji smile emoji to next hours and minute((( in the grid))
 
-now highlight minute and hours
+highlight minute and hours now,
