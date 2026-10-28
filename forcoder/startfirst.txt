@@ -22,10 +22,8 @@ Row 1: [05] | [10] | [15]
 Row 2: [20] | [25] | [30]
 Row 3: [35] | [40] | [45]
 Row 4: [50] | [55] | [00]
-[STEP 5: HIGHLIGHTING]
-Find the correct hour and minute calculated in Step 1. Inside the grids, place a "😊" emoji immediately to the right of that specific number. Do not leave the numbers out.
-write the time now and higlight or put emoji smile emoji to next hours and minute((( in the grid))
-highlight minute and hours now,
+
+
 
 [STEP 5: HIGHLIGHTING]
 Find the correct hour and minute calculated in Step 1. Inside the grids, place a "😊" emoji immediately to the right of that specific number. Do not leave the numbers out.
