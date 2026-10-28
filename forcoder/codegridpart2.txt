@@ -1,5 +1,9 @@
 
 
+Row 1: [1:30] | [2:15] | [3:00] | [3:45]
+Row 2: [4:30] | [5:15] | [6:00] | [6:45]
+
+
 1:30,2:15,3:00,3:45
 bottom
 ,4:30,5:15,6:00,6:45
@@ -33,12 +37,6 @@ Only option is
 
 ( look and reread only show for the front)
 
-↖ ↓=1:30,
 
-↑→=2:15,
-
-↗↑=3:00,↗←=3:45,↙ ↓=4:30,↓→=5:15,↘↑=6:00, =↘ ← =6:45
-
-remove the clock if there is image of clock in it
 
 ( important make highlit the currect time now)
