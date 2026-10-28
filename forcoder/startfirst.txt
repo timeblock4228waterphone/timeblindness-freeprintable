@@ -1,6 +1,6 @@
 make a 3 acroos by 4 down grid two version of it
 
-like this two verson
+
 
 Hours Grid:
 
