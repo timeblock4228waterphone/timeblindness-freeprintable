@@ -29,7 +29,7 @@ for hous
 (
 
 
-
+(( remove the 13hours up to 23 hours and00 hours)
 
 
 ( next remember the minute is
@@ -41,7 +41,7 @@ is
 00-04→00, 05-09→05, 10-14→10, 15-19→15, 20-24→20, 25-29→25, 30-34→30, 35-39→35, 40-44→40, 45-49→45, 50-54→50, 55-59→55
 
 
-00=00,01,02,03,04.
+
 
 below are hours
 
@@ -57,45 +57,6 @@ those are hours
 
 
 
-1=1or13 hours
-
-2=2or14 hours
-
-3=3 or15 hours
-
-4=4 or 16 hours
-
-5=5 or 7 hours
-
-6=6 or18 hours
-
-7=7or 19 hours
-
-8=8or 20 hours
-
-9=9 or 21 hours
-
-10=10 or 22 hours.
-
-11= 11or 23 hours
-
-12=12 or 00 hours
-
-(( remove the 13hours up to 23 hours and00 hours)
-
-in the same grid
-
-
-
-
-
-
-
-how to round down
-
-.
-
-( remove the 13hours up to 23 hours and00 hours)
 
 first type a smile emoji with the time now
 
