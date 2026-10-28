@@ -1,7 +1,10 @@
+Print the grids exactly using text pipe strings like this example:
 
+2 down and 4 accross
 
 Row 1: [1:30] | [2:15] | [3:00] | [3:45]
 Row 2: [4:30] | [5:15] | [6:00] | [6:45]
+
 
 
 1:30,2:15,3:00,3:45
