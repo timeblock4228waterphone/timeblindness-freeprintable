@@ -1,8 +1,10 @@
 this one you put into google and then it shows the 45 minute with 2 down and 4 acrross
 
-↖ ↓ ,↑→ ,↗↑ ,↗←
+this one you put into google and then it shows the 45 minute with 2 down and 4 acrross
+↖ ↓=1:30,↑→=2:15,↗↑=3:00,↗←=3:45
+bottom
+,↙ ↓=4:30,↓→=5:15,↘↑=6:00, =↘ ← =6:45
 
-↙ ↓ ,↓→ ,↘↑ ,↘ ←
 
 okay
 
@@ -10,11 +12,7 @@ okay
 
 left arrow is hours and right arrow is minute.
 
-↖ ↓=1:30,
-
-↑→=2:15,
-
-↗↑=3:00,↗←=3:45,↙ ↓=4:30,↓→=5:15,↘↑=6:00, =↘ ← =6:45
+,↙ ↓=4:30,↓→=5:15,↘↑=6:00, =↘ ← =6:45
 
 Pos 1 [↖ ↓] -> 01:30-02:14, 07:30-08:14, 13:30-14:14, 19:30-20:14
 Pos 2 [↑ →] -> 02:15-02:59, 08:15-08:59, 14:15-14:59, 20:15-20:59
@@ -28,18 +26,9 @@ Pos 8 [↘ ←] -> 06:45-07:29, 12:45-13:29, 18:45-19:29, 00:45-01:29
 Option
 
 
-
-8 option is
-
-1:30,2:15,3:00,3:45,4:30,5:15,6:00,6:45
-
 Rember
 
 Only option is
-
-1:30,2:15,3:00,3:45,4:30,5:15,6:00,6:45
-
-okay there is 2 by 4 square. 1,2,3,4 top, and 5,6,7,8, square,
 
 ( look and reread only show for the front)
 
