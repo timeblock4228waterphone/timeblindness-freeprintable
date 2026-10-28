@@ -1,59 +1,30 @@
-make a 3 acroos by 4 down grid 
+I need you to generate two distinct 3-column by 4-row text grids based on the current time. 
 
+[STEP 1: TIME CONVERSION]
+- Check the current time. 
+- Convert the hour to a 12-hour format13→1, 14→2, 15→3, 16→4, 17→5, 18→6, 19→7, 20→8, 21→9, 22→10, 23→11, 00→12
+- Round the minutes down to the nearest 5-minute increment 00-04→00, 05-09→05, 10-14→10, 15-19→15, 20-24→20, 25-29→25, 30-34→30, 35-39→35, 40-44→40, 45-49→45, 50-54→50, 55-59→55
+[STEP 2: GRID LAYOUT]
+Print the grids exactly using text pipe strings like this example:
+[1] | [2] | [3]
+[4] | [5] | [6]
 
-
-Hours Grid:
-
+[STEP 3: HOURLY GRID DATA]
 Row 1: [1] | [2] | [3]
 Row 2: [4] | [5] | [6]
 Row 3: [7] | [8] | [9]
 Row 4: [10] | [11] | [12]
 
+[STEP 4: MINUTES GRID DATA]
+Row 1: [00] | [05] | [10]
+Row 2: [15] | [20] | [25]
+Row 3: [30] | [35] | [40]
+Row 4: [45] | [50] | [55]
 
-Minutes Grid:
-Row 1: [ 5] | [ 10] | [ 15]
-Row 2: [20] | [ 25] | [ 30]
-Row 3: [35] | [ 40] | [ 45]
-Row 4: [ 50] | [ 55] | [ 00]
-
-( for who reread it read it slowly and check twice)
-
-those are hours
-
-write 1-12 like
-
-okay
-for hous
-13→1, 14→2, 15→3, 16→4, 17→5, 18→6, 19→7, 20→8, 21→9, 22→10, 23→11, 00→12
-
-(
+[STEP 5: HIGHLIGHTING]
+Find the correct hour and minute calculated in Step 1. Inside the grids, place a "😊" emoji immediately to the right of that specific number. Do not leave the numbers out.
 
 
-(( remove the 13hours up to 23 hours and00 hours)
-
-
-( next remember the minute is
-
-
-how to round down
-
-is
-00-04→00, 05-09→05, 10-14→10, 15-19→15, 20-24→20, 25-29→25, 30-34→30, 35-39→35, 40-44→40, 45-49→45, 50-54→50, 55-59→55
-
-
-
-
-below are hours
-
-( remove the 13hours up to 23 hours and00 hours)
-
-first type a smile emoji with the time now
-
-write the time now and higlight or put emoji smile emoji to next hours and minute((( in the grid))
-
-now highlight minute and hours by 4 grid 
-
-those are hours
 
 
 
