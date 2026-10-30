@@ -40,8 +40,8 @@ next level
 
 
 find 1:30 and 4:30
-and 5:15 and 8:15
+and 8:15 and 5:15
 and 9:45
-and 3:45 and 
+and 6:45 and 
 3:00
 and and 6:00
