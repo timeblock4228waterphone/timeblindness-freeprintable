@@ -15,10 +15,13 @@ okay now
 below are minute
 make a 3 acrross by 4  downgrid
 
+
 Row 1: [5] | [ 10] | [ 15]
 Row 2: [ 20] | , 25] | [30]
 Row 3: [35] | [ 40] | [45]
 Row 4: [ 50] | [ 55] | [00]
+
+Round the minutes down to the nearest 5-minute increment 00-04→00, 05-09→05, 10-14→10, 15-19→15, 20-24→20, 25-29→25, 30-34→30, 35-39→35, 40-44→40, 45-49→45, 50-54→50, 55-59→55
 
 next level
 
