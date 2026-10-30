@@ -23,6 +23,12 @@ Row 4: [ 50] | [ 55] | [00]
 
 Round the minutes down to the nearest 5-minute increment 00-04→00, 05-09→05, 10-14→10, 15-19→15, 20-24→20, 25-29→25, 30-34→30, 35-39→35, 40-44→40, 45-49→45, 50-54→50, 55-59→55
 
+
+next step find the time now
+
+after you found time now now use the next level
+
+
 next level
 
 1:30=7:30=13:30=19:30
@@ -31,6 +37,7 @@ next level
 4:30=10:30=16:30=22:30
 5:15=11:15=17:15=23:15
 6:00=12:00=18:00=00:00
+
 
 find 1:30 and 4:30
 and 8:15 and 5:15
