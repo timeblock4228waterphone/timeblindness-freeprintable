@@ -9,6 +9,8 @@ are hours.
 ↖=1,7,13,19↑=2,8,14,20.↗=3,9,15,21
 ↙=4,10,16,22.↓=5,11,17,23.↘=6,12,18,00
 
+put the arrow inside the minute .
+
 okay now
 below are minute
 make a 3 acrross by 4  downgrid
