@@ -40,4 +40,10 @@ Only option is
 
 remove the clock if there is image of clock in it
 
+Left arrow = hour portion
+Right arrow = minute portion
+Use the matching shape to read the time quickly
+No clock image
+Highlight the current time on the card
+
 ( important make highlit the currect time now)
