@@ -99,7 +99,7 @@ look at this one first to undersand the wallet
 yup
 
 
-[one thing extra](./Timeblindness-phonescreen.jpg)
+
 
 Size Update july 14 this has an update where it says 19-24 instead of 19-00
 UPDATE June 8 there is cheat sheet for it
@@ -118,7 +118,7 @@ forcoder/stevetimearrow.txt
 
 
 
-[Low Spoon Expense Tracker once a month](./once-a-month-low-spoon-expense-tracker.pdf)
+[Low Spoon Expense Tracker once a month](./moneyandjob/steveexpense (1).pdf)
 this one is low energy way to keep track of expense.
 
 
