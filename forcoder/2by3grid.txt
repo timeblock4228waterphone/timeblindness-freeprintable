@@ -4,6 +4,9 @@ okay break it down
 
 what is minute
 
+write 1-12 like this 3 accross and 2 top left 1,7 middle, 2,8 then right 3,9 , then bottom 
+left 4,10 then bottom right 5,11 then bottom right 6,12
+
 hours
 is
 1=7=13=19
