@@ -15,4 +15,7 @@ is 5=5,6,7,8,9 .10=10,11,12,13,14 .15=15,16,17,18,19. 20=20,21,22,23,24.
 
 hours are
 
-1=13 2=14 3=15 4=16 5=17 6=18 7=19 8=20 9=21 10=22 11=23 12=00 ( remove the 13hours up to 23 hours and00 hours) write the time now and higlight by now hours and minute show ] write the currednt time and put smilly on the hours and minute
+1=13 2=14 3=15 4=16 5=17 6=18 7=19 8=20 9=21 10=22 11=23 12=00 ( remove the 13hours up to 23 hours
+
+
+and00 hours) write the time now and higlight by now hours and minute show ] write the currednt time and put smilly on the hours and minute
