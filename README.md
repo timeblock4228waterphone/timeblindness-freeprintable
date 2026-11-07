@@ -109,8 +109,10 @@ it can fit into a wallet if you fold it. this one is the only one to print if yo
 
 
 
-[8 Arrow Time not needed ](./8-(not-needed-arrowtime-level-hard).pdf) This one arrow time you can plug into ai and it decode for you. the reason it so long is because the isntruction for ai that you plug and and quesiton for the time it is and what it decode to be. It is not for everyday thing to use it for personally when i go to the library on bicycle and need to write down the time with little time.=( jun 17 updated for easier reading)
+[8 Arrow Time not needed ](./forcoder/stevetimearrow.txt) This one arrow time you can plug into ai and it decode for you. the reason it so long is because the isntruction for ai that you plug and and quesiton for the time it is and what it decode to be. It is not for everyday thing to use it for personally when i go to the library on bicycle and need to write down the time with little time.=( jun 17 updated for easier reading)
 
+
+forcoder/stevetimearrow.txt
 
 
 
