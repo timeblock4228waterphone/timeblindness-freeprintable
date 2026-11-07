@@ -5,13 +5,44 @@ arrow is type any hours and any minute and then ai would spit out the arrow it
 The reason for these arrow rules that if you dont have paper to mark with pen but have 3 pen 2 pen to 
 point and 1 pen to separate top and bottom Hour groups 
 
+
+
+note to self this is very shitty writing so i got redo this all shit
+
+
+
+•(A): • A=1 (1–6) → above • 
+A=2 (7–12) → below • 
+A=3 (13–18) → above • 
+A=4 (19–34) → below 
+for minute
+• C=1 (5–34) → above
+• C=2 (34–04) 60=00 → below
+
+
+but 64 is 1 hour and and 4 minute
+
+Hour=6(a-1)+b Minute is 30(c-1)+5d 
+ 1 hour is =60 minute
+
+ Round the minutes down to the nearest 5-minute increment 00-04→00, 05-09→05, 10-14→10, 15-19→15, 20-24→20, 25-29→25, 30-34→30, 35-39→35, 40-44→40, 45-49→45, 50-54→50, 55-59→55,
+
+
+
+
+
+
+defowjiewroewjrweior
  
 (A): • A=1 (1–6) → above • 
 A=2 (7–12) → below • 
 A=3 (13–18) → above • 
 A=4 (19–00) → below 
 Minute groups (C): • 
-C=1 (01–34) → above • C=2 (35–60) 60=00→ below 
+• C=1 (00–34) → above
+• C=2 (35–60) 60=00 → below
+Equations & Rounding:
+• Minute = \(30(C - 1) + 5D\)
 Next rule 
 ABCD is for time 
 A= (1,2,3,4) 
@@ -19,9 +50,11 @@ B=(1,2,3,4,5,6)
 C=(1,2) 
 D=(1,2,3,4,5,6) Equations 
 Hour=6(a-1)+b Minute is 30(c-1)+5d 
+ Round the minutes down to the nearest 5-minute increment 00-04→00, 05-09→05, 10-14→10, 15-19→15, 20-24→20, 25-29→25, 30-34→30, 35-39→35, 40-44→40, 45-49→45, 50-54→50, 55-59→55,
 (( AI read this slow down remember slow down for first question about it slow down and check twice 
 and then write)) 
 B or D when this 
+
 1= ↖ 
 2= ↑ 
 3= ↗ 
