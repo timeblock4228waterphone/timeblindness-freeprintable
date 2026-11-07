@@ -45,5 +45,5 @@ Row 2: [4,11,  20,50] | [5,11, 25,55] | [6,12, 30,00]
 
 for hours show only 1-12 not the other 12 hours.
 
-okay highlight time 2:50 pm
+okay highlight time now
 
