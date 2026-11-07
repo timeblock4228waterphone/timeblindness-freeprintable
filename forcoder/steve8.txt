@@ -5,6 +5,9 @@
 
 draw line in the middle going right to left and that where it goes.
 
+
+
+
 •(A): • A=1 (1–6) → above the line • 
 A=2 (7–12) → below the  the line• 
 A=3 (13–18) → above the line • 
@@ -14,16 +17,37 @@ for minute
 • C=2 (34–04) 60=00 → below the line
 
 
-but 64 is 1 hour and and 4 minute
+Minutes	05 to 34 (Rounds to 05–30)	35 to 04 (Rounds to 35–60/00)
 
-Hour=6(a-1)+b Minute is 30(c-1)+5d 
- 1 hour is =60 minute
+• 00–04 → 00
+• 05–09 → 05
+• 10–14 → 10
+• 15–19 → 15
+• 20–24 → 20
+• 25–29 → 25
+• 30–34 → 30
+• 35–39 → 35
+• 40–44 → 40
+• 45–49 → 45
+• 50–54 → 50
+• 55–59 → 55
+• Note: If minutes reach 60+, it rolls over into 1 hour and 00 minute
 
  Round the minutes down to the nearest 5-minute increment 00-04→00,
-05-09→05,
-10-14→10, 15-19→15, 20-24→20, 25-29→25,
-30-34→30, 35-39→35, 40-44→40, 45-49→45,
-50-54→50, 55-59→55,
+
+
+
+
+Hour=6(a-1)+b Minute is 30(c-1)+5d 
+• Hours 1–6: Group a=1. Solve for b.
+• Hours 7–12: Group a=2. Solve for b.
+• Hours 13–18: Group a=3. Solve for b.
+• Hours 19–24 (00): Group a=4. Solve for b. (Treat 00 as 24).
+
+
+
+
+
 
 
 ↖↑↗ 
