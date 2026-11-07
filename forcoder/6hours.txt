@@ -1,1 +1,37 @@
 
+write 
+left side 4 down and 1 acrros
+right side right 2 down an 1 accross
+
+left side
+hours 
+it says 
+as the face.
+
+Hours Grid (Left)
+
+• Row 1: "1–6"
+• Row 2: "7–12"
+• Row 3: "13–18"
+• Row 4: "19–24" (with 00 written as 24)
+
+
+then on right side 
+is minute.
+with the two down 
+
+Minutes Grid (Right)
+
+• Row 1: 1–30
+• Row 2: 31–60 (with 00 written as 60)
+
+hight litght the time now
+
+highlight the rows only not the acutal minute and hour for it.
+
+24 =000 for hours
+
+
+60 =00 for minute
+
+
