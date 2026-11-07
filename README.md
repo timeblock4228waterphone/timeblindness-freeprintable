@@ -118,7 +118,7 @@ forcoder/stevetimearrow.txt
 
 
 
-[Low Spoon Expense Tracker once a month](./once-a-month-low-spoon-expense-tracker.pdf) Size 104 KB
+[Low Spoon Expense Tracker once a month](./once-a-month-low-spoon-expense-tracker.pdf)
 this one is low energy way to keep track of expense.
 
 
