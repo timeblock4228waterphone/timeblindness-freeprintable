@@ -11,7 +11,7 @@ A=2 (7–12) → below •
 A=3 (13–18) → above • 
 A=4 (19–00) → below 
 Minute groups (C): • 
-C=1 (05–30) → above • C=2 (35–00) → below 
+C=1 (01–34) → above • C=2 (35–60) 60=00→ below 
 Next rule 
 ABCD is for time 
 A= (1,2,3,4) 
@@ -59,7 +59,7 @@ __________________
 5. Hour groups: 
 Above line = 1–6 
 Below line = 7–12 (continue for 24h if extended). 
-6. Minute groups: Above line = 01–30 Below line = 35–00. 7. Vertical placement selects the group only. 
+6. Minute groups: Above line = 01–34 Below line = 35–60. 7. Vertical placement selects the group only. 
 8. Horizontal placement decides whether the arrow is hour or minute. 9. Never interpret top arrow as 
 hour and bottom arrow as minute. 10.Preserve spacing/layout the left and right arrow sould be 5 
 space from eachother; alignment changes meaning. 11.Example: 
@@ -136,6 +136,6 @@ It is important slow down to be more accuarte 1. Decide which arrow is Hour (lef
 5. Combine direction + placement into final layout 
 6. Draw 
 Important hour 1-6 is above the line. Hour 7-12 below the line hour 13-18 is above the line hour19-24 ( 24 
-is 00.) is below the line.minute 5-30 is above the line minute 35-60( 60 =00) below the line
+is 00.) is below the line.minute 1-34 is above the line minute 35-60( 60 =00) below the line
 
 rember it need 5 space apart
