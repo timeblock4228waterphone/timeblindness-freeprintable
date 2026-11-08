@@ -72,8 +72,7 @@ draw this f
 __________________ 
 [Hours] [Minute] space apard by 5 space 
 
-
-rule for the arrow
+read it slowly and check twice
 
 
 rember it need 5 space apart
