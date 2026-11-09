@@ -72,7 +72,7 @@ draw this f
 __________________ 
 [Hours] [Minute] space apard by 5 space 
 
-read it slowly and check twice
+read it slowly and check twice it is 5 space apart
 
 
 rember it need 5 space apart
