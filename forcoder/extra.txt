@@ -78,20 +78,10 @@ Example: For 4:30, the hour number is 4, which gives you ↙ 4.
 
  
 
-Step 4: Find the Minute Glyph 
 
-Take the minute number from your Base Option Time (:00, :15, :30, or :45) and match it to its special companion rule: 
-
-If the minutes are :00 → ↑ 0 
-
-If the minutes are :15 → → 15 
-
-If the minutes are :30 → ↓ 30 
-
-If the minutes are :45 → ← 45 
 
 Example: For 4:30, the minute number is 30, which gives you ↓ 30. 
-
+(find the time now instruciton)
  
 
 Final Result 
