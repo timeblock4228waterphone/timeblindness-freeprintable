@@ -32,13 +32,15 @@ Only option is
 
 ( look and reread only show for the front)
 
-↖ ↓=1:30,
+↖ ↓ 1:30,
 
-↑→=2:15,
+↑→ 2:15,
 
-↗↑=3:00,↗←=3:45,↙ ↓=4:30,↓→=5:15,↘↑=6:00, =↘ ← =6:45
+↗↑ 3:00,↗← 3:45,↙ ↓ 4:30,↓→ 5:15,↘↑6:00, =↘ ← 6:45
 
 remove the clock if there is image of clock in it
+
+rember to use only text only 
 
 Left arrow = hour portion
 Right arrow = minute portion
