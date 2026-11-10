@@ -8,15 +8,22 @@ row 2,↙ ↓=4:30,↓→=5:15,↘↑=6:00, =↘ ← =6:45
 
 okay
 like this
-Row 1: [↖ ↓] | [↑ →] | [↗ ↑]  | [↗ ←]
-Row 2: [↙ ↓] | [↓ →] | [↘ ↑]  | [↘ ←]
+
 
 
 ( left arrow is two space apart from right arrow
 
 left arrow is hours and right arrow is minute.
 
-,↙ ↓=4:30,↓→=5:15,↘↑=6:00, =↘ ← =6:45
+[REFERENCE DATA]
+[↖ ↓] = 1:30 (Windows: 01:30, 07:30, 13:30, 19:30)
+[↑ →] = 2:15 (Windows: 02:15, 08:15, 14:15, 20:15)
+[↗ ↑] = 3:00 (Windows: 03:00, 09:00, 15:00, 21:00)
+[↗ ←] = 3:45 (Windows: 03:45, 09:45, 15:45, 21:45)
+[↙ ↓] = 4:30 (Windows: 04:30, 10:30, 16:30, 22:30)
+[↓ →] = 5:15 (Windows: 05:15, 11:15, 17:15, 23:15)
+[↘ ↑] = 6:00 (Windows: 06:00, 12:00, 18:00, 00:00)
+[↘ ←] = 6:45 (Windows: 06:45, 12:45, 18:45, 00:45
 
 Pos 1 [↖ ↓] -> 01:30-02:14, 07:30-08:14, 13:30-14:14, 19:30-20:14
 Pos 2 [↑ →] -> 02:15-02:59, 08:15-08:59, 14:15-14:59, 20:15-20:59
@@ -36,11 +43,18 @@ Only option is
 
 ( look and reread only show for the front)
 
-↖ ↓ 1:30,
 
-↑→ 2:15,
 
-↗↑ 3:00,↗← 3:45,↙ ↓ 4:30,↓→ 5:15,↘↑6:00, =↘ ← 6:45
+below like this 
+
+
+
+Row 1: [↖ ↓] 1:30 | [↑ →] 2:15 | [↗ ↑] 3:00 | [↗ ←] 3:45
+
+
+Row 2:  [↙ ↓] 4:30 | [↓ →] 5:15 | [↘ ↑] 6:00 | [↘ ←] 6:45
+
+
 
 remove the clock if there is image of clock in it
 
@@ -50,6 +64,6 @@ Left arrow = hour portion
 Right arrow = minute portion
 Use the matching shape to read the time quickly
 No clock image
-Highlight the current time on the card
+Highlight the current time on the card and write the time it is now
 
 ( important make highlit the currect time now)
