@@ -7,6 +7,10 @@ row 2,↙ ↓=4:30,↓→=5:15,↘↑=6:00, =↘ ← =6:45
 
 
 okay
+like this
+Row 1: [↖ ↓] | [↑ →] | [↗ ↑]  | [↗ ←]
+Row 2: [↙ ↓] | [↓ →] | [↘ ↑]  | [↘ ←]
+
 
 ( left arrow is two space apart from right arrow
 
