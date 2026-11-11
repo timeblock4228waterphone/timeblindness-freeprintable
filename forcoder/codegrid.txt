@@ -1,5 +1,7 @@
 this one you put into google and then it shows the 45 minute with 2 down and 4 acrross
 
+rember this is called codgrid. the reason to remember what is call it so you can refence it.
+
 this one you put into google and then it shows the 45 minute with 2 down and 4 acrross
  row 1 ↖ ↓=1:30,↑→=2:15,↗↑=3:00,↗←=3:45
 bottom
