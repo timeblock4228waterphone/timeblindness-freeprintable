@@ -2,14 +2,12 @@ Print the grids exactly using text pipe strings like this example:
 
 2 down and 4 accross
 
-Row 1: [1:30] | [2:15] | [3:00] | [3:45]
-Row 2: [4:30] | [5:15] | [6:00] | [6:45]
+Row 1: [1:30] | [2:15] | [3:00] | [3:45]| [4:30]
+Row 2: [4:30] | [5:15] | [6:00] | [6:45] | [7:30]
+ next
 
 
 
-1:30,2:15,3:00,3:45
-bottom
-,4:30,5:15,6:00,6:45
 
 
 okay
@@ -37,6 +35,10 @@ Option
 Rember
 
 Only option is
+
+Row 1: [1:30] | [2:15] | [3:00] | [3:45]| [4:30]
+Row 2: [4:30] | [5:15] | [6:00] | [6:45] | [7:30]
+ next
 
 ( look and reread only show for the front)
 
