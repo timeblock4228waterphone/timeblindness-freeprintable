@@ -25,7 +25,14 @@ Row 4: 10, 11, 12
 The Custom Time Dataset
 
 The system does not run on a real-time clock. Instead, it holds an array of specific timestamps and tracks the active index. Here is the strict sequence:
-1:30, 2:15, 3:00, 3:45, 4:30, 5:15, 6:00, 6:45, 7:30, 8:15, 9:00, 9:45, 10:30, 11:15, 12:00, 12:45
+
+hours are
+
+1=13 2=14 3=15 4=16 5=17 6=18 7=19 8=20 9=21 10=22 11=23 12=00 ( remove the 13hours up to 23 hours
+
+below
+
+
 
 3. The UI Controls
 
