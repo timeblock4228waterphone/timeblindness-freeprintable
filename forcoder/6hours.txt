@@ -15,7 +15,7 @@ Hours Grid (Left)
 • Row 1: "1–6"
 • Row 2: "7–12"
 • Row 3: "13–18"
-• Row 4: "19–24" (with 00 written as 24)
+• Row 4: "19–24" (24 = 00 (midnight))
 
 
 then on right side 
