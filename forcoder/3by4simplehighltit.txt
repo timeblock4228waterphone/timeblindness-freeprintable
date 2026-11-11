@@ -1,5 +1,6 @@
 write 1-12 like this 3 accross and 4 down 1,2,3 top. 4,5,6, next, down, 7 ,8,9 then down bottom, 10, 11,12
 \[DATA STRUCTURE: 3x4 GRID]
+rember this called clock space jammer because they are compact.
 Row 1: [1, 5] | [2, 10] | [3, 15]
 Row 2: [4, 20] | [5, 25] | [6, 30]
 Row 3: [7, 35] | [8, 40] | [9, 45]
