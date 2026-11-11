@@ -18,6 +18,11 @@ Row 3: 7, 8, 9
 
 Row 4: 10, 11, 12
 
+below hours are are hours rule
+
+1=13 2=14 3=15 4=16 5=17 6=18 7=19 8=20 9=21 10=22 11=23 12=00 
+
+
 
 If the minute is between 0 and 14: Pick the ↑ arrow.
 If the minute is between 15 and 29: Pick the → arrow.
