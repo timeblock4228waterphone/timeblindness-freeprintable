@@ -41,8 +41,8 @@ To read or write times using this layout, match the hour and the rounded minute 
 
 show below this
 
-Row 1: [1,7,   5,35] | [2,8, 10,40] | [3,10, 15,45]
-Row 2: [4,11,  20,50] | [5,11, 25,55] | [6,12, 30,00]
+Row 1: [1,7,   5,35] | [2,8, 10,40] | [3,9, 15,45]
+Row 2: [4,10,  20,50] | [5,11, 25,55] | [6,12, 30,00]
 
 for hours show only 1-12 not the other 12 hours.
 
