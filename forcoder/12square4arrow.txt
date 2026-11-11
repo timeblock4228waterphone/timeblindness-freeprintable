@@ -51,4 +51,7 @@ Subtract 60 from the minutes (so 65 becomes 5).
 Add 1 to the Hour.
 If the new Hour becomes 24: Reset the hour back to 00.
 Run Part 3 and Part 4 again using these new numbers so the grid updates and the arrow spins to its new position!
+
+write it only text only
+find the tiem now
 ( remove any clock if there is any)
