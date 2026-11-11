@@ -23,12 +23,27 @@ Row 3: 7, 8, 9
 Row 4: 10, 11, 12
 
 The Custom Time Dataset
+the next is minute 
+If minutes are between 0 and 14: Choose the ↑ arrow.
+
+If minutes are between 15 and 29: Choose the → arrow.
+
+If minutes are between 30 and 44: Choose the ↓ arrow.
+
+If minutes are between 45 and 59: Choose the ← arrow.
 
 The system does not run on a real-time clock. Instead, it holds an array of specific timestamps and tracks the active index. Here is the strict sequence:
+
+If the Base Time minute is :30 -> Choose the ↓↑ arrow.  (Matches: 1:30, 4:30, 7:30, 10:30)
+• If the Base Time minute is :15 -> Choose the → arrow.  (Matches: 2:15, 5:15, 8:15, 11:15)
+• If the Base Time minute is :00 -> Choose the ↑ arrow.  (Matches: 3:00, 6:00, 9:00, 12:00)
+• If the Base Time minute is :45 -> Choose the ← arrow.  (Matches: 3:45, 6:45, 9:45, 12:45)
+
 
 hours are
 
 1=13 2=14 3=15 4=16 5=17 6=18 7=19 8=20 9=21 10=22 11=23 12=00 ( remove the 13hours up to 23 hours
+ s
 
 below
 
@@ -57,6 +72,11 @@ next is
 only show the arrow that is 
 1:30
 ,2:15 ,3:00 ,3:45, 4:30, 5:15, 6:00, 6:45, 7:30,8:15, 9:00, 9:45, 10:30, 11:15, 12:00, 12:45.
+
+ If the Base Time minute is :30 -> Choose the ↑ arrow.  (Matches: 1:30, 4:30, 7:30, 10:30)
+• If the Base Time minute is :15 -> Choose the → arrow.  (Matches: 2:15, 5:15, 8:15, 11:15)
+• If the Base Time minute is :00 -> Choose the ↓ arrow.  (Matches: 3:00, 6:00, 9:00, 12:00)
+• If the Base Time minute is :45 -> Choose the ← arrow.  (Matches: 3:45, 6:45, 9:45, 12:45)
 
 
 
