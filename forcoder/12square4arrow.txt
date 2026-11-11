@@ -9,10 +9,14 @@ Put that box into the first slot of the grid.
 Add 1 to the counter, and repeat this until you reach number 12.
 Arrange Them in Rows
 The computer automatically fills the slots from left to right, moving down to the next row when a line is full:
-Row 1: Places boxes 1, 2, 3. (Row is full!)
-Row 2: Moves down, places boxes 4, 5, 6. (Row is full!)
-Row 3: Moves down, places boxes 7, 8, 9. (Row is full!)
-Row 4: Moves down, places boxes 10, 11, 12. (Grid complete!)
+Row 1: 1, 2, 3
+
+Row 2: 4, 5, 6
+
+Row 3: 7, 8, 9
+
+Row 4: 10, 11, 12
+
 Now that the AI knows how to build the blank 1-12 grid and how to read the time, it combines both parts together!
 Would you like to see how a programmer combines these steps using real code (like Python or JavaScript), or should we add another feature to our grid layout?
 AI responses may include mistakes.
