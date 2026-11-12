@@ -49,11 +49,8 @@ for hours show only 1-12 not the other 12 hours.
   okay now that you understand this now remover the minute ignor the minute.
 
 
+next part includ this part
 
-12, 3, 6, 9 (00-44) = UP
-12, 3, 6, 9 (45-29) = LEFT
-1, 4, 7, 10 (30-14) = DOWN
-2, 5, 8, 11 (15-59) = RIGH
 
 00= ↑ arrow.
 15= → arrow.
@@ -67,6 +64,19 @@ QUICK LOOKUP
 12:45 / 3:45 / 6:45 / 9:45  |  ← Left
  1:30 / 4:30 / 7:30 / 10:30 |  ↓ Down
  2:15 / 5:15 / 8:15 / 11:15 |  → Right
+
+ below is how you round down
+
+
+Slot 1	↓	DOWN		1, 4, 7, 10	1:30–2:14 • 4:30–5:14 • 7:30–8:14 • 10:30–11:14
+
+
+Slot 2	→	 RIGHT	2, 5, 8, 11	2:15–2:59 • 5:15–5:59 • 8:15–8:59 • 11:15–11:59
+Slot 3	↑	UP	12, 3, 6, 9	12:00–12:44 • 3:00–3:44 • 6:00–6:44 • 9:00–9:44
+
+Slot 4		← LEFT	12, 3, 6, 9	12:45–1:29 • 3:45–4:29 • 6:45–7:29 • 9:45–10:29
+
+
 
 
 1=13 2=14 3=15 4=16 5=17 6=18 7=19 8=20 9=21 10=22 11=23 12=00
