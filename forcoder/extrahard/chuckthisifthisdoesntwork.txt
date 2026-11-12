@@ -49,6 +49,12 @@ for hours show only 1-12 not the other 12 hours.
   okay now that you understand this now remover the minute ignor the minute.
 
 
+00= ↑ arrow.
+15= → arrow.
+30= ↓ arrow.
+45= ← arrow.
+
+
 
 
 
