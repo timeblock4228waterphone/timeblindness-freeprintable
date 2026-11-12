@@ -1,5 +1,11 @@
  for hours 1=13 2=14 3=15 4=16 5=17 6=18 7=19 8=20 9=21 10=22 11=23 12=00 
 
+
+
+there is  codgrid,part one of just verison hours,part one of just why version minute,2 by 3
+and 15 minute.
+
+
 part 1 
 this one you put into google and then it shows the 45 minute with 2 down and 4 acrross
 
@@ -143,7 +149,7 @@ Round the minutes down to the nearest 5-minute increment 00-04→00, 05-09→05,
 part 4
 
 okay break it down
-this is called 2 by 3
+this is called "2 by 3"
 what is minute
 rember this is called mini pack 2 by 3 size
 
@@ -181,6 +187,28 @@ To read or write times using this layout, match the hour and the rounded minute 
 
 - Round the minutes down to the nearest 5-minute increment 00-04→00, 05-09→05, 10-14→10, 15-19→15, 20-24→20, 25-29→25, 30-34→30, 35-39→35, 40-44→40, 45-49→45, 50-54→50, 55-59→55
 
+this one is part 5 
+15 minute
+00=00-14,
+15=15-29,
+30=30-44,
+45=45-59.
+
+okay
+split the screen into 4 part by 2 accross and 2 down
+
+
+codgrid on the top left
+
+,
+part one of just verison hours is bottom left
+
+next part one of just why version minute is bottom right
+
+is
+
+
+
 show below this
 
 Row 1 (Top):
@@ -196,6 +224,8 @@ Row 2 (Bottom):
 for hours show only 1-12 not the other 12 hours.
 
 okay highlight time now
+
+and then top right is. ,2 by 3
 
 
 
