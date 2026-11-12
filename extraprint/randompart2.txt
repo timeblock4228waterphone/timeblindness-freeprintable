@@ -89,6 +89,113 @@ highlight the rows only not the acutal minute and hour for it.
 60 =00 for minute
 
 
+part 4
+
+
+
+okay break it down
+
+what is minute
+rember this is called mini pack 2 by 3 size
+
+write 1-12 like this 3 accross and 2 top left 1,7 middle, 2,8 then right 3,9 , then bottom 
+left 4,10 then bottom right 5,11 then bottom right 6,12
+
+hours
+is
+
+• Top Left | Top Middle | Top Right
+• Bottom Left | Bottom Middle | Bottom Right
+
+
+Top Left: Hours 1, 7 | Minutes 05, 35
+  2. Top Middle: Hours 2, 8 | Minutes 10, 40
+  3. Top Right: Hours 3, 9 | Minutes 15, 45
+  4. Bottom Left: Hours 4, 10 | Minutes 20, 50
+  5. Bottom Middle: Hours 5, 11 | Minutes 25, 55
+  6. Bottom Right: Hours 6, 12 | Minutes 30, 00
+
+
+ Find the Minute Block (Bottom Line of Text)
+
+To read or write times using this layout, match the hour and the rounded minute to their designated positions. Always stack the hours directly above the minutes in each position.
+
+1=13 2=14 3=15 4=16 5=17 6=18 7=19 8=20 9=21 10=22 11=23 12=00 
+
+
+
+
+
+
+- Round the minutes down to the nearest 5-minute increment 00-04→00, 05-09→05, 10-14→10, 15-19→15, 20-24→20, 25-29→25, 30-34→30, 35-39→35, 40-44→40, 45-49→45, 50-54→50, 55-59→55
+
+show below this
+
+Row 1 (Top):
+[  1, 7  ] | [  2, 8  ] | [  3, 9  ]
+[ 05, 35 ] | [ 10, 40 ] | [ 15, 45 ]
+
+Row 2 (Bottom):
+[ 4, 10  ] | [ 5, 11  ] | [ 6, 12  ]
+[ 20, 50 ] | [ 25, 55 ] | [ 30, 00 ]
+
+for hours show only 1-12 not the other 12 hours.
+
+okay then below this is part 2. put this underneath.
+
+
+next part includ this part
+
+
+00= ↑ arrow.
+15= → arrow.
+30= ↓ arrow.
+45= ← arrow.
+
+
+
+QUICK LOOKUP
+12:00 / 3:00 / 6:00 / 9:00  |  ↑ Up
+12:45 / 3:45 / 6:45 / 9:45  |  ← Left
+ 1:30 / 4:30 / 7:30 / 10:30 |  ↓ Down
+ 2:15 / 5:15 / 8:15 / 11:15 |  → Right
+
+ below is how you round down
+
+
+Slot 1	↓	DOWN		1, 4, 7, 10	1:30–2:14 • 4:30–5:14 • 7:30–8:14 • 10:30–11:14
+
+
+Slot 2	→	 RIGHT	2, 5, 8, 11	2:15–2:59 • 5:15–5:59 • 8:15–8:59 • 11:15–11:59
+Slot 3	↑	UP	12, 3, 6, 9	12:00–12:44 • 3:00–3:44 • 6:00–6:44 • 9:00–9:44
+
+Slot 4		← LEFT	12, 3, 6, 9	12:45–1:29 • 3:45–4:29 • 6:45–7:29 • 9:45–10:29
+
+
+
+
+1=13 2=14 3=15 4=16 5=17 6=18 7=19 8=20 9=21 10=22 11=23 12=00
+ 
+for the front it show Row 1 [↓]| [→] | [↑] |[ ←]
+
+
+now for the front only do this below
+
+OUTPUT FORMAT FOR PART 1: adding only the current minute and hours
+
+If Hour and Minute land in the same box, write them as [Hour / Minute]. Leave empty boxes as [ ].
+
+
+ 
+   Top Row:    [  ] | [   ] | [   ]
+   Bottom Row: [   ] | [ ] | [   ]
+
+below
+OUTPUT FORMAT FOR PART 2: output current arrow.
+
+   Display: [   ] | [   ] | [   ] | [  ]
+
+
 
 
 
