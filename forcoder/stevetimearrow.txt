@@ -14,7 +14,7 @@ A=3 (13–18) → above the line •
 A=4 (19–24) → below the line
 for minute
 • C=1 (5–34) → above the line
-• C=2 (34–04) 60=00 → below the line
+• C=2 (35-04) 60=00 → below the line
 
 
 Minutes	05 to 34 (Rounds to 05–30)	35 to 04 (Rounds to 35–60/00)
@@ -72,10 +72,10 @@ draw this f
 __________________ 
 [Hours] [Minute] space apard by 5 space 
 
-read it slowly and check twice the minute and hours. is 5 space apart
+read it slowly and check twice it is 5 space apartl
 
 
-rember the hour and minute arow need 5 space apart
+rember it need 5 space apart
 
 
 
