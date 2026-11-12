@@ -2,7 +2,7 @@
 
 
 
-there is  codgrid,part one of just verison hours,part one of just why version minute,2 by 3
+there is  codgrid,Hours Grid, minute Grid,2 by 3
 and 15 minute.
 
 
@@ -81,7 +81,7 @@ Highlight the current time on the card and write the time it is now
 part 2
 
 Set Up the Grid Blueprint
-this is called "part one of just verison hours"
+this is called "hour grid"
 Generate 12 empty square boxes numbered sequentially from 1 to 12.
 
 They must automatically arrange themselves exactly like this:
@@ -126,7 +126,7 @@ part 3
 belwo are arrows
 
 these 
-this is called "part one of just why version minute"
+this is called "Minute Grid"
 are hours.
 ↖=1,7,13,19↑=2,8,14,20.↗=3,9,15,21
 ↙=4,10,16,22.↓=5,11,17,23.↘=6,12,18,00
@@ -202,9 +202,9 @@ split the screen into 4 part by 2 accross and 2 down
 codgrid on the top left
 
 ,
-part one of just verison hours is bottom left
+ hours grid is bottom left
 
-next part one of just why version minute is bottom right
+next part one of minute grid is bottom right
 
 is
 
