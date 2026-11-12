@@ -269,6 +269,8 @@ Inside each cell, list the 3 numbers together. Highlight the numbers that match 
 
 ignore the minute now.
 
+import for ai to know no minute doesnt start with 00 it start with 5 no doesnt it start with 00 for hour. because there is math equaiotn called time arrow that if it was 00 then the equiton would not make sense.
+
 for this one you draw 2 across and 4 down grid and the 
 left grid 
 Row 1 =[1] | [2] | [3]
