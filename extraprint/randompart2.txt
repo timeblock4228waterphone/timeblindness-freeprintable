@@ -27,6 +27,15 @@ and00 hours)
 
 part 2
 
+this is called 4 part 2 part
+
+Hours (Left)          Minutes (Right)
+[ 1–6 ]               [ 1–30 ]
+[ 7–12 ]              [ 31–60 ] (60 = 00)
+[ 13–18 ]
+[ 19–24 ] (24 = 000)
+
+
 
 write 
 this is called 4 part 2 part
@@ -42,20 +51,12 @@ as the face.
 
 Hours Grid (Left)
 
-• Row 1: "1–6"
-• Row 2: "7–12"
-• Row 3: "13–18"
-• Row 4: "19–24" (24 = 00 (midnight))
+\
 
 
 then on right side 
 is minute.
 with the two down 
-
-Minutes Grid (Right)
-
-• Row 1: 1–30
-• Row 2: 31–60 (with 00 written as 60)
 
 hight litght the time now
 
