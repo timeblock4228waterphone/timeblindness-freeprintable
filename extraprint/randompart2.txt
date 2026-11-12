@@ -112,75 +112,11 @@ Display: [ ] | [ ] | [ ] | [ ]
 ///
 
 part 4
-this one you put into google and then it shows the 45 minute with 2 down and 4 acrross
-
-rember this is called codgrid. the reason to remember what is call it so you can refence it.
-
-this one you put into google and then it shows the 45 minute with 2 down and 4 acrross
- row 1 ↖ ↓=1:30,↑→=2:15,↗↑=3:00,↗←=3:45
-bottom
-row 2,↙ ↓=4:30,↓→=5:15,↘↑=6:00, =↘ ← =6:45
-
-
-okay
-like this
-
-
-
-( left arrow is two space apart from right arrow
-
-left arrow is hours and right arrow is minute.
-
-[REFERENCE DATA]
-[↖ ↓] = 1:30 (Windows: 01:30, 07:30, 13:30, 19:30)
-[↑ →] = 2:15 (Windows: 02:15, 08:15, 14:15, 20:15)
-[↗ ↑] = 3:00 (Windows: 03:00, 09:00, 15:00, 21:00)
-[↗ ←] = 3:45 (Windows: 03:45, 09:45, 15:45, 21:45)
-[↙ ↓] = 4:30 (Windows: 04:30, 10:30, 16:30, 22:30)
-[↓ →] = 5:15 (Windows: 05:15, 11:15, 17:15, 23:15)
-[↘ ↑] = 6:00 (Windows: 06:00, 12:00, 18:00, 00:00)
-[↘ ←] = 6:45 (Windows: 06:45, 12:45, 18:45, 00:45)
-then
-
-Pos 1 [↖ ↓] -> 01:30-02:14, 07:30-08:14, 13:30-14:14, 19:30-20:14
-Pos 2 [↑ →] -> 02:15-02:59, 08:15-08:59, 14:15-14:59, 20:15-20:59
-Pos 3 [↗ ↑] -> 03:00-03:44, 09:00-09:44, 15:00-15:44, 21:00-21:44
-Pos 4 [↗ ←] -> 03:45-04:29, 09:45-10:29, 15:45-16:29, 21:45-22:29
-Pos 5 [↙ ↓] -> 04:30-05:14, 10:30-11:14, 16:30-17:14, 22:30-23:14
-Pos 6 [↓ →] -> 05:15-05:59, 11:15-11:59, 17:15-17:59, 23:15-23:59
-Pos 7 [↘ ↑] -> 06:00-06:44, 12:00-12:44, 18:00-18:44, 00:00-00:44
-Pos 8 [↘ ←] -> 06:45-07:29, 12:45-13:29, 18:45-19:29, 00:45-01:29
-
-Option
-
-
-Rember
-
-Only option is
-
-( look and reread only show for the front)
-
-
-
-below like this 
-
-
-
+PART 4: CODGRID (2x4 Front-only — bold active 45-min window; Left arrow=Hr, Right=Min)
 Row 1: [↖ ↓] 1:30 | [↑ →] 2:15 | [↗ ↑] 3:00 | [↗ ←] 3:45
+Row 2: [↙ ↓] 4:30 | [↓ →] 5:15 | [↘ ↑] 6:00 | [↘ ←] 6:45
+(Windows repeat every 6h: 1:30=1:30-2:14, 2:15=2:15-2:59, 3:00=3:00-3:44, 3:45=3:45-4:29, 4:30=4:30-5:14, 5:15=5:15-5:59, 6:00=6:00-6:44, 6:45=6:45-7:29)
 
-
-Row 2:  [↙ ↓] 4:30 | [↓ →] 5:15 | [↘ ↑] 6:00 | [↘ ←] 6:45
-
-
-
-remove the clock if there is image of clock in it
-
-rember to use only text only 
-
-Left arrow = hour portion
-Right arrow = minute portion
-Use the matching shape to read the time quickly
-No clock image
 
 
 this one is part 5 called 15 minute
