@@ -163,23 +163,24 @@ is
 • Bottom Left | Bottom Middle | Bottom Right
 
 
-• Top Left: 1, 7, 13, 19
-• Top Middle: 2, 8, 14, 20
-• Top Right: 3, 9, 15, 21
-• Bottom Left: 4, 10, 16, 22
-• Bottom Middle: 5, 11, 17, 23
-• Bottom Right: 6, 12, 18, 00
+
+Top Left: Hours 1, 7 | Minutes 05, 35
+  2. Top Middle: Hours 2, 8 | Minutes 10, 40
+  3. Top Right: Hours 3, 9 | Minutes 15, 45
+  4. Bottom Left: Hours 4, 10 | Minutes 20, 50
+  5. Bottom Middle: Hours 5, 11 | Minutes 25, 55
+  6. Bottom Right: Hours 6, 12 | Minutes 30, 00
+
+ for hours 1=13 2=14 3=15 4=16 5=17 6=18 7=19 8=20 9=21 10=22 11=23 12=00 
+
+
+
 
 
  Find the Minute Block (Bottom Line of Text)
 
 To read or write times using this layout, match the hour and the rounded minute to their designated positions. Always stack the hours directly above the minutes in each position.
-• Top Left: 05, 35
-• Top Middle: 10, 40
-• Top Right: 15, 45
-• Bottom Left: 20, 50
-• Bottom Middle: 25, 55
-• Bottom Right: 30, 00
+
 
 
 
