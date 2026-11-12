@@ -171,6 +171,15 @@ Top Left: Hours 1, 7 | Minutes 05, 35
   5. Bottom Middle: Hours 5, 11 | Minutes 25, 55
   6. Bottom Right: Hours 6, 12 | Minutes 30, 00
 
+
+Row 1 (Top):
+[  1, 7  ] | [  2, 8  ] | [  3, 9  ]
+[ 05, 35 ] | [ 10, 40 ] | [ 15, 45 ]
+
+Row 2 (Bottom):
+[ 4, 10  ] | [ 5, 11  ] | [ 6, 12  ]
+[ 20, 50 ] | [ 25, 55 ] | [ 30, 00 ]
+
  for hours 1=13 2=14 3=15 4=16 5=17 6=18 7=19 8=20 9=21 10=22 11=23 12=00 
 
 
@@ -189,6 +198,12 @@ To read or write times using this layout, match the hour and the rounded minute 
 - Round the minutes down to the nearest 5-minute increment 00-04→00, 05-09→05, 10-14→10, 15-19→15, 20-24→20, 25-29→25, 30-34→30, 35-39→35, 40-44→40, 45-49→45, 50-54→50, 55-59→55
 
 this one is part 5 
+it would look like
+Row 1: [15]
+Row 2: [45] | [15]
+Row 3: [ 30] 
+
+
 15 minute
 00=00-14,
 15=15-29,
@@ -243,39 +258,24 @@ use arrow for time now
 next
 
 for 2 by 3 
-Row 1: [  ] [  ] [  ]
-Row 2: [  ] [  ] [  ]
+Row 1 (Top):
+[  1, 7  ] | [  2, 8  ] | [  3, 9  ]
+[ 05, 35 ] | [ 10, 40 ] | [ 15, 45 ]
+
+Row 2 (Bottom):
+[ 4, 10  ] | [ 5, 11  ] | [ 6, 12  ]
+[ 20, 50 ] | [ 25, 55 ] | [ 30, 00 ]
+
+do not change anything
 
 
+for the 15 minute do not change anything 
+keep like
 
-for hours show only 1-12 not the other 12 hours.
-
-okay highlight time now
-
-and then top right is. ,2 by 3
-
-
-
-Row 1:  [  ] |  [  ] | [  ] |  [  ]
-Row 2:  [  ] |  [  ] |  [  ] | [  ]
+Row 1: [15]
+Row 2: [45] | [15]
+Row 3: [ 30] 
 
 
-
-below it looks like "part one of just why hours" use only arrow for it
-
-Row 1: [  ] [  ] [  ]
-Row 2: [  ] [  ] [  ]
-Row 3: [  ] [  ] [  ]
-Row 4: [  ] [  ] [  ]
-
-
-Row 1: [  ] [  ] [  ]
-Row 2: [  ] [  ] [  ]
-Row 3: [  ] [  ] [  ]
-Row 4: [  ] [  ] [  ]
-
-
-Row 1: [  ] [  ] [  ]
-Row 2: [  ] [  ] [  ]
 
 
