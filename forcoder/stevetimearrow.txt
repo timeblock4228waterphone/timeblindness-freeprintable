@@ -34,6 +34,8 @@ round time for minue
 
  Round the minutes down to the nearest 5-minute increment 00-04→00,
 
+Treat 00 as 60 in the formula
+
 
 
 
