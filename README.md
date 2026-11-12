@@ -15,8 +15,7 @@ then i thought use it as with just paper and pen
 then it change into a printable
 then phone screen
 and now the newest thing is .txt files
-that show it when you feed it ai
-
+the .txt files you can download it into any ai and it show you the grid live .
 it is 100 percent free no paywalll
 
 
