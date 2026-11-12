@@ -1,15 +1,9 @@
 Set Up the Grid Blueprint
-Tell the computer to create a grid container.
-Set the rules for the container: it must have exactly 3 columns across and 4 rows down (making 12 slots total).
-Fill the Grid with Numbers (1 to 12)
-Start a counter at number 1.
-Create a blank square box.
-Write the current counter number inside the box.
-Put that box into the first slot of the grid.
-Add 1 to the counter, and repeat this until you reach number 12.
-Arrange Them in Rows
-The computer automatically fills the slots from left to right, moving down to the next row when a line is full:
-below is the hours
+this is called part one of just why notecard.
+Generate 12 empty square boxes numbered sequentially from 1 to 12.
+
+They must automatically arrange themselves exactly like this:
+
 Row 1: 1, 2, 3
 
 Row 2: 4, 5, 6
@@ -17,6 +11,8 @@ Row 2: 4, 5, 6
 Row 3: 7, 8, 9
 
 Row 4: 10, 11, 12
+
+The Custom Time Dataset
 
 below hours are are hours rule
 
