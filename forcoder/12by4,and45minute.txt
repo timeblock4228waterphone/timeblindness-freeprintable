@@ -15,13 +15,11 @@ Generate 12 empty square boxes numbered sequentially from 1 to 12.
 
 They must automatically arrange themselves exactly like this:
 
-Row 1: 1, 2, 3
-
-Row 2: 4, 5, 6
-
-Row 3: 7, 8, 9
-
-Row 4: 10, 11, 12
+Draw a 4-row by 3-column grid of 12 boxes numbered 1 to 12 in order:
+Row 1: [ 1] [ 2] [ 3]
+Row 2: [ 4] [ 5] [ 6]
+Row 3: [ 7] [ 8] [ 9]
+Row 4: [10] [11] [12]
 
 The Custom Time Dataset
 the next is minute 
