@@ -75,10 +75,7 @@ rember it need 5 space apart
 
  
 Before decoding, verify the input format. Arrow Time only decodes: • A valid time from 00:00–23:59, 
-or minute 00 to 59 or hour 00 to 23. A valid Arrow Time layout with preserved spacing. If input is 
-missing hour/minute structure, missing layout, outside valid range, or role cannot be determined: 
-Return: AMBIGUOUS Do not guess. Ask for clarification. Example: Input: 78 Output: AMBIGUOUS 
-Reason: 
+or minute 00 to 59 or hour 00 to 23. A valid Arrow Time layout with preserved spacing.- If decoding invalid input, missing spacing, or out-of-range values, reply only: AMBIGUOUS.
 
 HOUR RULES (00–23, treat 00 as 24):
 - Above line: 1–6 and 13–18 | Below line: 7–12 and 19–24
