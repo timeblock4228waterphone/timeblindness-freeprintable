@@ -24,30 +24,8 @@ hours are
 and00 hours)
 
 
-part 2 write 1-12 like this 3 accross and 4 down 1,2,3 top. 4,5,6, next, down, 7 ,8,9 then down bottom, 10, 11,12
-\[DATA STRUCTURE: 3x4 GRID]
-rember this called clock space jammer because they are compact.
-Row 1: [1, 5] | [2, 10] | [3, 15]
-Row 2: [4, 20] | [5, 25] | [6, 30]
-Row 3: [7, 35] | [8, 40] | [9, 45]
-Row 4: [10, 50] | [11, 55] | [12, 00]
 
-
-
-( next remember the minute is 5,10,15,20,25,30,35,40,45,50,55,00 how to round down 
-is 5=5,6,7,8,9 .10=10,11,12,13,14 .15=15,16,17,18,19. 20=20,21,22,23,24. 
-25=25,26,27,28,29 30=30,31,32,33,34
-.35=35,36,37,38,39. 40=40,41,42,43,44. 45=45,46,47,48,49. 50=50,51,52,53,54. 55=55,56,57,58,59. 00=00,01,02,03,04.
-
-
-hours are
-
-1=13 2=14 3=15 4=16 5=17 6=18 7=19 8=20 9=21 10=22 11=23 12=00 ( remove the 13hours up to 23 hours
-
-
-and00 hours)
-
-part 3
+part 2
 
 
 write 
@@ -89,7 +67,7 @@ highlight the rows only not the acutal minute and hour for it.
 60 =00 for minute
 
 
-part 4
+part 3
 
 
 
@@ -196,7 +174,7 @@ OUTPUT FORMAT FOR PART 2: output current arrow.
    Display: [   ] | [   ] | [   ] | [  ]
 
 
-part 5
+part 4
 this one you put into google and then it shows the 45 minute with 2 down and 4 acrross
 
 rember this is called codgrid. the reason to remember what is call it so you can refence it.
@@ -268,7 +246,7 @@ Use the matching shape to read the time quickly
 No clock image
 
 
-this one is part 6 called 15 minute
+this one is part 5 called 15 minute
 it would look like
 Row 1: [15]
 Row 2: [45] | [15]
