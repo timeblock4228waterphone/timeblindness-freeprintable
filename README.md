@@ -7,6 +7,18 @@
 
 
 
+how did it start. it started with making 2 zine one with hour and the other one was minute. how it was made was i wrote 1 and 7, the next page i wrote 2,8 then 3,9 then 4,10 then 5,11 and lastly 6,12 as the hours
+then the next 
+one hours it would 
+be the same but miliply it by 5 to make hours i would grab it flip
+then i thought use it as with just paper and pen
+then it change into a printable
+then phone screen
+and now the newest thing is .txt files
+that show it when you feed it ai
+
+
+
 
  
 <img width="525" height="618" alt="stevewantachickentoeat" src="https://github.com/user-attachments/assets/36d17cda-9638-4a26-96b0-6644f2efdcba" />
