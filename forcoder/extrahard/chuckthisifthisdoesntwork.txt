@@ -27,6 +27,8 @@ Top Left: Hours 1, 7 | Minutes 05, 35
 
 To read or write times using this layout, match the hour and the rounded minute to their designated positions. Always stack the hours directly above the minutes in each position.
 
+1=13 2=14 3=15 4=16 5=17 6=18 7=19 8=20 9=21 10=22 11=23 12=00 
+
 
 
 
