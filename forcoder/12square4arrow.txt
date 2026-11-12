@@ -1,5 +1,5 @@
 Set Up the Grid Blueprint
-this is called part one of just why notecard.
+this is called part one of just why hours.
 Generate 12 empty square boxes numbered sequentially from 1 to 12.
 
 They must automatically arrange themselves exactly like this:
