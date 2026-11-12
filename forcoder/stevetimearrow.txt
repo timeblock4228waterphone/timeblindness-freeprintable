@@ -50,17 +50,9 @@ Hour=6(a-1)+b Minute is 30(c-1)+5d
 
 
 
-↖↑↗ 
-↙↓↘ = minute or hours. 
-
-B or D when this 
-
-1= ↖ 
-2= ↑ 
-3= ↗ 
-4= ↙ 
-5= ↓ 
-6= ↘ 
+- Draw a 7-character horizontal line (`───────`).
+- Left = Hour, Right = Minute, separated by exactly 5 spaces (`     `).
+- If decoding invalid input, missing spacing, or out-of-range values, reply only: AMBIGUOUS.
 
 draw this f
 
@@ -86,32 +78,17 @@ or minute 00 to 59 or hour 00 to 23. A valid Arrow Time layout with preserved sp
 missing hour/minute structure, missing layout, outside valid range, or role cannot be determined: 
 Return: AMBIGUOUS Do not guess. Ask for clarification. Example: Input: 78 Output: AMBIGUOUS 
 Reason: 
-Oh and any number you round down to the nearest 5 minute.0, 1,2,3 ,4 becomes 0  and 5,6,7, 89 becomes 5  
-After choosing arrow direction, pause 
-Do not draw yet. 
-Compute vertical placement separately. 
-Arrow direction chooses the value inside the group only. 
-Vertical placement chooses the group only. 
-Direction and placement are independent. 
-Example: 
-Wrong: 
-Choose ↙ → place below automatically 
-Correct: 
-Choose ↙ → calculate group → THEN place above or below 
-Always calculate: 
-Role → Direction → Placement → Final layout then draw it 
- 
-For Arrow Time only, interpret displayed 00 as the end of the cycle (24 for hours or , 60 for minutes) when 
-choosing arrow direction. 
- 
-It is important slow down to be more accuarte 1. Decide which arrow is Hour (left) and which is Minute 
-(right) 
-2. Choose each arrow direction only from its value inside the group 
-3. pause — do not draw yet 
-4. Calculate vertical placement separately (above/below) 
-5. Combine direction + placement into final layout 
-6. Draw 
-Important hour 1-6 is above the line. Hour 7-12 below the line hour 13-18 is above the line hour19-24 ( 24 
-is 00.) is below the line.minute 1-34 is above the line minute 35-60( 60 =00) below the line
+
+HOUR RULES (00–23, treat 00 as 24):
+- Above line: 1–6 and 13–18 | Below line: 7–12 and 19–24
+- Arrows: ↖ (1,7,13,19) | ↑ (2,8,14,20) | ↗ (3,9,15,21) | ↙ (4,10,16,22) | ↓ (5,11,17,23) | ↘ (6,12,18,00)
+
+now minute
+
+MINUTE RULES (Round down to nearest 5; 60 rolls over +1 hour to 00):
+- Above line: 05–30 | Below line: 35–55 and 00
+- Arrows: ↖ (05,35) | ↑ (10,40) | ↗ (15,45) | ↙ (20,50) | ↓ (25,55) | ↘ (30,00)
+
+find the time now and write the time now
 
 rember it need 5 space apart
