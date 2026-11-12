@@ -269,7 +269,18 @@ Inside each cell, list the 3 numbers together. Highlight the numbers that match 
 
 ignore the minute now.
 
-import for ai to know no minute doesnt start with 00 it start with 5 no doesnt it start with 00 for hour. because there is math equaiotn called time arrow that if it was 00 then the equiton would not make sense.
+
+
+also note to ai never ever start it with 00 hour or 5 minute as row 1
+dont make it look
+
+where it says 12, 00 as the start becasue it would affect the rule for cogrid visually or the time arrow rule
+
+becasue  if time start with 00 in the grid it would look like
+↑↓=1:30,↗→=2:15,↙↑=3:00,↙←=3:45
+,↓ ↓=4:30,↘→=5:15, ↖↑=6:00, = ↖ ← =6:45
+and that is hard so no dont start with a 00 as the first grid for 3 by 4.
+
 
 for this one you draw 2 across and 4 down grid and the 
 left grid 
