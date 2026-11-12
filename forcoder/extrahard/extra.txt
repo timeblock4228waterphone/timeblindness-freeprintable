@@ -1,6 +1,7 @@
  for hours 1=13 2=14 3=15 4=16 5=17 6=18 7=19 8=20 9=21 10=22 11=23 12=00 
 
 
+part 2
 
 Set Up the Grid Blueprint
 this is called "part one of just verison hours"
@@ -40,6 +41,8 @@ write it only text only
 
 ///
 
+part 3
+
 ↖↑↗
 ↙↓↘
 
@@ -64,6 +67,57 @@ Row 3: [35] | [ 40] | [45]
 Row 4: [ 50] | [ 55] | [00]
 
 Round the minutes down to the nearest 5-minute increment 00-04→00, 05-09→05, 10-14→10, 15-19→15, 20-24→20, 25-29→25, 30-34→30, 35-39→35, 40-44→40, 45-49→45, 50-54→50, 55-59→55
+
+
+part 4
+
+okay break it down
+this is called 2 by 3
+what is minute
+rember this is called mini pack 2 by 3 size
+
+write 1-12 like this 3 accross and 2 top left 1,7 middle, 2,8 then right 3,9 , then bottom 
+left 4,10 then bottom right 5,11 then bottom right 6,12
+
+hours
+is
+
+• Top Left | Top Middle | Top Right
+• Bottom Left | Bottom Middle | Bottom Right
+
+
+• Top Left: 1, 7, 13, 19
+• Top Middle: 2, 8, 14, 20
+• Top Right: 3, 9, 15, 21
+• Bottom Left: 4, 10, 16, 22
+• Bottom Middle: 5, 11, 17, 23
+• Bottom Right: 6, 12, 18, 00
+
+
+ Find the Minute Block (Bottom Line of Text)
+
+To read or write times using this layout, match the hour and the rounded minute to their designated positions. Always stack the hours directly above the minutes in each position.
+• Top Left: 05, 35
+• Top Middle: 10, 40
+• Top Right: 15, 45
+• Bottom Left: 20, 50
+• Bottom Middle: 25, 55
+• Bottom Right: 30, 00
+
+
+
+
+
+- Round the minutes down to the nearest 5-minute increment 00-04→00, 05-09→05, 10-14→10, 15-19→15, 20-24→20, 25-29→25, 30-34→30, 35-39→35, 40-44→40, 45-49→45, 50-54→50, 55-59→55
+
+show below this
+
+Row 1: [1,7,   5,35] | [2,8, 10,40] | [3,9, 15,45]
+Row 2: [4,10,  20,50] | [5,11, 25,55] | [6,12, 30,00]
+
+for hours show only 1-12 not the other 12 hours.
+
+okay highlight time now
 
 
 
