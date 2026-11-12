@@ -8,58 +8,15 @@
 
 
 
- \ /
-
-
-
-(:D ))-
-
-
-
- / \\
-
-(((( Number 1 rule is how to read all this is read the files how you read a facebook post picture first intrustin later ))) it would make much easer to readd)
-TL:DR the one to look at for the first 2 is 
-7-Time_Blindness_Multi_Tool.pdf
-1-a-low-spoon-checklist
-
-1-a-low-spoon-checklist(2).pdf
-
-
-
-( the older version have the wrong range of number)
-
-Rule #1: Always round down. Grab the nearest block behind the current time (6-9-breakd... p. 4).Rule #2: Pick only ONE system. The sheet contains 9 options so you don't have to flip pages, but you should only look at one at a time (6-9-breakd... p. 2).Rule #3: Print and fold. Print the file, fold it to fit your wallet, and consider laminating it with packing tape for durability.
-
-Attention Developers making apps from this CC0 PDF:Rule 1: Time blocks must be binary split exactly from minutes 1-30 and 31-59. Do not use 5-minute roundings like 5-30.Rule 2: The 45-minute tracking anchor must strictly round down to the nearest interval, not up.
-
-
-This is a layered time-reference system for ADHD/time blindness. Different parts are meant for different energy levels. You do not need to use all systems at once.
-
-It a visaul way to see time in printable.
-(( all these can be printed in black and white ))
-It makes so that way 
-
-Number 1 rule you round down to the nearest number of the 9 system 
-( read this)
-(also if you see a time thing with 9 systme in one there is reason for that. The reason is that in school you wont have time to look at 3 seprate page to look through it to see the time this way it is only 1 page on paper )
-
-You do not need to printal all the pages. 8 arrow times is not neccary and mental stimming is extra. 
-The reason some page is duplicated is because there is version that is 12 hours or 24 hours the work the same but one is militarty time and the other one is not military time
-
-
-
-for low enegry look at 6 unit one  or the stick man and the task check off one
-
-
-It helps you see where you are in the day, understand the next few hours, and track time using AM/PM, 24-hour time, grids, and clock references.
+ 
 <img width="525" height="618" alt="stevewantachickentoeat" src="https://github.com/user-attachments/assets/36d17cda-9638-4a26-96b0-6644f2efdcba" />
 
 
 How it works it is works with your energy level with time.
 it account for high level and low level
 
-( cc01 no right reserve means anyone can edit to make it their own verson or copy it is in yhe public domain )
+this is a printable for adhd for timbliness 
+alot of txt files
 
 
 
@@ -101,9 +58,7 @@ yup
 
 
 
-Size Update july 14 this has an update where it says 19-24 instead of 19-00
-UPDATE June 8 there is cheat sheet for it
-it can fit into a wallet if you fold it. this one is the only one to print if you are limited to print one page of all of then. print the school or work one . the page to print the last page the other one is bigger in page. school or work 9 system on one page and you can lamite this by using packing tape. this one you only need 1 page of the 3 same thing =
+
 
 
 
@@ -152,6 +107,9 @@ License is cco1 public domain no right reserved. meaning if you like it and want
   
  /  \ \
 (if you see this . this is my signtuare it a double chin happy. butterlfy named steve) this is who you give credit to.
+
+
+Below is a free fidget toy you make
 
 how to make a free fidget toy you google https://www.youtube.com/watch?v=_4p_QxWtGYc&t=83s or 
 
