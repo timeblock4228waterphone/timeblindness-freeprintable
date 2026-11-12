@@ -248,7 +248,7 @@ No clock image
 
 this one is part 5 called 15 minute
 it would look like
-Row 1: [15]
+Row 1: [00]
 Row 2: [45] | [15]
 Row 3: [ 30] 
 
