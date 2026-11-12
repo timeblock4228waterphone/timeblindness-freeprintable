@@ -1,6 +1,47 @@
+Set Up the Grid Blueprint
+this is called "part one of just why hours"
+Generate 12 empty square boxes numbered sequentially from 1 to 12.
+
+They must automatically arrange themselves exactly like this:
+
+Draw a 4-row by 3-column grid of 12 boxes numbered 1 to 12 in order:
+Row 1: [ 1] [ 2] [ 3]
+Row 2: [ 4] [ 5] [ 6]
+Row 3: [ 7] [ 8] [ 9]
+Row 4: [10] [11] [12]
+
+The Custom Time Dataset
+
+below hours are are hours rule
+
+1=13 2=14 3=15 4=16 5=17 6=18 7=19 8=20 9=21 10=22 11=23 12=00 
+
+
+
+If the minute is between 0 and 14: Pick the ↑ arrow.
+If the minute is between 15 and 29: Pick the → arrow.
+If the minute is between 30 and 44: Pick the ↓ arrow.
+If the minute is between 45 and 59: Pick the ← arrow.
+
+If the new Minute is 60 or more:
+Subtract 60 from the minutes (so 65 becomes 5).
+Add 1 to the Hour.
+If the new Hour becomes 24: Reset the hour back to 00.
+Run Part 3 and Part 4 again using these new numbers so the grid updates and the arrow spins to its new position!
+
+write it only text only
+find the tiem now
+( remove any clock if there is any)
+
+
+
+
 Row 1:  [  ] |  [  ] | [  ] |  [  ]
 Row 2:  [  ] |  [  ] |  [  ] | [  ]
 
+
+
+below it looks like "part one of just why hours" use only arrow for it
 
 Row 1: [  ] [  ] [  ]
 Row 2: [  ] [  ] [  ]
