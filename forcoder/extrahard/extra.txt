@@ -204,21 +204,47 @@ codgrid on the top left
 ,
  hours grid is bottom left
 
-next part one of minute grid is bottom right
+ minute grid is bottom right
 
-is
+2 by 3 is top right
+and 15 mintue is top right 
+
+the next step
+
+rember the rules but now 
+
+for codgrid look like this
+Row 1:  [  ] |  [  ] | [  ] |  [  ]
+Row 2:  [  ] |  [  ] |  [  ] | [  ]
+
+x out current time
+
+next
+
+for minute grid
+
+Row 1: [  ] [  ] [  ]
+Row 2: [  ] [  ] [  ]
+Row 3: [  ] [  ] [  ]
+Row 4: [  ] [  ] [  ]
+use the arrow
+
+next 
+
+for  minute grid
+
+Row 1: [  ] [  ] [  ]
+Row 2: [  ] [  ] [  ]
+Row 3: [  ] [  ] [  ]
+Row 4: [  ] [  ] [  ]
+use arrow for time now
 
 
+next
 
-show below this
-
-Row 1 (Top):
-[  1, 7  ] | [  2, 8  ] | [  3, 9  ]
-[ 05, 35 ] | [ 10, 40 ] | [ 15, 45 ]
-
-Row 2 (Bottom):
-[ 4, 10  ] | [ 5, 11  ] | [ 6, 12  ]
-[ 20, 50 ] | [ 25, 55 ] | [ 30, 00 ]
+for 2 by 3 
+Row 1: [  ] [  ] [  ]
+Row 2: [  ] [  ] [  ]
 
 
 
