@@ -16,8 +16,7 @@ for minute
 • C=1 (5–34) → above the line
 • C=2 (35-04) 60=00 → below the line
 
-
-Minutes	05 to 34 (Rounds to 05–30)	35 to 04 (Rounds to 35–60/00)
+round time for minue
 
 • 00–04 → 00
 • 05–09 → 05
@@ -43,6 +42,8 @@ Hour=6(a-1)+b Minute is 30(c-1)+5d
 • Hours 7–12: Group a=2. Solve for b.
 • Hours 13–18: Group a=3. Solve for b.
 • Hours 19–24 (00): Group a=4. Solve for b. (Treat 00 as 24).
+
+ B or D when this 1= ↖ 2= ↑ 3= ↗ 4= ↙ 5= ↓ 6= ↘
 
 
 
