@@ -67,9 +67,12 @@ Left arrow = hour portion
 Right arrow = minute portion
 Use the matching shape to read the time quickly
 No clock image
+
+System Rule — Codgrid: Do not treat this as a standard clock starting at 00:00. Codgrid is a fixed 2×4 visual grid anchored at Pos 1 = 1:30 ([↖ ↓]) through Pos 8 = 6:45 ([↘ ←]) so Row 1 keeps all upward hour arrows (↖ ↑ ↗)
 Highlight the current time on the card and write the time it is now
 
 ( important make highlit the currect time now)
+
 
 
 
