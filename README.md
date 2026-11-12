@@ -17,6 +17,8 @@ then phone screen
 and now the newest thing is .txt files
 that show it when you feed it ai
 
+it is 100 percent free no paywalll
+
 
 
 
