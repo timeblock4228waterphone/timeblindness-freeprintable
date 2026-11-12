@@ -25,48 +25,12 @@ and00 hours)
 
 
 
-part 2
-
-this is called 4 part 2 part
-
+PART 2:  called 4 PART 2 PART (24h & Exact Min — bold active row only, not individual numbers)
 Hours (Left)          Minutes (Right)
 [ 1–6 ]               [ 1–30 ]
-[ 7–12 ]              [ 31–60 ] (60 = 00)
+[ 7–12 ]              [ 31–60 ] (60=00)
 [ 13–18 ]
-[ 19–24 ] (24 = 000)
-
-
-
-write 
-this is called 4 part 2 part
-left side 4 down and 1 acrros
-right side right 2 down an 1 accross
-
-okay rember it is called spilt time into 4 part and 2 part
-
-left side
-hours 
-it says 
-as the face.
-
-Hours Grid (Left)
-
-\
-
-
-then on right side 
-is minute.
-with the two down 
-
-hight litght the time now
-
-highlight the rows only not the acutal minute and hour for it.
-
-24 =000 for hours
-
-
-60 =00 for minute
-
+[ 19–24 ] (24=000)
 
 part 3
 
@@ -118,13 +82,6 @@ Display: [ ↓ ] | [ → ] | [ ↑ ] | [ ← ]
 
 
 
-STRICT OUTPUT FORMAT (FRONT ONLY):
-PART 1:
-Top Row:    [ ] | [ ] | [ ]
-Bottom Row: [ ] | [ ] | [ ]
-
-PART 2:
-Display: [ ] | [ ] | [ ] | [ ]
 
 
 
@@ -141,13 +98,14 @@ If Hour and Minute land in the same box, write them as [Hour / Minute]. Leave em
 
 
  
-   Top Row:    [  ] | [   ] | [   ]
-   Bottom Row: [   ] | [ ] | [   ]
 
-below
-OUTPUT FORMAT FOR PART 2: output current arrow.
+STRICT OUTPUT FORMAT (FRONT ONLY):
+PART 1:
+Top Row:    [ ] | [ ] | [ ]
+Bottom Row: [ ] | [ ] | [ ]
 
-   Display: [   ] | [   ] | [   ] | [  ]
+PART 2:
+Display: [ ] | [ ] | [ ] | [ ]
 
 
 
@@ -237,41 +195,13 @@ Row 3: [ 30]
 30=30-44,
 45=45-59.
 
-okay part 6
-
-"Draw a single side-by-side grid that is 2 blocks wide and 4 rows down. 
-
-Inside each cell, list the 3 numbers together. Highlight the numbers that match the current time with parentheses ()
 
 
-
-ignore the minute now.
-
-
-
-also note to ai never ever start it with 00 hour or 5 minute as row 1
-dont make it look
-
-where it says 12, 00 as the start becasue it would affect the rule for cogrid visually or the time arrow rule
-
-becasue  if time start with 00 in the grid it would look like
-↑↓=1:30,↗→=2:15,↙↑=3:00,↙←=3:45
-,↓ ↓=4:30,↘→=5:15, ↖↑=6:00, = ↖ ← =6:45
-and that is hard so no dont start with a 00 as the first grid for 3 by 4.
-
-
-for this one you draw 2 across and 4 down grid and the 
-left grid 
-Row 1 =[1] | [2] | [3]
-row 2= =[4] | [5] | [6]
-row 3= [7] | [8] | [9]
-row 4 ==[10] | [11] | [12]
-and now the right side says row 
-row 1 =[13] | [14] | [15]
-row 2 =[16] | [17] | [18]
-row 3 =[19] | [20] | [21]
-row 4  =[22] | [23] | [00]
-he time now for the grid for now olcok
+"PART 6: 2x4 SIDE-BY-SIDE HOURS (Always start at 1, never 00. Ignore minutes. Wrap active 24h in parentheses)
+Row 1: [ 1, 2, 3 ]    | [ 13, 14, 15 ]
+Row 2: [ 4, 5, 6 ]    | [ 16, 17, 18 ]
+Row 3: [ 7, 8, 9 ]    | [ 19, 20, 21 ]
+Row 4: [ 10, 11, 12 ] | [ 22, 23, 00 ]
 
 
 
