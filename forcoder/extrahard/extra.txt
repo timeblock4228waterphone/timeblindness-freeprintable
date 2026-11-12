@@ -272,7 +272,7 @@ do not change anything
 for the 15 minute do not change anything 
 keep like
 
-Row 1: [15]
+Row 1: [00]
 Row 2: [45] | [15]
 Row 3: [ 30] 
 
