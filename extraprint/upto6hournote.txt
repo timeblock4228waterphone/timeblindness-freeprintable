@@ -41,18 +41,18 @@ use the arrow
 
 okay break it down
 this is called 2 by 3
-To show the current time, bold the active **Hour** (top line) and **Minute** (bottom line) inside the 2x3 grid below:
+To show the current time, bold the active **Hour** (top line)  (bottom line) inside the 2x3 grid below:
 
 * **Hours:** Use standard 12-hour format (`1–12`).
 
  this is hours,
-Row 1 (Top):    [ 1,7  ] | [ 2,8  ] | [ 3,9  ]
-Row 2 (Bottom): [ 4,10  ] | [ 5,11  ] | [ 6,12 ]
+Row 1 (Top):    [ 1 ] | [ 2  ] | [ 3  ]
+Row 2 (Bottom): [ 4 ] | [ 5  ] | [ 6 ]
 
 1=13 2=14 3=15 4=16 5=17 6=18 7=19 8=20 9=21 10=22 11=23 12=00 
 
 
-If Hour and Minute land in the same box, write them as [Hour / Minute]. Leave empty boxes as [ ].
+use only hours. land in the same box, write them as . Leave empty boxes as [ ].
 
 
  
