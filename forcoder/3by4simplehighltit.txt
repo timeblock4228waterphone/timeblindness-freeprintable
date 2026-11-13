@@ -1,4 +1,7 @@
- CLOCK SPACE JAMMER (3x4 Grid — Format: [Hour, Minute] using 12h & 5-min rounded. Bold active Hour & active Minute)
+this is how to look at understnad the 3 by 4grid
+
+
+CLOCK SPACE JAMMER (3x4 Grid — Format: [Hour, Minute] using 12h & 5-min rounded. Bold active Hour & active Minute)
 Row 1: [1, 05] | [2, 10] | [3, 15]
 Row 2: [4, 20] | [5, 25] | [6, 30]
 Row 3: [7, 35] | [8, 40] | [9, 45]
