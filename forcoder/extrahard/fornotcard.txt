@@ -1,0 +1,161 @@
+this is for notecard last very short
+
+
+
+
+part 1
+
+
+
+belwo are arrows
+1. MINUTE GRID (Left Side - 3x4 Grid):
+
+
+
+
+this is for notecard last very short part 1 ↖↑↗ ↙↓↘ belwo are arrows these this is called Minute Grid are hours. ↖=1,7,13,19↑=2,8,14,20.↗=3,9,15,21 ↙=4,10,16,22.↓=5,11,17,23.↘=6,12,18,00 put the arrow inside the minute .
+- MULTI-ARROW SORTING RULE: If two times share the same minute box, NEVER sort by chronological time. ALWAYS sort the arrows strictly by their Step number from 1 to 6 (Order: ↖ then ↑ then ↗ then ↙ then ↓ then ↘). Example: [↖↘], never [↘↖].
+
+put the arrow inside the minute .
+
+okay now
+below are minute
+make a 3 acrross by 4  downgrid
+
+=== VISUAL TEMPLATE ===
+MINUTE GRID
+┌───────┐ ┌───────┐ ┌───────┐
+│       │ │       │ │       │
+│       │ │       │ │       │
+└───────┘ └───────┘ └───────┘
+┌───────┐ ┌───────┐ ┌───────┐
+│       │ │       │ │       │
+│       │ │       │ │       │
+└───────┘ └───────┘ └───────┘
+┌───────┐ ┌───────┐ ┌───────┐
+│       │ │       │ │       │
+│       │ │       │ │       │
+└───────┘ └───────┘ └───────┘
+┌───────┐ ┌───────┐ ┌───────┐
+│       │ │       │ │       │
+│       │ │       │ │       │
+└───────┘ └───────┘ └───────┘
+
+
+Row 1: [5] | [ 10] | [ 15]
+Row 2: [ 20] | , 25] | [30]
+Row 3: [35] | [ 40] | [45]
+Row 4: [ 50] | [ 55] | [00]
+
+Round the minutes down to the nearest 5-minute increment 00-04→00, 05-09→05, 10-14→10, 15-19→15, 20-24→20, 25-29→25, 30-34→30, 35-39→35, 40-44→40, 45-49→45, 50-54→50, 55-59→55
+
+draw arrow like htis.
+
+
+[ ↖ ↑ ↗ ]
+[ ↙ ↓ ↘ ]
+
+
+   - Leave inactive boxes as [ ]
+
+
+okay break it down
+this is called 2 by 3
+To show the current time, bold the active **Hour** (top line)  (bottom line) inside the 2x3 grid below:
+
+* **Hours:** Use standard 12-hour format (`1–12`).
+
+ this is hours,
+Row 1 (Top):    [ 1 ] | [ 2  ] | [ 3  ]
+Row 2 (Bottom): [ 4 ] | [ 5  ] | [ 6 ]
+
+1=13 2=14 3=15 4=16 5=17 6=18 7=19 8=20 9=21 10=22 11=23 12=00 
+
+
+use only hours. land in the same box, write them as . Leave empty boxes as [ ].
+
+
+
+
+\
+
+
+
+
+
+
+for hours show only 1-12 not the other 12 hours.
+
+
+
+
+part 3
+
+
+: CODGRID (2x4 Front-only — bold active 45-min window; Left arrow=Hr, Right=Min)
+Row 1: [↖ ↓] 1:30 | [↑ →] 2:15 | [↗ ↑] 3:00 | [↗ ←] 3:45
+Row 2: [↙ ↓] 4:30 | [↓ →] 5:15 | [↘ ↑] 6:00 | [↘ ←] 6:45
+(Windows repeat every 6h: 1:30=1:30-2:14, 2:15=2:15-2:59, 3:00=3:00-3:44, 3:45=3:45-4:29, 4:30=4:30-5:14, 5:15=5:15-5:59, 6:00=6:00-6:44, 6:45=6:45-7:29)
+
+it would look like
+
+
+what the output looks like
+
+
+
+
+=== VISUAL TEMPLATE ===
+MINUTE GRID
+┌───────┐ ┌───────┐ ┌───────┐
+│       │ │       │ │       │
+│       │ │       │ │       │
+└───────┘ └───────┘ └───────┘
+┌───────┐ ┌───────┐ ┌───────┐
+│       │ │       │ │       │
+│       │ │       │ │       │
+└───────┘ └───────┘ └───────┘
+┌───────┐ ┌───────┐ ┌───────┐
+│       │ │       │ │       │
+│       │ │       │ │       │
+└───────┘ └───────┘ └───────┘
+┌───────┐ ┌───────┐ ┌───────┐
+│       │ │       │ │       │
+│       │ │       │ │       │
+└───────┘ └───────┘ └───────┘          
+
+draw an arrow 
+
+[ ↖ ↑ ↗ ]
+[ ↙ ↓ ↘ ]
+
+if there is two time.
+
+
+these are the option
+
+2x3 HOURS
+  [ ] | [ ] | [ ]
+  [ ] | [ ] | [ ]
+draw an x 
+
+CODGRID
+     [ ] | [ ] | [ ] | [ ]
+      [ ] | [ ] | [ ] | [ ]
+draw an x
+Leave inactive boxes as [ ] how to write it left side would be Minute Grid right side bottom right would be 2 by 3 and bottom top would beCODGRID
+
+
+
+for 2 by 3 draw and x
+
+
+fir cogrid drw an x
+
+
+for minute draw arrow only
+
+Leave inactive boxes as [ ] write now for the time 
+ use it as the example
+
+
