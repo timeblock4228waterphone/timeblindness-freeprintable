@@ -77,16 +77,28 @@ Row 2: [↙ ↓] 4:30 | [↓ →] 5:15 | [↘ ↑] 6:00 | [↘ ←] 6:45
 it would look like
 
 
+show this below
 
-MINUTE GRID               2x3 HOURS
-[ ] [ ] [ ]               [ ] | [ ] | [ ]
-[ ] [ ] [ ]               [ ] | [ ] | [ ]
+
+
+
+MINUTE GRID               
+[ ] [ ] [ ]               
+[ ] [ ] [ ]               
 [ ] [ ] [ ]
 [ ] [ ] [ ]               
-CODGRID
-                          [ ] | [ ] | [ ] | [ ]
-                          [ ] | [ ] | [ ] | [ ]
 
+draw an arrow
+
+2x3 HOURS
+  [ ] | [ ] | [ ]
+  [ ] | [ ] | [ ]
+draw an x 
+
+CODGRID
+     [ ] | [ ] | [ ] | [ ]
+      [ ] | [ ] | [ ] | [ ]
+draw an x
 Leave inactive boxes as [ ] how to write it left side would be Minute Grid right side top right would be 2 by 3 and bottom right would beCODGRID
 
 
