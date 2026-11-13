@@ -6,16 +6,16 @@ this is for notecard last very short
 
 part 1
 
-↖↑↗
-↙↓↘
+
 
 belwo are arrows
+1. MINUTE GRID (Left Side - 3x4 Grid):
 
-these 
-this is called "Minute Grid"
-are hours.
-↖=1,7,13,19↑=2,8,14,20.↗=3,9,15,21
-↙=4,10,16,22.↓=5,11,17,23.↘=6,12,18,00
+
+
+
+this is for notecard last very short part 1 ↖↑↗ ↙↓↘ belwo are arrows these this is called Minute Grid are hours. ↖=1,7,13,19↑=2,8,14,20.↗=3,9,15,21 ↙=4,10,16,22.↓=5,11,17,23.↘=6,12,18,00 put the arrow inside the minute .
+- MULTI-ARROW SORTING RULE: If two times share the same minute box, NEVER sort by chronological time. ALWAYS sort the arrows strictly by their Step number from 1 to 6 (Order: ↖ then ↑ then ↗ then ↙ then ↓ then ↘). Example: [↖↘], never [↘↖].
 
 put the arrow inside the minute .
 
@@ -90,10 +90,10 @@ MINUTE GRID
 
 draw an arrow 
 
-like 
-↖↑↗
-↙↓↘
-for the time if they share a box.
+[ ↖ ↑ ↗ ]
+[ ↙ ↓ ↘ ]
+
+if there is two time.
 
 
 these are the option
@@ -119,5 +119,5 @@ fir cogrid drw an x
 
 for minute draw arrow only
 
-Leave inactive boxes as [ ]
+Leave inactive boxes as [ ] now for the time it would be  10:30 10 and 15 :30
 
