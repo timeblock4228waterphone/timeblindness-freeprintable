@@ -87,6 +87,8 @@ CODGRID
                           [ ] | [ ] | [ ] | [ ]
                           [ ] | [ ] | [ ] | [ ]
 
+Leave inactive boxes as [ ] how to write it left side would be Minute Grid right side top right would be 2 by 3 and bottom right would beCODGRID
+
 
 
 for 2 by 3 draw and x
