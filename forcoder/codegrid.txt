@@ -1,5 +1,4 @@
-part 4
-PART 4: CODGRID (2x4 Front-only — bold active 45-min window; Left arrow=Hr, Right=Min)
+: CODGRID (2x4 Front-only — bold active 45-min window; Left arrow=Hr, Right=Min)
 Row 1: [↖ ↓] 1:30 | [↑ →] 2:15 | [↗ ↑] 3:00 | [↗ ←] 3:45
 Row 2: [↙ ↓] 4:30 | [↓ →] 5:15 | [↘ ↑] 6:00 | [↘ ←] 6:45
 (Windows repeat every 6h: 1:30=1:30-2:14, 2:15=2:15-2:59, 3:00=3:00-3:44, 3:45=3:45-4:29, 4:30=4:30-5:14, 5:15=5:15-5:59, 6:00=6:00-6:44, 6:45=6:45-7:29)
