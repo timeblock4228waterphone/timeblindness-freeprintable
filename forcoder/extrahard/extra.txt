@@ -146,19 +146,13 @@ To read or write times using this layout, match the hour and the rounded minute 
 
 
 - Round the minutes down to the nearest 5-minute increment 00-04→00, 05-09→05, 10-14→10, 15-19→15, 20-24→20, 25-29→25, 30-34→30, 35-39→35, 40-44→40, 45-49→45, 50-54→50, 55-59→55
+part 5
 
-this one is part 5 
-it would look like
-Row 1: [15]
+below is called 15 minute
+ 15 MINUTE (Bold active quadrant: 00=00-14, 15=15-29, 30=30-44, 45=45-59)
+Row 1: [00]
 Row 2: [45] | [15]
-Row 3: [ 30] 
-
-
-15 minute
-00=00-14,
-15=15-29,
-30=30-44,
-45=45-59.
+Row 3: [30]
 
 okay
 split the screen into 4 part by 2 accross and 2 down
