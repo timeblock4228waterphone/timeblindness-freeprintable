@@ -8,15 +8,13 @@ To show the current time, bold the active **Hour** (top line) and **Minute** (bo
 
 * **Hours:** Use standard 12-hour format (`1–12`).
 
-
+ this is hours,
 Row 1 (Top):    [ 1,7  ] | [ 2,8  ] | [ 3,9  ]
 Row 2 (Bottom): [ 4,10  ] | [ 5,11  ] | [ 6,12 ]
 
 1=13 2=14 3=15 4=16 5=17 6=18 7=19 8=20 9=21 10=22 11=23 12=00 
 
-.
-   - Leave inactive boxes as [ ]
-
+\
 
 
 
@@ -28,10 +26,12 @@ show below this
 
 for hours show only 1-12 not the other 12 hours.
 
-draw x over it
+draw x in the box
 
 under this for hours
 
+.
+   - Leave inactive boxes as [ ]
 
 
  
