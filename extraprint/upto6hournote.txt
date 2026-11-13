@@ -51,29 +51,26 @@ Row 2 (Bottom): [ 4,10  ] | [ 5,11  ] | [ 6,12 ]
 
 1=13 2=14 3=15 4=16 5=17 6=18 7=19 8=20 9=21 10=22 11=23 12=00 
 
+
+If Hour and Minute land in the same box, write them as [Hour / Minute]. Leave empty boxes as [ ].
+
+
+ 
+   Top Row:    [  ] | [   ] | [   ]
+   Bottom Row: [   ] | [ ] | [   ]
+
+
+
 \
 
 
 
 
 
-show below this
-
-   - Leave inactive boxes as [ ]
 
 for hours show only 1-12 not the other 12 hours.
 
-draw x in the box
 
-under this for hours
-
-.
-   - Leave inactive boxes as [ ]
-
-
- 
-   Top Row:    [  ] | [   ] | [   ]
-   Bottom Row: [   ] | [ ] | [   ]
 
 
 part 3
