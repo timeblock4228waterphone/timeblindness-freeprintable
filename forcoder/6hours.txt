@@ -1,40 +1,8 @@
-
-write 
-this is called 4 part 2 part
-left side 4 down and 1 acrros
-right side right 2 down an 1 accross
-
-okay rember it is called spilt time into 4 part and 2 part
-
-left side
-hours 
-it says 
-as the face.
-
-Hours Grid (Left)
-
-• Row 1: "1–6"
-• Row 2: "7–12"
-• Row 3: "13–18"
-• Row 4: "19–24" (24 = 00 (midnight))
-
-
-then on right side 
-is minute.
-with the two down 
-
-Minutes Grid (Right)
-
-• Row 1: 1–30
-• Row 2: 31–60 (with 00 written as 60)
-
-hight litght the time now
-
-highlight the rows only not the acutal minute and hour for it.
-
-24 =000 for hours
-
-
-60 =00 for minute
+called 4 PART 2 PART (24h & Exact Min — bold active row only, not individual numbers)
+Hours (Left)          Minutes (Right)
+[ 1–6 ]               [ 1–30 ]
+[ 7–12 ]              [ 31–60 ] (60=00)
+[ 13–18 ]
+[ 19–24 ] (24=000)
 
 
