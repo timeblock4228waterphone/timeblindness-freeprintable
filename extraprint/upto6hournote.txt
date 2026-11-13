@@ -1,3 +1,9 @@
+
+this is for notecard last very short
+
+
+
+
 part 1
 
 ↖↑↗
@@ -54,7 +60,7 @@ Row 2 (Bottom): [ 4 ] | [ 5  ] | [ 6 ]
 
 use only hours. land in the same box, write them as . Leave empty boxes as [ ].
 
-
+draw an x only on it
  
    Top Row:    [  ] | [   ] | [   ]
    Bottom Row: [   ] | [ ] | [   ]
@@ -88,3 +94,9 @@ Row 2:  [  ] |  [  ] |  [  ] | [  ]
 
 x out current time
    - Leave inactive boxes as [ ]
+
+
+
+how to write it
+
+left side would be Minute Grid  right side top right would be 2 by 3 and bottom right would beCODGRID
