@@ -29,9 +29,9 @@ show below this
 for hours show only 1-12 not the other 12 hours.
 
 okay highlight time now
+---------------------------
 
-
-for human below explaition
+to show to human below
 
 why is the number crammed so much because in words document there was only space for the design this one
 
