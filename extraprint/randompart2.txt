@@ -29,6 +29,17 @@ Round the minutes down to the nearest 5-minute increment 00-04→00, 05-09→05,
 
 
 
+next
+
+for minute grid
+
+Row 1: [  ] [  ] [  ]
+Row 2: [  ] [  ] [  ]
+Row 3: [  ] [  ] [  ]
+Row 4: [  ] [  ] [  ]
+
+
+
 part 2
 
 : CODGRID (2x4 Front-only — bold active 45-min window; Left arrow=Hr, Right=Min)
