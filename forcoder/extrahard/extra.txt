@@ -183,10 +183,10 @@ use arrow for time now
 next
 
 for 2 by 3 
-Row 1 (Top):
+only show 
+Row 1 (Top):    [ 1,7 / 05,35 ] | [ 2,8 / 10,40 ] | [ 3,9 / 15,45 ]
+Row 2 (Bottom): [ 4,10 / 20,50 ] | [ 5,11 / 25,55 ] | [ 6,12 / 30,00 ]
 
-Row 1: [  ] [  ] [  ]
-Row 2: [  ] [  ] [  ]
 
 
 do not change anything
