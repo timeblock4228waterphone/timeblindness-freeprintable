@@ -117,3 +117,11 @@ Leave inactive boxes as [ ] write now for the time
  use it as the example
 
 
+
+also
+
+read this if you are human
+
+
+reason why this was made with without number because this was made with a boogie board lcd device and drawing this 50 times in week the first hing that would go would been number.
+
