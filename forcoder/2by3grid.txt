@@ -2,36 +2,18 @@
 
 okay break it down
 this is called 2 by 3
-what is minute
-rember this is called mini pack 2 by 3 size
+To show the current time, bold the active **Hour** (top line) and **Minute** (bottom line) inside the 2x3 grid below:
 
-write 1-12 like this 3 accross and 2 top left 1,7 middle, 2,8 then right 3,9 , then bottom 
-left 4,10 then bottom right 5,11 then bottom right 6,12
-
-hours
-is
-
-• Top Left | Top Middle | Top Right
-• Bottom Left | Bottom Middle | Bottom Right
+* **Hours:** Use standard 12-hour format (`1–12`).
 
 
-• Top Left: 1, 7, 13, 19
-• Top Middle: 2, 8, 14, 20
-• Top Right: 3, 9, 15, 21
-• Bottom Left: 4, 10, 16, 22
-• Bottom Middle: 5, 11, 17, 23
-• Bottom Right: 6, 12, 18, 00
+**Row 1 (Top):**
+[  1, 7  ] | [  2, 8  ] | [  3, 9  ]
+[ 05, 35 ] | [ 10, 40 ] | [ 15, 45 ]
 
-
- Find the Minute Block (Bottom Line of Text)
-
-To read or write times using this layout, match the hour and the rounded minute to their designated positions. Always stack the hours directly above the minutes in each position.
-• Top Left: 05, 35
-• Top Middle: 10, 40
-• Top Right: 15, 45
-• Bottom Left: 20, 50
-• Bottom Middle: 25, 55
-• Bottom Right: 30, 00
+**Row 2 (Bottom):**
+[ 4, 10  ] | [ 5, 11  ] | [ 6, 12  ]
+[ 20, 50 ] | [ 25, 55 ] | [ 30, 00 ]
 
 
 
@@ -41,13 +23,7 @@ To read or write times using this layout, match the hour and the rounded minute 
 
 show below this
 
-Row 1 (Top):
-[  1, 7  ] | [  2, 8  ] | [  3, 9  ]
-[ 05, 35 ] | [ 10, 40 ] | [ 15, 45 ]
 
-Row 2 (Bottom):
-[ 4, 10  ] | [ 5, 11  ] | [ 6, 12  ]
-[ 20, 50 ] | [ 25, 55 ] | [ 30, 00 ]
 
 for hours show only 1-12 not the other 12 hours.
 
