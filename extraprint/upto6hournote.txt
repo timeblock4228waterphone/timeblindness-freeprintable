@@ -88,9 +88,13 @@ MINUTE GRID
 [ ] [ ] [ ]
 [ ] [ ] [ ]               
 
-draw an 
-[ \ | / ]   → Top Row:    \ = 1 (Top-Left)   | = 2 (Top-Center)    / = 3 (Top-Right)
-[ / | \ ]   → Bottom Row: / = 4 (Bottom-Left) | = 5 (Bottom-Center) \ = 6 (Bottom-Right)
+draw an arrow 
+
+like 
+↖↑↗
+↙↓↘
+for the time if they share a box.
+
 
 these are the option
 
