@@ -88,7 +88,11 @@ MINUTE GRID
 [ ] [ ] [ ]
 [ ] [ ] [ ]               
 
-draw an arrow
+draw an 
+[ \ | / ]   → Top Row:    \ = 1 (Top-Left)   | = 2 (Top-Center)    / = 3 (Top-Right)
+[ / | \ ]   → Bottom Row: / = 4 (Bottom-Left) | = 5 (Bottom-Center) \ = 6 (Bottom-Right)
+
+these are the option
 
 2x3 HOURS
   [ ] | [ ] | [ ]
