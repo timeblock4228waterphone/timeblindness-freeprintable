@@ -11,13 +11,14 @@ Row 1 (Top):    [ 1,7 / 05,35 ] | [ 2,8 / 10,40 ] | [ 3,9 / 15,45 ]
 Row 2 (Bottom): [ 4,10 / 20,50 ] | [ 5,11 / 25,55 ] | [ 6,12 / 30,00 ]
 
 1=13 2=14 3=15 4=16 5=17 6=18 7=19 8=20 9=21 10=22 11=23 12=00 
+--------------------------------
+ Format the active boxes:
+   - Different boxes: write [ **H** ] and [ **M** ]
+   - Same box: write [ **H / M** ]
+ Leave all inactive boxes blank as [ ].
 
- If Hour and Minute are in different boxes: write [ H ] and [ M ].
-   - If Hour and Minute land in the same box: write [ H / M ].
-   - Leave inactive boxes as [ ]
 
-
-
+-------------------------
 
 - Round the minutes down to the nearest 5-minute increment 00-04→00, 05-09→05, 10-14→10, 15-19→15, 20-24→20, 25-29→25, 30-34→30, 35-39→35, 40-44→40, 45-49→45, 50-54→50, 55-59→55
 
