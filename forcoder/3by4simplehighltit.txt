@@ -1,25 +1,22 @@
-write 1-12 like this 3 accross and 4 down 1,2,3 top. 4,5,6, next, down, 7 ,8,9 then down bottom, 10, 11,12
-\[DATA STRUCTURE: 3x4 GRID]
-rember this called clock space jammer because they are compact.
-Row 1: [1, 5] | [2, 10] | [3, 15]
+ CLOCK SPACE JAMMER (3x4 Grid — Format: [Hour, Minute] using 12h & 5-min rounded. Bold active Hour & active Minute)
+Row 1: [1, 05] | [2, 10] | [3, 15]
 Row 2: [4, 20] | [5, 25] | [6, 30]
 Row 3: [7, 35] | [8, 40] | [9, 45]
 Row 4: [10, 50] | [11, 55] | [12, 00]
 
+ Round the minutes down to the nearest 5-minute increment 00-04→00, 05-09→05, 10-14→10, 15-19→15, 20-24→20, 25-29→25, 30-34→30, 35-39→35, 40-44→40, 45-49→45, 50-54→50, 55-59→55
 
-
-( next remember the minute is 5,10,15,20,25,30,35,40,45,50,55,00 how to round down 
-- Round the minutes down to the nearest 5-minute increment 00-04→00, 05-09→05, 10-14→10, 15-19→15, 20-24→20, 25-29→25, 30-34→30, 35-39→35, 40-44→40, 45-49→45, 50-54→50, 55-59→55
-
-also note to ai never ever start it with 00 hour or 5 minute as row 1
-dont make it look
-
-where it says 12, 00 as the start becasue it would affect the rule for cogrid visually or the time arrow rule
 
 
 hours are
 
-1=13 2=14 3=15 4=16 5=17 6=18 7=19 8=20 9=21 10=22 11=23 12=00 ( remove the 13hours up to 23 hours
+1=13 2=14 3=15 4=16 5=17 6=18 7=19 8=20 9=21 10=22 11=23 12=00 ( remove the 13hours up to 23 hour
+
+also note to ai never ever start it with 00 hour or 5 minute as row 1
+dont make it look
+
+
+
 
 
 and00 hours) write the time now and higlight by now hours and minute show ] write the currednt time and put smilly on the hours and minute
