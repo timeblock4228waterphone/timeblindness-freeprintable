@@ -77,7 +77,7 @@ Row 2: [↙ ↓] 4:30 | [↓ →] 5:15 | [↘ ↑] 6:00 | [↘ ←] 6:45
 it would look like
 
 
-show this below
+what the output looks like
 
 
 
