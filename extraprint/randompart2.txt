@@ -1,3 +1,10 @@
+ for codgrid look like this
+Row 1:  [  ] |  [  ] | [  ] |  [  ]
+Row 2:  [  ] |  [  ] |  [  ] | [  ]
+
+x out current time
+
+
 part1
 
 
