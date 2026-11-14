@@ -118,8 +118,6 @@ Leave inactive boxes as [ ] write now for the time
 
 ---------
 
-i dont know for below 
-
 This is hours 
 
 Row 1 (Top):    [ 1 ,7] | [ 2  ,8] | [ 3 , 9]
