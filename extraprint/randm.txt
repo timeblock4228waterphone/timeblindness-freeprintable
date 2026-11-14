@@ -1,4 +1,4 @@
- ↖ =1,7,13,19 hour 
+this is only for me 
 
 this is literally nothing importatnt here
 ↑]this is ass needed
@@ -7,7 +7,16 @@ this is literally nothing importatnt here
 │       │ │       │ │       │
 │       │ │       │ │       │
 └───────┘ └───────┘ └───────┘ 
+Map the hour to its directional arrow:
 
+
+
+-  ↑ = 00
+
+-  → =15
+
+- ↓ = 30
+-  ← = 45
 
 
 ┌───────┐ 
