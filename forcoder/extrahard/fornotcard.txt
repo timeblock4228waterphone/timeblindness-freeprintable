@@ -101,7 +101,7 @@ CODGRID
      [ ] | [ ] | [ ] | [ ]
       [ ] | [ ] | [ ] | [ ]
 draw an x
-Leave inactive boxes as [ ] how to write it left side would be Minute Grid right side bottom right would be 2 by 3 and bottom top would beCODGRID
+
 
 
 
@@ -116,9 +116,9 @@ for minute draw arrow only
 Leave inactive boxes as [ ] write now for the time 
  use it as the example
 
----------
+---------------
 
-This is hours 
+This is called 2by3 and 4 arrow
 
 Row 1 (Top):    [ 1 ,7] | [ 2  ,8] | [ 3 , 9]
 Row 2 (Bottom): [ 4 ,10] | [ 5,11 ] | [ 6,12]
@@ -145,10 +145,32 @@ Map the hour to its directional arrow:
   4. **Slot 4 (Far Right):** `→` (15–29) or space
 * **Never Shift Positions:
 
+┌───────┐
+│   ↑   │  <-- Top (00–14)
+│ ←   → │  <-- Left (45–59) & Right (15–29)
+│   ↓   │  <-- Bottom (30–44)
+└───────┘
+
+this what one example
+
+2BY3 & 4 ARROW
+┌───────┐ ┌───────┐ ┌───────┐
+│   ↑   │ │       │ │   ↑   │
+│ ←   → │ │     → │ │       │
+│   ↓   │ │       │ │   ↓   │
+└───────┘ └───────┘ └───────┘
+┌───────┐ ┌───────┐ ┌───────┐
+│       │ │   ↑   │ │       │
+│ ←     │ │       │ │       │
+│       │ │       │ │       │
+└───────┘ └───────┘ └───────┘
+
 
 
 -------_
 
+Leave inactive boxes as [ ] how to write it left side would be Minute Grid/ right side middle would be 2 by 3/, and top right  would beCODGRID/ and bottom right would be 2by3 and 4 arrow
+----------------
 also
 
 read this if you are human
