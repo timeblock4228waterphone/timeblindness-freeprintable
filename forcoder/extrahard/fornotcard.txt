@@ -135,6 +135,17 @@ If the minute is between 45 and 59: Pick the ← arrow.
 
 Pick the box then the arroe in it like []
 
+Map the hour to its directional arrow:
+
+
+
+-  ↑ = 00
+
+-  → =15
+
+- ↓ = 30
+-  ← = 45
+
 -------_
 
 also
