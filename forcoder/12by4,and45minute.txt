@@ -3,67 +3,30 @@
 Objective
 remember this is called 12 by 4 every 45 minute
 
-build a custom sequence of times mapped onto a physical 3x4 number grid. The grid must highlight the current hour box and display a directional arrow inside that box based on the minutes.
 
-The Visual Layout (The 3x4 Grid)
+- [H]:30 to [H+1]:14 → Box [H] + ↓
+- [H+1]:15 to [H+1]:59 → Box [H+1] + →
+- [H+2]:00 to [H+2]:44 → Box [H+2] + ↑
+- [H+2]:45 to [H+3]:29 → Box [H+2] + ←
 
-Create a central grid container on the screen.
+]
+__________
 
-Force a strict layout of 3 columns across and 4 rows down (3x4 matrix).
-
-Generate 12 empty square boxes numbered sequentially from 1 to 12.
-
-They must automatically arrange themselves exactly like this:
-
-Draw a 4-row by 3-column grid of 12 boxes numbered 1 to 12 in order:
-Row 1: [ 1] [ 2] [ 3]
-Row 2: [ 4] [ 5] [ 6]
-Row 3: [ 7] [ 8] [ 9]
-Row 4: [10] [11] [12]
-
+12 BY 4 EVERY 45 MINUTE (Text only)
+Convert to 12h (13–23→1–11, 00→12). Find the slot whose start time is at or just before current time (wraps 12:45→1:29):
+1:30=B1↓ | 2:15=B2→ | 3:00=B3↑ | 3:45=B3←
+4:30=B4↓ | 5:15=B5→ | 6:00=B6↑ | 6:45=B6←
+7:30=B7↓ | 8:15=B8→ | 9:00=B9↑ | 9:45=B9←
+10:30=B10↓ | 11:15=B11→ | 12:00=B12↑ | 12:45=B12←
 The Custom Time Dataset
-the next is minute 
 
 
-The system does not run on a real-time clock. Instead, it holds an array of specific timestamps and tracks the active index. Here is the strict sequence:
-
-
-
-
-hours are
-
-1=13 2=14 3=15 4=16 5=17 6=18 7=19 8=20 9=21 10=22 11=23 12=00 ( remove the 13hours up to 23 hours
- s
-
-below
-
-next level
-
-01:30  – 02:14  (or 13:30–14:14) | 1:30 | Box 1 | ↓ (Down) |
-| 02:15 – 02:59 (or 14:15–14:59) | 2:15 | Box 2 | → (Right) |
-| 03:00 – 03:44 (or 15:00–15:44) | 3:00 | Box 3 | ↑ (Up) |
-| 03:45  – 04:29  (or 15:45–16:29) | 3:45 | Box 3 | ← (Left) |
-| 04:30  – 05:14  (or 16:30–17:14) | 4:30 | Box 4 | ↓ (Down) |
-| 05:15  – 05:59  (or 17:15–17:59) | 5:15 | Box 5 | → (Right) |
-| 06:00  – 06:44  (or 18:00–18:44) | 6:00 | Box 6 | ↑ (Up) |
-| 06:45  – 07:29  (or 18:45–19:29) | 6:45 | Box 6 | ← (Left) |
-| 07:30  – 08:14  (or 19:30–20:14) | 7:30 | Box 7 | ↓ (Down) |
-| 08:15 – 08:59  (or 20:15–20:59) | 8:15 | Box 8 | → (Right) |
-| 09:00  – 09:44  (or 21:00–21:44) | 9:00 | Box 9 | ↑ (Up) |
-| 09:45  – 10:29  (or 21:45–22:29) | 9:45 | Box 9 | ← (Left) |
-| 10:30  – 11:14  (or 22:30–23:14) | 10:30 | Box 10 | ↓ (Down) |
-| 11:15  – 11:59  (or 23:15–23:59) | 11:15 | Box 11 | → (Right) |
-| 12:00  – 12:44  (or 00:00–00:44) | 12:00 | Box 12 | ↑ (Up) |
-| 12:45  – 01:29  (or 00:45–01:29) | 12:45 | Box 12 | ← (Left) 
-
-
-next is 
-
-
-only show the arrow that is 
-1:30
-,2:15 ,3:00 ,3:45, 4:30, 5:15, 6:00, 6:45, 7:30,8:15, 9:00, 9:45, 10:30, 11:15, 12:00, 12:45.
-
+Show ONLY the active arrow inside its 12h Box (hide inactive numbers):
+[ 1] [ 2] [ 3]
+[ 4] [ 5] [ 6]
+[ 7] [ 8] [ 9]
+[10] [11] [12]
+__________
   
 match time now. with text only
 
