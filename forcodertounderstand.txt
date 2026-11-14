@@ -25,41 +25,24 @@ Row 2:  4:30 |  5:15 |  6:00 | 6:45
 
 ----------------------
 
-part2
-
 2. SPACE JAMMER (Wrap active H12 & M5 in "")
 [1, 05] | [2, 10] | [3, 15]
 [4, 20] | [5, 25] | [6, 30]
 [7, 35] | [8, 40] | [9, 45]
 [10, 50] | [11, 55] | [12, 00]
 
- Round the minutes down to the nearest 5-minute increment "floor minutes to nearest 5"
-hours are
-
-
-
 3. 4 PART 2 PART (Wrap active range in ""; 24=00, 60=00)
 H24: [1–6] | [7–12] | [13–18] | [19–24]
 M: [1–30] | [31–60]
-------------------------
-part 4
 
-
-• Grid Map:
 4. GRID MAP (Wrap active H12 & M5 in "")
 [ 1,7 / 05,35 ] | [ 2,8 / 10,40 ] | [ 3,9 / 15,45 ]
 [ 4,10 / 20,50 ] | [ 5,11 / 25,55 ] | [ 6,12 / 30,00 ]
 
-
--------------------------------------------
-
-
-PART 5: 15 MINUTE ( Bold active quadrant: 00=00-14, 15=15-29, 30=30-44, 45=45-59)
-Row 1: [00]
-Row 2: [45] | [15]
-Row 3: [30]
-
-----------------------------------
+5. 15 MIN (Wrap active 15m quadrant in * *)
+   [00]
+[45] | [15]
+   [30]
 
 6. 2x4 HOURS (Wrap active H24 in "")
 [1, 2, 3] | [13, 14, 15]
