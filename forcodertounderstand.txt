@@ -26,7 +26,7 @@ Row 2:  4:30 |  5:15 |  6:00 | 6:45
 
 part2
 
-PART 2: CLOCK SPACE JAMMER (3x4 — Format [H, M], . Place symbol around in active slot [ ] active H & M)
+PART 2: CLOCK SPACE JAMMER (3x4 — Format [H, M], . Place symbol around in active slot " " active H & M)
 R1: [1, 05] | [2, 10] | [3, 15]
 R2: [4, 20] | [5, 25] | [6, 30]
 R3: [7, 35] | [8, 40] | [9, 45]
@@ -39,14 +39,14 @@ hours are
 
 and00 hours)
 
-PART 3: 4 PART 2 PART (24h & Exact Min — Place symbol around in active slot [ ] active row only)
+PART 3: 4 PART 2 PART (24h & Exact Min — Place symbol around in active slot "" active row only)
 Hours: [1–6] | [7–12] | [13–18] | [19–24] (24=00)
 Mins: [1–30] | [31–60] (60=00)
 ------------------------
 part 4
 
 
-• Grid Map: Show 12h hours & 5m-floored minutes (R1: [1,7 / 05,35] | [2,8 / 10,40] | [3,9 / 15,45], R2: [4,10 / 20,50] | [5,11 / 25,55] | [6,12 / 30,00]). Bold active 12h Hour and active 5m-floored Minute.
+• Grid Map: Show 12h hours & 5m-floored minutes (R1: [1,7 / 05,35] | [2,8 / 10,40] | [3,9 / 15,45], R2: [4,10 / 20,50] | [5,11 / 25,55] | [6,12 / 30,00]). Place symbol around in active slot "" active 12h Hour and active 5m-floored Minute.
 
 • Strict Output:
 Top: [ 1,7 / 05,35 ] | [ 2,8 / 10,40 ] | [ 3,9 / 15,45 ]
@@ -63,7 +63,7 @@ Row 3: [30]
 
 ----------------------------------
 
-PART 6: 2x4 HOURS (Ignore mins. Wrap active 24h in (Place symbol around in active slot [ ]))
+PART 6: 2x4 HOURS (Ignore mins. Wrap active 24h in (Place symbol around in active slot ""))
 R1: [1, 2, 3] | [13, 14, 15]
 R2: [4, 5, 6] | [16, 17, 18]
 R3: [7, 8, 9] | [19, 20, 21]
