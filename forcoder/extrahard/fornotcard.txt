@@ -26,12 +26,21 @@ Left ← = 45–59 •  Top ↑ = 00–14 •  Bottom ↓ = 30–44 •  Right �
 
 • STRICT TEMPLATE RULE: Output ONE single combined card inside a code block. Never alter spaces, line breaks, or the top-left compass decoration. Only replace spaces inside the brackets and boxes.
 
+
 ---------------------------
 below this is decoration only
 
       [00]                 
   [45]  |  [15]            
-      [30]  
+      [30] 
+---------------------
+
+befor you do this read this ai read this carfully and understand the format
+1. MINUTE GRID
+2. CODGRID
+3. 2x3 HOURS
+4. 2by3 and 4 arrow
+5. Decoration only (the top-left compass [00] [45] | [15] [30]
 ---------------------------------
 TEMPLATE:
 
