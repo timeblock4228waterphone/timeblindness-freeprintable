@@ -1,4 +1,9 @@
 GLOBAL RULES: Use 12h format (13–23→1–11, 00→12) unless 24h is specified. Floor minutes to nearest 5 (min - min%5). Bold active items.
+PART 2: CLOCK SPACE JAMMER (3x4 — Format [H, M], . Bold active )
+R1: [1, 05] | [2, 10] | [3, 15]
+R2: [4, 20] | [5, 25] | [6, 30]
+R3: [7, 35] | [8, 40] | [9, 45]
+R4: [10, 50] | [11, 55] | [12, 00]
 
 part 1
 
