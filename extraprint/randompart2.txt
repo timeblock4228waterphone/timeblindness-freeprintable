@@ -1,39 +1,11 @@
 
+
+
+
+
+
+
 part 1
-
-↖↑↗
-↙↓↘
-
-belwo are arrows
-
-these 
-this is called "Minute Grid"
-are hours.
-↖=1,7,13,19↑=2,8,14,20.↗=3,9,15,21
-↙=4,10,16,22.↓=5,11,17,23.↘=6,12,18,00
-
-put the arrow inside the minute .
-
-okay now
-below are minute
-make a 3 acrross by 4  downgrid
-
-
-Row 1: [5] | [ 10] | [ 15]
-Row 2: [ 20] | , 25] | [30]
-Row 3: [35] | [ 40] | [45]
-Row 4: [ 50] | [ 55] | [00]
-
-Round the minutes down to the nearest 5-minute increment 00-04→00, 05-09→05, 10-14→10, 15-19→15, 20-24→20, 25-29→25, 30-34→30, 35-39→35, 40-44→40, 45-49→45, 50-54→50, 55-59→55
-
-----------------------------------
-
-
-
-
-
-
-part 2
 
 : CODGRID (2x4 Front-only — bold active 45-min window; Left arrow=Hr, Right=Min)
 Row 1: [↖ ↓] 1:30 | [↑ →] 2:15 | [↗ ↑] 3:00 | [↗ ←] 3:45
@@ -43,7 +15,7 @@ Row 2: [↙ ↓] 4:30 | [↓ →] 5:15 | [↘ ↑] 6:00 | [↘ ←] 6:45
 
 ----------------------
 
-part3
+part2
 
 
 
@@ -67,7 +39,7 @@ and00 hours)
 
 
 
-PART 2:  called 4 PART 2 PART (24h & Exact Min — bold active row only, not individual numbers)
+PART 3:  called 4 PART 2 PART (24h & Exact Min — bold active row only, not individual numbers)
 Hours (Left)          Minutes (Right)
 [ 1–6 ]               [ 1–30 ]
 [ 7–12 ]              [ 31–60 ] (60=00)
