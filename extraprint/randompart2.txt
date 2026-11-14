@@ -20,11 +20,11 @@ part2
 
 
 
-PART 1: CLOCK SPACE JAMMER (3x4 Grid — Format: [Hour, Minute] using 12h & 5-min rounded. Bold active Hour & active Minute)
-Row 1: [1, 05] | [2, 10] | [3, 15]
-Row 2: [4, 20] | [5, 25] | [6, 30]
-Row 3: [7, 35] | [8, 40] | [9, 45]
-Row 4: [10, 50] | [11, 55] | [12, 00]
+PART 2: CLOCK SPACE JAMMER (3x4 — Format [H, M], . Bold active H & M)
+R1: [1, 05] | [2, 10] | [3, 15]
+R2: [4, 20] | [5, 25] | [6, 30]
+R3: [7, 35] | [8, 40] | [9, 45]
+R4: [10, 50] | [11, 55] | [12, 00]
 
  Round the minutes down to the nearest 5-minute increment 00-04→00, 05-09→05, 10-14→10, 15-19→15, 20-24→20, 25-29→25, 30-34→30, 35-39→35, 40-44→40, 45-49→45, 50-54→50, 55-59→55
 
@@ -39,12 +39,9 @@ and00 hours)
 
 
 
-PART 3:  called 4 PART 2 PART (24h & Exact Min — bold active row only, not individual numbers)
-Hours (Left)          Minutes (Right)
-[ 1–6 ]               [ 1–30 ]
-[ 7–12 ]              [ 31–60 ] (60=00)
-[ 13–18 ]
-[ 19–24 ] (24=000)
+PART 3: 4 PART 2 PART (24h & Exact Min — Bold active row only)
+Hours: [1–6] | [7–12] | [13–18] | [19–24] (24=00)
+Mins: [1–30] | [31–60] (60=00)
 ------------------------
 part 4
 
