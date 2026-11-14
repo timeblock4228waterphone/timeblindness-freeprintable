@@ -140,9 +140,14 @@ Pick the box then the arroe in it like []
 Map the hour to its directional arrow:
 
 
-**Real Clock Arrow Layout:** Map the **4 arrows** (`↑`, `→`, `↓`, `←`) to real clock-face quarter positions (**`↑`** = 00/top, **`→`** = 15/right, **`↓`** = 30/bottom, **`←`** = 45/left).
-
-
+*Strict Display & Clock-Face Rules
+* **Single Grid Only:** Never draw multiple 2x3 grids. Combine every requested time into **one single 2x3 grid** total.
+* **Fixed 4-Slot Clock Order Inside Every Box (`[← ↑ ↓ →]`):** Every box has 4 fixed character slots matching analog clock positions from left to right:
+  1. **Slot 1 (Far Left):** `←` (45–59) or space
+  2. **Slot 2 (Top-Center):** `↑` (00–14) or space
+  3. **Slot 3 (Bottom-Center):** `↓` (30–44) or space
+  4. **Slot 4 (Far Right):** `→` (15–29) or space
+* **Never Shift Positions:
 
 
 
