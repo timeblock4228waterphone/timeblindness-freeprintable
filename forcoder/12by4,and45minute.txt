@@ -12,12 +12,7 @@ remember this is called 12 by 4 every 45 minute
 ]
 __________
 
-12 BY 4 EVERY 45 MINUTE (Text only)
-Convert to 12h (13–23→1–11, 00→12). Find the slot whose start time is at or just before current time (wraps 12:45→1:29):
-1:30=B1↓ | 2:15=B2→ | 3:00=B3↑ | 3:45=B3←
-4:30=B4↓ | 5:15=B5→ | 6:00=B6↑ | 6:45=B6←
-7:30=B7↓ | 8:15=B8→ | 9:00=B9↑ | 9:45=B9←
-10:30=B10↓ | 11:15=B11→ | 12:00=B12↑ | 12:45=B12←
+
 The Custom Time Dataset
 
 
@@ -26,6 +21,19 @@ Show ONLY the active arrow inside its 12h Box (hide inactive numbers):
 [ 4] [ 5] [ 6]
 [ 7] [ 8] [ 9]
 [10] [11] [12]
+
+12 BY 4 EVERY 45 MINUTE (Text only)
+Convert to 12h (13–23→1–11, 00→12). Find the slot whose start time is at or just before current time (wraps 12:45→1:29):
+1:30=B1↓ | 2:15=B2→ | 3:00=B3↑ | 3:45=B3←
+4:30=B4↓ | 5:15=B5→ | 6:00=B6↑ | 6:45=B6←
+7:30=B7↓ | 8:15=B8→ | 9:00=B9↑ | 9:45=B9←
+10:30=B10↓ | 11:15=B11→ | 12:00=B12↑ | 12:45=B12←
+
+Output this exact 4x3 bracket grid, placing ONLY the active arrow inside its matching Box (leave all other boxes empty [  ]):
+Row 1 [  ] | [  ] | [  ]
+Row 2[  ] | [  ] | [  ]
+Row 3[  ] | [  ] | [  ]
+Row 3[  ] | [  ] | [  ]
 __________
   
 match time now. with text only
