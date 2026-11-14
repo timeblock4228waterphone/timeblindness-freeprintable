@@ -4,165 +4,50 @@ this is for notecard last very short
 
 === NOTECARD TIME GRID GENERATOR ===
 
-Generate a compact notecard layout for the requested time using three grids:
-- Left Side: MINUTE GRID (3x4)
-- Top Right: CODGRID (2x4)
-- Bottom Right: HOURS (2x3)
-
---------------------------------------------------
-1. MINUTE GRID (Left Side - 3x4 Grid)
---------------------------------------------------
-Map the hour to its directional arrow:
-- ↖ = 1, 7, 13, 19
-- ↑ = 2, 8, 14, 20
-- ↗ = 3, 9, 15, 21
-- ↙ = 4, 10, 16, 22
-- ↓ = 5, 11, 17, 23
-- ↘ = 6, 12, 18, 00
-
-Round minutes down to the nearest 5-minute increment:
-- 00-04 -> 00 | 05-09 -> 05 | 10-14 -> 10
-- 15-19 -> 15 | 20-24 -> 20 | 25-29 -> 25
-- 30-34 -> 30 | 35-39 -> 35 | 40-44 -> 40
-- 45-49 -> 45 | 50-54 -> 50 | 55-59 -> 55
-
-Grid Layout:
-Row 1: [ 5  ] | [ 10 ] | [ 15 ]
-Row 2: [ 20 ] | [ 25 ] | [ 30 ]
-Row 3: [ 35 ] | [ 40 ] | [ 45 ]
-Row 4: [ 50 ] | [ 55 ] | [ 00 ]
-
-Rules:
-- Draw ONLY the arrow inside the active minute box.
-- Leave inactive boxes blank.
-- MULTI-ARROW SORTING RULE: If two times share the same minute box, NEVER sort chronologically. Always sort arrows strictly in order from Step 1 to 6: ↖, ↑, ↗, ↙, ↓, ↘ (Example: [↖↘], never [↘↖]).
-
---------------------------------------------------
-2. CODGRID (Top Right - 2x4 Grid)
---------------------------------------------------
-Place an "X" in the active 45-minute window (windows repeat every 6 hours):
-- Row 1: [ 1:30 ] | [ 2:15 ] | [ 3:00 ] | [ 3:45 ]
-- Row 2: [ 4:30 ] | [ 5:15 ] | [ 6:00 ] | [ 6:45 ]
-
-Window Ranges:
-- 1:30 = 1:30–2:14 | 2:15 = 2:15–2:59 | 3:00 = 3:00–3:44 | 3:45 = 3:45–4:29
-- 4:30 = 4:30–5:14 | 5:15 = 5:15–5:59 | 6:00 = 6:00–6:44 | 6:45 = 6:45–7:29
-
-Rules:
-- Draw an "X" in the active window box.
-- Leave inactive boxes as [   ].
-
---------------------------------------------------
-3. HOURS GRID (Bottom Right - 2x3 Grid)
---------------------------------------------------
-Map the hour to its 1–6 slot (1=7/13/19, 2=8/14/20, 3=9/15/21, 4=10/16/22, 5=11/17/23, 6=12/18/00):
-- Row 1: [ 1 ] | [ 2 ] | [ 3 ]
-- Row 2: [ 4 ] | [ 5 ] | [ 6 ]
-
---------------------------
-
-
-
-=== VISUAL TEMPLATE ===
-MINUTE GRID
-┌───────┐ ┌───────┐ ┌───────┐
-│       │ │       │ │       │
-│       │ │       │ │       │
-└───────┘ └───────┘ └───────┘
-┌───────┐ ┌───────┐ ┌───────┐
-│       │ │       │ │       │
-│       │ │       │ │       │
-└───────┘ └───────┘ └───────┘
-┌───────┐ ┌───────┐ ┌───────┐
-│       │ │       │ │       │
-│       │ │       │ │       │
-└───────┘ └───────┘ └───────┘
-┌───────┐ ┌───────┐ ┌───────┐
-│       │ │       │ │       │
-│       │ │       │ │       │
-└───────┘ └───────┘ └───────┘          
-
-draw an arrow 
-
-[ ↖ ↑ ↗ ]
-[ ↙ ↓ ↘ ]
-
-if there is two time.
-
-
-these are the option
-
-2x3 HOURS
-  [ ] | [ ] | [ ]
-  [ ] | [ ] | [ ]
-draw an x 
-
-CODGRID
-     [ ] | [ ] | [ ] | [ ]
-      [ ] | [ ] | [ ] | [ ]
-draw an x
-
-
-
-
-for 2 by 3 draw and x
-
-
-fir cogrid drw an x
-
-
-for minute draw arrow only
-
-Leave inactive boxes as [ ] write now for the time 
- use it as the example
-
----------------
-
-This is called 2by3 and 4 arrow
-
-Row 1 (Top):    [ 1 ,7] | [ 2  ,8] | [ 3 , 9]
-Row 2 (Bottom): [ 4 ,10] | [ 5,11 ] | [ 6,12]
-
-
-2x3 HOURS
-  [ ] | [ ] | [ ]
-  [ ] | [ ] | [ ]
-
-
-Pick the box then the arroe in it like []
-
-
-2×3 + 4-arrow rules
-•  Box map: 1=7/13/19, 2=8/14/20, 3=9/15/21, 4=10/16/22, 5=11/17/23, 6=12/18/00
+RULES:
+1. MINUTE GRID (3x4, round min down to 5):
+   Slots: R1[05,10,15] R2[20,25,30] R3[35,40,45] R4[50,55,00]
+   Hour Arrows: ↖(1,7,13,19) ↑(2,8,14,20) ↗(3,9,15,21) ↙(4,10,16,22) ↓(5,11,17,23) ↘(6,12,18,00)
+   Sort multi-arrows strictly: ↖ ↑ ↗ ↙ ↓ ↘ (never chronologically).
+2. CODGRID (2x4, X in active 45m window, repeats every 6h):
+   R1: [1:30–2:14] | [2:15–2:59] | [3:00–3:44] | [3:45–4:29]
+   R2: [4:30–5:14] | [5:15–5:59] | [6:00–6:44] | [6:45–7:29]
+3. 2x3 HOURS (X in active box):
+   R1: [1=7/13/19] | [2=8/14/20] | [3=9/15/21]
+   R2: [4=10/16/22] | [5=11/17/23] | [6=12/18/00]
+4. 2by3 and 4 arrow (same 1–6 boxes; inside active box put minute arrow):
+    Box map: 1=7/13/19, 2=8/14/20, 3=9/15/21, 4=10/16/22, 5=11/17/23, 6=12/18/00
 •  Inside the active box only:
 	•  Left ← = 45–59
 	•  Top ↑ = 00–14
 	•  Bottom ↓ = 30–44
 	•  Right → = 15–29
+---------------------------
+below this is decoration only
 
-example below
-┌───────┐ ┌───────┐ ┌───────┐
-│       │ │       │ │   ↑   │
-│       │ │       │ │       │
-│       │ │       │ │       │
-└───────┘ └───────┘ └───────┘
-┌───────┐ ┌───────┐ ┌───────┐
-│       │ │       │ │       │
-│       │ │       │ │       │
-│       │ │       │ │       │
-└───────┘ └───────┘ └───────┘
+      [00]                 
+  [45]  |  [15]            
+      [30]  
+---------------------------------
+TEMPLATE:
 
--------_
+      [00]                 CODGRID
+  [45]  |  [15]            [   ] | [   ] | [   ] | [   ]
+      [30]                 [   ] | [   ] | [   ] | [   ]
 
-Leave inactive boxes as [ ] how to write it left side would be Minute Grid/ right side middle would be 2 by 3/, and top right  would beCODGRID/ and bottom right would be 2by3 and 4 arrow and top left would be
-look like
-
-Row 1: [00]
-Row 2: [45] | [15]
-Row 3: [30]
-this is decoration only
-
-
+MINUTE GRID                2x3 HOURS
+┌─────┐ ┌─────┐ ┌─────┐    [   ] | [   ] | [   ]
+│     │ │     │ │     │    [   ] | [   ] | [   ]
+└─────┘ └─────┘ └─────┘
+┌─────┐ ┌─────┐ ┌─────┐    2by3 and 4 arrow
+│     │ │     │ │     │    ┌─────┐ ┌─────┐ ┌─────┐
+└─────┘ └─────┘ └─────┘    │     │ │     │ │     │
+┌─────┐ ┌─────┐ ┌─────┐    │     │ │     │ │     │
+│     │ │     │ │     │    └─────┘ └─────┘ └─────┘
+└─────┘ └─────┘ └─────┘    ┌─────┐ ┌─────┐ ┌─────┐
+┌─────┐ ┌─────┐ ┌─────┐    │     │ │     │ │     │
+│     │ │     │ │     │    │     │ │     │ │     │
+└─────┘ └─────┘ └─────┘    └─────┘ └─────┘ └─────┘
 
 ----------------
 also
