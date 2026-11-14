@@ -1,16 +1,14 @@
-first go to 
+first part is just for reading when it say part 1 that the meat of it
 
-6_9_ breakdown_Muli_tools.pdf this will show what it looks like
+there is a pdf called 6_9_breakdown it okay if you dont see it or dont want to open it
 
-the things you need
-for app idea is
+next there will be thing called notecardtxt and steve time arrow those are the basic to for idea
 
-notecard .txt
-and a thing called steve arrow
 
 
 below is the cheat sheet
-
+okay now that you read this the meeat is part 1 -6
+_________________________
 part 1
 
 Map the given time into these 6 grids inside a code block. Keep all text; only highlight active slots.
