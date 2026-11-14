@@ -24,7 +24,6 @@ draw line in the middle going right to left and that where it goes.
 • 45–49 → 45
 • 50–54 → 50
 • 55–59 → 55
-• Note: If minutes reach 60+, it rolls over into 1 hour and 00 minute
 
  
 find the time now and write the time now
