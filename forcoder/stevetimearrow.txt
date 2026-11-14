@@ -1,12 +1,6 @@
 
 
-
-
-
 draw line in the middle going right to left and that where it goes.
-
-
-
 
  ARROW TIME (24h: 00:00–23:59)
 - **Format:** 7-char line `───────`. Left=Hour, Right=Min, separated by **5 spaces** (`     `). Empty side uses 1 space.
