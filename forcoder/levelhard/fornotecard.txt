@@ -3,7 +3,7 @@ this is for notecard last very short
 this notecard is named "You are here and that enough"
 
 
-Output ONE combined grid in a code block. Keep exact spacing and the `[00] [45] | [15] [30]` compass. Combine all times onto one card.
+Output ONE combined grid in a code block. Keep exact spacing and the `[00] [45] | [15] [30]`  compass. Combine all times onto one card.
 
 MINUTE GRID (3x4, round min down to 5):
 R1: 05,10,15 | R2: 20,25,30 | R3: 35,40,45 | R4: 50,55,00
