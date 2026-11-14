@@ -22,11 +22,7 @@ RULES:
 •  Inside the active box only:
 
 OVERLAP RULE: Combine all given times onto one card. In 2by3 and 4 arrow, sort multiple arrows inside one box as: ← ↑ → ↓.
-	•  Left ← = 45–59
-
-	•  Top ↑ = 00–14
-	•  Bottom ↓ = 30–44
-	•  Right → = 15–29
+Left ← = 45–59 •  Top ↑ = 00–14 •  Bottom ↓ = 30–44 •  Right → = 15–29
 
 • STRICT TEMPLATE RULE: Output ONE single combined card inside a code block. Never alter spaces, line breaks, or the top-left compass decoration. Only replace spaces inside the brackets and boxes.
 
