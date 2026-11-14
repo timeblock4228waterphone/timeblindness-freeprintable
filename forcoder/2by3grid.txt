@@ -2,20 +2,12 @@
 
 okay break it down
 this is called 2 by 3
-To show the current time, bold the active **Hour** (top line) and **Minute** (bottom line) inside the 2x3 grid below:
-
-* **Hours:** Use standard 12-hour format (`1–12`).
-
-
-Row 1 (Top):    [ 1,7 / 05,35 ] | [ 2,8 / 10,40 ] | [ 3,9 / 15,45 ]
-Row 2 (Bottom): [ 4,10 / 20,50 ] | [ 5,11 / 25,55 ] | [ 6,12 / 30,00 ]
-
-1=13 2=14 3=15 4=16 5=17 6=18 7=19 8=20 9=21 10=22 11=23 12=00 
---------------------------------
- Format the active boxes:
-   - Different boxes: write [ **H** ] and [ **M** ]
-   - Same box: write [ **H / M** ]
- Leave all inactive boxes blank as [ ].
+• Grid Map: Show 12h hours & 5m-floored minutes (R1: [1,7 / 05,35] | [2,8 / 10,40] | [3,9 / 15,45], R2: [4,10 / 20,50] | [5,11 / 25,55] | [6,12 / 30,00]). Bold active 12h Hour and active 5m-floored Minute.
+• Arrows (45m cycle): [↓] 1:30–2:14 (+3h repeats), [→] 2:15–2:59 (+3h), [↑] 3:00–3:44 (+3h), [←] 3:45–4:29 (+3h). Bold active arrow.
+• Strict Output:
+Top: [ 1,7 / 05,35 ] | [ 2,8 / 10,40 ] | [ 3,9 / 15,45 ]
+Bot: [ 4,10 / 20,50 ] | [ 5,11 / 25,55 ] | [ 6,12 / 30,00 ]
+Display: [ ↓ ] | [ → ] | [ ↑ ] | [ ← ]
 
 
 -------------------------
