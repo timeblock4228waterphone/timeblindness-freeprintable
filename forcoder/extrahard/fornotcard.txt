@@ -8,20 +8,28 @@ RULES:
 1. MINUTE GRID (3x4, round min down to 5):
    Slots: R1[05,10,15] R2[20,25,30] R3[35,40,45] R4[50,55,00]
    Hour Arrows: ↖(1,7,13,19) ↑(2,8,14,20) ↗(3,9,15,21) ↙(4,10,16,22) ↓(5,11,17,23) ↘(6,12,18,00)
-   Sort multi-arrows strictly: ↖ ↑ ↗ ↙ ↓ ↘ (never chronologically).
+   Sort multi-arrows strictly: ↖ ↑ ↗ ↙ ↓ ↘ (never chronologically)
+.
 2. CODGRID (2x4, X in active 45m window, repeats every 6h):
    R1: [1:30–2:14] | [2:15–2:59] | [3:00–3:44] | [3:45–4:29]
    R2: [4:30–5:14] | [5:15–5:59] | [6:00–6:44] | [6:45–7:29]
 3. 2x3 HOURS (X in active box):
    R1: [1=7/13/19] | [2=8/14/20] | [3=9/15/21]
    R2: [4=10/16/22] | [5=11/17/23] | [6=12/18/00]
+
 4. 2by3 and 4 arrow (same 1–6 boxes; inside active box put minute arrow):
     Box map: 1=7/13/19, 2=8/14/20, 3=9/15/21, 4=10/16/22, 5=11/17/23, 6=12/18/00
 •  Inside the active box only:
+
+OVERLAP RULE: Combine all given times onto one card. In 2by3 and 4 arrow, sort multiple arrows inside one box as: ← ↑ → ↓.
 	•  Left ← = 45–59
+
 	•  Top ↑ = 00–14
 	•  Bottom ↓ = 30–44
 	•  Right → = 15–29
+
+• STRICT TEMPLATE RULE: Output ONE single combined card inside a code block. Never alter spaces, line breaks, or the top-left compass decoration. Only replace spaces inside the brackets and boxes.
+
 ---------------------------
 below this is decoration only
 
