@@ -170,6 +170,12 @@ this what one example
 -------_
 
 Leave inactive boxes as [ ] how to write it left side would be Minute Grid/ right side middle would be 2 by 3/, and top right  would beCODGRID/ and bottom right would be 2by3 and 4 arrow and top left would be
+look like
+
+Row 1: [00]
+Row 2: [45] | [15]
+Row 3: [30]
+this is decoration only
 
 
 
