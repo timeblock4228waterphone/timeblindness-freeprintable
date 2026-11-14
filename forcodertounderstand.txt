@@ -1,2 +1,76 @@
 first go to 
-7-time_blindes_tool.pdf
+
+6_9_ breakdown_Muli_tools.pdf this will show what it looks like
+
+
+
+
+below is the cheat sheet
+
+part 1
+
+
+: CODGRID (2x4 Front-only — bold active 45-min window; Left arrow=Hr, Right=Min)
+Row 1:  1:30 |  2:15 |  3:00 |  3:45
+Row 2:  4:30 |  5:15 |  6:00 | 6:45
+(Windows repeat every 6h: 1:30=1:30-2:14, 2:15=2:15-2:59, 3:00=3:00-3:44, 3:45=3:45-4:29, 4:30=4:30-5:14, 5:15=5:15-5:59, 6:00=6:00-6:44, 6:45=6:45-7:29)
+
+----------------------
+
+part2
+
+PART 2: CLOCK SPACE JAMMER (3x4 — Format [H, M], . Bold active H & M)
+R1: [1, 05] | [2, 10] | [3, 15]
+R2: [4, 20] | [5, 25] | [6, 30]
+R3: [7, 35] | [8, 40] | [9, 45]
+R4: [10, 50] | [11, 55] | [12, 00]
+
+ Round the minutes down to the nearest 5-minute increment 00-04→00, 05-09→05, 10-14→10, 15-19→15, 20-24→20, 25-29→25, 30-34→30, 35-39→35, 40-44→40, 45-49→45, 50-54→50, 55-59→55
+hours are
+
+1=13 2=14 3=15 4=16 5=17 6=18 7=19 8=20 9=21 10=22 11=23 12=00 ( remove the 13hours up to 23 hours
+
+and00 hours)
+
+PART 3: 4 PART 2 PART (24h & Exact Min — Bold active row only)
+Hours: [1–6] | [7–12] | [13–18] | [19–24] (24=00)
+Mins: [1–30] | [31–60] (60=00)
+------------------------
+part 4
+
+
+• Grid Map: Show 12h hours & 5m-floored minutes (R1: [1,7 / 05,35] | [2,8 / 10,40] | [3,9 / 15,45], R2: [4,10 / 20,50] | [5,11 / 25,55] | [6,12 / 30,00]). Bold active 12h Hour and active 5m-floored Minute.
+
+• Strict Output:
+Top: [ 1,7 / 05,35 ] | [ 2,8 / 10,40 ] | [ 3,9 / 15,45 ]
+Bot: [ 4,10 / 20,50 ] | [ 5,11 / 25,55 ] | [ 6,12 / 30,00 ]
+
+
+-------------------------------------------
+
+this one is part 5 called 15 minute
+PART 5: 15 MINUTE (Bold active quadrant: 00=00-14, 15=15-29, 30=30-44, 45=45-59)
+Row 1: [00]
+Row 2: [45] | [15]
+Row 3: [30]
+
+----------------------------------
+
+PART 6: 2x4 HOURS (Ignore mins. Wrap active 24h in ())
+R1: [1, 2, 3] | [13, 14, 15]
+R2: [4, 5, 6] | [16, 17, 18]
+R3: [7, 8, 9] | [19, 20, 21]
+R4: [10, 11, 12] | [22, 23, 00]
+
+
+---------
+-----
+
+
+
+
+skip this doesnt add to literally but backstory
+anything
+why did I create this because I was tired of losing timer
+and I thought I have zine and a pen and then write down time that i could flip 
+thought time literally the number for it
