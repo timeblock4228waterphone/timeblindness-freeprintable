@@ -1,4 +1,4 @@
-GLOBAL RULES: Use 12h format (13–23→1–11, 00→12) unless 24h is specified. Floor minutes to nearest 5 (min - min%5). Bold active items.
+Floor minutes to nearest 5 (min - min%5). Bold active items.
 part 1
 
 
