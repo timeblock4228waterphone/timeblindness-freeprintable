@@ -146,6 +146,13 @@ Map the hour to its directional arrow:
 - ↓ = 30
 -  ← = 45
 
+┌───────┐ 
+│   ↑   │  
+│   ← → |
+│   ↓   |
+└───────┘  
+
+
 -------_
 
 also
