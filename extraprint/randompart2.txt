@@ -44,23 +44,16 @@ Bot: [ 4, 10 ] | [ 5, 11 ] | [ 6, 12 ]
 Display: [ ↓ ] | [ → ] | [ ↑ ] | [ ← ]
 for the front it show Row 1 [↓]| [→] | [↑] |[ ←]
 
+• Grid Map: Show 12h hours & 5m-floored minutes (R1: [1,7 / 05,35] | [2,8 / 10,40] | [3,9 / 15,45], R2: [4,10 / 20,50] | [5,11 / 25,55] | [6,12 / 30,00]). Bold active 12h Hour and active 5m-floored Minute.
+• Arrows (45m cycle): [↓] 1:30–2:14 (+3h repeats), [→] 2:15–2:59 (+3h), [↑] 3:00–3:44 (+3h), [←] 3:45–4:29 (+3h). Bold active arrow.
+• Strict Output:
+Top: [ 1,7 / 05,35 ] | [ 2,8 / 10,40 ] | [ 3,9 / 15,45 ]
+Bot: [ 4,10 / 20,50 ] | [ 5,11 / 25,55 ] | [ 6,12 / 30,00 ]
+Display: [ ↓ ] | [ → ] | [ ↑ ] | [ ← ]
 
-now for the front only do this below
-
-OUTPUT FORMAT FOR PART 1: adding only the current minute and hours
-
-If Hour and Minute land in the same box, write them as [Hour / Minute]. Leave empty boxes as [ ].
 
 
- 
-
-STRICT OUTPUT FORMAT (FRONT ONLY):
-PART 1:
-Top Row:    [ ] | [ ] | [ ]
-Bottom Row: [ ] | [ ] | [ ]
-
-PART 2:
-Display: [ ] | [ ] | [ ] | [ ]
+]
 
 
 
