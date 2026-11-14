@@ -26,7 +26,7 @@ Row 4: [50] | [55] | [00]
 
 
 [STEP 3: HIGHLIGHTING]
-Find the correct hour and minute calculated in Step 1. Inside the grids, place a "😊" emoji immediately to the right of that specific number. Do not leave the numbers out.
+Find the correct hour and minute calculated in Step 1. Inside the grids, place a "" around specific number. Do not leave the numbers out.
 
 
 
