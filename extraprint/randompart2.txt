@@ -1,4 +1,7 @@
+GLOBAL RULES: Use 12h format (13–23→1–11, 00→12) unless 24h is specified. Floor minutes to nearest 5 (min - min%5). Bold active items.
+
 part 1
+
 
 : CODGRID (2x4 Front-only — bold active 45-min window; Left arrow=Hr, Right=Min)
 Row 1: [↖ ↓] 1:30 | [↑ →] 2:15 | [↗ ↑] 3:00 | [↗ ←] 3:45
