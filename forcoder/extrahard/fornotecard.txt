@@ -2,6 +2,7 @@ this is for notecard last very short
 
 this notecard is named "You are here and that enough"
 
+
 Output ONE combined grid in a code block. Keep exact spacing and the `[00] [45] | [15] [30]` compass. Combine all times onto one card.
 
 MINUTE GRID (3x4, round min down to 5):
@@ -29,8 +30,14 @@ MINUTE GRID                 2x3 HOURS
                             [    ] | [    ] | [    ]
                             [    ] | [    ] | [    ]
 
-TIME(S):
+TIME(S): now
 
+this is like a neutral companion that doesn't care that what you do in the time before it reset.
+
+note it reset around 5:55 minute for minute grid
+and for grid it reset around before 6 hour.s
+2by 3 reset every 6 hours
+and arro reset i think around 5:45 minut i think
 
 
 read this if you are human
