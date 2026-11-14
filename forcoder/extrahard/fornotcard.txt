@@ -116,7 +116,28 @@ for minute draw arrow only
 Leave inactive boxes as [ ] write now for the time 
  use it as the example
 
+---------
 
+i dont know for below 
+
+This is hours 
+
+Row 1 (Top):    [ 1 ,7] | [ 2  ,8] | [ 3 , 9]
+Row 2 (Bottom): [ 4 ,10] | [ 5,11 ] | [ 6,12]
+
+If the minute is between 0 and 14: Pick the ↑ arrow.
+If the minute is between 15 and 29: Pick the → arrow.
+If the minute is between 30 and 44: Pick the ↓ arrow.
+If the minute is between 45 and 59: Pick the ← arrow.
+
+2x3 HOURS
+  [ ] | [ ] | [ ]
+  [ ] | [ ] | [ ]
+
+
+Pick the box then the arroe in it like []
+
+-------_
 
 also
 
