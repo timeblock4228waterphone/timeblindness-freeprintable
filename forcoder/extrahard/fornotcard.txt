@@ -135,22 +135,15 @@ If the minute is between 45 and 59: Pick the ← arrow.
 
 Pick the box then the arroe in it like []
 
+*Stack Collisions:** If two or more times share the same hour box, write all of their arrows side-by-side inside that single box
+
 Map the hour to its directional arrow:
 
 
+**Real Clock Arrow Layout:** Map the **4 arrows** (`↑`, `→`, `↓`, `←`) to real clock-face quarter positions (**`↑`** = 00/top, **`→`** = 15/right, **`↓`** = 30/bottom, **`←`** = 45/left).
 
--  ↑ = 00
 
--  → =15
 
-- ↓ = 30
--  ← = 45
-
-┌───────┐ 
-│   ↑   │  
-│   ← → |
-│   ↓   |
-└───────┘  
 
 
 -------_
