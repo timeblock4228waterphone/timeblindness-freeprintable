@@ -197,7 +197,24 @@ MINUTE GRID                 2x3 HOURS
 **TIME(S):** [Insert time(s)]
 
 
+```
+for example
+minute card
+[   ] | [    ] | [    ]
+[    ] | [    ] | [    ]
+[ ↓ ] | [   ] | [ ←↑ ]
+[   ] | [   ] | [ ↓   ]
 
+for 
+[ X ] | [   ] | [ X ]
+[   ] | [   ] | [ X ]
+
+for 2 by 3 arrow
+[  	↓  ] | [    ] | [ ↑ ]
+[    ] | [    ] | [  ←↓ ]
+
+[ X ] | [   ] | [ X ] | [ X ]
+[   ] | [   ] | [ X ] | [   ]
 
 
 
