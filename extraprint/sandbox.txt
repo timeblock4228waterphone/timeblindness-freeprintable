@@ -10,6 +10,8 @@ this is literally nothing importatnt here
 Map the hour to its directional arrow:
 
 
+1:30 and 12:30 and 9:00 and 9:45
+
 
 -  ↑ = 00
 
