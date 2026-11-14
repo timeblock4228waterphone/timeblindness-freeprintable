@@ -35,14 +35,7 @@ Mins: [1–30] | [31–60] (60=00)
 ------------------------
 part 4
 
-oPART 4: MINI PACK (2x3 Hours + 4-Arrow Display — Front Output Only)
-• Grid Map: Show 12h hours only (R1: [ 1, 7 ] | [ 2, 8 ] | [ 3, 9 ], R2: [ 4, 10 ] | [ 5, 11 ] | [ 6, 12 ]). Bold active 12h Hour.
-• Arrows (45m cycle): [↓] 1:30–2:14 (+3h repeats), [→] 2:15–2:59 (+3h), [↑] 3:00–3:44 (+3h), [←] 3:45–4:29 (+3h). Bold active arrow.
-• Strict Output:
-Top: [ 1, 7 ] | [ 2, 8 ] | [ 3, 9 ]
-Bot: [ 4, 10 ] | [ 5, 11 ] | [ 6, 12 ]
-Display: [ ↓ ] | [ → ] | [ ↑ ] | [ ← ]
-for the front it show Row 1 [↓]| [→] | [↑] |[ ←]
+
 
 • Grid Map: Show 12h hours & 5m-floored minutes (R1: [1,7 / 05,35] | [2,8 / 10,40] | [3,9 / 15,45], R2: [4,10 / 20,50] | [5,11 / 25,55] | [6,12 / 30,00]). Bold active 12h Hour and active 5m-floored Minute.
 • Arrows (45m cycle): [↓] 1:30–2:14 (+3h repeats), [→] 2:15–2:59 (+3h), [↑] 3:00–3:44 (+3h), [←] 3:45–4:29 (+3h). Bold active arrow.
