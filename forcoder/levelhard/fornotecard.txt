@@ -6,42 +6,30 @@ this notecard is named "You are here and that enough"
 Output ONLY the completed card inside ONE code block. Combine all input times onto one card. Use ONLY the lookup rules below.
 
 ### 1. HOUR LOOKUP (Find H)
-* H = `01, 07, 13, 19` -> H6 = `1`, Arrow = `↖`, Box = `R1C1`
-* H = `02, 08, 14, 20` -> H6 = `2`, Arrow = `↑`, Box = `R1C2`
-* H = `03, 09, 15, 21` -> H6 = `3`, Arrow = `↗`, Box = `R1C3`
-* H = `04, 10, 16, 22` -> H6 = `4`, Arrow = `↙`, Box = `R2C1`
-* H = `05, 11, 17, 23` -> H6 = `5`, Arrow = `↓`, Box = `R2C2`
-* H = `00, 06, 12, 18` -> H6 = `6`, Arrow = `↘`, Box = `R2C3`
 
+01,07,13,19->1,↖,R1C1 | 02,08,14,20->2,↑,R1C2 | 03,09,15,21->3,↗,R1C3
+04,10,16,22->4,↙,R2C1 | 05,11,17,23->5,↓,R2C2 | 00,06,12,18->6,↘,R2C3
 ### 2. MINUTE LOOKUP (Find M)
-* `00-04` -> 5MinBox = `R4C3`, QuadArrow = `↑`
-* `05-09` -> 5MinBox = `R1C1`, QuadArrow = `↑`
-* `10-14` -> 5MinBox = `R1C2`, QuadArrow = `↑`
-* `15-19` -> 5MinBox = `R1C3`, QuadArrow = `→`
-* `20-24` -> 5MinBox = `R2C1`, QuadArrow = `→`
-* `25-29` -> 5MinBox = `R2C2`, QuadArrow = `→`
-* `30-34` -> 5MinBox = `R2C3`, QuadArrow = `↓`
-* `35-39` -> 5MinBox = `R3C1`, QuadArrow = `↓`
-* `40-44` -> 5MinBox = `R3C2`, QuadArrow = `↓`
-* `45-49` -> 5MinBox = `R3C3`, QuadArrow = `←`
-* `50-54` -> 5MinBox = `R4C1`, QuadArrow = `←`
-* `55-59` -> 5MinBox = `R4C2`, QuadArrow = `←`
+00-04->R4C3,↑ | 05-09->R1C1,↑ | 10-14->R1C2,↑ | 15-19->R1C3,→
+20-24->R2C1,→ | 25-29->R2C2,→ | 30-34->R2C3,↓ | 35-39->R3C1,↓
+40-44->R3C2,↓ | 45-49->R3C3,← | 50-54->R4C1,← | 55-59->R4C2,←
 
 ### 3. CODGRID LOOKUP (Use H6 + M)
-* `1:30` to `2:14` -> `R1C1`
-* `2:15` to `2:59` -> `R1C2`
-* `3:00` to `3:44` -> `R1C3`
-* `3:45` to `4:29` -> `R1C4`
-* `4:30` to `5:14` -> `R2C1`
-* `5:15` to `5:59` -> `R2C2`
-* `6:00` to `6:44` -> `R2C3`
-* `6:45` to `6:59` OR `1:00` to `1:29` -> `R2C4`
+1:30-2:14->R1C1 | 2:15-2:59->R1C2 | 3:00-3:44->R1C3 | 3:45-4:29->R1C4
+4:30-5:14->R2C1 | 5:15-5:59->R2C2 | 6:00-6:44->R2C3 | 6:45-6:59,1:00-1:29->R2C4
 
-### 4. FILL THE 4 GRIDS (R = Row, C = Column)
-* **CODGRID**: Put `X` in the Step 3 box (max 1 `X` per box).
-* **5-Minute Grid**: Put the Step 1 `Arrow` in the Step 2 `5MinBox` (max 1 arrow per box).
-* **2 by 3 HOUR GRID**: Put `X` in the Step 1 `Box` (max 1 `X` per box).
-* **ARROW GRID**: Put the Step 2 `QuadArrow` in the Step 1 `Box`. If multiple arrows land in one box, remove duplicates and sort them strictly in this order: `← ↑ ↓ →`
+### 
+- CODGRID: Put X in COD_MAP Box (1 max/box).
+- 5-Minute Grid: Put H_MAP Arrow in M_MAP 5MinBox (1 max/box).
+- 2 by 3 HOUR GRID: Put X in H_MAP Box (1 max/box).
+- ARROW GRID: Put M_MAP Quad in H_MAP Box (dedupe, sort: ← ↑ ↓ →).
+
+
+below is decoration only for it
+             [00]           
+       [45]   |   [15]      
+             [30]          
+
 
 ### 5. TEMPLATE (Keep exact spacing
 TEMPLATE:
