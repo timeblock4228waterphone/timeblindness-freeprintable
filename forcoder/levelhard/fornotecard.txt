@@ -22,6 +22,8 @@ R3=[35]|[40]|[45]
 - CODGRID (2x4, 6h cycle): Put X in active 45m slot
  (R1: [1:30-2:14 ]| [2:15-2:59 ]| [3:00-3:44 ]| [3:45-4:29]
 R2: [4:30-5:14 ]| [5:15-5:59] | [6:00-6:44 ]| [6:45-7:29].
+For CODGRID, first subtract 6 hours from the input time if it is after 6:00. 
+Then find the matching 45-minute time slot and place ONE X in that box. Use the 2-row, 4-column layout exactly as shown.
 - 2 by 3 HOUR GRID
 what it looks like
 Row 1: [1,7]|[2,8]|[3,9]
