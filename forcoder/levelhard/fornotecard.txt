@@ -38,6 +38,7 @@ MINUTE GRID                 2 by 3 HOUR GRID
 6:45
 11:59
 
+this is like a neutral companion that doesn't care that what you do in the time before it reset.
 
 read this if you are human
 
