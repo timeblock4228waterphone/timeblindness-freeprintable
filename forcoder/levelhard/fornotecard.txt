@@ -19,6 +19,7 @@ R2=[20]|[25]|[30]
 R3=[35]|[40]|[45] 
 | R4=[50]|[55]|[00]
 : Put H6 arrow (1:↖ 2:↑ 3:↗ 4:↙ 5:↓ 6:↘) in M5 box. NO X.
+H6 is the repeating 6-hour hour value: H mod 6, with remainder 0 treated as 6.
 -------------
 - CODGRID (2x4, 6h cycle): Put X in active 45m slot
  (R1: [1:30-2:14 ]| [2:15-2:59 ]| [3:00-3:44 ]| [3:45-4:29]
@@ -54,9 +55,10 @@ idx = ((M5 if M5>0 else 60)//5) - 1 -> R=(idx//3)+1, C=(idx%3)+1
 [3] HOUR GRID (2x3, H6 = H%6 or 6):
 R = 1 if H6<=3 else 2, C = ((H6-1)%3)+1
 ---- slow down for 5 second for accuracy--
+"Perform all calculations and coordinate verification internally. Output ONLY the verified final card inside ONE code block."
 
 TEMPLATE:
-Y
+You are here and that enough
 
              [00]           CODGRID
        [45]   |   [15]      [   ] | [   ] | [   ] | [   ]
@@ -69,6 +71,7 @@ Y
 [    ] | [    ] | [    ]    ARROW GRID
                             [    ] | [    ] | [    ]
                             [    ] | [    ] | [    ]
+5:55 and 10:30
 for double checking
 ai write below
 
