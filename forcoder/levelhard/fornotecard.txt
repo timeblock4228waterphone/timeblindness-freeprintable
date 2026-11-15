@@ -3,125 +3,47 @@ this is for notecard last very short
 this notecard is named "You are here and that enough"
 
 -----------
-Output ONE combined card in ONE code block. Preserve exact template spacing. Combine all input times onto one card. Max 1 symbol per box (deduplicate overlaps; never stack symbols like XX).
-BEFORE DRAWING THE CARD:
+Output ONLY the completed card inside ONE code block. Combine all input times onto one card. Use ONLY the lookup rules below.
 
-1. List each input time and calculate: H6, M5, 6h-shifted time (for CODGRID), and quadrant.
-2. Verify every grid coordinate against the rules.
-3.Output ONLY the verified final card inside ONE code block.
+### 1. HOUR LOOKUP (Find H)
+* H = `01, 07, 13, 19` -> H6 = `1`, Arrow = `↖`, Box = `R1C1`
+* H = `02, 08, 14, 20` -> H6 = `2`, Arrow = `↑`, Box = `R1C2`
+* H = `03, 09, 15, 21` -> H6 = `3`, Arrow = `↗`, Box = `R1C3`
+* H = `04, 10, 16, 22` -> H6 = `4`, Arrow = `↙`, Box = `R2C1`
+* H = `05, 11, 17, 23` -> H6 = `5`, Arrow = `↓`, Box = `R2C2`
+* H = `00, 06, 12, 18` -> H6 = `6`, Arrow = `↘`, Box = `R2C3`
 
+### 2. MINUTE LOOKUP (Find M)
+* `00-04` -> 5MinBox = `R4C3`, QuadArrow = `↑`
+* `05-09` -> 5MinBox = `R1C1`, QuadArrow = `↑`
+* `10-14` -> 5MinBox = `R1C2`, QuadArrow = `↑`
+* `15-19` -> 5MinBox = `R1C3`, QuadArrow = `→`
+* `20-24` -> 5MinBox = `R2C1`, QuadArrow = `→`
+* `25-29` -> 5MinBox = `R2C2`, QuadArrow = `→`
+* `30-34` -> 5MinBox = `R2C3`, QuadArrow = `↓`
+* `35-39` -> 5MinBox = `R3C1`, QuadArrow = `↓`
+* `40-44` -> 5MinBox = `R3C2`, QuadArrow = `↓`
+* `45-49` -> 5MinBox = `R3C3`, QuadArrow = `←`
+* `50-54` -> 5MinBox = `R4C1`, QuadArrow = `←`
+* `55-59` -> 5MinBox = `R4C2`, QuadArrow = `←`
 
-### 1. CALCULATE VALUES FOR EACH TIME (H:M)
-* **H6** = `H mod 6` (if 0, use `6`)
-* **M5** = `M - (M mod 5)` (if 0, use `60`)
-* **COD_IDX** = `floor((((H mod 6) * 60 + M - 90) mod 360) / 45)`
+### 3. CODGRID LOOKUP (Use H6 + M)
+* `1:30` to `2:14` -> `R1C1`
+* `2:15` to `2:59` -> `R1C2`
+* `3:00` to `3:44` -> `R1C3`
+* `3:45` to `4:29` -> `R1C4`
+* `4:30` to `5:14` -> `R2C1`
+* `5:15` to `5:59` -> `R2C2`
+* `6:00` to `6:44` -> `R2C3`
+* `6:45` to `6:59` OR `1:00` to `1:29` -> `R2C4`
 
-5-MINUTE GRID (4 rows × 3 columns)
+### 4. FILL THE 4 GRIDS (R = Row, C = Column)
+* **CODGRID**: Put `X` in the Step 3 box (max 1 `X` per box).
+* **5-Minute Grid**: Put the Step 1 `Arrow` in the Step 2 `5MinBox` (max 1 arrow per box).
+* **2 by 3 HOUR GRID**: Put `X` in the Step 1 `Box` (max 1 `X` per box).
+* **ARROW GRID**: Put the Step 2 `QuadArrow` in the Step 1 `Box`. If multiple arrows land in one box, remove duplicates and sort them strictly in this order: `← ↑ ↓ →`
 
-Step 1: Calculate H6 = H mod 6.
-If remainder = 0, use 6.
-
-Step 2: Calculate MINUTE_BOX = M - (M mod 5).
-
-Step 3: Find the MINUTE_BOX position in this grid:
-
-R1: [05] | [10] | [15]
-R2: [20] | [25] | [30]
-R3: [35] | [40] | [45]
-R4: [50] | [55] | [00]
-
-00 maps to R4 C3.
-
-Step 4: Place exactly ONE HOUR_ARROW in the
-box corresponding to M5.
-
-Arrow mapping:
-1 = ↖
-2 = ↑
-3 = ↗
-4 = ↙
-5 = ↓
-6 = ↘
-
-IMPORTANT:
-- M5 determines the box.
--HOUR_ARROW determines the arrow.
-- Never put X in this grid.
-- Never place the arrow in the H6 position.
-- Never stack symbols.
-
-MINUTE_BOX determines the box.
-
-HOUR_ARROW determines the symbol.
-
-HOUR_ARROW is selected using H6_VALUE.
-
-Place the arrow in MINUTE_BOX.
--------------
-- CODGRID (2x4, 6h cycle): Put X in active 45m slot
-
-
-Slot_idx = floor(((H%6)*60 + M - 90) % 360 / 45)
-
-
-1=7=13=19,2=8=14,3=9=15=21,4=10=16=22,5=11=17=23,6=12=18=00
-display
-R1: [1:30] | [2:15] | [3:00] | [3:45]
-R2: [4:30] | [5:15] | [6:00] | [6:45]
-
-Slot_idx uses ZERO-BASED numbering.
-The first box is index 0, not index 1.
-
-0 = R1 C1
-1 = R1 C2
-2 = R1 C3
-3 = R1 C4
-4 = R2 C1
-5 = R2 C2
-6 = R2 C3
-7 = R2 C4
-
-CODGRID must work with ANY input time in 24-hour format (00:00–23:59). 
-Convert the input time to a repeating 6-hour cycle using modulo 6 hours, preserving the exact minutes. 
-Then identify which of the 8 consecutive 45-minute slots contains that time and place exactly one X in the corresponding box. 
-Never assume the input time is already within the displayed 6-hour range.
--------
-- 2 × 3 HOUR GRID (2 rows × 3 columns)
-
-Step 1: Use the previously calculated H6_VALUE.
-
-Step 2: Find the matching H6_VALUE in this grid:
-
-R1: [1,7] | [2,8] | [3,9]
-R2: [4,10] | [5,11] | [6,12]
-
-Step 3: Place exactly ONE X in the box containing H6_VALUE.
-
-H6_VALUE determines the box.
-Place X in that box.
-
-Do not use M5 or the minute quadrant to determine this position.
-Leave all other boxes empty unless another input time selects them
-
-
----- slow down for 5 second for accuracy--
-
-
--ARROW GRID
- * Arrows: `00-14`:↑ `15-29`:→ `30-44`:↓ `45-59`:←
------
-
-[1] CODGRID (2x4, 45m slots from 1:30, 6h cycle):
-Slot_idx = floor(((H%6)*60 + M - 90) % 360 / 45) -> R=(idx//4)+1, C=(idx%4)+1
-
-[2] 5-MIN GRID (4x3, M5 = M - M%5):
-idx = ((M5 if M5>0 else 60)//5) - 1 -> R=(idx//3)+1, C=(idx%3)+1
-
-[3] HOUR GRID (2x3, H6 = H%6 or 6):
-R = 1 if H6<=3 else 2, C = ((H6-1)%3)+1
----- slow down for 5 second for accuracy--
-"Perform all calculations and coordinate verification internally. Output ONLY the verified final card inside ONE code block."
-
+### 5. TEMPLATE (Keep exact spacing
 TEMPLATE:
 You are here and that enough
 
