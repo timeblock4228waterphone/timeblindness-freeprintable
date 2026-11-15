@@ -7,14 +7,14 @@ Output ONE combined card in ONE code block. Preserve exact template spacing. Com
 
 RULES (Calc per time, merge onto 1 card):
 - H6 = H mod 6 (0=6). M5 = M floored to 5.
-- MINUTE GRID (3x4: R1=05,10,15 | R2=20,25,30 | R3=35,40,45 | R4=50,55,00): Put H6 arrow (1:↖ 2:↑ 3:↗ 4:↙ 5:↓ 6:↘) in M5 box. NO X.
+- 5-Minute Grid (3x4: R1=05,10,15 | R2=20,25,30 | R3=35,40,45 | R4=50,55,00): Put H6 arrow (1:↖ 2:↑ 3:↗ 4:↙ 5:↓ 6:↘) in M5 box. NO X.
 - CODGRID (2x4, 6h cycle): Put X in active 45m slot (R1: 1:30-2:14 | 2:15-2:59 | 3:00-3:44 | 3:45-4:29; R2: 4:30-5:14 | 5:15-5:59 | 6:00-6:44 | 6:45-7:29).
 - 2 by 3 HOUR GRID
 what it looks like
 Row 1: [1,7]|[2,8]|[3,9]
  R2: [4,10]|[5,11] [6,12]: Put X in H6 box.
 
-ARROW GRID
+-ARROW GRID
 (Same H6 layout): Put M quadrant arrow (00-14:↑ 15-29:→ 30-44:↓ 45-59:←) in H6 box.
 
 
@@ -26,7 +26,7 @@ You are here and that enough
        [45]   |   [15]      [   ] | [   ] | [   ] | [   ]
              [30]           [   ] | [   ] | [   ] | [   ]
 
-MINUTE GRID                 2 by 3 HOUR GRID
+5-Minute Grid                 2 by 3 HOUR GRID
 [    ] | [    ] | [    ]    [   ] | [   ] | [   ]
 [    ] | [    ] | [    ]    [   ] | [   ] | [   ]
 [    ] | [    ] | [    ]
