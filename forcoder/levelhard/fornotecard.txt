@@ -38,9 +38,25 @@ MINUTE GRID                 2x3 HOURS
                             [    ] | [    ] | [    ]
                             [    ] | [    ] | [    ]
 
-TIME(S): now
 
-this is like a neutral companion that doesn't care that what you do in the time before it reset.
+TIME(S): now
+Treat the template as a fixed grid.
+
+Do not rewrite or redesign it.
+
+Preserve every line break and spacing.
+
+Only insert symbols into existing boxes.
+
+Never move a section to another position.
+
+Before answering, verify the layout matches the original template exactly.
+
+Output one completed card in one code block
+
+
+
+the reason :this is like a neutral companion that doesn't care that what you do in the time before it reset.
 
 note it reset around 5:55 minute for minute grid
 and for grid it reset around before 6 hour or 5 hours
