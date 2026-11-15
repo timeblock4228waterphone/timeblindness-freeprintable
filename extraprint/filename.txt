@@ -18,20 +18,40 @@ GRIDS (1 symbol/box):
   1 | 2 | 3
   4 | 5 | 6
 
+
+
+
 TEMPLATE (Keep (00)/(45)/(15)/(30) & spacing):
-------
-            CODGRID
-              [00] 
-       [45]   |   [15]      [__] | [__] | [__] | [__]
-             [30]           [__] | [__] | [__] | [__]
+Process each input time independently, complete and verify every lookup and grid coordinate first, then place the symbols into the template and merge overlapping placements without stacking.
 
-5-Minute Grid             2 by 3 HOUR GRID
-[__] | [__] | [__]        [__] | [__] | [__]
-[__] | [__] | [__]        [__] | [__] | [__]
+5 minute grid go left.
+decoration go top
+COGRID go to top riht
+and 2by3 hour grid go top right
+and arrow grid go bottom rigth
+
+
+              [00]          
+       [45]   |   [15]    ]
+             [30]     
+5-Minute Grid 
+[__] | [__] | [__] 
 [__] | [__] | [__]
-[__] | [__] | [__]        ARROW GRID
-                          [____] | [____] | [____]
-                          [____] | [____] | [____]
+[__] | [__] | [__]
+[__] | [__] | [__] 
 
+
+2 by 3 HOUR GRID
+[__] | [__] | [__]       
+[__] | [__] | [__]   
+ARROW GRID
+[____] | [____] | [____]
+[____] | [____] | [____]
+ARROW GRID
+[__] | [__] | [__]       
+[__] | [__] | [__]
+------
+            
+        
 INPUTS: 10:30 and 5:55.
 
