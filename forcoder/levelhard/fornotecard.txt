@@ -75,6 +75,19 @@ All times listed below represent separate moments that must appear together on O
 * Preserve the original template exactly.
 * The final output must contain ONE combined card representing ALL supplied times.
 
+Every box may contain ONLY ONE symbol.
+
+* MINUTE GRID: Maximum one arrow per box.
+* CODGRID: Maximum one X per box.
+* 2x3 HOURS: Maximum one X per box.
+* 2by3 AND 4 ARROW: Maximum one arrow per box.
+
+If multiple times activate the same box, display the symbol only once.
+
+Never use XX, multiple arrows, duplicated symbols, or stacked symbols.
+
+The card represents all supplied times collectively, not the number of times a position was activated.
+
 time 
     5:55
 10:30
