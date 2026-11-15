@@ -22,10 +22,28 @@ R3=[35]|[40]|[45]
 H6 is the repeating 6-hour hour value: H mod 6, with remainder 0 treated as 6.
 -------------
 - CODGRID (2x4, 6h cycle): Put X in active 45m slot
- (R1: [1:30-2:14 ]| [2:15-2:59 ]| [3:00-3:44 ]| [3:45-4:29]
-R2: [4:30-5:14 ]| [5:15-5:59] | [6:00-6:44 ]| [6:45-7:29].
+
+
+Slot_idx = floor(((H%6)*60 + M - 90) % 360 / 45)
+
 
 1=7=13=19,2=8=14,3=9=15=21,4=10=16=22,5=11=17=23,6=12=18=00
+display
+R1: [1:30] | [2:15] | [3:00] | [3:45]
+R2: [4:30] | [5:15] | [6:00] | [6:45]
+
+Slot_idx uses ZERO-BASED numbering.
+The first box is index 0, not index 1.
+
+0 = R1 C1
+1 = R1 C2
+2 = R1 C3
+3 = R1 C4
+4 = R2 C1
+5 = R2 C2
+6 = R2 C3
+7 = R2 C4
+
 CODGRID must work with ANY input time in 24-hour format (00:00–23:59). 
 Convert the input time to a repeating 6-hour cycle using modulo 6 hours, preserving the exact minutes. 
 Then identify which of the 8 consecutive 45-minute slots contains that time and place exactly one X in the corresponding box. 
