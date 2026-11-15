@@ -16,9 +16,9 @@ BEFORE DRAWING THE CARD:
 Step 1: Calculate H6 = H mod 6.
 If remainder = 0, use 6.
 
-Step 2: Calculate M5 = M - (M mod 5).
+Step 2: Calculate MINUTE_BOX = M - (M mod 5).
 
-Step 3: Find the M5 position in this grid:
+Step 3: Find the MINUTE_BOX position in this grid:
 
 R1: [05] | [10] | [15]
 R2: [20] | [25] | [30]
@@ -27,7 +27,7 @@ R4: [50] | [55] | [00]
 
 00 maps to R4 C3.
 
-Step 4: Place exactly ONE H6 arrow in the
+Step 4: Place exactly ONE HOUR_ARROW in the
 box corresponding to M5.
 
 Arrow mapping:
@@ -40,10 +40,18 @@ Arrow mapping:
 
 IMPORTANT:
 - M5 determines the box.
-- H6 determines the arrow.
+-HOUR_ARROW determines the arrow.
 - Never put X in this grid.
 - Never place the arrow in the H6 position.
 - Never stack symbols.
+
+MINUTE_BOX determines the box.
+
+HOUR_ARROW determines the symbol.
+
+HOUR_ARROW is selected using H6_VALUE.
+
+Place the arrow in MINUTE_BOX.
 -------------
 - CODGRID (2x4, 6h cycle): Put X in active 45m slot
 
@@ -73,13 +81,23 @@ Convert the input time to a repeating 6-hour cycle using modulo 6 hours, preserv
 Then identify which of the 8 consecutive 45-minute slots contains that time and place exactly one X in the corresponding box. 
 Never assume the input time is already within the displayed 6-hour range.
 -------
-- 2 by 3 HOUR GRID
-what it looks like
-Row 1: [1,7]|[2,8]|[3,9]
- R2: [4,10]|[5,11] [6,12]: 
+- 2 × 3 HOUR GRID (2 rows × 3 columns)
 
-Put X in H6 box.and leave 
-________
+Step 1: Use the previously calculated H6_VALUE.
+
+Step 2: Find the matching H6_VALUE in this grid:
+
+R1: [1,7] | [2,8] | [3,9]
+R2: [4,10] | [5,11] | [6,12]
+
+Step 3: Place exactly ONE X in the box containing H6_VALUE.
+
+H6_VALUE determines the box.
+Place X in that box.
+
+Do not use M5 or the minute quadrant to determine this position.
+Leave all other boxes empty unless another input time selects them
+
 
 ---- slow down for 5 second for accuracy--
 
