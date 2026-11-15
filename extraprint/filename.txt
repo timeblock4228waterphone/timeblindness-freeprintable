@@ -7,7 +7,7 @@ RULES (H=Hour, M=Minute):
 - H_Arrow by Pos: 1:↖ 2:↑ 3:↗ 4:↙ 5:↓ 6:↘
 - Quad by M: 00-14:↑ 15-29:→ 30-44:↓ 45-59:←
 
-
+///- H6 = H mod 6 (if 0, use 6)
 - 5-Minute Grid (Match M -> H_Arrow):
   M01=05-09 | M02=10-14 | M03=15-19
   M04=20-24 | M05=25-29 | M06=30-34
