@@ -103,7 +103,7 @@ Leave all other boxes empty unless another input time selects them
 
 
 -ARROW GRID
-(Same H6 layout): Put M quadrant arrow (00-14:↑ 15-29:→ 30-44:↓ 45-59:←) in H6 box.
+(Same H6 layout): Put M quadrant arrow (00-14:↑ 15-29:→ 30-44:↓ 45-59:←) in H6 box.Sort:← ↑  ↓→
 -----
 
 [1] CODGRID (2x4, 45m slots from 1:30, 6h cycle):
