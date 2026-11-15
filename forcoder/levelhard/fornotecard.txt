@@ -40,19 +40,26 @@ MINUTE GRID                 2x3 HOURS
 
 
 TIME(S): now
-Treat the template as a fixed grid.
+EXECUTION PROCESS:
 
-Do not rewrite or redesign it.
+STEP 1: Read the input time.
 
-Preserve every line break and spacing.
+STEP 2: Calculate all required time variables.
 
-Only insert symbols into existing boxes.
+STEP 3: Calculate each grid independently.
 
-Never move a section to another position.
+STEP 4: Assign symbols to their designated boxes.
 
-Before answering, verify the layout matches the original template exactly.
+STEP 5: Verify every grid against its individual rules.
 
-Output one completed card in one code block
+STEP 6: Compare the completed card against the original template.
+
+STEP 7: Output exactly ONE completed card in ONE code block.
+
+IMPORTANT:
+Correct calculations are more important than presentation.
+Exact template preservation is mandatory.
+Do not interpret or improve the design.
 
 
 
