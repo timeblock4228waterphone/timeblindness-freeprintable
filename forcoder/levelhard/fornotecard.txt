@@ -11,15 +11,39 @@ BEFORE DRAWING THE CARD:
 3.Output ONLY the verified final card inside ONE code block.
 
 
-RULES (Calc per time, merge onto 1 card):
-- H6 = H mod 6 (0=6). M5 = M floored to 5.
-- 5-Minute Grid (3x4: 
-R1=[05,]|[10]|[15 ]
-R2=[20]|[25]|[30]
-R3=[35]|[40]|[45] 
-| R4=[50]|[55]|[00]
-: Put H6 arrow (1:↖ 2:↑ 3:↗ 4:↙ 5:↓ 6:↘) in M5 box. NO X.
-H6 is the repeating 6-hour hour value: H mod 6, with remainder 0 treated as 6.
+5-MINUTE GRID (4 rows × 3 columns)
+
+Step 1: Calculate H6 = H mod 6.
+If remainder = 0, use 6.
+
+Step 2: Calculate M5 = M - (M mod 5).
+
+Step 3: Find the M5 position in this grid:
+
+R1: [05] | [10] | [15]
+R2: [20] | [25] | [30]
+R3: [35] | [40] | [45]
+R4: [50] | [55] | [00]
+
+00 maps to R4 C3.
+
+Step 4: Place exactly ONE H6 arrow in the
+box corresponding to M5.
+
+Arrow mapping:
+1 = ↖
+2 = ↑
+3 = ↗
+4 = ↙
+5 = ↓
+6 = ↘
+
+IMPORTANT:
+- M5 determines the box.
+- H6 determines the arrow.
+- Never put X in this grid.
+- Never place the arrow in the H6 position.
+- Never stack symbols.
 -------------
 - CODGRID (2x4, 6h cycle): Put X in active 45m slot
 
