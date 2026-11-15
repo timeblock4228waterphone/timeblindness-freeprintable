@@ -3,32 +3,39 @@ this is for notecard last very short
 this notecard is named "You are here and that enough"
 
 -----------
-Output ONLY the completed card inside ONE code block. Combine all input times onto one card. Use ONLY the lookup rules below.
+Output ONLY the filled TEMPLATE inside ONE code block. Combine all times onto one card. Use ONLY X, arrows, or spaces inside brackets.
 
-### 1. HOUR LOOKUP (Find H)
+### 1. HOUR LOOKUP (Find H -> H6, H_Arrow, HourPos)
+01,07,13,19->1,↖,1 | 02,08,14,20->2,↑,2 | 03,09,15,21->3,↗,3
+04,10,16,22->4,↙,4 | 05,11,17,23->5,↓,5 | 00,06,12,18->6,↘,6
 
-01,07,13,19->1,↖,R1C1 | 02,08,14,20->2,↑,R1C2 | 03,09,15,21->3,↗,R1C3
-04,10,16,22->4,↙,R2C1 | 05,11,17,23->5,↓,R2C2 | 00,06,12,18->6,↘,R2C3
-### 2. MINUTE LOOKUP (Find M)
-00-04->R4C3,↑ | 05-09->R1C1,↑ | 10-14->R1C2,↑ | 15-19->R1C3,→
-20-24->R2C1,→ | 25-29->R2C2,→ | 30-34->R2C3,↓ | 35-39->R3C1,↓
-40-44->R3C2,↓ | 45-49->R3C3,← | 50-54->R4C1,← | 55-59->R4C2,←
+### 2. QUAD ARROW (Find M -> Quad)
+00-14->↑ | 15-29->→ | 30-44->↓ | 45-59->←
 
-### 3. CODGRID LOOKUP (Use H6 + M)
-1:30-2:14->R1C1 | 2:15-2:59->R1C2 | 3:00-3:44->R1C3 | 3:45-4:29->R1C4
-4:30-5:14->R2C1 | 5:15-5:59->R2C2 | 6:00-6:44->R2C3 | 6:45-6:59,1:00-1:29->R2C4
+### 3. GRID POSITION MAPS (Find matching range, put symbol in same box)
+CODGRID (match H6:M, put X):
+[1:30-2:14] | [2:15-2:59] | [3:00-3:44] | [3:45-4:29]
+[4:30-5:14] | [5:15-5:59] | [6:00-6:44] | [6:45-6:59 or 1:00-1:29]
 
-### 
-- CODGRID: Put X in COD_MAP Box (1 max/box).
-- 5-Minute Grid: Put H_MAP Arrow in M_MAP 5MinBox (1 max/box).
-- 2 by 3 HOUR GRID: Put X in H_MAP Box (1 max/box).
-- ARROW GRID: Put M_MAP Quad in H_MAP Box (dedupe, sort: ← ↑ ↓ →).
+5-Minute Grid (match M, put H_Arrow):
+[05-09] | [10-14] | [15-19]
+[20-24] | [25-29] | [30-34]
+[35-39] | [40-44] | [45-49]
+[50-54] | [55-59] | [00-04]
 
+2 by 3 HOUR GRID (match HourPos, put X) & ARROW GRID (match HourPos, put Quad):
+[1] | [2] | [3]
+[4] | [5] | [6]
 
-below is decoration only for it
-             [00]           
-       [45]   |   [15]      
-             [30]          
+### 4. RULES
+- Clock ([00], [45] |[15] [30] ): Never modify.
+- CODGRID, 5-Minute Grid, HOUR GRID: Max 1 symbol per box.
+- ARROW GRID: Remove duplicate arrows in a box, sort strictly: ← ↑ ↓ →.
+- Replace all labels in TEMPLATE with symbols or spaces (keep exact box widths).
+
+         [00]
+   [45]   |   [15]
+         [30]         
 
 
 ### 5. TEMPLATE (Keep exact spacing
