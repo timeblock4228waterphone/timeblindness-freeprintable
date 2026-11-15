@@ -20,6 +20,8 @@ what it looks like
 Row 1: [1,7]|[2,8]|[3,9]
  R2: [4,10]|[5,11] [6,12]: Put X in H6 box.
 
+---- slow down for 5 second for accuracy--/
+
 -ARROW GRID
 (Same H6 layout): Put M quadrant arrow (00-14:↑ 15-29:→ 30-44:↓ 45-59:←) in H6 box.
 
