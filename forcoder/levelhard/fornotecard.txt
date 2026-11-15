@@ -39,6 +39,20 @@ CODGRID (match H6:M, put X):
 
 
 ### 5. TEMPLATE (Keep exact spacing
+
+You are here and that enough
+
+             (00)           CODGRID
+       (45)   |   (15)      [X] | [X] | [X] | [X]
+             (30)           [X] | [X] | [X] | [X]
+
+5-Minute Grid                 2 by 3 HOUR GRID
+[1] | [2] | [3]             [X] | [X] | [X]
+[4] | [5] | [6]             [X] | [X] | [X]
+[1] | [2] | [3]
+[4] | [5] | [6]             ARROW GRID
+                            [<^v>] | [<^v>] | [<^v>]
+                            [<^v>] | [<^v>] | [<^v>]
 TEMPLATE:
 You are here and that enough
 
