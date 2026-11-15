@@ -8,8 +8,7 @@ b=1,2,3,4,5,5
 - **Arrows (1–6):** `1:↖ 2:↑ 3:↗ 4:↙ 5:↓ 6:↘`
 - **Hour (`00`→`24`, `H=6(a-1)+b`):**
 - H6 = H mod 6 (if 0, use 6). Pos = H6.
-- H_Arrow by Pos: 1:↖ 2:↑ 3:↗ 4:↙ 5:↓ 6:↘
-- Quad by M: 00-14:↑ 15-29:→ 30-44:↓ 45-59:←
+
 
 ///- H6 = H mod 6 (if 0, use 6)
 - 5-Minute Grid (Match M -> H_Arrow):
@@ -29,7 +28,9 @@ GRIDS:
 - 2x3 HOUR GRID (Match Pos -> X):
   H1=1 | H2=2 | H3=3
   H4=4 | H5=5 | H6=6
-- ARROW GRID (Match Pos -> Quad, unique, sort ← ↑ ↓ →):
+- ARROW GRID
+Quad by M: 00-14:↑ 15-29:→ 30-44:↓ 45-59:←
+ (Match Pos -> Quad, unique, sort ← ↑ ↓ →):
   A1=1 | A2=2 | A3=3
   A4=4 | A5=5 | A6=6
 
