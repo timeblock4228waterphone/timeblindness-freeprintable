@@ -4,6 +4,12 @@ this notecard is named "You are here and that enough"
 
 -----------
 Output ONE combined card in ONE code block. Preserve exact template spacing. Combine all input times onto one card. Max 1 symbol per box (deduplicate overlaps; never stack symbols like XX).
+BEFORE DRAWING THE CARD:
+
+1. List each input time and calculate: H6, M5, 6h-shifted time (for CODGRID), and quadrant.
+2. Verify every grid coordinate against the rules.
+3.Output ONLY the verified final card inside ONE code block.
+
 
 RULES (Calc per time, merge onto 1 card):
 - H6 = H mod 6 (0=6). M5 = M floored to 5.
