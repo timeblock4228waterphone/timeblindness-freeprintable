@@ -3,27 +3,16 @@ this is for notecard last very short
 this notecard is named "You are here and that enough"
 
 -----------
-Output ONE combined grid in a code block. Keep exact spacing and the `[00] [45] | [15] [30]`  compass. Combine all times onto one card.
+Output ONE combined card in ONE code block. Preserve exact template spacing. Combine all input times onto one card. Max 1 symbol per box (deduplicate overlaps; never stack symbols like XX).
 
-MINUTE GRID (3x4, round min down to 5):
-R1: 05,10,15 | R2: 20,25,30 | R3: 35,40,45 | R4: 50,55,00
-Arrows (Hour mod 6, 0=6): 1:↖ 2:↑ 3:↗ 4:↙ 5:↓ 6:↘. Sort: ↖ ↑ ↗ ↙ ↓ ↘
+RULES (Calc per time, merge onto 1 card):
+- H6 = H mod 6 (0=6). M5 = M floored to 5.
+- MINUTE GRID (3x4: R1=05,10,15 | R2=20,25,30 | R3=35,40,45 | R4=50,55,00): Put H6 arrow (1:↖ 2:↑ 3:↗ 4:↙ 5:↓ 6:↘) in M5 box. NO X.
+- CODGRID (2x4, 6h cycle): Put X in active 45m slot (R1: 1:30-2:14 | 2:15-2:59 | 3:00-3:44 | 3:45-4:29; R2: 4:30-5:14 | 5:15-5:59 | 6:00-6:44 | 6:45-7:29).
+- 2x3 HOURS (R1: H6 1-3 | R2: H6 4-6): Put X in H6 box.
+- 2by3 AND 4 ARROW (Same H6 layout): Put M quadrant arrow (00-14:↑ 15-29:→ 30-44:↓ 45-59:←) in H6 box.
 
-MINUTE GRID: Place the correct arrow (↖ ↑ ↗ ↙ ↓ ↘) in the active 5-minute box. NEVER put an X in the MINUTE GRID. Xs are only for CODGRID and 2x3 HOURS. The 2by3 ARROW grid uses its designated arrows.
-
-CODGRID (2x4, X in active 45m window, repeats every 6h):
-
-
-R1: 1:30-2:14 | 2:15-2:59 | 3:00-3:44 | 3:45-4:29
-R2: 4:30-5:14 | 5:15-5:59 | 6:00-6:44 | 6:45-7:29
-
-
-
-
-2x3 HOURS & 2by3and x AND 4 ARROW (Box = Hour mod 6, 0=6; Row1=1-3, Row2=4-6):
-2x3 HOURS: X in active box.
-2by3 ARROW: Arrow in active box:then  ↑= (00-14) →(15-29) ↓(30-44) ←(45-59). Sort:← ↑ ↓→ 
----------------//
+TEMPLATE:
 You are here and that enough
 
              [00]           CODGRID
@@ -37,60 +26,6 @@ MINUTE GRID                 2x3 HOURS
 [    ] | [    ] | [    ]    2by3 AND 4 ARROW
                             [    ] | [    ] | [    ]
                             [    ] | [    ] | [    ]
-
-
-TIME(S): now
-EXECUTION PROCESS:
-
-STEP 1: Read the input time.
-
-STEP 2: Calculate all required time variables.
-
-STEP 3: Calculate each grid independently.
-
-STEP 4: Assign symbols to their designated boxes.
-
-STEP 5: Verify every grid against its individual rules.
-
-STEP 6: Compare the completed card against the original template.
-
-STEP 7: Output exactly ONE completed card in ONE code block.
-
-IMPORTANT:
-Correct calculations are more important than presentation.
-Exact template preservation is mandatory.
-Do not interpret or improve the design.
-
-
-
-the reason :this is like a neutral companion that doesn't care that what you do in the time before it reset.
-All times listed below represent separate moments that must appear together on ONE single notecard.
-
-* Do NOT generate separate cards.
-* Do NOT select only one time.
-* Do NOT overwrite previous time positions.
-* Calculate every time independently.
-* Insert every time’s symbols into its corresponding grid.
-* If multiple times activate the same box, show all applicable symbols in that box.
-* Preserve the original template exactly.
-* The final output must contain ONE combined card representing ALL supplied times.
-
-Every box may contain ONLY ONE symbol.
-
-* MINUTE GRID: Maximum one arrow per box.
-* CODGRID: Maximum one X per box.
-* 2x3 HOURS: Maximum one X per box.
-* 2by3 AND 4 ARROW: Maximum one arrow per box.
-
-If multiple times activate the same box, display the symbol only once.
-
-Never use XX, multiple arrows, duplicated symbols, or stacked symbols.
-
-The card represents all supplied times collectively, not the number of times a position was activated.
-
-time 
-    5:55
-10:30
 12:00
 3:15
 6:45
