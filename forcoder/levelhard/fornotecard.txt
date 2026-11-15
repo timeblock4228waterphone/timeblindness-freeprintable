@@ -64,11 +64,24 @@ Do not interpret or improve the design.
 
 
 the reason :this is like a neutral companion that doesn't care that what you do in the time before it reset.
+All times listed below represent separate moments that must appear together on ONE single notecard.
 
-note it reset around 5:55 minute for minute grid
-and for grid it reset around before 6 hour or 5 hours
+* Do NOT generate separate cards.
+* Do NOT select only one time.
+* Do NOT overwrite previous time positions.
+* Calculate every time independently.
+* Insert every time’s symbols into its corresponding grid.
+* If multiple times activate the same box, show all applicable symbols in that box.
+* Preserve the original template exactly.
+* The final output must contain ONE combined card representing ALL supplied times.
 
-
+time 
+    5:55
+10:30
+12:00
+3:15
+6:45
+11:59
 
 
 read this if you are human
