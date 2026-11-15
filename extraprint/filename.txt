@@ -24,7 +24,7 @@ CODGRID (Match H6:M -> put X, max 1/box):
 [4] | [5] | [6]
 
 ### TEMPLATE (Do not alter (00)/(45)/(15)/(30))
-------
+------ (Keep exact spacing)
 You are here and that enough
 
              (00)           CODGRID
