@@ -36,17 +36,23 @@ TEMPLATE:
 ```text
 You are here and that enough
 
-        [ 00 ]           CODGRID
-   [ 45 ]  |  [ 15 ]     [ C1  ] | [ C2  ] | [ C3  ] | [ C4  ]
-        [ 30 ]           [ C5  ] | [ C6  ] | [ C7  ] | [ C8  ]
-
-5-Minute Grid            2 by 3 HOUR GRID
-[ M01 ] | [ M02 ] | [ M03 ]   [ H1  ] | [ H2  ] | [ H3  ]
-[ M04 ] | [ M05 ] | [ M06 ]   [ H4  ] | [ H5  ] | [ H6  ]
+        [ 00 ]           
+   [ 45 ]  |  [ 15 ]      
+        [ 30 ]           
+CODGRID
+[ C1  ] | [ C2  ] | [ C3  ] | [ C4  ]
+ [ C5  ] | [ C6  ] | [ C7  ] | [ C8  ]
+5-Minute Grid        
+[ M01 ] | [ M02 ] | [ M03 ]   
+[ M04 ] | [ M05 ] | [ M06 ]  
 [ M07 ] | [ M08 ] | [ M09 ]
-[ M10 ] | [ M11 ] | [ M12 ]   ARROW GRID
-                              [ A1  ] | [ A2  ] | [ A3  ]
-                              [ A4  ] | [ A5  ] | [ A6  ]
+[ M10 ] | [ M11 ] | [ M12 ]   
+ 2 by 3 HOUR GRID
+[ H1  ] | [ H2  ] | [ H3  ]
+[ H4  ] | [ H5  ] | [ H6  ]
+
+arrow 
+  [ A1  ] | [  [ A4  ] | [ A5  ] | [ A6  ]
 ```
 
 INPUTS: 10:30 and 5:55
