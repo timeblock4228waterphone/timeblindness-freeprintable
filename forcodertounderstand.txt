@@ -6,10 +6,12 @@ next there will be thing called notecardtxt and steve time arrow those are the b
 
 
 
-below is the cheat sheet
+below is the cheat shee
+
+it is called stay and breath
 okay now that you read this the meeat is part 1 -6
 _________________________
-part 1
+1
 
 Map the given time into these 6 grids inside a code block. Keep all text; only highlight active slots.
 Vars: H12 (1–12), H24 (00–23), M (00–59), M5 (M floored to 5).
