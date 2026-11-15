@@ -50,15 +50,10 @@ CODGRID
  2 by 3 HOUR GRID
 [ H1  ] | [ H2  ] | [ H3  ]
 [ H4  ] | [ H5  ] | [ H6  ]
- 2 by 3 HOUR GRID
-[    ] | [    ] | [    ]    [   ] | [   ] | [   ]
-[    ] | [    ] | [    ]    [   ] | [   ] | [   ]
-[    ] | [    ] | [    ]
-[    ] | [    ] | [    ]    ARROW GRID
-                            [    ] | [    ] | [    ]
-                            [    ] | [    ] | [    ]
-  ARROW GRID 
-  [ A1  ] | [  [ A4  ] | [ A5  ] | [ A6  ]
+ARROW GRID 
+ [ H1  ] | [ H2  ] | [ H3  ]
+[ H4  ] | [ H5  ] | [ H6  ]
+  
 ```
 
 INPUTS: 10:30 and 5:55
