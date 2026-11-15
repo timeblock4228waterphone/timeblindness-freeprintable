@@ -19,25 +19,41 @@ R2=[20]|[25]|[30]
 R3=[35]|[40]|[45] 
 | R4=[50]|[55]|[00]
 : Put H6 arrow (1:↖ 2:↑ 3:↗ 4:↙ 5:↓ 6:↘) in M5 box. NO X.
+-------------
 - CODGRID (2x4, 6h cycle): Put X in active 45m slot
  (R1: [1:30-2:14 ]| [2:15-2:59 ]| [3:00-3:44 ]| [3:45-4:29]
 R2: [4:30-5:14 ]| [5:15-5:59] | [6:00-6:44 ]| [6:45-7:29].
+
+1=7=13=19,2=8=14,3=9=15=21,4=10=16=22,5=11=17=23,6=12=18=00
 CODGRID must work with ANY input time in 24-hour format (00:00–23:59). 
 Convert the input time to a repeating 6-hour cycle using modulo 6 hours, preserving the exact minutes. 
 Then identify which of the 8 consecutive 45-minute slots contains that time and place exactly one X in the corresponding box. 
 Never assume the input time is already within the displayed 6-hour range.
+-------
 - 2 by 3 HOUR GRID
 what it looks like
 Row 1: [1,7]|[2,8]|[3,9]
- R2: [4,10]|[5,11] [6,12]: Put X in H6 box.
+ R2: [4,10]|[5,11] [6,12]: 
+
+Put X in H6 box.and leave 
+________
 
 ---- slow down for 5 second for accuracy--
 
 
 -ARROW GRID
 (Same H6 layout): Put M quadrant arrow (00-14:↑ 15-29:→ 30-44:↓ 45-59:←) in H6 box.
+-----
 
+[1] CODGRID (2x4, 45m slots from 1:30, 6h cycle):
+Slot_idx = floor(((H%6)*60 + M - 90) % 360 / 45) -> R=(idx//4)+1, C=(idx%4)+1
 
+[2] 5-MIN GRID (4x3, M5 = M - M%5):
+idx = ((M5 if M5>0 else 60)//5) - 1 -> R=(idx//3)+1, C=(idx%3)+1
+
+[3] HOUR GRID (2x3, H6 = H%6 or 6):
+R = 1 if H6<=3 else 2, C = ((H6-1)%3)+1
+---- slow down for 5 second for accuracy--
 
 TEMPLATE:
 Y
@@ -53,6 +69,28 @@ Y
 [    ] | [    ] | [    ]    ARROW GRID
                             [    ] | [    ] | [    ]
                             [    ] | [    ] | [    ]
+for double checking
+ai write below
+
+Input Time:
+
+ 2 by 3 HOUR GRID Calculation:
+
+5-Minute Grid  Calculation:
+
+CODGRID Row and Column:
+CODGRID Calculation :
+
+Quadrant what cogrid what row and col:
+
+CODGRID Position:
+
+ 2 by 3 HOUR GRID Position:
+
+ARROW GRID Position:
+
+
+
 12:00
 3:15
 6:45
