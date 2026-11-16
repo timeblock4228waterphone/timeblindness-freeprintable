@@ -1,56 +1,49 @@
-this is for notecard last very short
 
-this notecard is named "You are here and that enough"
-HOW TO USE THIS TIME ENCODER:
-1. Open an AI chat (Google AI Mode, ChatGPT, or Claude)—do NOT paste into a regular web search bar.
-2. Copy everything below, change the Input time at the bottom, and hit Send.
-this notecard is named "You are here and that enough"
 
------------
+You are here and that enough
+1. Paste into an AI chat (not web search). Change INPUT TIME at the bottom and send.
+
 STRICT FORMAT LOCK:
 - Output ONLY the filled TEMPLATE inside ONE ```text code block. Zero intro, zero math, zero outro.
 - Keep exact line count, box widths, and spaces outside brackets.
-- 3-char boxes ([...]): active = "[ X ]", empty = "[   ]".
-- 4-char boxes ([....]): empty = "[    ]", 1 arrow = "[ ↑  ]", 2 arrows = "[ ↖↘ ]", 3 arrows = "[ ←↑→]", 4 arrows = "[←↑↓→]".
+- 3-char boxes: active = "[ X ]", empty = "[   ]".
+- 4-char boxes: empty = "[    ]", 1 arrow = "[ ↑  ]", 2 arrows = "[ ↖↘ ]", 3 arrows = "[ ←↑→]", 4 arrows = "[←↑↓→]".
 
-RULES (Convert input time(s) to H24=00–23, M=00–59; if H24=00 use H=24 except in T):
+RULES (5m x 12 = 60m x 6 = 360m = 72 options; use 24-hr H=00–23, M=00–59):
 For each input time:
-
-1. 5-MIN GRID (Overwrite matching 2-digit minute with Hour Arrow; others -> "[    ]"):
-- Hour Arrow: solve H = 6(a-1)+b [a=1–4, b=1–6] -> b maps 1:↖ 2:↑ 3:↗ 4:↙ 5:↓ 6:↘.
-- Minute Floor: round M down to nearest 5 (00,05,10,15,20,25,30,35,40,45,50,55; e.g. 28->25).
-- If 2+ arrows hit same box, keep unique sorted (↖ ↑ ↗ ↙ ↓ ↘).
-
-2. CODGRID (Overwrite matching C[b] with "[ X ]", others -> "[   ]"):
-- T = (H24×60)+M (if T<90, add 1440).
-- Solve T = 360(a-1)+45b+45+c [a=1–4, b=1–8, c=00–44].
-- Slot Map: 1:C1 (1:30) | 2:C2 (2:15) | 3:C3 (3:00) | 4:C4 (3:45) | 5:C5 (4:30) | 6:C6 (5:15) | 7:C7 (6:00) | 8:C8 (6:45).
-
-3. 2x3 HOUR GRID (Overwrite H[b] with "[ X ]", others -> "[   ]"):
-- Use b (1–6) from Rule 1.
-
-4. ARROW GRID (Overwrite A[b] with Quad Arrow, others -> "[    ]"):
-- Quad Arrow by M: 00–14=↑ | 15–29=→ | 30–44=↓ | 45–59=←.
-- Use b (1–6) from Rule 1; if 2+ arrows hit same box, keep unique sorted (← ↑ ↓ →).
-
-5. CLOCK ([00], [45], [15], [30]): Never modify. Replace <input> with the input time(s).
+1. HOUR SLOT (b = 1 to 6, repeating every 6 hrs):
+   b=1: 01,07,13,19 (↖) | b=2: 02,08,14,20 (↑) | b=3: 03,09,15,21 (↗)
+   b=4: 04,10,16,22 (↙) | b=5: 05,11,17,23 (↓) | b=6: 06,12,18,00 (↘)
+2. 5-MIN GRID: Round M down to nearest 5 (00,05,10,15,20,25,30,35,40,45,50,55). Replace matching [Mxx ] tag with Hour Arrow from Rule 1 (others -> "[    ]"). Sort multiple arrows: ↖ ↑ ↗ ↙ ↓ ↘.
+3. 2x3 HOUR GRID: Replace matching [Hb ] with "[ X ]" using b from Rule 1 (others -> "[   ]").
+4. ARROW GRID: Replace matching [Ab  ] with Quad Arrow using b from Rule 1 (00–14=↑, 15–29=→, 30–44=↓, 45–59=←; others -> "[    ]"). Sort multiple arrows: ← ↑ ↓ →.
+5. CODGRID: Convert time to total mins T = (H×60)+M (if T<90, add 1440). Find slot where T starts:
+   C1: 90–134 (1:30)  | C2: 135–179 (2:15) | C3: 180–224 (3:00) | C4: 225–269 (3:45)
+   C5: 270–314 (4:30) | C6: 315–359 (5:15) | C7: 360–404 (6:00) | C8: 405–449 (6:45)
+   (Repeat cycle every +360 mins). Replace matching [Cb ] with "[ X ]" (others -> "[   ]").
+6. CLOCK: Keep (00), (45), (15), (30) unchanged. Replace <input> with the input time(s).
 
 TEMPLATE:
 ```text
 You are here and that enough
              
                        CODGRID
-         [00] 
-   [45]   |   [15]      [C1 ] | [C2 ] | [C3 ] | [C4 ]
-         [30]           [C5 ] | [C6 ] | [C7 ] | [C8 ]
-
+         (00) 
+   (45)   |   (15)      [C1 ] | [C2 ] | [C3 ] | [C4 ]
+         (30)           [C5 ] | [C6 ] | [C7 ] | [C8 ]
+       <input>
 5-Minute Grid                 2 by 3 HOUR GRID
-[ 05 ] | [ 10 ] | [ 15 ]    [H1 ] | [H2 ] | [H3 ]
-[ 20 ] | [ 25 ] | [ 30 ]    [H4 ] | [H5 ] | [H6 ]
-[ 35 ] | [ 40 ] | [ 45 ]
-[ 50 ] | [ 55 ] | [ 00 ]    ARROW GRID
+[M05 ] | [M10 ] | [M15 ]    [H1 ] | [H2 ] | [H3 ]
+[M20 ] | [M25 ] | [M30 ]    [H4 ] | [H5 ] | [H6 ]
+[M35 ] | [M40 ] | [M45 ]
+[M50 ] | [M55 ] | [M00 ]    ARROW GRID
                             [A1  ] | [A2  ] | [A3  ]
                             [A4  ] | [A5  ] | [A6  ] 
+```
+
+INPUT TIME: 12:59, 1:49
+
+
 ```
 
 INPUT TIME: 12:59, 1:49
