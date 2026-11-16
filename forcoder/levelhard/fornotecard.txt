@@ -8,7 +8,7 @@ Output ONLY the filled TEMPLATE inside ONE code block. Combine all given times o
 MATH (H24=00–23, M=00–59; for 00:xx use H=24 except T):
 1. 5-MIN ARROW GRID (M01–M12):
 - Hour: H = 6(a-1)+b [a=1–4, b=1–6] -> Arrow: 1:↖ 2:↑ 3:↗ 4:↙ 5:↓ 6:↘ (by b)
-- Min (00–04->60): M = 5m+r [m=1–12, r=0–4] -> Put Arrow in slot M[m].
+- Minute Box: 00–04=M00 | 05–09=M05 | 10–14=M10 | 15–19=M15 | 20–24=M20 | 25–29=M25 | 30–34=M30 | 35–39=M35 | 40–44=M40 | 45–49=M45 | 50–54=M50 | 55–59=M55.
 m = floor(M ÷ 5)
 - If multiple times hit the same M[m] box, keep unique arrows sorted (↖ ↑ ↗ ↙ ↓ ↘) and pad with spaces to keep the 4-char width (e.g., [ ↖↘ ]).
 
