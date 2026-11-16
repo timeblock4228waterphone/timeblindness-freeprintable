@@ -17,10 +17,10 @@ For each input time:
 2. 5-MIN GRID: Round M down to nearest 5 (00,05,10,15,20,25,30,35,40,45,50,55). Replace matching [Mxx ] tag with Hour Arrow from Rule 1 (others -> "[    ]"). Sort multiple arrows: ↖ ↑ ↗ ↙ ↓ ↘.
 3. 2x3 HOUR GRID: Replace matching [Hb ] with "[ X ]" using b from Rule 1 (others -> "[   ]").
 4. ARROW GRID: Replace matching [Ab  ] with Quad Arrow using b from Rule 1 (00–14=↑, 15–29=→, 30–44=↓, 45–59=←; others -> "[    ]"). Sort multiple arrows: ← ↑ ↓ →.
-5. CODGRID: Convert time to total mins T = (H×60)+M (if T<90, add 1440). Find slot where T starts:
-   C1: 90–134 (1:30)  | C2: 135–179 (2:15) | C3: 180–224 (3:00) | C4: 225–269 (3:45)
-   C5: 270–314 (4:30) | C6: 315–359 (5:15) | C7: 360–404 (6:00) | C8: 405–449 (6:45)
-   (Repeat cycle every +360 mins). Replace matching [Cb ] with "[ X ]" (others -> "[   ]").
+5. **CODGRID:** `T = (H×60)+M`. Find `D = (T - 90) mod 360` (if `T < 90`, use `T + 270`). Map `D` to slot:
+   `0–44`: `[C1 ]` | `45–89`: `[C2 ]` | `90–134`: `[C3 ]` | `135–179`: `[C4 ]`
+   `180–224`: `[C5 ]` | `225–269`: `[C6 ]` | `270–314`: `[C7 ]` | `315–359`: `[C8 ]`
+   Overwrite matching `[Cb ]` with `[ X ]` (others -> `[   ]`).
 6. CLOCK: Keep (00), (45), (15), (30) unchanged. Replace <input> with the input time(s).
 7. VERIFY: Before outputting, confirm active arrow count in 5-MIN GRID equals active [ X ] count in 2x3 HOUR GRID (unless two times share a box).
 TEMPLATE:
