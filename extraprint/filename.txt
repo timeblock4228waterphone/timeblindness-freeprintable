@@ -20,8 +20,36 @@ b=1,2,3,4,5,5
 
 GRIDS:
 - CODGRID (Match H6:M -> X):
-  C1=1:30-2:14 | C2=2:15-2:59 | C3=3:00-3:44 | C4=3:45-4:29
-  C5=4:30-5:14 | C6=5:15-5:59 | C7=6:00-6:44 | C8=6:45-1:29
+  H = hours + m= minute 
+
+
+
+T=60h +m
+
+If t is 90 ≤ T ≤ 1439
+
+Then add 1440
+
+CODGRID EQUATION:
+
+T = 360(a-1) + 45b + 45 + c
+
+VARIABLES:
+a = 1–4
+b = 1–8
+c = 00–44
+
+OUT-OF-RANGE RULE:
+If input time is between 00:00 and 01:29,
+add 1440 to the input minutes before conversion.
+
+DAILY RESET:
+1440 minutes = 00:00
+
+Where b = 1–8, corresponding to B1–B8.
+
+B1 | B2 | B3| B4
+  B5| B6 | B7 | B8
 
 
 
