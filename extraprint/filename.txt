@@ -12,12 +12,13 @@ Arrows (1–6): 1:↖ 2:↑ 3:↗ 4:↙ 5:↓ 6:↘
 - H_Arrow: Match Pos -> Arrow (1:↖ 2:↑ 3:↗ 4:↙ 5:↓ 6:↘)
 ------------------------
 GRIDS:
-1. CODGRID (Match B -> X):
-- T = (H × 60) + M (If T < 90, add 1440)
-- T = 360(a - 1) + 45b + 45 + c (a=1–4, b=1–8, c=00–44) 1440 minutes is 00:00
-- Layout:
-  B1 | B2 | B3 | B4
-  B5 | B6 | B7 | B8
+1.  CODGRID (Replace ONLY the matching 4-char time anchor at Slot b with [ X ]; preserve all inactive time labels and spacing):
+- T = (H24 × 60) + M (If T < 90, T = T + 1440)
+- Solve T = 360(a - 1) + 45b + 45 + c (a=1–4, b=1–8, c=00–44)
+- Template (Slot 1 to Slot 8 = b):
+- Slot Map: b=1:1:30 | b=2:2:15 | b=3:3:00 | b=4:3:45 | b=5:4:30 | b=6:5:15 | b=7:6:00 | b=8:6:45
+Row 1:  1:30 |  2:15 |  3:00 |  3:45
+Row 2:  4:30 |  5:15 |  6:00 |  6:45
 
 -------------------------------
 2. 2x3 HOUR GRID (Match b -> X, others -> _):
