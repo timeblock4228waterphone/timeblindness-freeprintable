@@ -4,7 +4,7 @@ this notecard is named "You are here and that enough"
 
 -----------
 # Grid Encoder
-Solve inside `<math>` first, then output ONLY the filled template inside ONE `text` block.
+Calculate all rules silently. Output ONLY the filled template inside ONE `text` code block. Do not show math steps or use XML tags.
 
 ## Format
 - 3-char `[...]`: active=`[ X ]`, empty=`[   ]`
@@ -13,24 +13,25 @@ Solve inside `<math>` first, then output ONLY the filled template inside ONE `te
 
 ## Algebra & Rules
 1. **5-Min Grid:** `H = 6(a-1)+b` (`a`=1–4, `b`=1–6) -> `b` maps `1:↖ 2:↑ 3:↗ 4:↙ 5:↓ 6:↘`. Floor `M` to 5-min mark (`00`..`55`) and overwrite with arrow (unique sorted: `↖ ↑ ↗ ↙ ↓ ↘`). Replace unused minutes with `[    ]`.
-2. **CODGRID (`C1`–`C8`):** `T = (H24×60)+M` (if `T<90`, `T+1440`). `T = 360(a-1)+45b+45+c` (`a`=1–4, `b`=1–8, `c`=00–44). Put `[ X ]` in `C[b]`.
+2. **CODEGRID (`C1`–`C8`):** `T = (H24×60)+M` (if `T<90`, `T+1440`). `T = 360(a-1)+45b+45+c` (`a`=1–4, `b`=1–8, `c`=00–44). Put `[ X ]` in `C[b]`.
 3. **2x3 Hour (`H1`–`H6`):** Put `[ X ]` in `H[b]` using `b` from Rule 1.
 4. **Arrow Grid (`A1`–`A6`):** `M = 15(c-1)+d` (`c`=1–4, `d`=0–14) -> `c` maps `1:↑ 2:→ 3:↓ 4:←`. Put in `A[b]` using `b` from Rule 1 (unique sorted: `← ↑ ↓ →`, pad spaces to 4 chars).
 
 ## Template
 ```text
 You are here and that enough
-       [00]                CODGRID
-   [45]  | [15]            [C1 ] | [C2 ] | [C3 ] | [C4 ]
-       [30]                [C5 ] | [C6 ] | [C7 ] | [C8 ]
 
-5-Minute Grid            2 by 3 HOUR GRID
-[ 05 ] | [ 10 ] | [ 15 ] [H1 ] | [H2 ] | [H3 ]
-[ 20 ] | [ 25 ] | [ 30 ] [H4 ] | [H5 ] | [H6 ]
+           [00]                    CODE GRID
+       [45] | [15]          [C1 ] | [C2 ] | [C3 ] | [C4 ]
+           [30]             [C5 ] | [C6 ] | [C7 ] | [C8 ]
+
+5-Minute Grid               2 by 3 HOUR GRID
+[ 05 ] | [ 10 ] | [ 15 ]    [H1 ] | [H2 ] | [H3 ]
+[ 20 ] | [ 25 ] | [ 30 ]    [H4 ] | [H5 ] | [H6 ]
 [ 35 ] | [ 40 ] | [ 45 ]
-[ 50 ] | [ 55 ] | [ 00 ] ARROW GRID
-                         [A1 ] | [A2 ] | [A3 ]
-                         [A4 ] | [A5 ] | [A6 ]
+[ 50 ] | [ 55 ] | [ 00 ]    ARROW GRID
+                            [A1 ] | [A2 ] | [A3 ]
+                            [A4 ] | [A5 ] | [A6 ]
 ```
 
 **Input:** `00:46`
