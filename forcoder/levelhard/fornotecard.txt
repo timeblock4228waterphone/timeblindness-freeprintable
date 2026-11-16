@@ -8,29 +8,35 @@ this notecard is named "You are here and that enough"
 -----------
 
 STRICT FORMAT LOCK:
-- Output ONLY the filled TEMPLATE inside ONE code block (```). Zero intro, zero math, zero outro.
-- Keep exact line count and spaces outside brackets.
+this notecard is named "You are here and that enough"
+-----------
+STRICT FORMAT LOCK:
+- Output ONLY the filled TEMPLATE inside ONE ```text code block. Zero intro, zero math, zero outro.
+- Keep exact line count, box widths, and spaces outside brackets.
 - 3-char boxes ([...]): active = "[ X ]", empty = "[   ]".
 - 4-char boxes ([....]): empty = "[    ]", 1 arrow = "[ ↑  ]", 2 arrows = "[ ↖↘ ]", 3 arrows = "[ ←↑→]", 4 arrows = "[←↑↓→]".
 
-RULES (H24=00–23, M=00–59; if H24=00 use H=24 except in T):
-1. 5-MIN GRID (Overwrite matching 2-digit minute with Hour Arrow; replace all other 2-digit minutes with "[    ]"):
-- Hour Arrow: H = 6(a-1)+b [a=1–4, b=1–6] -> 1:↖ 2:↑ 3:↗ 4:↙ 5:↓ 6:↘ (by b).
-- Minute Floor: 00–04=00 | 05–09=05 | 10–14=10 | 15–19=15 | 20–24=20 | 25–29=25 | 30–34=30 | 35–39=35 | 40–44=40 | 45–49=45 | 50–54=50 | 55–59=55.
+RULES (Convert input time(s) to H24=00–23, M=00–59; if H24=00 use H=24 except in T):
+For each input time:
+
+1. 5-MIN GRID (Overwrite matching 2-digit minute with Hour Arrow; others -> "[    ]"):
+- Hour Arrow: solve H = 6(a-1)+b [a=1–4, b=1–6] -> b maps 1:↖ 2:↑ 3:↗ 4:↙ 5:↓ 6:↘.
+- Minute Floor: round M down to nearest 5 (00,05,10,15,20,25,30,35,40,45,50,55; e.g. 28->25).
 - If 2+ arrows hit same box, keep unique sorted (↖ ↑ ↗ ↙ ↓ ↘).
 
-2. CODGRID (Overwrite matching C1–C8 with "[ X ]", others -> "[   ]"):
-- T = (H24×60)+M (if T<90, T+1440); T = 360(a-1)+45b+45+c [a=1–4, b=1–8, c=00–44].
-- Slot Map: b=1:C1 (1:30) | b=2:C2 (2:15) | b=3:C3 (3:00) | b=4:C4 (3:45) | b=5:C5 (4:30) | b=6:C6 (5:15) | b=7:C7 (6:00) | b=8:C8 (6:45).
+2. CODGRID (Overwrite matching C[b] with "[ X ]", others -> "[   ]"):
+- T = (H24×60)+M (if T<90, add 1440).
+- Solve T = 360(a-1)+45b+45+c [a=1–4, b=1–8, c=00–44].
+- Slot Map: 1:C1 (1:30) | 2:C2 (2:15) | 3:C3 (3:00) | 4:C4 (3:45) | 5:C5 (4:30) | 6:C6 (5:15) | 7:C7 (6:00) | 8:C8 (6:45).
 
-3. 2x3 HOUR GRID (Overwrite matching H1–H6 with "[ X ]", others -> "[   ]"):
-- Using b from Hour Arrow (1–6), mark H[b].
+3. 2x3 HOUR GRID (Overwrite H[b] with "[ X ]", others -> "[   ]"):
+- Use b (1–6) from Rule 1.
 
-4. ARROW GRID (Overwrite matching A1–A6 with Quad Arrow, others -> "[    ]"):
-- Quad Arrow: 00–14=↑ | 15–29=→ | 30–44=↓ | 45–59=←.
-- Put Quad Arrow in A[b] (b from Hour Arrow; if 2+, keep unique sorted: ← ↑ ↓ →).
+4. ARROW GRID (Overwrite A[b] with Quad Arrow, others -> "[    ]"):
+- Quad Arrow by M: 00–14=↑ | 15–29=→ | 30–44=↓ | 45–59=←.
+- Use b (1–6) from Rule 1; if 2+ arrows hit same box, keep unique sorted (← ↑ ↓ →).
 
-5. CLOCK (,|,): Never modify.
+5. CLOCK ([00], [45], [15], [30]): Never modify. Replace <input> with the input time(s).
 
 TEMPLATE:
 ```text
@@ -46,8 +52,8 @@ You are here and that enough
 [ 20 ] | [ 25 ] | [ 30 ]    [H4 ] | [H5 ] | [H6 ]
 [ 35 ] | [ 40 ] | [ 45 ]
 [ 50 ] | [ 55 ] | [ 00 ]    ARROW GRID
-                            [A1 ] | [A2 ] | [A3 ]
-                            [A4 ] | [A5 ] | [A6 ]
+                            [A1  ] | [A2  ] | [A3  ]
+                            [A4  ] | [A5  ] | [A6  ] 
 ```
 
 INPUT TIME: 12:59, 1:49
