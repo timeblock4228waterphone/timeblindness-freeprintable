@@ -62,7 +62,8 @@ B=1-4
   H1=1 | H2=2 | H3=3
   H4=4 | H5=5 | H6=6
 - ARROW GRID
-Quad by M: 00-14:↑ 15-29:→ 30-44:↓ 45-59:←
+Quad by M: a=1-4,b= 0-14. A15-15+b,/1a=
+00:↑ a2:→ a3:↓ a4:←
  (Match Pos -> Quad, unique, sort ← ↑ ↓ →):
   A1=1 | A2=2 | A3=3
   A4=4 | A5=5 | A6=6
