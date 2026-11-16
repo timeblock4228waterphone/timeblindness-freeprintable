@@ -19,15 +19,14 @@ Vars:
 - H12 (1–12), H24 (00–23), M (00–59), M5 (M floored to nearest 5: 00, 05, 10... 55).
 - Midnight/Zero rules: For 00:xx, treat H24 as 24 in Grids 3, 4, and 6 (keep label as 00 in Grid 6). For M=00–04, treat M5 as 00 in Grid 2, and treat M as 60 in Grids 3 and 4.
 
-1. CODGRID (Replace ONLY the matching 4-char time anchor b with [ X ]; preserve all inactive time labels and spacing):
+1. CODGRID (Replace ONLY the matching 4-char time anchor at Slot b with [ X ]; preserve all inactive time labels and spacing):
 - T = (H24 × 60) + M (If T < 90, T = T + 1440)
 - Solve T = 360(a - 1) + 45b + 45 + c (a=1–4, b=1–8, c=00–44)
-- Template (b=1 to b=8):
+- Template (Slot 1 to Slot 8 = b):
 Row 1:  1:30 |  2:15 |  3:00 |  3:45
 Row 2:  4:30 |  5:15 |  6:00 |  6:45
 
-2. SPACE JAMMER (Wrap active H12 and active M5 independently in ""; if both are in the same cell, 
-wrap both like ["2", "10"]; preserve all inactive numbers):
+2. SPACE JAMMER (Wrap active H12 and active M5 independently in ""; if both are in the same cell, wrap both like ["2", "10"]; preserve all inactive numbers):
 [1, 05] | [2, 10] | [3, 15]
 [4, 20] | [5, 25] | [6, 30]
 [7, 35] | [8, 40] | [9, 45]
@@ -37,10 +36,10 @@ wrap both like ["2", "10"]; preserve all inactive numbers):
 H24: [1–6] | [7–12] | [13–18] | [19–24]
 M: [1–30] | [31–60]
 
-4. GRID MAP (Wrap the active H12 number and active M5 number independently in ""; if both are in the same cell, wrap both like [ "1",7 / "05",35 ]; preserve all inactive numbers):
+4. GRID MAP (In Box Hour_Pos, wrap the number matching Hour_Pos in ""; in Box Min_Pos, wrap the 5-min value matching M5 in ""; if both land in the same box, wrap both like [ "1",7 / "05",35 ]; preserve all inactive numbers):
 - Hour: Solve H24 = 6a - 6 + b (a=1–4, b=1–6; if 00, use 24). Hour_Pos = b.
 - Minute: Round M down to nearest 5 (if 00–04, use 60). Solve M = 30(c - 1) + 5d (c=1–2, d=1–6). Min_Pos = d.
-- Template (Positions 1–6):
+- Template (Boxes 1–6):
   [ 1,7 / 05,35 ]  | [ 2,8 / 10,40 ]  | [ 3,9 / 15,45 ]
   [ 4,10 / 20,50 ] | [ 5,11 / 25,55 ] | [ 6,12 / 30,00 ]
 
