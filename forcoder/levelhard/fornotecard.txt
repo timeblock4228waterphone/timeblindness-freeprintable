@@ -5,10 +5,7 @@ HOW TO USE THIS TIME ENCODER:
 1. Open an AI chat (Google AI Mode, ChatGPT, or Claude)—do NOT paste into a regular web search bar.
 2. Copy everything below, change the Input time at the bottom, and hit Send.
 this notecard is named "You are here and that enough"
------------
 
-STRICT FORMAT LOCK:
-this notecard is named "You are here and that enough"
 -----------
 STRICT FORMAT LOCK:
 - Output ONLY the filled TEMPLATE inside ONE ```text code block. Zero intro, zero math, zero outro.
