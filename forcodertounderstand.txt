@@ -17,7 +17,7 @@ Map the given time into these 6 grids inside a code block. Keep all text; only h
 Vars: H12 (1–12), H24 (00–23), M (00–59), M5 (M floored to 5).
 
 
-: CODGRID (
+
 1. CODGRID (Replace matching time b with [ X ], keep others as text):
 - T = (H × 60) + M (If T < 90, T = T + 1440)
 - Solve T = 360(a - 1) + 45b + 45 + c (a=1–4, b=1–8, c=00–44)
