@@ -22,7 +22,7 @@ For each input time:
    C5: 270–314 (4:30) | C6: 315–359 (5:15) | C7: 360–404 (6:00) | C8: 405–449 (6:45)
    (Repeat cycle every +360 mins). Replace matching [Cb ] with "[ X ]" (others -> "[   ]").
 6. CLOCK: Keep (00), (45), (15), (30) unchanged. Replace <input> with the input time(s).
-
+7. VERIFY: Before outputting, confirm active arrow count in 5-MIN GRID equals active [ X ] count in 2x3 HOUR GRID (unless two times share a box).
 TEMPLATE:
 ```text
 You are here and that enough
