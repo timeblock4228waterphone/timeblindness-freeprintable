@@ -1,4 +1,11 @@
-this is the sandbox now
+this is the sandbox no
+
+BASE TIME EQUATION: - T = (H24 × 60) + M (If T < 90, add 1440) - T = 720(k - 1) + 45(s - 1) + 90 + c
+2.	⁠Where: - k = 1–2 (12-hour half: 1 = 1:30 AM–1:29 PM, 2 = 1:30 PM–1:29 AM) - s
+3.	⁠= 1–16 (Active 45-minute slot across the 12-hour cycle) - c = 0–44
+4.	⁠(Minutes elapsed inside slot s; set c = 0 for slot start anchors)
+5.	⁠SLOT ANCHOR TIME (T\_slot, setting c = 0): - T\_slot = 45(s - 1) + 90 (If T\_slot ≥ 780, subtract 720) - T\_slot = 60(Box) + b
+
 
 1. CODGRID (Finds 45-min slot b):
 - T = (H24 × 60) + M (If T < 90, T = T + 1440)
