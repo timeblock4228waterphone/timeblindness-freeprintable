@@ -3,7 +3,10 @@ this is for notecard last very short
 this notecard is named "You are here and that enough"
 
 -----------
-Output ONLY the filled TEMPLATE inside ONE code block. Combine all given times onto one card. Use ONLY X, arrows, or spaces inside brackets (keep exact widths).
+Output ONLY the filled TEMPLATE inside ONE code block (```). Zero intro, zero math, zero outro.
+- Keep exact line count and spaces outside brackets.
+- 3-char boxes ([...]): active = "[ X ]", empty = "[   ]".
+- 4-char boxes ([....]): empty = "[    ]", 1 arrow = "[ ↑  ]", 2 arrows = "[ ↖↘ ]", 3 arrows = "[ ←↑→]", 4 arrows = "[←↑↓→]".
 
 MATH (H24=00–23, M=00–59; for 00:xx use H=24 except T):
 RULES (H24=00–23, M=00–59; if H24=00 use H=24 except in T):
