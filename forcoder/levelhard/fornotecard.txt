@@ -20,7 +20,9 @@ MATH (H24=00–23, M=00–59; for 00:xx use H=24 except T):
 
 4. ARROW GRID (A1–A6):
 - M = 15(c-1)+d [c=1–4, d=0–14] -> Quad: 1:↑ 2:→ 3:↓ 4:← (by c)
-- Put Quad arrow in slot A[b] (b from Hour math). If multiple times hit same box, keep unique arrows sorted: ← ↑ ↓ →.
+- Put Quad arrow in slot A[b] (b from Hour math).
+- If multiple times hit the same A[b] box, keep unique arrows sorted (← ↑ ↓ →) and pad with spaces to keep the 4-char width (e.g., [ ←→ ]).
+
 
 5. CLOCK ([00],[45],[15],[30]): Never modify. Replace all C/M/H/A labels below with symbols or spaces:
 
