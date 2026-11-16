@@ -25,13 +25,21 @@ Row 2:  4:30 |  5:15 |  6:00 |  6:45
 - Convert 00 to 24.
 - Solve Hour = 6a - 6 + b (a=1–4, b=1–6).
 - Place X at position b:
-  1 | 2 | 3
-  4 | 5 | 6
+┌───┬───┬───┐
+│ 1 │ 2 │ 3 │
+├───┼───┼───┤
+│ 4 │ 5 │ 6 │
+└───┴───┴───┘
 
-3. ARROW GRID (Match Pos -> Quad):
-- M = 15(a - 1) + b (a=1–4, b=0–14)
-- Quad: a=1:↑ | a=2:→ | a=3:↓ | a=4:←
-- Output unique arrows sorted by: ← ↑ ↓ →
+ ARROW GRID (Put active Arrow in spot b, others -> _):
+- Hour: Convert 00 to 24. Solve Hour = 6a - 6 + b (a=1–4, b=1–6).
+- Arrow: Solve M = 15(c - 1) + d (c=1–4, d=0–14). Map c: c=1:↑ | c=2:→ | c=3:↓ | c=4:←
+- Replace matching spot b with the Arrow and inactive spots with _ (keep exact spacing):
+┌───┬───┬───┐
+│ 1 │ 2 │ 3 │
+├───┼───┼───┤
+│ 4 │ 5 │ 6 │
+└───┴───┴───┘
 
 STRICT FORMAT:
 Keep [ 00 ], [ 45 ], [ 15 ], [ 30 ], and all spacing/newlines untouched. Only replace the 3-character slot codes (C1 , M01, H1 , A1 , etc.) with the matched symbol padded to 3 chars, or 3 spaces if empty.
