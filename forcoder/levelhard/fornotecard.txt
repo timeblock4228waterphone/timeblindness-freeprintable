@@ -1,8 +1,4 @@
 
-
-# You are here and that enough
-1. Paste into an AI chat (not web search). Change **INPUT TIME** at the bottom and send.
-
 ## STRICT FORMAT LOCK
 - Output **1 check line** (`Time -> Arrow in Mxx, Cb, Hb, Ab`), then the filled TEMPLATE inside **ONE** ` ```text ` 
 - Keep exact line count, box widths, and spaces outside brackets.
