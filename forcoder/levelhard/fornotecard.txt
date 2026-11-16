@@ -35,11 +35,11 @@ RULES (H24=00–23, M=00–59; if H24=00 use H=24 except in T):
 TEMPLATE:
 ```text
 You are here and that enough
-
+             
                        CODGRID
-
-         |           [C1 ] | [C2 ] | [C3 ] | [C4 ]
-                       [C5 ] | [C6 ] | [C7 ] | [C8 ]
+         [00] 
+   [45]   |   [15]      [C1 ] | [C2 ] | [C3 ] | [C4 ]
+         [30]           [C5 ] | [C6 ] | [C7 ] | [C8 ]
 
 5-Minute Grid                 2 by 3 HOUR GRID
 [ 05 ] | [ 10 ] | [ 15 ]    [H1 ] | [H2 ] | [H3 ]
