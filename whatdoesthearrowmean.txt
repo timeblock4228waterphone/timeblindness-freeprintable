@@ -1,6 +1,6 @@
 1. CODGRID (Finds 45-min slot b):
 - T = (H24 × 60) + M (If T < 90, T = T + 1440)
-- T = 360(a - 1) + 45b + 45 + c  [a=1–4, b=1–8, c=44]
+-T = 360(a - 1) + 45(b - 1) + 90 + c
 - Active Slot = b
 
 
