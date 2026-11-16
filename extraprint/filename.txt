@@ -2,14 +2,14 @@
 
 Fill the template inside ONE code block. Combine all inputs onto one card.
 
-1.1. 5-MIN ARROW GRID (Replace matching m with H_Arrow, others -> _):
+1. 5-MIN ARROW GRID (Replace matching 5m with H_Arrow [60->00], others -> __):
 - Hour (00->24): H = 6(a-1)+b [a=1–4, b=1–6] -> H_Arrow: 1:↖ 2:↑ 3:↗ 4:↙ 5:↓ 6:↘ (by b)
 - Min (00–04->60): M = 5m+r [m=1–12, r=0–4]
 - Grid:
- 1 |  2 |  3
- 4 |  5 |  6
- 7 |  8 |  9
-10 | 11 | 12
+05 | 10 | 15
+20 | 25 | 30
+35 | 40 | 45
+50 | 55 | 00
 ------------------------
 GRIDS:
 2.  CODGRID (Replace ONLY the matching 4-char time anchor at Slot b with [ X ]; preserve all inactive time labels and spacing):
