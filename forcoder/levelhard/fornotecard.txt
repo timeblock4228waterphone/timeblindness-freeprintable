@@ -14,7 +14,8 @@ For each input time:
 1. HOUR SLOT (b = 1 to 6, repeating every 6 hrs):
    b=1: 01,07,13,19 (↖) | b=2: 02,08,14,20 (↑) | b=3: 03,09,15,21 (↗)
    b=4: 04,10,16,22 (↙) | b=5: 05,11,17,23 (↓) | b=6: 06,12,18,00 (↘)
-2. 5-MIN GRID: Round M down to nearest 5 (00,05,10,15,20,25,30,35,40,45,50,55). Replace matching [Mxx ] tag with Hour Arrow from Rule 1 (others -> "[    ]"). Sort multiple arrows: ↖ ↑ ↗ ↙ ↓ ↘.
+2. 2. **5-MIN GRID:** Round `M` down to nearest 5 (`05`–`55`, with `00` in bottom-right). Overwrite matching `[Mxx ]` with Hour Arrow (others -> `[    ]`)
+Arrow from Rule 1 (others -> "[    ]"). Sort multiple arrows: ↖ ↑ ↗ ↙ ↓ ↘.
 3. 2x3 HOUR GRID: Replace matching [Hb ] with "[ X ]" using b from Rule 1 (others -> "[   ]").
 4. ARROW GRID: Replace matching [Ab  ] with Quad Arrow using b from Rule 1 (00–14=↑, 15–29=→, 30–44=↓, 45–59=←; others -> "[    ]"). Sort multiple arrows: ← ↑ ↓ →.
 5. **CODGRID:** `T = (H×60)+M`. Find `D = (T - 90) mod 360` (if `T < 90`, use `T + 270`). Map `D` to slot:
