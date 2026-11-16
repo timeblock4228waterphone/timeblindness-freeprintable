@@ -3,50 +3,37 @@ this is for notecard last very short
 this notecard is named "You are here and that enough"
 
 -----------
-Output ONLY the filled TEMPLATE inside ONE code block (```). Zero intro, zero math, zero outro.
-- Keep exact line count and spaces outside brackets.
-- 3-char boxes ([...]): active = "[ X ]", empty = "[   ]".
-- 4-char boxes ([....]): empty = "[    ]", 1 arrow = "[ ↑  ]", 2 arrows = "[ ↖↘ ]", 3 arrows = "[ ←↑→]", 4 arrows = "[←↑↓→]".
+# Grid Encoder
+Solve inside `<math>` first, then output ONLY the filled template inside ONE `text` block.
 
-MATH (H24=00–23, M=00–59; for 00:xx use H=24 except T):
-RULES (H24=00–23, M=00–59; if H24=00 use H=24 except in T):
-1. 5-MIN GRID (Overwrite matching 2-digit minute with Hour Arrow; replace all other 2-digit minutes with "[    ]"):
-- Hour Arrow: H = 6(a-1)+b [a=1–4, b=1–6] -> 1:↖ 2:↑ 3:↗ 4:↙ 5:↓ 6:↘ (by b).
-- Minute Floor: 00–04=00 | 05–09=05 | 10–14=10 | 15–19=15 | 20–24=20 | 25–29=25 | 30–34=30 | 35–39=35 | 40–44=40 | 45–49=45 | 50–54=50 | 55–59=55.
-- If 2+ arrows hit same box, keep unique sorted (↖ ↑ ↗ ↙ ↓ ↘).
+## Format
+- 3-char `[...]`: active=`[ X ]`, empty=`[   ]`
+- 4-char `[....]`: empty=`[    ]`, 1=`[ ↑  ]`, 2=`[ ↖↘ ]`, 3=`[ ←↑→]`, 4=`[←↑↓→]`
+- `H24`=00–23, `M`=00–59. If `H24`=00, `H`=24 (except in `T`).
 
-2. CODGRID (C1–C8):
--T = (H24×60)+M (if T<90, T+1440); T = 360(a-1)+45b+45+c [a=1–4, b=1–8, c=00–44].
-- Slot Map: b=1 (C1: 1:30) | b=2 (C2: 2:15) | b=3 (C3: 3:00) | b=4 (C4: 3:45) | b=5 (C5: 4:30) | b=6 (C6: 5:15) | b=7 (C7: 6:00) | b=8 (C8: 6:45)
-- Put "[ X ]" in C[b].
+## Algebra & Rules
+1. **5-Min Grid:** `H = 6(a-1)+b` (`a`=1–4, `b`=1–6) -> `b` maps `1:↖ 2:↑ 3:↗ 4:↙ 5:↓ 6:↘`. Floor `M` to 5-min mark (`00`..`55`) and overwrite with arrow (unique sorted: `↖ ↑ ↗ ↙ ↓ ↘`). Replace unused minutes with `[    ]`.
+2. **CODGRID (`C1`–`C8`):** `T = (H24×60)+M` (if `T<90`, `T+1440`). `T = 360(a-1)+45b+45+c` (`a`=1–4, `b`=1–8, `c`=00–44). Put `[ X ]` in `C[b]`.
+3. **2x3 Hour (`H1`–`H6`):** Put `[ X ]` in `H[b]` using `b` from Rule 1.
+4. **Arrow Grid (`A1`–`A6`):** `M = 15(c-1)+d` (`c`=1–4, `d`=0–14) -> `c` maps `1:↑ 2:→ 3:↓ 4:←`. Put in `A[b]` using `b` from Rule 1 (unique sorted: `← ↑ ↓ →`, pad spaces to 4 chars).
 
-3. 2x3 HOUR GRID (H1–H6):
-- Using b from Hour math (1–6), put X in slot H[b] (max 1/box).
-
-4. ARROW GRID (A1–A6):
-- M = 15(c-1)+d [c=1–4, d=0–14] -> Quad: 1:↑ 2:→ 3:↓ 4:← (by c)
-- Put Quad arrow in slot A[b] (b from Hour math).
-- If multiple times hit the same A[b] box, keep unique arrows sorted (← ↑ ↓ →) and pad with spaces to keep the 4-char width (e.g., [ ←→ ]).
-
-
-TEMPLATE:
+## Template
 ```text
 You are here and that enough
+       [00]                CODGRID
+   [45]  | [15]            [C1 ] | [C2 ] | [C3 ] | [C4 ]
+       [30]                [C5 ] | [C6 ] | [C7 ] | [C8 ]
 
-             [00]           CODGRID
-       [45]   |   [15]      [C1 ] | [C2 ] | [C3 ] | [C4 ]
-             [30]           [C5 ] | [C6 ] | [C7 ] | [C8 ]
-
-5-Minute Grid                 2 by 3 HOUR GRID
-[ 05 ] | [ 10 ] | [ 15 ]    [H1 ] | [H2 ] | [H3 ]
-[ 20 ] | [ 25 ] | [ 30 ]    [H4 ] | [H5 ] | [H6 ]
+5-Minute Grid            2 by 3 HOUR GRID
+[ 05 ] | [ 10 ] | [ 15 ] [H1 ] | [H2 ] | [H3 ]
+[ 20 ] | [ 25 ] | [ 30 ] [H4 ] | [H5 ] | [H6 ]
 [ 35 ] | [ 40 ] | [ 45 ]
-[ 50 ] | [ 55 ] | [ 00 ]    ARROW GRID
-                            [A1 ] | [A2 ] | [A3 ]
-                            [A4 ] | [A5 ] | [A6 ]
+[ 50 ] | [ 55 ] | [ 00 ] ARROW GRID
+                         [A1 ] | [A2 ] | [A3 ]
+                         [A4 ] | [A5 ] | [A6 ]
 ```
 
-INPUT TIME: 00:46
+**Input:** `00:46`
  
 
 
