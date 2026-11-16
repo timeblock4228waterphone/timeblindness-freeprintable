@@ -2,84 +2,35 @@
 
 Fill the template inside ONE code block. Combine all inputs onto one card.
 
-RULES (H=Hour, M=Minute):
-a=1,2,3,4
-b=1,2,3,4,5,5
-- **Arrows (1–6):** `1:↖ 2:↑ 3:↗ 4:↙ 5:↓ 6:↘`
-- **Hour (`00`→`24`, `H=6(a-1)+b`):**
-- H6 = H mod 6 (if 0, use 6). Pos = H6.
-
-
-///- H6 = H mod 6 (if 0, use 6)
-- 5-Minute Grid (Match M -> H_Arrow):
+Arrows (1–6): 1:↖ 2:↑ 3:↗ 4:↙ 5:↓ 6:↘
+- Hour Math (00→24): H = 6(a-1) + b (a=1–4, b=1–6). Pos = H mod 6 (if 0, Pos=6).
+- 5-Minute Grid (Match M -> M_Pos):
   M01=05-09 | M02=10-14 | M03=15-19
   M04=20-24 | M05=25-29 | M06=30-34
   M07=35-39 | M08=40-44 | M09=45-49
   M10=50-54 | M11=55-59 | M12=00-04
-- H_Arrow by Pos: 1:↖ 2:↑ 3:↗ 4:↙ 5:↓ 6:↘
-
+- H_Arrow: Match Pos -> Arrow (1:↖ 2:↑ 3:↗ 4:↙ 5:↓ 6:↘)
+------------------------
 GRIDS:
-- CODGRID (Match H6:M -> X):
- Convert Time into Minutes
+1. CODGRID (Match B -> X):
+- T = (H × 60) + M (If T < 90, add 1440)
+- T = 360(a - 1) + 45b + 45 + c (a=1–4, b=1–8, c=00–44) 1440 minutes is 00:00
+- Layout:
+  B1 | B2 | B3 | B4
+  B5 | B6 | B7 | B8
 
-T = (Hours × 60) + Minutes
+-------------------------------
+2. 2x3 HOUR GRID (Match b -> X, others -> _):
+- Convert 00 to 24.
+- Solve Hour = 6a - 6 + b (a=1–4, b=1–6).
+- Place X at position b:
+  1 | 2 | 3
+  4 | 5 | 6
 
-2. Rollover Rule
-
-If T is less than 90, add 1440.
-
-T = T + 1440
-
-3. CODGRID Equation
-
-T = 360(a − 1) + 45b + 45 + c
-
-4. Variable Limits
-
-A = 1–4
-B = 1–8
-C = 00–44
-
-5. Valid Time Range
-
-90 ≤ T ≤ 1529
-
-6. Grid Positions
-
-B1 | B2 | B3 | B4
-B5 | B6 | B7 | B8
-
-
-- 2x3 HOUR GRID (Match Pos -> X):
-A+6b-6
-=
-A=1-6
-B=1-4
-
-  H1=1 | H2=2 | H3=3
-  H4=4 | H5=5 | H6=6
-- ARROW GRID
-Quad by M: Q = 15(a − 1) + b
-
-VARIABLES
-
-* Q = Final position
-* a = 1–4
-* b = 0–14
-
-DIRECTION KEY
-
-a = 1 → ↑
-a = 2 → →
-a = 3 → ↓
-a = 4 → ←
-
-RANGE
-
-0 ≤ Q ≤ 59
- (Match Pos -> Quad, unique, sort ← ↑ ↓ →):
-  A1=1 | A2=2 | A3=3
-  A4=4 | A5=5 | A6=6
+3. ARROW GRID (Match Pos -> Quad):
+- M = 15(a - 1) + b (a=1–4, b=0–14)
+- Quad: a=1:↑ | a=2:→ | a=3:↓ | a=4:←
+- Output unique arrows sorted by: ← ↑ ↓ →
 
 STRICT FORMAT:
 Keep [ 00 ], [ 45 ], [ 15 ], [ 30 ], and all spacing/newlines untouched. Only replace the 3-character slot codes (C1 , M01, H1 , A1 , etc.) with the matched symbol padded to 3 chars, or 3 spaces if empty.
