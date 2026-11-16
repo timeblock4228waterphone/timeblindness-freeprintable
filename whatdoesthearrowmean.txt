@@ -18,7 +18,8 @@ CODGRID ANCHOR ARROWS (Places Hour Arrow on LEFT, Minute Arrow on RIGHT inside A
 - Hour Arrow (from Step 2 Diagonal Arrow): 1:↖ | 2:↑ | 3:↗ | 4:↙ | 5:↓ | 6:↘
 - Inside Active CODGRID Slot b, show [Hour_Arrow Minute_Arrow] (Hour Arrow on the left, Minute Arrow on the right)
 
-- Slot Map: b=1:1:30 | b=2:2:15 | b=3:3:00 | b=4:3:45 | b=5:4:30 | b=6:5:15 | b=7:6:00 | b=8:6:45
+- Slot Map:
+b=1:1:30 | b=2:2:15 | b=3:3:00 | b=4:3:45 | b=5:4:30 | b=6:5:15 | b=7:6:00 | b=8:6:45
 Row 1:  1:30 |  2:15 |  3:00 |  3:45
 Row 2:  4:30 |  5:15 |  6:00 |  6:45
 
