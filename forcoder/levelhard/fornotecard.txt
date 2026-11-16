@@ -55,18 +55,6 @@ You are here and that enough
 
 INPUT TIME: 12:59, 1:49
 
- 
-
-
-
-12:00
-3:15
-6:45
-11:59
 
 this is like a neutral companion that doesn't care that what you do in the time before it reset. it reset in rolling 5 hours and 55 minute reset when you start it.
 
-read this if you are human
-
-
-reason why this was made with without number because this was made with a boogie board lcd device and drawing this 50 times in week the first hing that would go would been number.
