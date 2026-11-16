@@ -24,9 +24,8 @@ MATH (H24=00–23, M=00–59; for 00:xx use H=24 except T):
 - If multiple times hit the same A[b] box, keep unique arrows sorted (← ↑ ↓ →) and pad with spaces to keep the 4-char width (e.g., [ ←→ ]).
 
 
-5. CLOCK ([00],[45],[15],[30]): Never modify. Replace all C/M/H/A labels below with symbols or spaces:
-
 TEMPLATE:
+```text
 You are here and that enough
 
              [00]           CODGRID
@@ -40,7 +39,7 @@ You are here and that enough
 [M10 ] | [M11 ] | [M12 ]    ARROW GRID
                             [A1 ] | [A2 ] | [A3 ]
                             [A4 ] | [A5 ] | [A6 ]
-•
+```
 
 5:55 and 10:30
  
