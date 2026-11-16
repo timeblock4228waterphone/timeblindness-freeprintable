@@ -6,15 +6,16 @@ this notecard is named "You are here and that enough"
 Output ONLY the filled TEMPLATE inside ONE code block. Combine all given times onto one card. Use ONLY X, arrows, or spaces inside brackets (keep exact widths).
 
 MATH (H24=00–23, M=00–59; for 00:xx use H=24 except T):
-1. 5-MIN ARROW GRID (M01–M12):
-- Hour: H = 6(a-1)+b [a=1–4, b=1–6] -> Arrow: 1:↖ 2:↑ 3:↗ 4:↙ 5:↓ 6:↘ (by b)
-- Minute Box: 00–04=M00 | 05–09=M05 | 10–14=M10 | 15–19=M15 | 20–24=M20 | 25–29=M25 | 30–34=M30 | 35–39=M35 | 40–44=M40 | 45–49=M45 | 50–54=M50 | 55–59=M55.
-m = floor(M ÷ 5)
-- If multiple times hit the same M[m] box, keep unique arrows sorted (↖ ↑ ↗ ↙ ↓ ↘) and pad with spaces to keep the 4-char width (e.g., [ ↖↘ ]).
+RULES (H24=00–23, M=00–59; if H24=00 use H=24 except in T):
+1. 5-MIN GRID (Overwrite matching 2-digit minute with Hour Arrow; replace all other 2-digit minutes with "[    ]"):
+- Hour Arrow: H = 6(a-1)+b [a=1–4, b=1–6] -> 1:↖ 2:↑ 3:↗ 4:↙ 5:↓ 6:↘ (by b).
+- Minute Floor: 00–04=00 | 05–09=05 | 10–14=10 | 15–19=15 | 20–24=20 | 25–29=25 | 30–34=30 | 35–39=35 | 40–44=40 | 45–49=45 | 50–54=50 | 55–59=55.
+- If 2+ arrows hit same box, keep unique sorted (↖ ↑ ↗ ↙ ↓ ↘).
 
 2. CODGRID (C1–C8):
-- T = (H24×60)+M (if T<90, T+1440); T = 360(a-1)+45b+45+c [a=1–4, b=1–8, c=00–44]
-- Put X in slot C[b] (max 1/box).
+-T = (H24×60)+M (if T<90, T+1440); T = 360(a-1)+45b+45+c [a=1–4, b=1–8, c=00–44].
+- Slot Map: b=1 (C1: 1:30) | b=2 (C2: 2:15) | b=3 (C3: 3:00) | b=4 (C4: 3:45) | b=5 (C5: 4:30) | b=6 (C6: 5:15) | b=7 (C7: 6:00) | b=8 (C8: 6:45)
+- Put "[ X ]" in C[b].
 
 3. 2x3 HOUR GRID (H1–H6):
 - Using b from Hour math (1–6), put X in slot H[b] (max 1/box).
