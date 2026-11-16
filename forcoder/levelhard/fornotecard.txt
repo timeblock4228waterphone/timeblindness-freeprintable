@@ -4,7 +4,7 @@ You are here and that enough
 1. Paste into an AI chat (not web search). Change INPUT TIME at the bottom and send.
 
 STRICT FORMAT LOCK:
-- Output ONLY the filled TEMPLATE inside ONE ```text code block. Zero intro, zero math, zero outro.
+- Output ONLY the filled TEMPLATE inside ONE ```text code block. 
 - Keep exact line count, box widths, and spaces outside brackets.
 - 3-char boxes: active = "[ X ]", empty = "[   ]".
 - 4-char boxes: empty = "[    ]", 1 arrow = "[ ↑  ]", 2 arrows = "[ ↖↘ ]", 3 arrows = "[ ←↑→]", 4 arrows = "[←↑↓→]".
