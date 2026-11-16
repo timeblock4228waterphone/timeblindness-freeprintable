@@ -2,8 +2,9 @@ this is the sandbox now
 
 1. CODGRID (Finds 45-min slot b):
 - T = (H24 × 60) + M (If T < 90, T = T + 1440)
-- T = 360(a - 1) + 45b + 45 + c  [a=1–4, b=1–8, c=00]
+- T = 360(a - 1) + 45b + 45 + c  [a=1–4, b=1–8, c=44]
 - Active Slot = b
+
 
 2. HOUR POSITION & DIAGONAL ARROW (Finds grid spot e):
 - Treat H24=00 as 24.
@@ -11,10 +12,16 @@ this is the sandbox now
 - Active Pos = e
 - Diagonal Arrow (by e): 1:↖ | 2:↑ | 3:↗ | 4:↙ | 5:↓ | 6:↘
 
-3. . MINUTE QUADRANT ARROW -> CODGRID (Finds arrow f for slot b):
-- M = 15(f - 1) + g  [f=1–4, g=0–14]
-- Quadrant Arrow (by f): 1:↑ | 2:→ | 3:↓ | 4:←
-- Place Quadrant Arrow f inside Active CODGRID Slot b.
+CODGRID ANCHOR ARROWS (Places Hour Arrow on LEFT, Minute Arrow on RIGHT inside Active Slot b):
+- Take the anchor minute M_slot from Active CODGRID Slot b:
+  b=1 (1:30) -> 30 | b=2 (2:15) -> 15 | b=3 (3:00) -> 00 | b=4 (3:45) -> 45
+  b=5 (4:30) -> 30 | b=6 (5:15) -> 15 | b=7 (6:00) -> 00 | b=8 (6:45) -> 45
+- Minute Arrow (by M_slot): 00:↑ | 15:→ | 30:↓ | 45:←
+- Hour Arrow (from Step 2 Diagonal Arrow): 1:↖ | 2:↑ | 3:↗ | 4:↙ | 5:↓ | 6:↘
+- Inside Active CODGRID Slot b, show [Hour_Arrow Minute_Arrow] (Hour Arrow on the left, Minute Arrow on the right)
+
+Generate all 8 arrow combinations using a=1 and b=1–8, with c=00. 
+
 
 Floor minutes to nearest 5 (min - min%5). Bold active items.
 part 1
