@@ -4,6 +4,8 @@ this is the sandbox now
 1:↖ 2:↑ 3:↗ 4:↙ 5:↓ 6:↘
 - Hour Math (00→24): H = 6(a-1) + b (a=1–4, b=1–6). Pos = H mod 6 (if 0, Pos=6)
 
+- Arrow: Solve M = 15(c - 1) + d (c=1–4, d=0–14). Map c: c=1:↑ | c=2:→ | c=3:↓ | c=4:←
+
 Floor minutes to nearest 5 (min - min%5). Bold active items.
 part 1
 
