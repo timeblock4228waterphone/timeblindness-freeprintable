@@ -20,37 +20,34 @@ b=1,2,3,4,5,5
 
 GRIDS:
 - CODGRID (Match H6:M -> X):
-  H = hours + m= minute 
+ Convert Time into Minutes
 
+T = (Hours × 60) + Minutes
 
+2. Rollover Rule
 
-T=60h +m
+If T is less than 90, add 1440.
 
-If t is 90 ≤ T ≤ 1439
+T = T + 1440
 
-Then add 1440
+3. CODGRID Equation
 
-CODGRID EQUATION:
+T = 360(a − 1) + 45b + 45 + c
 
-T = 360(a-1) + 45b + 45 + c
+4. Variable Limits
 
-VARIABLES:
-a = 1–4
-b = 1–8
-c = 00–44
+A = 1–4
+B = 1–8
+C = 00–44
 
-OUT-OF-RANGE RULE:
-If input time is between 00:00 and 01:29,
-add 1440 to the input minutes before conversion.
+5. Valid Time Range
 
-DAILY RESET:
-1440 minutes = 00:00
+90 ≤ T ≤ 1529
 
-Where b = 1–8, corresponding to B1–B8.
+6. Grid Positions
 
-B1 | B2 | B3| B4
-  B5| B6 | B7 | B8
-
+B1 | B2 | B3 | B4
+B5 | B6 | B7 | B8
 
 
 - 2x3 HOUR GRID (Match Pos -> X):
