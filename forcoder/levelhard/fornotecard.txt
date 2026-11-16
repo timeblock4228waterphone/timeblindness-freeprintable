@@ -4,7 +4,7 @@
 1. Paste into an AI chat (not web search). Change **INPUT TIME** at the bottom and send.
 
 ## STRICT FORMAT LOCK
-- Output **1 check line** (`Time -> Arrow in Mxx, Cb, Hb, Ab`), then the filled TEMPLATE inside **ONE** ` ```text ` code block. Zero intro, zero outro.
+- Output **1 check line** (`Time -> Arrow in Mxx, Cb, Hb, Ab`), then the filled TEMPLATE inside **ONE** ` ```text ` 
 - Keep exact line count, box widths, and spaces outside brackets.
 - **3-char boxes:** active = `[ X ]`, empty = `[   ]`.
 - **4-char boxes:** empty = `[    ]`, 1 arrow = `[ ↑  ]`, 2 arrows = `[ ↖↘ ]`, 3 arrows = `[ ←↑→]`, 4 arrows = `[←↑↓→]`.
