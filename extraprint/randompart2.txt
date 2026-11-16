@@ -6,6 +6,9 @@ this is the sandbox now
 
 - Arrow: Solve M = 15(c - 1) + d (c=1–4, d=0–14). Map c: c=1:↑ | c=2:→ | c=3:↓ | c=4:←
 
+- T = (H24 × 60) + M (If T < 90, T = T + 1440)
+- Solve T = 360(a - 1) + 45b + 45 + c (a=1–4, b=1–8, c=00)
+
 Floor minutes to nearest 5 (min - min%5). Bold active items.
 part 1
 
