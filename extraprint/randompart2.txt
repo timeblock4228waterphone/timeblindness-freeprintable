@@ -1,6 +1,33 @@
 this is the sandbox no
 
- 1. Adjusted Minutes (t)
+Hour: Solve H24 = 6a - 6 + b (a=1–4, b=1–6; if 00, use 24). Hour_Pos = b.
+- Minute: Round M down to nearest 5 (if 00–04, use 60). Solve M = 30(c - 1) + 5d (c=1–2, d=1–6). Min_Pos = d.
+ ///1. Adjusted Minutes (t)
+
+row 1 b1|b2|b3
+row 2 B4|b5|b6
+
+and 
+row 1 d1|d2|d3
+Row 2 d4|d5|d6
+
+ 2x3 Hour Grid (b = 1 to 6)
+* Convert 00 to 24.
+* Solve H24 = 6a - 6 + b (a = 1 to 4, b = 1 to 6)
+* Hour_Pos = b
+
+Row 1: [ b1 ] | [ b2 ] | [ b3 ]
+Row 2: [ b4 ] | [ b5 ] | [ b6 ]
+
+## 2. 2x3 Minute Grid (d = 1 to 6)
+* Round M down to nearest 5 (if 00 to 04, use 60).
+* Solve M5 = 30(c - 1) + 5d (c = 1 to 2, d = 1 to 6)
+* Min_Pos = d
+
+Row 1: [ d1 ] | [ d2 ] | [ d3 ]
+Row 2: [ d4 ] | [ d5 ] | [ d6 ]
+
+
 * t = 60(h24) + m (if t < 90, add 1440)
 
 ## 2. Expanded Slot Form
