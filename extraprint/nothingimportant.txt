@@ -7,6 +7,9 @@ Row 2:  [↓ ↓]  |  [↘ →]  |  [↖ ↑]  |  [↖ ←]
 • [↘ ↑] | [↘ ←] | [↖ ↓] | [↑ →]
  [↗ ↑] | [↗ ←] | [↙ ↓] | [↓ →]
 
+↘↑ ↘← ↖↓ ↑→
+
+↗↑ ↗← ↙↓ ↓→
 
 ## 1. CODEGRID
 * **Rule:** Replace **only** the matching 4-character time anchor at Slot `b` with `[X ]`; preserve all inactive time labels and spacing.
