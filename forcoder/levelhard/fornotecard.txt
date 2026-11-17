@@ -57,7 +57,9 @@ INPUT TIME:
 
 ```
 
-INPUT TIME: 12:59, 1:49
+INPUT TIME: 20:15
+OUTPUT MODE: Print ONLY the check line (`Time -> Arrow in Mxx, Cd, Hb, Ab`). 
+
 
 
 this is like a neutral companion that doesn't care that what you do in the time before it reset. it reset in rolling 5 hours and 55 minute reset when you start it.
