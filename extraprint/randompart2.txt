@@ -1,29 +1,39 @@
 this is the sandbox no
 
-this is 12 by 4 arrow
+ 1. Adjusted Minutes (t)
+* t = 60(h24) + m (if t < 90, add 1440)
 
-t=60(h24)+m ( if <90, add 1440)
-Expanded slots form (t):
-t=720(k-1)+45(s-1)+90+c
+## 2. Expanded Slot Form
+* t = 720(k - 1) + 45(s - 1) + 90 + c
 
+## 3. Solving for Variables
+* **Half-Day Block (k = 1 to 2):**
+  k = floor((t - 90) / 720) + 1
 
-2 solvin for vable
-k1 - 2, the:
- K= floor((t-90)/720)+1
-s=1- 16 
-S= flor (((t-90)-720k-1))/45)+1
-c(0 t 44, leftover minute inside slot s):
-c=(t-90)- 720(k-1) - 45(s-1)
+* **45-Minute Slot (s = 1 to 16):**
+  s = floor(((t - 90) - 720(k - 1)) / 45) + 1
 
-R = S mod 4
+* **Leftover Minutes (c = 0 to 44):**
+  c = (t - 90) - 720(k - 1) - 45(s - 1)
 
+## 4. Arrow Direction (R)
+* R = s mod 4
 
-↓, if R = 1
-→, if R = 2
-↑, if R = 3
-←, if R = 0
+| R | Arrow |
+| :---: | :---: |
+| 1 | ↓ |
+| 2 | → |
+| 3 | ↑ |
+| 0 | ← |
 
-T_slot=60(box)+r
+## 5. Slot Start & Clock Box (1 to 12)
+* **Slot Start Time (T_slot):**
+  T_slot = 720(k - 1) + 45(s - 1) + 90
+
+* **Clock Hour Box (Box = 1 to 12):**
+  Box = ((floor(T_slot / 60) - 1) mod 12) + 1
+
+///
 
 Box=1-12(clock hour:box= f(loorT_slot/60))
 
