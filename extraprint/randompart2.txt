@@ -47,26 +47,28 @@ For each input time:
    Place `[ X ]` in matching `[Cd ]` (others -> `[   ]`).
 6. **CLOCK:** **NEVER** modify `(00)`, `(45)`, `(15)`, `(30)`. Replace `<input>` with the input time(s).
 
-## TEMPLATE
-```text
-You are here and that enough
-             
-                       CODGRID
-         (00) 
-   (45)   |   (15)      [C1 ] | [C2 ] | [C3 ] | [C4 ]
-         (30)           [C5 ] | [C6 ] | [C7 ] | [C8 ]
-       <input>
-5-Minute Grid                 2 by 3 HOUR GRID
-[M05 ] | [M10 ] | [M15 ]    [H1 ] | [H2 ] | [H3 ]
-[M20 ] | [M25 ] | [M30 ]    [H4 ] | [H5 ] | [H6 ]
-[M35 ] | [M40 ] | [M45 ]
-[M50 ] | [M55 ] | [M00 ]    ARROW GRID
-                            [A1  ] | [A2  ] | [A3  ]
-                            [A4  ] | [A5  ] | [A6  ] 
-```
+## TEMPLATE (COPY EXACT CHARACTER COUNT PER LINE — DO NOT SWAP LEFT/RIGHT SIDES)
+Line 01: You are here and that enough
+Line 02:              
+Line 03:                        CODGRID
+Line 04:          (00) 
+Line 05:    (45)   |   (15)      [C1 ] | [C2 ] | [C3 ] | [C4 ]
+Line 06:          (30)           [C5 ] | [C6 ] | [C7 ] | [C8 ]
+Line 07:        <input>
+Line 08: 5-Minute Grid                 2 by 3 HOUR GRID
+Line 09: [M05 ] | [M10 ] | [M15 ]    [H1 ] | [H2 ] | [H3 ]
+Line 10: [M20 ] | [M25 ] | [M30 ]    [H4 ] | [H5 ] | [H6 ]
+Line 11: [M35 ] | [M40 ] | [M45 ]
+Line 12: [M50 ] | [M55 ] | [M00 ]    ARROW GRID
+Line 13:                             [A1  ] | [A2  ] | [A3  ]
+Line 14:                             [A4  ] | [A5  ] | [A6  ] 
 
+**IMPORTANT:** Your response MUST begin with ```text on the very first line and end with ``` on the last line. Omit "Line XX: " prefixes. Keep the clock on the LEFT and CODGRID on the RIGHT on Lines 05–06.
 
 INPUT TIME: 
+
+
+INPUT TIME: 19:50
 
 
 
