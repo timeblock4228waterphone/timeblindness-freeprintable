@@ -23,9 +23,8 @@ Vars:
 - T = (H24 × 60) + M (If T < 90, T = T + 1440)
 - Solve T = 360(a - 1) + 45b + 45 + c (a=1–4, b=1–8, c=00–44)
 - Template (Slot 1 to Slot 8 = b):
-- Slot Map: b=1:1:30 | b=2:2:15 | b=3:3:00 | b=4:3:45 | b=5:4:30 | b=6:5:15 | b=7:6:00 | b=8:6:45
-Row 1:  1:30 |  2:15 |  3:00 |  3:45
-Row 2:  4:30 |  5:15 |  6:00 |  6:45
+Row 1:  b1 |  b2 |  b3 |  b4
+Row 2:  b5 |  b6 |  b7 |  b8
 
 2. SPACE JAMMER (Wrap active H12 on the LEFT of the comma in "", and active M5 on the RIGHT of the comma in ""; if both are in the same bracket, wrap both like ["2", "10"]; preserve all inactive numbers):
 - Template:
