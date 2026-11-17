@@ -1,6 +1,6 @@
 this is the sandbox no
 
-
+this is 12 by 4 arrow
 
 t=60(h24)+m ( if <90, add 1440)
 Expanded slots form (t):
@@ -18,10 +18,10 @@ c=(t-90)- 720(k-1) - 45(s-1)
 R = S mod 4
 
 B =
-30, if R = 1
-15, if R = 2
-00, if R = 3
-45, if R = 0
+↓, if R = 1
+→, if R = 2
+↑, if R = 3
+←, if R = 0
 
 
 `00–14`=`↑`, `15–29`=`→`, `30–44`=`↓`, `45–59`=`←`
