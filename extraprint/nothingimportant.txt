@@ -7,6 +7,19 @@ Row 2:  [↓ ↓]  |  [↘ →]  |  [↖ ↑]  |  [↖ ←]
 • [↘ ↑] | [↘ ←] | [↖ ↓] | [↑ →]
  [↗ ↑] | [↗ ←] | [↙ ↓] | [↓ →]
 
+
+## 1. CODEGRID
+* **Rule:** Replace **only** the matching 4-character time anchor at Slot `b` with `[X ]`; preserve all inactive time labels and spacing.
+* **Math:** 
+  * `T = (H24 × 60) + M` *(If `T < 90`, add `1440`)*
+  * Solve `T = 360(a - 1) + 45(b - 1) + 90 + c` *(where `a = 1–4`, `b = 1–8`, `c = 00–44`)*
+* **Template (Slot 1 to Slot 8 = `b`):**
+
+```text
+Row 1: 1:30 | 2:15 | 3:00 | 3:45
+Row 2: 4:30 | 5:15 | 6:00 | 6:45
+
+
 ## SYSTEM OVERVIEW
 
 | Grid | Code | What It Tracks |
