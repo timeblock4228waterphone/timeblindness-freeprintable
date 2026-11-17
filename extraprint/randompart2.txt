@@ -1,5 +1,21 @@
 this is the sandbox no
 
+
+
+t=60(h24)+m ( if <90, add 1440)
+Expanded slots form (t):
+t=720(k-1)+45(s-1)+90+c
+
+
+2 solvin for vable
+k1 - 2, the:
+ K= floor((t-90)/720)+1
+s=1- 16 
+S= flor (((t-90)-720k-1))/45)+1
+c(0 t 44, leftover minute inside slot s):
+c=(t-90)- 720(k-1) - 45(s-1)
+
+
 BASE TIME EQUATION: - T = (H24 × 60) + M (If T < 90, add 1440) - T = 720(k - 1) + 45(s - 1) + 90 + c
 2.	⁠Where: - k = 1–2 (12-hour half: 1 = 1:30 AM–1:29 PM, 2 = 1:30 PM–1:29 AM) - s
 3.	⁠= 1–16 (Active 45-minute slot across the 12-hour cycle) - c = 0–44
