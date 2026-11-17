@@ -1,38 +1,17 @@
 
 
 okay break it down
-this is called 2 by 3
-• Grid Map: Show 12h hours & 5m-floored minutes (R1: [1,7 / 05,35] | [2,8 / 10,40] | [3,9 / 15,45], R2: [4,10 / 20,50] | [5,11 / 25,55] | [6,12 / 30,00]). Bold active 12h Hour and active 5m-floored Minute.
-• Arrows (45m cycle): [↓] 1:30–2:14 (+3h repeats), [→] 2:15–2:59 (+3h), [↑] 3:00–3:44 (+3h), [←] 3:45–4:29 (+3h). Bold active arrow.
-• Strict Output:
-Top: [ 1,7 / 05,35 ] | [ 2,8 / 10,40 ] | [ 3,9 / 15,45 ]
-Bot: [ 4,10 / 20,50 ] | [ 5,11 / 25,55 ] | [ 6,12 / 30,00 ]
-Display: [ ↓ ] | [ → ] | [ ↑ ] | [ ← ]
-
-
--------------------------
-
-- Round the minutes down to the nearest 5-minute increment 00-04→00, 05-09→05, 10-14→10, 15-19→15, 20-24→20, 25-29→25, 30-34→30, 35-39→35, 40-44→40, 45-49→45, 50-54→50, 55-59→55
-
-show below this
+4. GRID MAP (In Box Hour_Pos, wrap the matching hour 1–12 in ""; in Box Min_Pos, wrap the matching 5-min value 05–00 in ""; if both land in the same box, wrap both like [ "1",7 / "05",35 ]; preserve all inactive numbers):
+- Hour: Solve H24 = 6a - 6 + b (a=1–4, b=1–6; if 00, use 24). Hour_Pos = b. (Display hour as 1–12; if 12 or 24, match "12").
+- Minute: Round M down to nearest 5 (if 00–04, use 60). Solve M = 30(c - 1) + 5d (c=1–2, d=1–6). Min_Pos = d. (If M = 60, match "00").
+- Combined 2x3 Grid Map:
+  Row 1: [ b1 / d1 ] | [ b2 / d2 ] | [ b3 / d3 ]
+  Row 2: [ b4 / d4 ] | [ b5 / d5 ] | [ b6 / d6 ]
+- Template (Boxes 1–6):
+  [ 1,7 / 05,35 ]  | [ 2,8 / 10,40 ]  | [ 3,9 / 15,45 ]
+  [ 4,10 / 20,50 ] | [ 5,11 / 25,55 ] | [ 6,12 / 30,00 ]
 
 
 
-for hours show only 1-12 not the other 12 hours.
-
-okay highlight time now
----------------------------
-
-to show to human below
-
-why is the number crammed so much because in words document there was only space for the design this one
-
-
-the box was only
-around 1.5 inchines tall and around 2 inches wide in word document
-
-when the whole sheet is around
-7.5 inches wide and 3 inches tall
-and there was 8 box and days of the week on top.
-this taking one of the 8 boxes
+t
 
