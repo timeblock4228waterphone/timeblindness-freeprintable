@@ -11,9 +11,9 @@ below is the cheat shee
 it is called rest and breath thank you for staying.
 okay now that you read this the meeat is part 1 -6
 _________________________
-1
 
-Map the given time into these 6 grids inside a single code block. Keep all template text, brackets, and spacing intact; only highlight active slots using the exact rules below.
+
+-Map the given time into these 6 grids inside a single code block. Keep all template text, brackets, and spacing intact; only highlight active slots using the exact rules below.
 
 Vars:
 - H12 (1–12), H24 (00–23), M (00–59), M5 (M floored to nearest 5: 00, 05, 10... 55).
