@@ -15,6 +15,14 @@ S= flor (((t-90)-720k-1))/45)+1
 c(0 t 44, leftover minute inside slot s):
 c=(t-90)- 720(k-1) - 45(s-1)
 
+R = S mod 4
+
+B =
+30, if R = 1
+15, if R = 2
+00, if R = 3
+45, if R = 0
+
 
 BASE TIME EQUATION: - T = (H24 × 60) + M (If T < 90, add 1440) - T = 720(k - 1) + 45(s - 1) + 90 + c
 2.	⁠Where: - k = 1–2 (12-hour half: 1 = 1:30 AM–1:29 PM, 2 = 1:30 PM–1:29 AM) - s
