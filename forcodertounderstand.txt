@@ -21,10 +21,11 @@ Vars:
 
 1. CODEGRID (Replace ONLY the matching 4-char time anchor at Slot b with [X ]; preserve all inactive time labels and spacing):
 - T = (H24 × 60) + M (If T < 90, T = T + 1440)
--Solve `T = 360(a-1) + 45(d-1) + 90 + c` (`a=1–4, d=1–8, c=00–44`):
+- Solve T = 360(a - 1) + 45(b - 1) + 90 + c (a=1–4, b=1–8, c=00–44)
 - Template (Slot 1 to Slot 8 = b):
 Row 1: b1 | b2 | b3 | b4
 Row 2: b5 | b6 | b7 | b8
+
 
 
 2. SPACE JAMMER (Wrap active H12 on the LEFT of the comma in "", and active M5 on the RIGHT of the comma in ""; if both are in the same bracket, wrap both like ["2", "10"]; preserve all inactive numbers):
