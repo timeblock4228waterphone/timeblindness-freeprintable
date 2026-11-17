@@ -19,12 +19,13 @@ Vars:
 - H12 (1–12), H24 (00–23), M (00–59), M5 (M floored to nearest 5: 00, 05, 10... 55).
 - Midnight/Zero rules: For 00:xx, treat H24 as 24 in Grids 3, 4, and 6 (keep label as 00 in Grid 6). For M=00–04, treat M5 as 00 in Grid 2, and treat M as 60 in Grids 3 and 4.
 
-1. CODGRID (Replace ONLY the matching 4-char time anchor at Slot b with [ X ]; preserve all inactive time labels and spacing):
+1. CODEGRID (Replace ONLY the matching 4-char time anchor at Slot b with [X ]; preserve all inactive time labels and spacing):
 - T = (H24 × 60) + M (If T < 90, T = T + 1440)
-- Solve T = 360(a - 1) + 45b + 45 + c (a=1–4, b=1–8, c=00–44)
+- Solve T = 360(a - 1) + 45(b + 1) + c (a=1–4, b=1–8, c=00–44)
 - Template (Slot 1 to Slot 8 = b):
-Row 1:  b1 |  b2 |  b3 |  b4
-Row 2:  b5 |  b6 |  b7 |  b8
+Row 1: b1 | b2 | b3 | b4
+Row 2: b5 | b6 | b7 | b8
+
 
 2. SPACE JAMMER (Wrap active H12 on the LEFT of the comma in "", and active M5 on the RIGHT of the comma in ""; if both are in the same bracket, wrap both like ["2", "10"]; preserve all inactive numbers):
 - Template:
