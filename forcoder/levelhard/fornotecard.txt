@@ -1,5 +1,15 @@
+## SYSTEM OVERVIEW
+
+| Grid | Code | What It Tracks |
+| :--- | :--- | :--- |
+| **Minute Grid** | `M` | Minute rounded down to 5 |
+| **CODGRID** | `C` | 45-minute intervals |
+| **Hour Grid** | `H` | Hour grouped into 6 repeating positions |
+| **Arrow Grid** | `A` | Same 6-position hour grouping |
+
 ## STRICT FORMAT LOCK
-- Output **1 check line** per input time (`Time -> Arrow in Mxx, Cd, Hb, Ab`), then the filled TEMPLATE inside **ONE** ` ```text ` block.
+- **If `MODE: SHORT`:** Output **ONLY** the check line(s) (`Time -> Arrow in Mxx, Cd, Hb, Ab (+r mins)`). Do not output the template.
+- **If `MODE: FULL`:** Output **1 check line** per input time, then the filled TEMPLATE inside **ONE** ` ```text ` block.
 - Keep exact line count, box widths, and spaces outside brackets.
 - **3-char boxes:** active = `[ X ]`, empty = `[   ]`.
 - **4-char boxes:** empty = `[    ]`, 1 arrow = `[ ↑  ]`, 2 arrows = `[ ↖↘ ]`, 3 arrows = `[ ←↑→]`, 4 arrows = `[←↑↓→]`.
@@ -50,8 +60,9 @@ You are here and that enough
                             [A4  ] | [A5  ] | [A6  ] 
 ```
 
-INPUT TIME: 20:15
-OUTPUT MODE: Print ONLY the check line (`Time -> Arrow in Mxx, Cd, Hb, Ab`). 
+MODE: SHORT
+INPUT TIME: 
+
 
 
 
