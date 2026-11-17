@@ -1,21 +1,35 @@
-
 ## STRICT FORMAT LOCK
-- Output **1 check line** (`Time -> Arrow in Mxx, Cb, Hb, Ab`), then the filled TEMPLATE inside **ONE** ` ```text ` 
+- Output **1 check line** per input time (`Time -> Arrow in Mxx, Cd, Hb, Ab`), then the filled TEMPLATE inside **ONE** ` ```text ` block.
 - Keep exact line count, box widths, and spaces outside brackets.
 - **3-char boxes:** active = `[ X ]`, empty = `[   ]`.
 - **4-char boxes:** empty = `[    ]`, 1 arrow = `[ ↑  ]`, 2 arrows = `[ ↖↘ ]`, 3 arrows = `[ ←↑→]`, 4 arrows = `[←↑↓→]`.
 
+## MULTIPLE INPUT RULE
+1. Treat every input time as a separate, independent calculation.
+2. Apply Rules 1–5 to each input time individually.
+3. Do not combine or average input times before calculating.
+4. After all calculations are complete, place every result into ONE shared template.
+5. Preserve every active position from every input time.
+6. If multiple inputs activate the same box, display all resulting symbols in that box, following the specified arrow-sorting rules (for `[ X ]` boxes, keep `[ X ]`).
+7. Never let a later input overwrite an earlier input.
+
 ## RULES (5m x 12 = 60m x 6 = 360m = 72 options; 24-hr H=00–23, M=00–59)
 For each input time:
-1. HOUR SLOT (b = 1 to 6):
-   b=1: 1,7 (`↖`) | b=2: 2,8 (`↑`) | b=3: 3,9 (`↗`)
-   b=4: 4,10 (`↙`) | b=5: 5,11 (`↓`) | b=6: 6,12 (`↘`)
-2. 5-MINUTE GRID: Round minutes down to nearest 5 (05–00). Overwrite that matching [Mxx ] box with the Hour Arrow from Rule 1 (example: [ ↖  ]). Keep all other [Mxx ] labels visible.
-3. **2x3 HOUR GRID:** Overwrite matching `[Hb ]` with `[ X ]` using `b` from Rule 1 (others -> `[   ]`).
-4. **ARROW GRID:** Overwrite matching `[Ab  ]` with Quad Arrow using `b` from Rule 1 (`00–14`=`↑`, `15–29`=`→`, `30–44`=`↓`, `45–59`=`←`; others -> `[    ]`). Sort multiple arrows: `← ↑ ↓ →`.
-5. **CODGRID:** `T = (H×60)+M` (if `T<90`, add `1440`). Solve `T = 360(a-1) + 45(b-1) + 90 + c` (`a=1–4, b=1–8, c=00–44`):
+1. **HOUR SLOT (`b` = 1–6, repeating every 6 hrs):**
+   `b=1`: 01,07,13,19 (`↖`) | `b=2`: 02,08,14,20 (`↑`) | `b=3`: 03,09,15,21 (`↗`)
+   `b=4`: 04,10,16,22 (`↙`) | `b=5`: 05,11,17,23 (`↓`) | `b=6`: 06,12,18,00 (`↘`)
+2. **5-MIN GRID:** Solve `M = 5m + r` (`m=0–11`, leftover `r=0–4` mins). Match `5m` (`05, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 00`). Place Hour Arrow in matching `[Mxx ]`; unmatched -> `[    ]`. Show `(+r mins)` in the check line. Sort multiple arrows: `↖ ↑ ↗ ↙ ↓ ↘`.
+   - **5-MINUTE GRID POSITION MAP (Strictly Locked):**
+     Row 1: `M05` | `M10` | `M15`
+     Row 2: `M20` | `M25` | `M30`
+     Row 3: `M35` | `M40` | `M45`
+     Row 4: `M50` | `M55` | `M00`
+     Each minute value must occupy its exact matching position. Never move a value to another row or column.
+3. **2x3 HOUR GRID:** Place `[ X ]` in matching `[Hb ]` using `b` from Rule 1 (others -> `[   ]`).
+4. **ARROW GRID:** Place Quad Arrow in matching `[Ab  ]` using `b` from Rule 1 (`00–14`=`↑`, `15–29`=`→`, `30–44`=`↓`, `45–59`=`←`; others -> `[    ]`). Sort multiple arrows: `← ↑ ↓ →`.
+5. **CODGRID:** `T = (H×60)+M` (if `T<90`, add `1440`). Solve `T = 360(a-1) + 45(d-1) + 90 + c` (`a=1–4, d=1–8, c=00–44`):
    `C1`: 1:30 | `C2`: 2:15 | `C3`: 3:00 | `C4`: 3:45 | `C5`: 4:30 | `C6`: 5:15 | `C7`: 6:00 | `C8`: 6:45.
-   Overwrite matching `[Cb ]` with `[ X ]` (others -> `[   ]`).
+   Place `[ X ]` in matching `[Cd ]` (others -> `[   ]`).
 6. **CLOCK:** **NEVER** modify `(00)`, `(45)`, `(15)`, `(30)`. Replace `<input>` with the input time(s).
 
 ## TEMPLATE
@@ -36,7 +50,8 @@ You are here and that enough
                             [A4  ] | [A5  ] | [A6  ] 
 ```
 
-INPUT TIME: 12:59, 1:49
+INPUT TIME: 
+
 
 
 
