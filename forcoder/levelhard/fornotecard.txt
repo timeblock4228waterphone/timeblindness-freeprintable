@@ -7,10 +7,10 @@
 
 ## RULES (5m x 12 = 60m x 6 = 360m = 72 options; 24-hr H=00–23, M=00–59)
 For each input time:
-1. **HOUR SLOT (`b` = 1–6, repeating every 6 hrs):**
-   `b=1`: 01,07,13,19 (`↖`) | `b=2`: 02,08,14,20 (`↑`) | `b=3`: 03,09,15,21 (`↗`)
-   `b=4`: 04,10,16,22 (`↙`) | `b=5`: 05,11,17,23 (`↓`) | `b=6`: 06,12,18,00 (`↘`)
-2.2. **5-MIN GRID:** Solve `M = 5m + r` (`m=0–11`, leftover `r=0–4` mins). Match `5m` (`05, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 00`; `00` is bottom-right `[M00 ]`). Overwrite matching `[Mxx ]` with Hour Arrow; unmatched -> `[    ]`. Show `(+r mins)` in the check line. Sort multiple arrows: `↖ ↑ ↗ ↙ ↓ ↘`.
+1. HOUR SLOT (b = 1 to 6):
+   b=1: 1,7 (`↖`) | b=2: 2,8 (`↑`) | b=3: 3,9 (`↗`)
+   b=4: 4,10 (`↙`) | b=5: 5,11 (`↓`) | b=6: 6,12 (`↘`)
+2. 5-MINUTE GRID: Round minutes down to nearest 5 (05–00). Overwrite that matching [Mxx ] box with the Hour Arrow from Rule 1 (example: [ ↖  ]). Keep all other [Mxx ] labels visible.
 3. **2x3 HOUR GRID:** Overwrite matching `[Hb ]` with `[ X ]` using `b` from Rule 1 (others -> `[   ]`).
 4. **ARROW GRID:** Overwrite matching `[Ab  ]` with Quad Arrow using `b` from Rule 1 (`00–14`=`↑`, `15–29`=`→`, `30–44`=`↓`, `45–59`=`←`; others -> `[    ]`). Sort multiple arrows: `← ↑ ↓ →`.
 5. **CODGRID:** `T = (H×60)+M` (if `T<90`, add `1440`). Solve `T = 360(a-1) + 45(b-1) + 90 + c` (`a=1–4, b=1–8, c=00–44`):
