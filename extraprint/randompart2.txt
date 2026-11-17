@@ -2,23 +2,45 @@ this is the sandbox no
 
 Encode the INPUT TIME into the blank template below. All inactive boxes MUST remain blank ([   ] or [    ]).
 
-RULES:
-1. HOUR SLOT (b = 1 to 6) & HOUR ARROW:
-   b=1: 1,7 (`↖`) | b=2: 2,8 (`↑`) | b=3: 3,9 (`↗`)
-   b=4: 4,10 (`↙`) | b=5: 5,11 (`↓`) | b=6: 6,12 (`↘`)
-2. 5-MINUTE GRID (4-char boxes): Round minutes down to nearest 5 (05, 10, 15 / 20, 25, 30 / 35, 40, 45 / 50, 55, 00). Put the **Hour Arrow** from Rule 1 into that matching minute box (example: `[ ↖  ]`). Leave all other 11 boxes blank as `[    ]`.
-3. 2 by 3 HOUR GRID (3-char boxes): Put `[ X ]` in slot `b` from Rule 1. Leave all other 5 boxes blank as `[   ]`.
-4. ARROW GRID (4-char boxes): In slot `b` from Rule 1, put the **Quad Arrow** for the 15-min window (`00–14`=`↑`, `15–29`=`→`, `30–44`=`↓`, `45–59`=`←`, example: `[ ↓  ]`). Leave all other 5 boxes blank as `[    ]`.
-5. CODGRID (3-char boxes): Put `[ X ]` in the matching 45-min slot (repeats every 6 hours). Leave all other 7 boxes blank as `[   ]`:
-   Slot 1 (top-left): 1:30–2:14 or 7:30–8:14
-   Slot 2 (top-2nd):  2:15–2:59 or 8:15–8:59
-   Slot 3 (top-3rd):  3:00–3:44 or 9:00–9:44
-   Slot 4 (top-right):3:45–4:29 or 9:45–10:29
-   Slot 5 (bot-left): 4:30–5:14 or 10:30–11:14
-   Slot 6 (bot-2nd):  5:15–5:59 or 11:15–11:59
-   Slot 7 (bot-3rd):  6:00–6:44 or 12:00–12:44
-   Slot 8 (bot-right):6:45–7:29 or 12:45–1:29
-6. CLOCK: Replace `<input>` with the time. Never change `(00)`, `(45)`, `(15)`, or `(30)`.
+## STRICT FORMAT LOCK
+- Output **1 check line** (`Time -> Arrow in Mxx, Cd, Hb, Ab`), then the filled TEMPLATE inside **ONE** ` ```text ` block.
+- Keep exact line count, box widths, and spaces outside brackets.
+- **3-char boxes:** active = `[ X ]`, empty = `[   ]`.
+- **4-char boxes:** empty = `[    ]`, 1 arrow = `[ ↑  ]`, 2 arrows = `[ ↖↘ ]`, 3 arrows = `[ ←↑→]`, 4 arrows = `[←↑↓→]`.
+
+## RULES (5m x 12 = 60m x 6 = 360m = 72 options; 24-hr H=00–23, M=00–59)
+For each input time:
+1. **HOUR SLOT (`b` = 1–6, repeating every 6 hrs):**
+   `b=1`: 01,07,13,19 (`↖`) | `b=2`: 02,08,14,20 (`↑`) | `b=3`: 03,09,15,21 (`↗`)
+   `b=4`: 04,10,16,22 (`↙`) | `b=5`: 05,11,17,23 (`↓`) | `b=6`: 06,12,18,00 (`↘`)
+2. **5-MIN GRID:** Solve `M = 5m + r` (`m=0–11`, leftover `r=0–4` mins). Match `5m` (`05, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 00`; `00` is bottom-right `[M00 ]`). Overwrite matching `[Mxx ]` with Hour Arrow; unmatched -> `[    ]`. Show `(+r mins)` in the check line. Sort multiple arrows: `↖ ↑ ↗ ↙ ↓ ↘`.
+3. **2x3 HOUR GRID:** Overwrite matching `[Hb ]` with `[ X ]` using `b` from Rule 1 (others -> `[   ]`).
+4. **ARROW GRID:** Overwrite matching `[Ab  ]` with Quad Arrow using `b` from Rule 1 (`00–14`=`↑`, `15–29`=`→`, `30–44`=`↓`, `45–59`=`←`; others -> `[    ]`). Sort multiple arrows: `← ↑ ↓ →`.
+5. **CODGRID:** `T = (H×60)+M` (if `T<90`, add `1440`). Solve `T = 360(a-1) + 45(d-1) + 90 + c` (`a=1–4, d=1–8, c=00–44`):
+   `C1`: 1:30 | `C2`: 2:15 | `C3`: 3:00 | `C4`: 3:45 | `C5`: 4:30 | `C6`: 5:15 | `C7`: 6:00 | `C8`: 6:45.
+   Overwrite matching `[Cd ]` with `[ X ]` (others -> `[   ]`).
+6. **CLOCK:** **NEVER** modify `(00)`, `(45)`, `(15)`, `(30)`. Replace `<input>` with the input time(s).
+
+## TEMPLATE
+```text
+You are here and that enough
+             
+                       CODGRID
+         (00) 
+   (45)   |   (15)      [C1 ] | [C2 ] | [C3 ] | [C4 ]
+         (30)           [C5 ] | [C6 ] | [C7 ] | [C8 ]
+       <input>
+5-Minute Grid                 2 by 3 HOUR GRID
+[M05 ] | [M10 ] | [M15 ]    [H1 ] | [H2 ] | [H3 ]
+[M20 ] | [M25 ] | [M30 ]    [H4 ] | [H5 ] | [H6 ]
+[M35 ] | [M40 ] | [M45 ]
+[M50 ] | [M55 ] | [M00 ]    ARROW GRID
+                            [A1  ] | [A2  ] | [A3  ]
+                            [A4  ] | [A5  ] | [A6  ] 
+```
+
+INPUT TIME: 
+
 
 TEMPLATE:
 ```text
