@@ -37,9 +37,12 @@ Row 2:  4:30 |  5:15 |  6:00 |  6:45
 H24: [1–6] | [7–12] | [13–18] | [19–24]
 M: [1–30] | [31–60]
 
-4. GRID MAP (In Box Hour_Pos, wrap the number matching Hour_Pos in ""; in Box Min_Pos, wrap the 5-min value matching M5 in ""; if both land in the same box, wrap both like [ "1",7 / "05",35 ]; preserve all inactive numbers):
-- Hour: Solve H24 = 6a - 6 + b (a=1–4, b=1–6; if 00, use 24). Hour_Pos = b.
-- Minute: Round M down to nearest 5 (if 00–04, use 60). Solve M = 30(c - 1) + 5d (c=1–2, d=1–6). Min_Pos = d.
+4. GRID MAP (In Box Hour_Pos, wrap the matching hour 1–12 in ""; in Box Min_Pos, wrap the matching 5-min value 05–00 in ""; if both land in the same box, wrap both like [ "1",7 / "05",35 ]; preserve all inactive numbers):
+- Hour: Solve H24 = 6a - 6 + b (a=1–4, b=1–6; if 00, use 24). Hour_Pos = b. (Display hour as 1–12; if 12 or 24, match "12").
+- Minute: Round M down to nearest 5 (if 00–04, use 60). Solve M = 30(c - 1) + 5d (c=1–2, d=1–6). Min_Pos = d. (If M = 60, match "00").
+- Combined 2x3 Grid Map:
+  Row 1: [ b1 / d1 ] | [ b2 / d2 ] | [ b3 / d3 ]
+  Row 2: [ b4 / d4 ] | [ b5 / d5 ] | [ b6 / d6 ]
 - Template (Boxes 1–6):
   [ 1,7 / 05,35 ]  | [ 2,8 / 10,40 ]  | [ 3,9 / 15,45 ]
   [ 4,10 / 20,50 ] | [ 5,11 / 25,55 ] | [ 6,12 / 30,00 ]
