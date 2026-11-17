@@ -17,12 +17,18 @@ c=(t-90)- 720(k-1) - 45(s-1)
 
 R = S mod 4
 
-B =
+
 ↓, if R = 1
 →, if R = 2
 ↑, if R = 3
 ←, if R = 0
 
+T_slot=60(box)+r
+
+Box=1-12(clock hour:box= f(loorT_slot/60))
+
+
+somehw look at the box
 
 `00–14`=`↑`, `15–29`=`→`, `30–44`=`↓`, `45–59`=`←`
 
