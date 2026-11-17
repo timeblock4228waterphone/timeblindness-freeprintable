@@ -50,13 +50,6 @@ You are here and that enough
                             [A4  ] | [A5  ] | [A6  ] 
 ```
 
-INPUT TIME: 
-
-
-
-
-```
-
 INPUT TIME: 20:15
 OUTPUT MODE: Print ONLY the check line (`Time -> Arrow in Mxx, Cd, Hb, Ab`). 
 
