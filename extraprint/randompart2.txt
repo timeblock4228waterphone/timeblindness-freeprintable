@@ -18,7 +18,7 @@ this is the sandbox no
 - Keep exact line count, box widths, and spaces outside brackets.
 - **3-char boxes:** active = `[ X ]`, empty = `[   ]`.
 - **4-char boxes:** empty = `[    ]`, 1 arrow = `[ ↑  ]`, 2 arrows = `[ ↖↘ ]`, 3 arrows = `[ ←↑→]`, 4 arrows = `[←↑↓→]`.
-
+- **FINAL CLEANUP (MANDATORY):** After placing all active symbols for every input time, sweep the entire template and replace EVERY remaining `[C...]`, `[H...]`, `[M...]`, and `[A...]` placeholder with blank spaces (`[   ]` for C and H; `[    ]` for M and A). Zero placeholder labels may appear in the final output, and every M/A box must stay strictly 4 characters wide inside the brackets (e.g., `[ ↙  ]`).
 ## MULTIPLE INPUT RULE
 1. Treat every input time as a separate, independent calculation.
 2. Apply Rules 1–5 to each input time individually.
