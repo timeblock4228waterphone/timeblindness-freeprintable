@@ -19,7 +19,7 @@ Vars:
 - Midnight/Zero rules: For 00:xx, treat H24 as 24 in Grids 3, 4, and 6 (keep label as 00 in Grid 6). For M=00–04, treat M5 as 00 in Grid 2, and treat M as 60 in Grids 3 and 4.
 ---
 
-## 1. CODEGRID
+## 1. 45 minute
 * **Rule:** Replace **only** the matching 4-character time anchor at Slot `b` with `[X ]`; preserve all inactive time labels and spacing.
 * **Math:** 
   * `T = (H24 × 60) + M` *(If `T < 90`, add `1440`)*
