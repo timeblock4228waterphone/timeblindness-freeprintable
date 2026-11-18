@@ -71,7 +71,7 @@ For each input time:
 14|                            [A4  ] | [A5  ] | [A6  ] 
 
 MODE: SHORT
-INPUT TIME: 
+INPUT TIME: now
 
 
 
