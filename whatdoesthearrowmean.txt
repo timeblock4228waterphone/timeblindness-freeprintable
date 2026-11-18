@@ -2,20 +2,19 @@
 - T = 360(a - 1) + 45(b - 1) + 90 + c  [a=1–4, b=1–8, c=00–44]
 - Active Slot = b
 
-2. TIME DECOMPOSITION (Finds H24 and M_slot from T):
-- Solve T = 60(H24) + M_slot  [where H24 is an integer 1–24, and M_slot is 00, 15, 30, or 45 when c=00]
-- (If H24 = 0, set H24 = 24. If H24 > 24, subtract 24.)
-
-3. HOUR POSITION & DIAGONAL ARROW (Finds grid spot e):
+2. HOUR POSITION & DIAGONAL ARROW (Finds grid spot e):
+- Solve T = 60(H24) + M_rem  [where H24 is an integer and 0 <= M_rem < 60]
+- If H24 = 0, set H24 = 24. If H24 > 24, subtract 24.
 - Solve H24 = 6(d - 1) + e  [d=1–4, e=1–6]
 - Active Pos = e
 - Hour Arrow (by e): 1:↖ | 2:↑ | 3:↗ | 4:↙ | 5:↓ | 6:↘
 
-4. MINUTE ARROW (Finds minute direction from M_slot):
-- Minute Arrow (by M_slot): 00:↑ | 15:→ | 30:↓ | 45:←
+3. MINUTE ARROW (Directly from Slot b):
+- Solve b = 4(q - 1) + r  [q=1–2, r=1–4]
+- Minute Arrow (by r): 1:↓ | 2:→ | 3:↑ | 4:←
 
-5. CODGRID ANCHOR ARROWS:
-- Inside each Active Slot b, place [Hour_Arrow Minute_Arrow] (Hour Arrow on left, Minute Arrow on right).
+4. CODGRID ANCHOR ARROWS:
+- Inside each Active Slot b, place [Hour_Arrow Minute_Arrow] (Hour Arrow on the left, Minute Arrow on the right).
 - Solve the equations independently for each b=1 through b=8 using a=1 and c=00, then fill the map:
 Row 1:  B1 |  b2 |  b3 |  B4
 Row 2:  B5 |  B6 |  B7 |  B8
