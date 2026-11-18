@@ -1,18 +1,21 @@
-1. CODGRID (Finds 45-min slot b):
-- T = (H24 × 60) + M (If T < 90, T = T + 1440)
--T = 360(a - 1) + 45(b - 1) + 90 + c
+1. CODGRID (Finds total minutes T for slot b):
+- T = 360(a - 1) + 45(b - 1) + 90 + c  [a=1–4, b=1–8, c=00–44]
 - Active Slot = b
-2. HOUR POSITION & DIAGONAL ARROW (Finds grid spot e):
-- Treat H24=00 as 24.
-- H24 = 6(d - 1) + e  [d=1–4, e=1–6]
+
+2. TIME DECOMPOSITION (Finds H24 and M_slot from T):
+- Solve T = 60(H24) + M_slot  [where H24 is an integer 1–24, and M_slot is 00, 15, 30, or 45 when c=00]
+- (If H24 = 0, set H24 = 24. If H24 > 24, subtract 24.)
+
+3. HOUR POSITION & DIAGONAL ARROW (Finds grid spot e):
+- Solve H24 = 6(d - 1) + e  [d=1–4, e=1–6]
 - Active Pos = e
-- Diagonal Arrow (by e): 1:↖ | 2:↑ | 3:↗ | 4:↙ | 5:↓ | 6:↘
-CODGRID ANCHOR ARROWS (Places Hour Arrow on LEFT, Minute Arrow on RIGHT inside Active Slot b):
-- Take the anchor minute M_slot from Active CODGRID Slot b:  
+- Hour Arrow (by e): 1:↖ | 2:↑ | 3:↗ | 4:↙ | 5:↓ | 6:↘
+
+4. MINUTE ARROW (Finds minute direction from M_slot):
 - Minute Arrow (by M_slot): 00:↑ | 15:→ | 30:↓ | 45:←
-- Hour Arrow (from Step 2 Diagonal Arrow): 1:↖ | 2:↑ | 3:↗ | 4:↙ | 5:↓ | 6:↘
-- Inside Active CODGRID Slot b, show [Hour_Arrow Minute_Arrow] (Hour Arrow on the left, Minute Arrow on the right)
-- Slot Map:
+
+5. CODGRID ANCHOR ARROWS:
+- Inside each Active Slot b, place [Hour_Arrow Minute_Arrow] (Hour Arrow on left, Minute Arrow on right).
+- Solve the equations independently for each b=1 through b=8 using a=1 and c=00, then fill the map:
 Row 1:  B1 |  b2 |  b3 |  B4
-Row 2:  B5 | B6 |  B7 |  B8
-Generate all 8 arrow combinations using a=1 and b=1–8, with c=00. 
+Row 2:  B5 |  B6 |  B7 |  B8
