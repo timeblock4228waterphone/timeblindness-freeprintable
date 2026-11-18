@@ -1,3 +1,15 @@
+## 1. CODEGRID
+* **Rule:** Replace **only** the matching 4-character time anchor at Slot `b` with `[X ]`; preserve all inactive time labels and spacing.
+* **Math:** 
+  * `T = (H24 × 60) + M` *(If `T < 90`, add `1440`)*
+  * Solve `T = 360(a - 1) + 45(b - 1) + 90 + c` *(where `a = 1–4`, `b = 1–8`, `c = 00–44`)*
+* **Template (Slot 1 to Slot 8 = `b`):**
+
+```text
+Row 1: 1:30 | 2:15 | 3:00 | 3:45
+Row 2: 4:30 | 5:15 | 6:00 | 6:45
+
+
 ## SYSTEM OVERVIEW
 
 | Grid | Code | What It Tracks |
@@ -9,14 +21,14 @@
 
 ## STRICT FORMAT LOCK
 - **If `MODE: SHORT`:** Output **ONLY** the check line(s) (`Time -> Arrow in Mxx, Cd, Hb, Ab (+r mins)`). Do not output the template.
-- **If `MODE: FULL`:** Output **1 check line** per input time, then the filled TEMPLATE inside **ONE** ` ```text ` block.
-- Keep exact line count, box widths, and spaces outside brackets.
-- **3-char boxes:** active = `[ X ]`, empty = `[   ]`.
-- **4-char boxes:** empty = `[    ]`, 1 arrow = `[ ↑  ]`, 2 arrows = `[ ↖↘ ]`, 3 arrows = `[ ←↑→]`, 4 arrows = `[←↑↓→]`.
+- **If `MODE: FULL`:** Output **1 check line** per input time, then the filled TEMPLATE inside **ONE** ` ```text ` block. Strip the `01|`–`14|` prefixes and keep the exact leading spaces, line count, and left/right layout.
+- **3-char boxes (`C`, `H`):** active = `[ X ]`, empty = `[   ]`.
+- **4-char boxes (`M`, `A`):** empty = `[    ]`, 1 arrow = `[ ↑  ]`, 2 arrows = `[ ↖↘ ]`, 3 arrows = `[ ←↑→]`, 4 arrows = `[←↑↓→]`.
+- **CLEANUP:** Replace all unused `[C...]`, `[H...]`, `[M...]`, `[A...]` placeholders with blank spaces (`[   ]` or `[    ]`).
 
 ## MULTIPLE INPUT RULE
 1. Treat every input time as a separate, independent calculation.
-2. Apply Rules 1–5 to each input time individually.
+2. Apply Rules 1–6 to each input time individually.
 3. Do not combine or average input times before calculating.
 4. After all calculations are complete, place every result into ONE shared template.
 5. Preserve every active position from every input time.
@@ -42,27 +54,24 @@ For each input time:
    Place `[ X ]` in matching `[Cd ]` (others -> `[   ]`).
 6. **CLOCK:** **NEVER** modify `(00)`, `(45)`, `(15)`, `(30)`. Replace `<input>` with the input time(s).
 
-## TEMPLATE
-```text
-You are here and that enough
-             
-                       CODGRID
-         (00) 
-   (45)   |   (15)      [C1 ] | [C2 ] | [C3 ] | [C4 ]
-         (30)           [C5 ] | [C6 ] | [C7 ] | [C8 ]
-       <input>
-5-Minute Grid                 2 by 3 HOUR GRID
-[M05 ] | [M10 ] | [M15 ]    [H1 ] | [H2 ] | [H3 ]
-[M20 ] | [M25 ] | [M30 ]    [H4 ] | [H5 ] | [H6 ]
-[M35 ] | [M40 ] | [M45 ]
-[M50 ] | [M55 ] | [M00 ]    ARROW GRID
-                            [A1  ] | [A2  ] | [A3  ]
-                            [A4  ] | [A5  ] | [A6  ] 
-```
+## TEMPLATE (Strip `01|`–`14|` prefixes; keep exact spaces & left/right layout)
+01|You are here and that enough
+02|
+03|                       CODGRID
+04|         (00) 
+05|   (45)   |   (15)      [C1 ] | [C2 ] | [C3 ] | [C4 ]
+06|         (30)           [C5 ] | [C6 ] | [C7 ] | [C8 ]
+07|       <input>
+08|5-Minute Grid                 2 by 3 HOUR GRID
+09|[M05 ] | [M10 ] | [M15 ]    [H1 ] | [H2 ] | [H3 ]
+10|[M20 ] | [M25 ] | [M30 ]    [H4 ] | [H5 ] | [H6 ]
+11|[M35 ] | [M40 ] | [M45 ]
+12|[M50 ] | [M55 ] | [M00 ]    ARROW GRID
+13|                            [A1  ] | [A2  ] | [A3  ]
+14|                            [A4  ] | [A5  ] | [A6  ] 
 
 MODE: SHORT
 INPUT TIME: 
-
 
 
 
