@@ -1,15 +1,3 @@
-## 1. CODEGRID
-* **Rule:** Replace **only** the matching 4-character time anchor at Slot `b` with `[X ]`; preserve all inactive time labels and spacing.
-* **Math:** 
-  * `T = (H24 × 60) + M` *(If `T < 90`, add `1440`)*
-  * Solve `T = 360(a - 1) + 45(b - 1) + 90 + c` *(where `a = 1–4`, `b = 1–8`, `c = 00–44`)*
-* **Template (Slot 1 to Slot 8 = `b`):**
-
-```text
-Row 1: 1:30 | 2:15 | 3:00 | 3:45
-Row 2: 4:30 | 5:15 | 6:00 | 6:45
-
-
 ## SYSTEM OVERVIEW
 
 | Grid | Code | What It Tracks |
@@ -48,10 +36,19 @@ For each input time:
      Row 4: `M50` | `M55` | `M00`
      Each minute value must occupy its exact matching position. Never move a value to another row or column.
 3. **2x3 HOUR GRID:** Place `[ X ]` in matching `[Hb ]` using `b` from Rule 1 (others -> `[   ]`).
-4. **ARROW GRID:** Place Quad Arrow in matching `[Ab  ]` using `b` from Rule 1 (`00–14`=`↑`, `15–29`=`→`, `30–44`=`↓`, `45–59`=`←`; others -> `[    ]`). Sort multiple arrows: `← ↑ ↓ →`.
-5. **CODGRID:** `T = (H×60)+M` (if `T<90`, add `1440`). Solve `T = 360(a-1) + 45(d-1) + 90 + c` (`a=1–4, d=1–8, c=00–44`):
-   `C1`: 1:30 | `C2`: 2:15 | `C3`: 3:00 | `C4`: 3:45 | `C5`: 4:30 | `C6`: 5:15 | `C7`: 6:00 | `C8`: 6:45.
-   Place `[ X ]` in matching `[Cd ]` (others -> `[   ]`).
+4. **ARROW GRID:** Determine the box position `[Ab  ]` using the hour slot `b` from Rule 1. Determine the arrow direction independently using the minute range (`00–14`=`↑`, `15–29`=`→`, `30–44`=`↓`, `45–59`=`←`). The hour selects the box; the minutes select the arrow. These two calculations must not be confused. Place the arrow in `[Ab  ]` (others -> `[    ]`). Sort multiple arrows: `← ↑ ↓ →`.
+5. **CODGRID:**
+   - **CODGRID INDEX RULE:** The 45-minute interval index `d` determines the CODGRID box directly. `d=1` maps to `C1`, `d=2` maps to `C2`, continuing sequentially through `d=8` mapping to `C8`. Never derive the box number by estimating or rounding the clock time.
+   - **Equation:** `T = 360(a - 1) + 45(d - 1) + 90 + c` (`a=1–4`, `d=1–8`, `c=00–44`).
+   - **Required Calculation Order:**
+     1. Calculate `T = (H × 60) + M` (if `T < 90`, add `1440`).
+     2. Apply the 90-minute offset (`T - 90`).
+     3. Calculate `a` (`1–4`).
+     4. Calculate `d` (`1–8`).
+     5. Calculate `c` (`00–44`).
+     6. Verify the equation.
+     7. Place `[ X ]` in `[Cd ]` (others -> `[   ]`).
+   - **CODGRID VALIDATION:** Before selecting a box, verify that `0 ≤ c ≤ 44` and that substituting `a`, `d`, and `c` into the original equation reproduces the exact calculated `T`. If verification fails, recalculate. Never output an unverified CODGRID position.
 6. **CLOCK:** **NEVER** modify `(00)`, `(45)`, `(15)`, `(30)`. Replace `<input>` with the input time(s).
 
 ## TEMPLATE (Strip `01|`–`14|` prefixes; keep exact spaces & left/right layout)
@@ -70,5 +67,8 @@ For each input time:
 13|                            [A1  ] | [A2  ] | [A3  ]
 14|                            [A4  ] | [A5  ] | [A6  ] 
 
-MODE: SHORT
-INPUT TIME:
+## CURRENT TIME RULE
+- **Trigger:** If `INPUT TIME` is `now`, look up the current time in **[Your Time Zone, e.g., Central Time / CST]** on the web and convert it to 24-hour `HH:MM` format before running Rules 1–6.
+
+MODE: FULL
+INPUT TIME: now
