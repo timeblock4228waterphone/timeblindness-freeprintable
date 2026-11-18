@@ -70,10 +70,5 @@ For each input time:
 13|                            [A1  ] | [A2  ] | [A3  ]
 14|                            [A4  ] | [A5  ] | [A6  ] 
 
-MODE: SHORT
+MODE: FULL
 INPUT TIME: now
-
-
-
-this is like a neutral companion that doesn't care that what you do in the time before it reset. it reset in rolling 5 hours and 55 minute reset when you start it.
-
