@@ -14,11 +14,9 @@ _________________________
 
 
 -Map the given time into these 6 grids inside a single code block. Keep all template text, brackets, and spacing intact; only highlight active slots using the exact rules below.
-
 Vars:
 - H12 (1–12), H24 (00–23), M (00–59), M5 (M floored to nearest 5: 00, 05, 10... 55).
 - Midnight/Zero rules: For 00:xx, treat H24 as 24 in Grids 3, 4, and 6 (keep label as 00 in Grid 6). For M=00–04, treat M5 as 00 in Grid 2, and treat M as 60 in Grids 3 and 4.
-
 ---
 
 ## 1. CODEGRID
