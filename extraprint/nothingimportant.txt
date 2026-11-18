@@ -12,6 +12,71 @@ or
 
 this is like a neutral companion that doesn't care that what you do in the time before it reset. it reset in rolling 5 hours and 55 minute reset when you start it.
 
+## SYSTEM OVERVIEW
+
+| Grid | Code | What It Tracks |
+| :--- | :--- | :--- |
+| **Minute Grid** | `M` | Minute rounded down to 5 |
+| **CODGRID** | `C` | 45-minute intervals |
+| **Hour Grid** | `H` | Hour grouped into 6 repeating positions |
+| **Arrow Grid** | `A` | Same 6-position hour grouping |
+
+## STRICT FORMAT LOCK
+- **If `MODE: SHORT`:** Output **ONLY** the check line(s) (`Time -> Arrow in Mxx, Cd, Hb, Ab (+r mins)`). Do not output the template.
+- **If `MODE: FULL`:** Output **1 check line** per input time, then the filled TEMPLATE inside **ONE** ` ```text ` block. Strip the `01|`–`14|` prefixes and keep the exact leading spaces, line count, and left/right layout.
+- **3-char boxes (`C`, `H`):** active = `[ X ]`, empty = `[   ]`.
+- **4-char boxes (`M`, `A`):** empty = `[    ]`, 1 arrow = `[ ↑  ]`, 2 arrows = `[ ↖↘ ]`, 3 arrows = `[ ←↑→]`, 4 arrows = `[←↑↓→]`.
+- **CLEANUP:** Replace all unused `[C...]`, `[H...]`, `[M...]`, `[A...]` placeholders with blank spaces (`[   ]` or `[    ]`).
+
+## MULTIPLE INPUT RULE
+1. Treat every input time as a separate, independent calculation.
+2. Apply Rules 1–6 to each input time individually.
+3. Do not combine or average input times before calculating.
+4. After all calculations are complete, place every result into ONE shared template.
+5. Preserve every active position from every input time.
+6. If multiple inputs activate the same box, display all resulting symbols in that box, following the specified arrow-sorting rules (for `[ X ]` boxes, keep `[ X ]`).
+7. Never let a later input overwrite an earlier input.
+
+## RULES (5m x 12 = 60m x 6 = 360m = 72 options; 24-hr H=00–23, M=00–59)
+For each input time:
+1. **HOUR SLOT (`b` = 1–6, repeating every 6 hrs):**
+   `b=1`: 01,07,13,19 (`↖`) | `b=2`: 02,08,14,20 (`↑`) | `b=3`: 03,09,15,21 (`↗`)
+   `b=4`: 04,10,16,22 (`↙`) | `b=5`: 05,11,17,23 (`↓`) | `b=6`: 06,12,18,00 (`↘`)
+2. **5-MIN GRID:** Solve `M = 5m + r` (`m=0–11`, leftover `r=0–4` mins). Match `5m` (`05, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 00`). Place Hour Arrow in matching `[Mxx ]`; unmatched -> `[    ]`. Show `(+r mins)` in the check line. Sort multiple arrows: `↖ ↑ ↗ ↙ ↓ ↘`.
+   - **5-MINUTE GRID POSITION MAP (Strictly Locked):**
+     Row 1: `M05` | `M10` | `M15`
+     Row 2: `M20` | `M25` | `M30`
+     Row 3: `M35` | `M40` | `M45`
+     Row 4: `M50` | `M55` | `M00`
+     Each minute value must occupy its exact matching position. Never move a value to another row or column.
+3. **2x3 HOUR GRID:** Place `[ X ]` in matching `[Hb ]` using `b` from Rule 1 (others -> `[   ]`).
+4. **ARROW GRID:** Place Quad Arrow in matching `[Ab  ]` using `b` from Rule 1 (`00–14`=`↑`, `15–29`=`→`, `30–44`=`↓`, `45–59`=`←`; others -> `[    ]`). Sort multiple arrows: `← ↑ ↓ →`.
+5. **CODGRID:** `T = (H×60)+M` (if `T<90`, add `1440`). Solve `T = 360(a-1) + 45(d-1) + 90 + c` (`a=1–4, d=1–8, c=00–44`):
+   `C1`: 1:30 | `C2`: 2:15 | `C3`: 3:00 | `C4`: 3:45 | `C5`: 4:30 | `C6`: 5:15 | `C7`: 6:00 | `C8`: 6:45.
+   Place `[ X ]` in matching `[Cd ]` (others -> `[   ]`).
+6. **CLOCK:** **NEVER** modify `(00)`, `(45)`, `(15)`, `(30)`. Replace `<input>` with the input time(s).
+
+## TEMPLATE (Strip `01|`–`14|` prefixes; keep exact spaces & left/right layout)
+01|You are here and that enough
+02|
+03|                       CODGRID
+04|         (00) 
+05|   (45)   |   (15)      [C1 ] | [C2 ] | [C3 ] | [C4 ]
+06|         (30)           [C5 ] | [C6 ] | [C7 ] | [C8 ]
+07|       <input>
+08|5-Minute Grid                 2 by 3 HOUR GRID
+09|[M05 ] | [M10 ] | [M15 ]    [H1 ] | [H2 ] | [H3 ]
+10|[M20 ] | [M25 ] | [M30 ]    [H4 ] | [H5 ] | [H6 ]
+11|[M35 ] | [M40 ] | [M45 ]
+12|[M50 ] | [M55 ] | [M00 ]    ARROW GRID
+13|                            [A1  ] | [A2  ] | [A3  ]
+14|                            [A4  ] | [A5  ] | [A6  ] 
+
+## CURRENT TIME RULE
+- **Trigger:** If `INPUT TIME` is `now`, look up the current time in **[Your Time Zone, e.g., Central Time / CST]** on the web and convert it to 24-hour `HH:MM` format before running Rules 1–6.
+
+MODE: FULL
+INPUT TIME: now
 
 
 ↘↑ ↘← ↖↓ ↑→
