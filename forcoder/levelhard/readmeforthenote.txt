@@ -28,12 +28,9 @@ For each input time:
 1. **HOUR SLOT (`b` = 1–6, repeating every 6 hrs):**
    `b=1`: 01,07,13,19 (`↖`) | `b=2`: 02,08,14,20 (`↑`) | `b=3`: 03,09,15,21 (`↗`)
    `b=4`: 04,10,16,22 (`↙`) | `b=5`: 05,11,17,23 (`↓`) | `b=6`: 06,12,18,00 (`↘`)
-2. **5-MIN GRID:** Solve `M = 5m + r` (`m=0–11`, leftover `r=0–4` mins). Match `5m` (`05, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 00`). Place Hour Arrow in matching `[Mxx ]`; unmatched -> `[    ]`. Show `(+r mins)` in the check line. Sort multiple arrows: `↖ ↑ ↗ ↙ ↓ ↘`.
-   - **5-MINUTE GRID POSITION MAP (Strictly Locked):**
-     Row 1: `M05` | `M10` | `M15`
-     Row 2: `M20` | `M25` | `M30`
-     Row 3: `M35` | `M40` | `M45`
-     Row 4: `M50` | `M55` | `M00`
+2. **5-MIN GRID:** Solve `M = 5m - r` (`m=0–12`, leftover `r=0–4` mins). `0,12`=`M00` | `1`=`M05` | `2`=`M10` | `3`=`M15` | `4`=`M20` | `5`=`M25`
+`6`=`M30` | `7`=`M35` | `8`=`M40` | `9`=`M45` | `10`=`M50` | `11`=`M55`
+Place Hour Arrow in matching `[Mxx ]`; unmatched -> `[ ]`. Show `(-r mins)` in the check line. Sort multiple arrows: `↖ ↑ ↗ ↙ ↓ ↘`
      Each minute value must occupy its exact matching position. Never move a value to another row or column.
 3. **2x3 HOUR GRID:** Place `[ X ]` in matching `[Hb ]` using `b` from Rule 1 (others -> `[   ]`).
 4. **ARROW GRID:** Determine the box position `[Ab  ]` using the hour slot `b` from Rule 1. Determine the arrow direction independently using the minute range (`00–14`=`↑`, `15–29`=`→`, `30–44`=`↓`, `45–59`=`←`). The hour selects the box; the minutes select the arrow. These two calculations must not be confused. Place the arrow in `[Ab  ]` (others -> `[    ]`). Sort multiple arrows: `← ↑ ↓ →`.
@@ -93,14 +90,23 @@ INPUT TIME: now
 [M50 ]= 00:05+1h. 1h =0≤h≤23.
 [M55 ]= 00:05+1h. 1h =0≤h≤23.
 [M00 ]= 00:05+1h. 1h =0≤h≤23.
+---
 
+[h1 ]=01:xx+6h . h=0-3
+[h2 ]=02:xx+6h . h=0-3
+[h3 ]=03:xx+6h . h=0-3
+[h4 ]=04:xx+6h . h=0-3
+[h5 ]=05:xx+6h . h=0-3
+[h6 ]=06:xx+6h . h=0-3
 
-[C1 ]=01:xx+6h . h=0-3
-[C2 ]=02:xx+6h . h=0-3
-[C3 ]=03:xx+6h . h=0-3
-[C4 ]=04:xx+6h . h=0-3
-[C5 ]=05:xx+6h . h=0-3
-[C6 ]=06:xx+6h . h=0-3
+24:xx=00:xx
+----
+[a1 ]=01:xx+6h . h=0-3
+[a2 ]=02:xx+6h . h=0-3
+[a3 ]=03:xx+6h . h=0-3
+[a4 ]=04:xx+6h . h=0-3
+[a5 ]=05:xx+6h . h=0-3
+[a6 ]=06:xx+6h . h=0-3
 
 24:xx=00:xx
 
