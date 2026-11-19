@@ -72,7 +72,7 @@ INPUT TIME: now
 vo4?
 
 
-this is breakdown of it cheat sheetYour CODGRID equation is correct, but I'd add an explicit extraction rule so the system doesn't have to guess how to find q, d, and c.## SYSTEM OVERVIEW
+## SYSTEM OVERVIEW
 
 | Grid | Code | Modular Cycle |
 | :--- | :--- | :--- |
