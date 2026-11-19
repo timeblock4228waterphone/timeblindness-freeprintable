@@ -28,8 +28,7 @@ For each input time:
 1. **HOUR SLOT (`b` = 1–6, repeating every 6 hrs):**
    `b=1`: 01,07,13,19 (`↖`) | `b=2`: 02,08,14,20 (`↑`) | `b=3`: 03,09,15,21 (`↗`)
    `b=4`: 04,10,16,22 (`↙`) | `b=5`: 05,11,17,23 (`↓`) | `b=6`: 06,12,18,00 (`↘`)
-2. **5-MIN GRID:** Solve `M = 5m - r` (`m=0–12`, leftover `r=0–4` mins). `0,12`=`M00` | `1`=`M05` | `2`=`M10` | `3`=`M15` | `4`=`M20` | `5`=`M25`
-`6`=`M30` | `7`=`M35` | `8`=`M40` | `9`=`M45` | `10`=`M50` | `11`=`M55`
+2. **5-MIN GRID: Solve M = 5m + r (m=0–11, leftover r=0–4 mins). Match 5m (00, 05, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55). Place Hour Arrow in matching [Mxx ]; unmatched -> [    ]. Show (+r mins) in the check line. Sort multiple arrows: ↖ ↑ ↗ ↙ ↓ ↘.
 Place Hour Arrow in matching `[Mxx ]`; unmatched -> `[ ]`. Show `(-r mins)` in the check line. Sort multiple arrows: `↖ ↑ ↗ ↙ ↓ ↘`
      Each minute value must occupy its exact matching position. Never move a value to another row or column.
 3. **2x3 HOUR GRID:** Place `[ X ]` in matching `[Hb ]` using `b` from Rule 1 (others -> `[   ]`).
@@ -76,6 +75,8 @@ INPUT TIME: now
 
 ////
 
+
+5-MIN GRID: Solve M = 5m + r (m=0–11, leftover r=0–4 mins). Match 5m (00, 05, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55). Place Hour Arrow in matching [Mxx ]; unmatched -> [    ]. Show (+r mins) in the check line. Sort multiple arrows: ↖ ↑ ↗ ↙ ↓ ↘.
 
 
 [M05 ]= 00:05+1h. 1h =0≤h≤23.
