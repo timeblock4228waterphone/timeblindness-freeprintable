@@ -47,6 +47,53 @@ Place Hour Arrow in matching `[Mxx ]`; unmatched -> `[ ]`. Show `(-r mins)` in t
    - **CODGRID VALIDATION:** Before selecting a box, verify that `0 ≤ c ≤ 44` and that substituting `a`, `d`, and `c` into the original equation reproduces the exact calculated `T`. If verification fails, recalculate. Never output an unverified CODGRID position.
 6. **CLOCK:** **NEVER** modify `(00)`, `(45)`, `(15)`, `(30)`. Replace `<input>` with the input time(s).
 
+
+ **CODGRID INDEX RULE:** The 45-minute interval index `d` determines the CODGRID box directly. `d=1` maps to `C1`, `d=2` maps to `C2`, continuing sequentially through `d=8` mapping to `C8`. Never derive the box number by estimating or rounding the clock time.
+   - **Equation:** `T = 360(a - 1) + 45(d - 1) + 90 + c` (`a=1–4`, `d=1–8`, `c=00–44`).
+   - **Required Calculation Order:**
+     1. Calculate `T = (H × 60) + M` (if `T < 90`, add `1440`).
+     2. Apply the 90-minute offset (`T - 90`).
+     3. Calculate `a` (`1–4`).
+     4. Calculate `d` (`1–8`).
+     5. Calculate `c` (`00–44`).
+     6. Verify the equation.
+     7. Place `[ X ]` in `[Cd ]` (others -> `[   ]`).
+
+[M05 ]= 00:05+1h. 1h =0≤h≤23.
+[M10 ]= 00:05+1h. 1h =0≤h≤23.
+[M15 ]= 00:05+1h. 1h =0≤h≤23.
+[M20 ]= 00:05+1h. 1h =0≤h≤23.
+[M25 ]= 00:05+1h. 1h =0≤h≤23.
+[M30 ]= 00:05+1h. 1h =0≤h≤23.
+[M35 ]= 00:05+1h. 1h =0≤h≤23.
+[M40 ]= 00:05+1h. 1h =0≤h≤23.
+[M45 ]= 00:05+1h. 1h =0≤h≤23.
+[M50 ]= 00:05+1h. 1h =0≤h≤23.
+[M55 ]= 00:05+1h. 1h =0≤h≤23.
+[M00 ]= 00:05+1h. 1h =0≤h≤23.
+---
+
+[h1 ]=01:xx+6h . h=0-3
+[h2 ]=02:xx+6h . h=0-3
+[h3 ]=03:xx+6h . h=0-3
+[h4 ]=04:xx+6h . h=0-3
+[h5 ]=05:xx+6h . h=0-3
+[h6 ]=06:xx+6h . h=0-3
+
+24:xx=00:xx
+----
+[a1 ]=01:xx+6h . h=0-3
+[a2 ]=02:xx+6h . h=0-3
+[a3 ]=03:xx+6h . h=0-3
+[a4 ]=04:xx+6h . h=0-3
+[a5 ]=05:xx+6h . h=0-3
+[a6 ]=06:xx+6h . h=0-3
+
+24:xx=00:xx
+
+
+
+
 ## TEMPLATE (Strip `01|`–`14|` prefixes; keep exact spaces & left/right layout)
 01|You are here and that enough
 02|
@@ -67,7 +114,7 @@ Place Hour Arrow in matching `[Mxx ]`; unmatched -> `[ ]`. Show `(-r mins)` in t
 - **Trigger:** If `INPUT TIME` is `now`, look up the current time in **[Your Time Zone, e.g., Central Time / CST]** on the web and convert it to 24-hour `HH:MM` format before running Rules 1–6.
 
 MODE: SHORT
-INPUT TIME: now
+INPUT TIME: 9:58
 
 
 
