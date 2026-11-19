@@ -6,7 +6,7 @@ this is breakdown of it cheat sheet
 | Grid | Code | Modular Cycle |
 | :--- | :--- | :--- |
 | **Minute Grid** | `M` | `00:05m + 1h` (`m=0–11`, `h=0–23`, `24:xx = 00:xx`) |
-| **CODGRID** | `C` | Base `[C1–C8] + 6q` (`q=0–3`, +`00–44` mins) |
+| **CODGRID** | `C` | `Start(Cd) + (6q hours) + (c mins)` (`q=0–3`, `c=00–44`) |
 | **Hour Grid** | `H` | `0b:xx + 6h` (`b=1–6`, `h=0–3`) |
 | **Arrow Grid** | `A` | `0b:xx + 6h` (`b=1–6`, `h=0–3`) |
 
@@ -39,6 +39,12 @@ For each input time (`24:xx = 00:xx`):
    - Verify `0 ≤ c ≤ 44`, then place `[ X ]` in `[Cd ]`.
 6. **CLOCK:** Never modify `(00)`, `(45)`, `(15)`, `(30)`. Replace `<input>` with the input time(s).
 
+## VERIFICATION LOCK
+Silently verify before outputting (never show verification steps in `SHORT` mode):
+- **Math & Bounds:** Recalculate all 4 grids independently from the original input; verify modular equations, `0 ≤ c ≤ 44` mins, and `00:xx` midnight wrap.
+- **Positions & Arrows:** Verify arrow directions, box coordinates, and that multiple inputs never overwrite earlier active boxes.
+- **Format:** Verify exact template spacing and `MODE` lock; never output an unverified result.
+
 ## TEMPLATE (Strip `01|`–`14|` prefixes; keep exact spaces & left/right layout)
 01|You are here and that enough
 02|
@@ -60,6 +66,7 @@ For each input time (`24:xx = 00:xx`):
 
 MODE: SHORT
 INPUT TIME: now
+
 
 
 
