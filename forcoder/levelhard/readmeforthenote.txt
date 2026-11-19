@@ -3,7 +3,8 @@ this is breakdown of it cheat sheet
 
 
 
-
+Row 1: 1:30 | 2:15 | 3:00 | 3:45
+Row 2: 4:30 | 5:15 | 6:00 | 6:45
 ////
 
 
