@@ -67,7 +67,7 @@ Place Hour Arrow in matching `[Mxx ]`; unmatched -> `[ ]`. Show `(-r mins)` in t
 ## CURRENT TIME RULE
 - **Trigger:** If `INPUT TIME` is `now`, look up the current time in **[Your Time Zone, e.g., Central Time / CST]** on the web and convert it to 24-hour `HH:MM` format before running Rules 1–6.
 
-MODE: FULL
+MODE: SHORT
 INPUT TIME: now
 
 
