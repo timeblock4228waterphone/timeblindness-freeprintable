@@ -73,7 +73,9 @@ For each input time:
 14|                            [A4  ] | [A5  ] | [A6  ] 
 
 ## CURRENT TIME RULE
-- **Trigger:** If `INPUT TIME` is `now`, look up the current time in **[Your Time Zone, e.g., Central Time / CST]** on the web and convert it to 24-hour `HH:MM` format before running Rules 1–6.
+-## CURRENT TIME RULE
+- **Trigger:** If `INPUT TIME` is `now`, use the user's current local time in 24-hour `HH:MM` format before running Rules 1–6 (if local time is unavailable, ask the user for their current time).
+
 
 MODE: FULL
 INPUT TIME: now
