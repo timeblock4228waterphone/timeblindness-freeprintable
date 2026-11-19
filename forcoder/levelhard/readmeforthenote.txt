@@ -76,8 +76,16 @@ INPUT TIME: now
 ////
 
 
-5-MIN GRID: Solve M = 5m + r (m=0–11, leftover r=0–4 mins). Match 5m (00, 05, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55). Place Hour Arrow in matching [Mxx ]; unmatched -> [    ]. Show (+r mins) in the check line. Sort multiple arrows: ↖ ↑ ↗ ↙ ↓ ↘.
-
+- **CODGRID INDEX RULE:** The 45-minute interval index `d` determines the CODGRID box directly. `d=1` maps to `C1`, `d=2` maps to `C2`, continuing sequentially through `d=8` mapping to `C8`. Never derive the box number by estimating or rounding the clock time.
+   - **Equation:** `T = 360(a - 1) + 45(d - 1) + 90 + c` (`a=1–4`, `d=1–8`, `c=00–44`).
+   - **Required Calculation Order:**
+     1. Calculate `T = (H × 60) + M` (if `T < 90`, add `1440`).
+     2. Apply the 90-minute offset (`T - 90`).
+     3. Calculate `a` (`1–4`).
+     4. Calculate `d` (`1–8`).
+     5. Calculate `c` (`00–44`).
+     6. Verify the equation.
+     7. Place `[ X ]` in `[Cd ]` (others -> `[   ]`).
 
 [M05 ]= 00:05+1h. 1h =0≤h≤23.
 [M10 ]= 00:05+1h. 1h =0≤h≤23.
