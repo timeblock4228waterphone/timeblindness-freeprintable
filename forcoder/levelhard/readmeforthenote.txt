@@ -14,3 +14,13 @@
 12|[M50 ] | [M55 ] | [M00 ]    ARROW GRID
 13|                            [A1  ] | [A2  ] | [A3  ]
 14|                            [A4  ] | [A5  ] | [A6  ] 
+
+## CURRENT TIME RULE
+- **Trigger:** If `INPUT TIME` is `now`, look up the current time in **[Your Time Zone, e.g., Central Time / CST]** on the web and convert it to 24-hour `HH:MM` format before running Rules 1–6.
+
+INPUT TIME: now
+
+
+///
+
+[M05 ]=
