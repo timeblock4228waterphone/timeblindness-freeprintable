@@ -58,7 +58,10 @@ Place Hour Arrow in matching `[Mxx ]`; unmatched -> `[ ]`. Show `(-r mins)` in t
      5. Calculate `c` (`00–44`).
      6. Verify the equation.
      7. Place `[ X ]` in `[Cd ]` (others -> `[   ]`).
+.///
 
+- **If `MODE: SHORT`:** Output **ONLY** the check line(s) (`Time -> Arrow in Mxx, Cd, Hb, Ab (+r mins)`). Do not output the template.
+- **If `MODE: FULL`:** Output **1 check line** per input time, then the filled TEMPLATE inside **ONE** ` ```text ` block. Strip the `01|`–`14|` prefixes and keep the exact leading spaces, line 
 [M05 ]= 00:05+1h. 1h =0≤h≤23.
 [M10 ]= 00:05+1h. 1h =0≤h≤23.
 [M15 ]= 00:05+1h. 1h =0≤h≤23.
