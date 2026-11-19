@@ -138,6 +138,8 @@ Slow down and write a 1-line scratchpad (`Calc: ...`) before every check line to
 MODE: FULL
 INPUT TIME: now
 
+version 1
+
 
 
 
