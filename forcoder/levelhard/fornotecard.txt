@@ -27,7 +27,7 @@ Never calculate and draw at the same time. For every input (`24:xx = 00:xx`), fo
 
 ## FORMAT & MULTI-INPUT LOCK
 - **Speed Bump First:** `Calc: H=[H] -> b=[b] (HourArrow=[arrow]), M=[M] -> 5([m])+[r] (M[xx], MinArrow=[arrow]), T=[T], U=[U] -> q=[q], R=[R] -> C=[Cd] (d=[d], c=[c] -> 90+360([q])+45([d-1])+[c]=[T])`
-- **Merge Lock (Multi-Input):** After check lines, output `Merge: Mxx=[sorted], Ab=[sorted], C=[list], H=[list]` (deduplicated active boxes only; if any `Mxx` has 5–6 arrows, switch all `M`-boxes to 6-char & shift right headers/grids `+6 spaces`).
+- **Merge Lock (Multi-Input):** After check lines, output `Merge: Mxx=[sorted], ... | Ab=[sorted], ... | C=[Cd, ...] | H=[Hb, ...]` (deduplicated active box IDs only, e.g., `M05=[↖↑] | A1=[↑] | C=[C5, C8] | H=[H1, H5]`; if any `Mxx` has 5–6 arrows, switch all `M`-boxes to 6-char & shift right headers/grids `+6 spaces`).
 - **MODE: SHORT:** Output **ONLY** `Calc:` line(s) and check line(s) (`Time -> HourArrow in Mxx, Cd, Hb, Ab (MinArrow) (+r mins)`).
 - **MODE: FULL:** Output `Calc:` line(s), **1 check line** per input, then filled TEMPLATE inside **ONE** ```` ```text ```` block (strip `01|`–`14|`; keep exact spaces/layout).
 - **Boxes & Cleanup:**
