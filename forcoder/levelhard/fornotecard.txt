@@ -1,42 +1,46 @@
-## SYSTEM OVERVIEW
+## EXECUTION & SYMBOL LOCK (STRICT 6-STEP ORDER)
+Never calculate and draw at the same time. For every input (`24:xx = 00:xx`), follow this exact sequence:
+1. **Calculate** (`b`, `m`, `r`, `T`, `U`, `q`, `R`, `d`, `c`).
+2. **Lock** values in the `Calc:` scratchpad before touching the template.
+3. **Locate** destination boxes strictly from the **Coordinate Maps** below (never infer positions from visual order alone).
+4. **Select** symbols using the **Single-Job Symbol Lock**:
+   - **M-Grid (`Mxx`):** `HourArrow` ONLY (`↖ ↑ ↗ ↙ ↓ ↘`).
+   - **A-Grid (`Ab`):** `MinArrow` ONLY (`← ↑ ↓ →`).
+   - **H-Grid (`Hb`):** `[ X ]` ONLY.
+   - **CODGRID (`Cd`):** `[ X ]` at box `d` ONLY (never `q` or `c`).
+5. **Place** symbols into the template.
+6. **Audit** placement before outputting.
 
-| Grid | Code | Modular Cycle |
-| :--- | :--- | :--- |
-| **Minute Grid** | `M` | `00:05m + 1h` (`m=0–11`, `h=0–23`, `24:xx = 00:xx`) |
-| **CODGRID** | `C` | `01:30 + 45(d-1) + 6q` (`d=1–8`, `q=0–3`) |
-| **Hour Grid** | `H` | `0b:xx + 6h` (`b=1–6`, `h=0–3`) |
-| **Arrow Grid** | `A` | `0b:xx + 6h` (`b=1–6`, `h=0–3`) |
-
-## STRICT FORMAT LOCK
-- **If `MODE: SHORT`:** Output **ONLY** the check line(s) (`Time -> Arrow in Mxx, Cd, Hb, Ab (+r mins)`). Do not output the template.
-- **If `MODE: FULL`:** Output **1 check line** per input time, then the filled TEMPLATE inside **ONE** ` ```text ` block. Strip the `01|`–`14|` prefixes and keep the exact leading spaces, line count, and left/right layout.
-- **3-char boxes (`C`, `H`):** active = `[ X ]`, empty = `[   ]`.
-- **4-char boxes (`M`, `A`):** empty = `[    ]`, 1 arrow = `[ ↑  ]`, 2 arrows = `[ ↖↘ ]`, 3 arrows = `[ ←↑→]`, 4 arrows = `[←↑↓→]`.
-- **CLEANUP:** Never leave an inactive placeholder containing its original label (`[C...]`, `[H...]`, `[M...]`, `[A...]`). Replace all unused boxes with blank spaces (`[   ]` or `[    ]`) while preserving exact brackets and spacing.
-
-## MULTIPLE INPUT RULE
-1. Treat every input time (`H=00–23`, `M=00–59`) as an independent calculation; never combine or average inputs.
-2. Place all results into ONE shared template, preserving every active position without overwriting earlier inputs.
-3. If multiple inputs share a box, keep `[ X ]` for `C`/`H`. For `M` and `A`, deduplicate identical arrows (each unique arrow appears only once), then sort `M` (`↖ ↑ ↗ ↙ ↓ ↘`) and `A` (`← ↑ ↓ →`).
-
-## COMPACT MODULAR RULES
-For each input time (`24:xx = 00:xx`, note `H=00` solves with `b=6, h=-1` or wraps to `24`):
-
-1. **HOUR SLOT (`b` = 1–6):** Solve `H = b + 6h` (`h=0–3`; exception: `H=00` uses `b=6, h=-1`).
+## GRID RULES & AUTHORITATIVE COORDINATES
+1. **HOUR (`b` = 1–6):** Solve `H = b + 6h` (`h=0–3`; exception: `H=00` uses `b=6, h=-1` so `6 + 6(-1) = 0`).
    - `b=1` (`↖`) | `b=2` (`↑`) | `b=3` (`↗`) | `b=4` (`↙`) | `b=5` (`↓`) | `b=6` (`↘`)
-2. **5-MIN GRID (`Mxx`):** Solve `M = 5m + r` (`m=0–11`, `r=0–4`).
-   - Explicit mapping: `m=0 → M00`, `m=1 → M05`, `m=2 → M10`, `m=3 → M15`, `m=4 → M20`, `m=5 → M25`, `m=6 → M30`, `m=7 → M35`, `m=8 → M40`, `m=9 → M45`, `m=10 → M50`, `m=11 → M55`.
-   - Locked Grid Layout:
-     `R1: M05, M10, M15` | `R2: M20, M25, M30` | `R3: M35, M40, M45` | `R4: M50, M55, M00`
-   - Place Hour Arrow in `[Mxx ]` and show `(+r mins)` in the check line.
-3. **2x3 HOUR GRID (`Hb`):** Place `[ X ]` in `[Hb ]`.
-4. **ARROW GRID (`Ab`):** Select box `[Ab  ]` using `b`, and arrow using `M` (`00–14`=`↑`, `15–29`=`→`, `30–44`=`↓`, `45–59`=`←`).
-5. **CODGRID (`Cd`):** Let `T = 60H + M` (if `T < 90`, add `1440`).
-   - Solve `T = 90 + 360q + 45(d - 1) + c` (`q=0–3`, `d=1–8`, `c=00–44`).
-   - Verify `0 ≤ c ≤ 44` reproduces `T`, then place `[ X ]` in `[Cd ]`.
-6. **CLOCK:** Never modify `(00)`, `(45)`, `(15)`, `(30)`. Replace `<input>` with the input time(s).
+2. **MINUTE (`Mxx`):** Solve `M = 5m + r` (`m=0–11`, `r=0–4`).
+   - Map `m`: `0→M00`, `1→M05`, `2→M10`, `3→M15`, `4→M20`, `5→M25`, `6→M30`, `7→M35`, `8→M40`, `9→M45`, `10→M50`, `11→M55`.
+   - **M-Grid Map (4×3):** `R1:` M05, M10, M15 | `R2:` M20, M25, M30 | `R3:` M35, M40, M45 | `R4:` M50, M55, M00.
+3. **MIN-ARROW (`MinArrow`):** `00–14`=`↑` | `15–29`=`→` | `30–44`=`↓` | `45–59`=`←`.
+4. **H & A Grid Maps (2×3, by `b`):** `R1:` `b=1`→H1/A1, `b=2`→H2/A2, `b=3`→H3/A3 | `R2:` `b=4`→H4/A4, `b=5`→H5/A5, `b=6`→H6/A6.
+5. **CODGRID (`Cd`, 2×4, by `d`):**
+   - `T = 60H + M` (if `T < 90`, add `1440`). `U = T - 90`.
+   - `q = floor(U / 360)` (`0–3`), `R = U - 360q` (`0–359`).
+   - Calculate `d` and `c` **strictly from `R`, never directly from `U`**: `d = floor(R / 45) + 1` (`1–8`), `c = R mod 45` (`0–44`).
+   - Verify `90 + 360q + 45(d - 1) + c = T`.
+   - **CODGRID Map (2×4):** `R1:` C1, C2, C3, C4 | `R2:` C5, C6, C7, C8.
 
-## TEMPLATE (Strip `01|`–`14|` prefixes; keep exact spaces & left/right layout)
+## FORMAT & MULTI-INPUT LOCK
+- **Speed Bump First:** `Calc: H=[H] -> b=[b] (HourArrow=[arrow]), M=[M] -> 5([m])+[r] (M[xx], MinArrow=[arrow]), T=[T], U=[U] -> q=[q], R=[R] -> C=[Cd] (d=[d], c=[c] -> 90+360([q])+45([d-1])+[c]=[T])`
+- **MODE: SHORT:** Output **ONLY** `Calc:` line(s) and check line(s) (`Time -> HourArrow in Mxx, Cd, Hb, Ab (MinArrow) (+r mins)`).
+- **MODE: FULL:** Output `Calc:` line(s), **1 check line** per input, then filled TEMPLATE inside **ONE** ```` ```text ```` block (strip `01|`–`14|`; keep exact spaces/layout).
+- **Boxes & Cleanup:**
+  - **C & H Grids (3-char):** active `[ X ]`, empty `[   ]`.
+  - **A-Grid (always 4-char, `MinArrow` only):** `0`=`[    ]`, `1`=`[ ↑  ]`, `2`=`[ ←→ ]`, `3`=`[ ←↑→]`, `4`=`[←↑↓→]`.
+  - **M-Grid Standard (4-char when all `M`-boxes hold 0–4 arrows, `HourArrow` only):** `0`=`[    ]`, `1`=`[ ↖  ]`, `2`=`[ ↖↘ ]`, `3`=`[ ↖↑↗]`, `4`=`[↖↑↗↘]`.
+  - **M-Grid Expanded (6-char for ALL 12 `M`-boxes if any single `M`-box holds 5 or 6 arrows):** `0`=`[      ]`, `1`=`[  ↖   ]`, `2`=`[  ↖↘  ]`, `3`=`[ ↖↑↗  ]`, `4`=`[ ↖↑↗↘ ]`, `5`=`[↖↑↗↙↓ ]`, `6`=`[↖↑↗↙↓↘]`.
+  - **Cleanup:** Replace all unused placeholders with blank spaces.
+- **Multi-Input:** Calculate independently; place in ONE shared template without overwriting. Keep `[ X ]` in shared `C`/`H`; combine and deduplicate arrows **only when multiple inputs land in the exact same destination box** (never across the whole grid), then sort `M` (`↖ ↑ ↗ ↙ ↓ ↘`) and `A` (`← ↑ ↓ →`).
+- **Clock:** Never alter `(00)`, `(45)`, `(15)`, `(30)`. Replace `<input>` with input time(s).
+- **Silent Audit Before Output:** Verify M-grid Row/Col & `HourArrow` only; H-grid `Hb`; A-grid `Ab` & `MinArrow` only; CODGRID `Cd` (`d`, not `q`/`c`).
+
+## TEMPLATE (Strip `01|`–`14|`; keep exact spaces & layout)
 01|You are here and that enough
 02|
 03|                       CODGRID
@@ -50,10 +54,10 @@ For each input time (`24:xx = 00:xx`, note `H=00` solves with `b=6, h=-1` or wra
 11|[M35 ] | [M40 ] | [M45 ]
 12|[M50 ] | [M55 ] | [M00 ]    ARROW GRID
 13|                            [A1  ] | [A2  ] | [A3  ]
-14|                            [A4  ] | [A5  ] | [A6  ] 
+14|                            [A4  ] | [A5  ] | [A6  ]
 
 ## CURRENT TIME RULE
-- **Trigger:** If `INPUT TIME` is `now`, use the user's current local time in 24-hour `HH:MM` format before running Rules 1–6 (if local time is unavailable, ask the user for their current time).
+If `INPUT TIME` is `now`, use the user's current local 24-hour `HH:MM` time (or ask if unavailable).
 
-MODE: SHORT
+MODE: FULL
 INPUT TIME: now
