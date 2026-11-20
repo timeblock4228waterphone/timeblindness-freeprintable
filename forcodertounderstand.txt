@@ -31,34 +31,34 @@ Row 2: 4:30 | 5:15 | 6:00 | 6:45
 ```
 
 ## 2. SPACE JAMMER
-* **Rule:** Wrap active `H12` on the **left** of the comma in `""`, and active `M5` on the **right** of the comma in `""`. If both land in the same bracket, wrap both like `["2", "10"]`. Preserve all inactive numbers.
+* **Rule:** Replace active `H12` on the **left** of the comma with `X` *(pad with a space `X ` if 2 digits to preserve alignment)*, and active `M5` on the **right** of the comma with `X `. If both land in the same bracket, replace both like `[X , X ]`. Preserve all inactive numbers.
 * **Template:**
 ```text
-[1, 05]  | [2, 10]  | [3, 15]
-[4, 20]  | [5, 25]  | [6, 30]
-[7, 35]  | [8, 40]  | [9, 45]
+[1, 05] | [2, 10] | [3, 15]
+[4, 20] | [5, 25] | [6, 30]
+[7, 35] | [8, 40] | [9, 45]
 [10, 50] | [11, 55] | [12, 00]
 ```
 
 ## 3. 4 PART 2 PART
-* **Rule:** Wrap the active `H24` range and active `M` range independently in `""` (`24 = 00`, `60 = 00`). Preserve inactive ranges.
+* **Rule:** Replace the active `H24` range and active `M` range independently with `[ X ]` (`24 = 00`, `60 = 00`). Preserve inactive ranges.
 * **Template:**
 ```text
-H24: [1–6]  | [7–12]  | [13–18] | [19–24]
-M:   [1–30] | [31–60]
+H24: [1–6] | [7–12] | [13–18] | [19–24]
+M: [1–30] | [31–60]
 ```
 
 ## 4. GRID MAP
-* **Rule:** In Box `Hour_Pos`, wrap the matching hour (`1–12`) in `""`. In Box `Min_Pos`, wrap the matching 5-minute value (`05–00`) in `""`. If both land in the same box, wrap both like `[ "1",7 / "05",35 ]`. Preserve all inactive numbers.
+* **Rule:** In Box `Hour_Pos`, replace the matching hour (`1–12`) with `X` *(pad with a space `X ` if 2 digits)*. In Box `Min_Pos`, replace the matching 5-minute value (`05–00`) with `X `. If both land in the same box, replace both like `[ X,7 / X ,35 ]`. Preserve all inactive numbers.
 * **Math:**
-  * **Hour:** Solve `H24 = 6a - 6 + b` *(where `a = 1–4`, `b = 1–6`; if `00`, use `24`)*. `Hour_Pos = b`. Display hour as `1–12` *(if `12` or `24`, match `"12"`)*.
-  * **Minute:** Round `M` down to nearest 5 *(if `00–04`, use `60`)*. Solve `M = 30(c - 1) + 5d` *(where `c = 1–2`, `d = 1–6`)*. `Min_Pos = d` *(if `M = 60`, match `"00"`)*.
+  * **Hour:** Solve `H24 = 6a - 6 + b` *(where `a = 1–4`, `b = 1–6`; if `00`, use `24`)*. `Hour_Pos = b`. Display hour as `1–12` *(if `12` or `24`, match `12`)*.
+  * **Minute:** Round `M` down to nearest 5 *(if `00–04`, use `60`)*. Solve `M = 30(c - 1) + 5d` *(where `c = 1–2`, `d = 1–6`)*. `Min_Pos = d` *(if `M = 60`, match `00`)*.
 * **Grid Layout Reference:**
   * Row 1: `[ b1 / d1 ] | [ b2 / d2 ] | [ b3 / d3 ]`
   * Row 2: `[ b4 / d4 ] | [ b5 / d5 ] | [ b6 / d6 ]`
 * **Template (Boxes 1–6):**
 ```text
-[ 1,7 / 05,35 ]  | [ 2,8 / 10,40 ]  | [ 3,9 / 15,45 ]
+[ 1,7 / 05,35 ] | [ 2,8 / 10,40 ] | [ 3,9 / 15,45 ]
 [ 4,10 / 20,50 ] | [ 5,11 / 25,55 ] | [ 6,12 / 30,00 ]
 ```
 
@@ -71,15 +71,15 @@ M:   [1–30] | [31–60]
 ```
 
 ## 6. 2x4 HOURS
-* **Rule:** Wrap **only** the active `H24` number in `""`; preserve all inactive numbers and brackets verbatim.
+* **Rule:** Replace **only** the active `H24` number with `X` *(or `X ` for 2-digit numbers to preserve spacing)*; preserve all inactive numbers and brackets verbatim.
 * **Math:** Treat `00` as `24`. Solve `H24 = 3a - 3 + b` *(where `a = 1–8`, `b = 1–3`)*.
   * `a` selects the bracket (`1–4` left column top-to-bottom, `5–8` right column top-to-bottom).
   * `b` selects the slot (`1–3`) inside the bracket.
 * **Template:**
 ```text
-[1, 2, 3]    | [13, 14, 15]
-[4, 5, 6]    | [16, 17, 18]
-[7, 8, 9]    | [19, 20, 21]
+[1, 2, 3] | [13, 14, 15]
+[4, 5, 6] | [16, 17, 18]
+[7, 8, 9] | [19, 20, 21]
 [10, 11, 12] | [22, 23, 00]
 ```
 time 23:08
