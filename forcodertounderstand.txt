@@ -40,7 +40,7 @@ Row 2: 4:30 | 5:15 | 6:00 | 6:45
 ```
 
 ## 2. SPACE JAMMER
-* **Rule:** Replace active `HXX` on the **left** of the comma with `X` *(pad with a space `X ` if 2 digits to preserve alignment)*, and active `MXX` on the **right** of the comma with `X `. If both land in the same bracket, replace both like `[X , X ]`. Preserve all inactive numbers.
+* **Rule:** Replace active `HXX` HXX=hrs .on the **left** of the comma with `X` *(pad with a space `X ` if 2 digits to preserve alignment)*, and active `MXX` on the **right** of the comma with `X `. If both land in the same bracket, replace both like `[X , X ]`. Preserve all inactive numbers.
 MXX=5[m/5] 
 * **Template:**
 ```text
