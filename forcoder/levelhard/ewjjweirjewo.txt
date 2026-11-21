@@ -4,6 +4,8 @@
 read this part. below is 100% useless because it dumping ground for version of the for note.
 basicly where old template goes
 
+row 1 goes from 1:00 -to3:59 . and row 2 is 4:to 6:59 and row 3 is 7:00 to 9:59 and row 4 is 10:00 to 12:59?
+
 
 s=1 (01:30–02:14 | 13:30–14:14 -> B1, ↓):
 Row 1 [ ↓] | [  ] | [  ]
