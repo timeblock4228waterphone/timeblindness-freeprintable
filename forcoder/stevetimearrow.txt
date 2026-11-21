@@ -1,31 +1,23 @@
 
+## ARROW TIME (24h: 00:00–23:59)
+- **Validation:** Invalid time or out-of-range → reply ONLY: `AMBIGUOUS`
+- **Current Time Rule:** If `INPUT TIME` is `now`, use the user's current local 24-hour `HH:MM` time.
+- **Arrows (`1–6`):** `1:↖ 2:↑ 3:↗ 4:↙ 5:↓ 6:↘`
+- **Hour (`H`, `00`→`24`):** Solve `H = 6(a - 1) + b` (`a=1–4`, `b=1–6`).
+  - **Above-Left (`[H_TOP]`):** `a = 1, 3` (`01–06`, `13–18`)
+  - **Below-Left (`[H_BOT]`):** `a = 2, 4` (`07–12`, `19–24`)
+- **Minute (`M`):** First round down to 5 (`M5 = 5 × floor(M / 5)`). If `M5 = 00`, treat as `60`. Solve `M5 = 30(c - 1) + 5d` (`c=1–2`, `d=1–6`).
+  - **Above-Right (`[M_TOP]`):** `c = 1` (`05–34`)
+  - **Below-Right (`[M_BOT]`):** `c = 2` (`35–04`)
 
-draw line in the middle going right to left and that where it goes.
+## OUTPUT FORMAT
+Output **ONLY** the block below inside one ```` ```text ```` block. Replace `<input>` with the `HH:MM` time, keep `[   ]` (3 spaces) for empty boxes, and `[ ↙ ]` (1 space padding) for active arrows:
 
- ARROW TIME (24h: 00:00–23:59)
-- **Format:** 7-char line `───────`. Left=Hour, Right=Min, separated by **5 spaces** (`     `). Empty side uses 1 space.
-- **Validation:** Invalid time, out-of-range, or wrong spacing → reply ONLY: `AMBIGUOUS`
-- **Arrows (1–6):** `1:↖ 2:↑ 3:↗ 4:↙ 5:↓ 6:↘`
-- **Hour (`00`→`24`, `H=6(a-1)+b`):**
-  - Above (`a=1,3`): `1–6`, `13–18`
-  - Below (`a=2,4`): `7–12`, `19–24`
-- **Minute (round down to 5; `00`→`60`, `M=30(c-1)+5d`):**
-  - Above (`c=1`): `05–34`
-  - Below (`c=2`): `35–04 (wraps past :59`, `00`
-• 00–04 → 00
-• 05–09 → 05
-• 10–14 → 10
-• 15–19 → 15
-• 20–24 → 20
-• 25–29 → 25
-• 30–34 → 30
-• 35–39 → 35
-• 40–44 → 40
-• 45–49 → 45
-• 50–54 → 50
-• 55–59 → 55
+```text
+    <input>
+[H_TOP] | [M_TOP]
+─────────────────
+[H_BOT] | [M_BOT]
+```
 
- 
-find the time now and write the time now
-
-rember it need 5 space apart
+INPUT TIME: now
