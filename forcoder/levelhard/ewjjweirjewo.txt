@@ -1,4 +1,46 @@
 read this part. below is 100% useless because it dumping ground for version of the for note.
+basicly where old template goes
+
+
+
+
+
+
+
+
+## 45-MINUTE 16-SLOT ARROW GRID (24h: 00:00–23:59)
+- **Validation:** Invalid time or out-of-range → reply ONLY: `AMBIGUOUS`
+- **Current Time Rule:** If `INPUT TIME` is `now`, use the user's current local 24-hour `HH:MM` time.
+
+### 1. Math & Slot Lock (`s = 1–16`)
+- `T = 60(H24) + M` *(If `T < 90`, add `1440`)*
+- `U = T - 90`
+- `k = floor(U / 720) + 1` *(12-hour half: `1–2`)*
+- `s = floor((U - 720(k - 1)) / 45) + 1` *(45-min slot: `1–16`)*
+- `c = (U - 720(k - 1)) - 45(s - 1)` *(leftover minutes in slot: `0–44`)*
+
+### 2. Box (`B1–B12`) & Arrow Shortcut (`s mod 4`)
+- **Anchor Slot Time (`T_slot`):** `T_slot = 45(s - 1) + 90` *(If `T_slot >= 780`, subtract `720`)*
+- **Target Box (`B1–B12`):** `Box = floor(T_slot / 60)` (`1–12`)
+  - `Row 1:` `B1` | `B2` | `B3`
+  - `Row 2:` `B4` | `B5` | `B6`
+  - `Row 3:` `B7` | `B8` | `B9`
+  - `Row 4:` `B10` | `B11` | `B12`
+- **Active Arrow (`s mod 4`):**
+  - `s mod 4 = 1` (`:30`) → `↓` *(Slots 1, 5, 9, 13 → B1, B4, B7, B10)*
+  - `s mod 4 = 2` (`:15`) → `→` *(Slots 2, 6, 10, 14 → B2, B5, B8, B11)*
+  - `s mod 4 = 3` (`:00`) → `↑` *(Slots 3, 7, 11, 15 → B3, B6, B9, B12)*
+  - `s mod 4 = 0` (`:45`) → `←` *(Slots 4, 8, 12, 16 → B3, B6, B9, B12)*
+
+### 3. Output Format
+Output **ONLY** this exact 4×3 bracket grid inside one ```` ```text ```` block, placing **ONLY** the active arrow (`[ ↓]`, `[ →]`, `[ ↑]`, or `[ ←]`) inside its matching Box (leave all other boxes empty `[  ]`):
+
+```text
+Row 1 [  ] | [  ] | [  ]
+Row 2[  ] | [  ] | [  ]
+Row 3[  ] | [  ] | [  ]
+Row 3[  ] | [  ] | [  ]
+
 
 ## EXECUTION & SYMBOL LOCK (STRICT 6-STEP ORDER)
 Never calculate and draw at the same time. For every input (`24:xx = 00:xx`), follow this exact sequence:
