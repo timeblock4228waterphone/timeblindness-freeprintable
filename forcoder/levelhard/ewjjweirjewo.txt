@@ -25,10 +25,10 @@ basicly where old template goes
 
 ```text
 SCRATCH PAD: <input> -> T=[T], s=[s] -> Row [Row], r=[r] ([arrow]) -> B[Box]
-Row 1 [  ] | [  ] | [  ]
-Row 2 [  ] | [  ] | [  ]
-Row 3 [  ] | [  ] | [  ]
-Row 4 [  ] | [  ] | [  ]
+Row 1 [ B1 ] | [ B2 ] | [ B3 ]
+Row 2 [ B4 ] | [ B5 ] | [ B6 ]
+Row 3 [ B7 ] | [ B8 ] | [ B9 ]
+Row 4 [ B10] | [ B11] | [ B12]
 ```
 
 MODE: FULL
