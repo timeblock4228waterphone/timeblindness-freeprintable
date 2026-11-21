@@ -20,8 +20,8 @@ that because i dont know how to make it look like
 below
 like Visual Arrow Layout (write as 2 rows on your card):
 
-[↖ ↑ ↗]
-[↙ ↓ ↘]
+|[↖ ↑ ↗ ]|
+|[↙ ↓ ↘ ]|
 (Note: Single-line text/code displays this flat as: ↖ ↑ ↗ ↙ ↓ ↘)
 
 
