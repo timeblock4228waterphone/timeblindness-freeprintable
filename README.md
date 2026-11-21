@@ -151,9 +151,10 @@ how to make a free fidget toy you google https://www.youtube.com/watch?v=_4p_QxW
 if you dont want to click on a random
 link write this bro let me write longer so you dont have to click on it :to google you 
 
-google (How to Make a Paper Table Football | Flick Football | Origami Step by Step Tutorial. )
+google (How to Make a Paper Table Football | Flick Football | Origami Step by Step Tutorial. by 
+Kyrin Crafts)
 the knot to use to tie is is slip knot and use two thread instead of one to tie it is stronger
-Kyrin Crafts if you dont want to click on link.
+if you dont want to click on link.
 
 then at tie a thread at the tail like this and fold it you can swing it around. or if hard to know how to use make it and give to an kid that can handle string and they will know how to swing it . the kid hold the thread and swing it .. <img width="931" height="693" alt="steve-fear-is-tomato" src="https://github.com/user-attachments/assets/330270a7-d0a5-4c5e-847e-66a5476b8bb9" />
 
