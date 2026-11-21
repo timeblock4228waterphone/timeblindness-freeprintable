@@ -22,11 +22,16 @@ Row 2 [ B4 ] | [ B5 ] | [ B6 ]
 Row 3 [ B7 ] | [ B8 ] | [ B9 ]
 Row 4 [ B10] | [ B11] | [ B12]
 
+the thing that is there is 
 
-only have
 
+1:30 ,2:15 , 3:00 , 3:45
+ 4:30 , 5:15 , 6:00 ,6:45
+
+
+```
  * `T = (H24 × 60) + M` *(If `T < 90`, add `1440`)*
-  * Solve `T = 360(a - 1) + 45(b - 1) + 90 + c` *(where `a = 1–4`, `b = 1–8`, `c = 00–44`)*
+  * Solve `T = 720(a - 1) + 45(b - 1) + 90 + c` *(where `a = 1–2`, `b = 1–8`, `c = 00–44`)*
 * **Template (Slot 1 to Slot 8 = `b`):**
 
 b=mod4
