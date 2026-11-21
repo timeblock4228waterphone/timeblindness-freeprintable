@@ -1,6 +1,44 @@
 read this part. below is 100% useless because it dumping ground for version of the for note.
 basicly where old template goes
 
+## 16-SLOT / 12-BOX 45-MINUTE ARROW GRID (24h: 00:00–23:59)
+- **Validation:** Invalid time or out-of-range → reply ONLY: `AMBIGUOUS`
+- **Current Time Rule:** If `INPUT TIME` is `now`, use the user's current local 24-hour `HH:MM` time.
+
+### 1. Math & Slot Lock (`s = 1–16`)
+- `T = 60(H24) + M` *(If `T < 90`, add `1440`)*
+- `U = T - 90`
+- `k = floor(U / 720) + 1` *(12-hour half: `1–2`)*
+- `s = floor((U - 720(k - 1)) / 45) + 1` *(45-min slot: `1–16`)*
+- `c = (U - 720(k - 1)) - 45(s - 1)` *(leftover minutes in slot: `0–44`)*
+
+### 2. Box (`B1–B12`), Row (`1–4`) & Arrow (`s mod 4`)
+- **Slot Start Time (`T_slot`):** `T_slot = 45(s - 1) + 90` *(If `T_slot >= 780`, subtract `720`)*
+- **Target Box / Hour (`B1–B12`):** `Box = floor(T_slot / 60)` (`1–12`)
+  - `Row 1:` `B1` (Hour 1) | `B2` (Hour 2) | `B3` (Hour 3)
+  - `Row 2:` `B4` (Hour 4) | `B5` (Hour 5) | `B6` (Hour 6)
+  - `Row 3:` `B7` (Hour 7) | `B8` (Hour 8) | `B9` (Hour 9)
+  - `Row 4:` `B10` (Hour 10) | `B11` (Hour 11) | `B12` (Hour 12)
+- **Active Arrow (`s mod 4`):**
+  - `s mod 4 = 1` (`:30`) → `↓` *(Slots 1, 5, 9, 13 → B1, B4, B7, B10)*
+  - `s mod 4 = 2` (`:15`) → `→` *(Slots 2, 6, 10, 14 → B2, B5, B8, B11)*
+  - `s mod 4 = 3` (`:00`) → `↑` *(Slots 3, 7, 11, 15 → B3, B6, B9, B12)*
+  - `s mod 4 = 0` (`:45`) → `←` *(Slots 4, 8, 12, 16 → B3, B6, B9, B12)*
+
+### 3. Output Modes & Scratch Pad Lock
+- **MODE: SHORT:** Output **ONLY** one single line (no scratch pad):
+  `<input> -> Arrow: [arrow] | Row [1-4] | Hour [1-12] (B[1-12])`
+- **MODE: LONG:** Output **ONLY** the `SCRATCH PAD` line first to lock the math, followed by the 4×3 bracket grid inside one ```` ```text ```` block, placing **ONLY** the active arrow (`[ ↓]`, `[ →]`, `[ ↑]`, or `[ ←]`) inside its matching Box (leave all other boxes empty `[  ]`):
+
+```text
+SCRATCH PAD: <input> -> T=[T], U=[U], k=[k], s=[s], c=[c] | T_slot=[T_slot] -> B[Box] (Row [1-4]) | s mod 4=[0-3] -> [arrow]
+Row 1 [  ] | [  ] | [  ]
+Row 2 [  ] | [  ] | [  ]
+Row 3 [  ] | [  ] | [  ]
+Row 4 [  ] | [  ] | [  ]
+""
+
+for op only above delete above because it temporty
 
 
 
