@@ -1,8 +1,3 @@
-1. 
-	• 01:00–03:59 or 13:00–15:59 → Row 1 (B1–B3)
-	• 04:00–06:59 or 16:00–18:59 → Row 2 (B4–B6)
-	• 07:00–09:59 or 19:00–21:59 → Row 3 (B7–B9)
-	• 10:00–12:59 or 22:00–00:59 → Row 4 (B10–B12)
 
 
 ## 16-SLOT / 12-BOX 45-MINUTE ARROW GRID (24h: 00:00–23:59)
@@ -19,6 +14,14 @@
   - `Row 2:` `B4` (Hour 4) | `B5` (Hour 5) | `B6` (Hour 6)
   - `Row 3:` `B7` (Hour 7) | `B8` (Hour 8) | `B9` (Hour 9)
   - `Row 4:` `B10` (Hour 10) | `B11` (Hour 11) | `B12` (Hour 12)
+
+
+Row 1 [ B1 ] | [ B2 ] | [ B3 ]
+Row 2 [ B4 ] | [ B5 ] | [ B6 ]
+Row 3 [ B7 ] | [ B8 ] | [ B9 ]
+Row 4 [ B10] | [ B11] | [ B12]
+
+x out the b now
 
 
 ### 1. Math & Slot Lock (`s = 1–16`)
