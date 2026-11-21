@@ -18,12 +18,12 @@ if it 809 or 8010 it is h2?
 - **Hour (`HH`) → Target Box (`B1–B12`):** Always **round down** to the current hour (`floor`). Ignore the minutes (`MM`) when picking the box (e.g., `01:00` through `01:59` ALL stay in `B1`; `00:00` through `00:59` map to `B12`; `13:00` through `23:59` subtract 12).
 
 
+- **Slot (`s mod 4`) → `MinArrow`:**
+  - `s1` (`30`) → `↓`
+  - `s2` (`15`) → `→`
+  - `s3` (`00`) → `↑`
+  - `s0` (`45`) → `←`
 
-- **Minutes (`MM`) → `MinArrow`:** Always **round down** into 15-minute buckets (`floor(MM / 15)`):
-  - `00` (`0`) → `↑`
-  - `15` (`1`) → `→`
-  - `30` (`2`) → `↓`
-  - `45` (`3`) → `←`
 - **Grid Render Rule:** Render the 4x3 grid below using a strict 4-character inner width inside every bracket (`[xxxx]`). Replace ONLY the Target Box label with `  <MinArrow> ` (2 spaces + arrow + 1 space) and keep all other boxes unchanged:
 
 Row 1 [ B1 ] | [ B2 ] | [ B3 ]
