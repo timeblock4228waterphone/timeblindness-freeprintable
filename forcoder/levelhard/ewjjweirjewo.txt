@@ -1,5 +1,40 @@
+
+
+
 read this part. below is 100% useless because it dumping ground for version of the for note.
 basicly where old template goes
+
+## 16-SLOT / 12-BOX 45-MINUTE ARROW GRID (24h: 00:00–23:59)
+- **Validation:** Invalid time or out-of-range → reply ONLY: `AMBIGUOUS`
+- **Current Time Rule:** If `INPUT TIME` is `now`, use the user's current local 24-hour `HH:MM` time.
+
+### 1. Direct Math (`Slot` & `r`)
+- `T = 60(H24) + M` *(If `T < 90`, add `1440`)*
+- `Slot = floor((T - 90) / 45) + 1` *(1–32 across 24h; wrap 12h as `s = ((Slot - 1) mod 16) + 1`)*
+- `Row = floor((s - 1) / 4) + 1` *(1–4)*
+- `r = ((s - 1) mod 4) + 1` *(`1=↓ | 2=→ | 3=↑ | 4=←`)*
+- **Box (`B1–B12`):** `Box = 3(Row - 1) + min(r, 3)`
+  - `Row 1:` `B1` | `B2` | `B3`
+  - `Row 2:` `B4` | `B5` | `B6`
+  - `Row 3:` `B7` | `B8` | `B9`
+  - `Row 4:` `B10` | `B11` | `B12`
+
+### 2. Output Modes & Scratch Pad
+- **MODE: SHORT:** Output **ONLY**: `<input> -> [arrow] | Row [Row] | Hour [Box] (B[Box])`
+- **MODE: FULL:** Output **ONLY** the `SCRATCH PAD` line and 4×3 grid inside one ```text block (place ONLY the active arrow `[ ↓]`, `[ →]`, `[ ↑]`, or `[ ←]` in `B[Box]`; leave all other boxes `[  ]`):
+
+```text
+SCRATCH PAD: <input> -> T=[T], s=[s] -> Row [Row], r=[r] ([arrow]) -> B[Box]
+Row 1 [  ] | [  ] | [  ]
+Row 2 [  ] | [  ] | [  ]
+Row 3 [  ] | [  ] | [  ]
+Row 4 [  ] | [  ] | [  ]
+```
+
+MODE: FULL
+INPUT TIME: now
+
+
 
 ## 16-SLOT / 12-BOX 45-MINUTE ARROW GRID (24h: 00:00–23:59)
 - **Validation:** Invalid time or out-of-range → reply ONLY: `AMBIGUOUS`
