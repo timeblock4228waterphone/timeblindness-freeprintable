@@ -40,11 +40,11 @@ x out the b now
   - `s mod 4 = 3` (`:00`) → `↑` *(Slots 3, 7, 11, 15 → B3, B6, B9, B12)*
   - `s mod 4 = 0` (`:45`) → `←` *(Slots 4, 8, 12, 16 → B3, B6, B9, B12)*
 
-### 3. Output Modes & Scratch Pad Lock
+### 3. math & Scratch Pad 
 - **MODE: SHORT:** Output **ONLY** one single line (no scratch pad):
   `<input> -> Arrow: [arrow] | Row [1-4] | Hour [1-12] (B[1-12])`
 - **MODE: FULL:** Output **ONLY** the `SCRATCH PAD` line first to lock the math, followed by the 4×3 bracket grid inside one ```text block, placing **ONLY** the active arrow (`[ ↓]`, `[ →]`, `[ ↑]`, or `[ ←]`) inside its matching Box (leave all other boxes empty `[  ]`):
-
+## TEMPLATE
 ```text
 SCRATCH PAD: <input> -> T=[T], U=[U], k=[k], s=[s], c=[c] | T_slot=[T_slot] -> B[Box] (Row [1-4]) | s mod 4=[0-3] -> [arrow]
 Row 1 [ B1 ] | [ B2 ] | [ B3 ]
