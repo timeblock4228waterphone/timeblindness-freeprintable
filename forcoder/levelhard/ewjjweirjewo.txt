@@ -1,3 +1,5 @@
+read this part. below is 100% useless because it dumping ground for version of the for note.
+
 ## EXECUTION & SYMBOL LOCK (STRICT 6-STEP ORDER)
 Never calculate and draw at the same time. For every input (`24:xx = 00:xx`), follow this exact sequence:
 1. **Calculate** (`b`, `m`, `r`, `T`, `U`, `q`, `R`, `d`, `c`).
