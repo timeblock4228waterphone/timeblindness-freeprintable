@@ -8,9 +8,33 @@
   * Solve `T = 360(a - 1) + 45(b - 1) + 90 + c` *(where `a = 1–4`, `b = 1–8`, `c = 00–44`)*
 * **Template (Slot 1 to Slot 8 = `b`):**
 ```text
-Row 1: 1:30 | 2:15 | 3:00 | 3:45
-Row 2: 4:30 | 5:15 | 6:00 | 6:45
+
 ```
+
+
+
+
+t=60(h24)+m ( if <90, add 1440)
+Expanded slots form (t):
+t=720(k-1)+45(s-1)+90+c
+
+
+2 solvin for vable
+k1 - 2, the:
+ K= floor((t-90)/720)+1
+s=1- 16 
+S= flor (((t-90)-720k-1))/45)+1
+c(0 t 44, leftover minute inside slot s):
+c=(t-90)- 720(k-1) - 45(s-1)
+
+3 slot 
+T_slot = 45(s-1) +90 (If T_slot > =780, subtract 720)
+B = 00 15, 30 or 45 (anchor minute:  b = T_slot -60(box))
+
+…..
+
+
+
 
 
 
