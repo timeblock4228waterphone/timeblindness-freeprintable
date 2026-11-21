@@ -4,7 +4,54 @@ t<90 then add add 1440
 
 if it 809 or 8010 it is h2?
 
+## 16-SLOT / 12-BOX 45-MINUTE ARROW GRID 
+- **Current Time Rule:** If `INPUT TIME` is `now`, use the user's current local 24-hour `HH:MM` time.
 
+
+### Step 1: Solve the 45-Minute Slot (`s = 1–16`)
+- `T = (H24 × 60) + M` *(If `T < 90`, add `1440`; valid range is `90` to `1529`)*
+- Half-day `h` (`1–2`): `h = 1` if `90 ≤ T ≤ 809`; `h = 2` if `T ≥ 810`
+- Solve `T = 720(h - 1) + 45(s - 1) + 90 + m` *(where `h = 1–2`, `s = 1–16`, `m = 00–44`)*
+
+
+s1=1:30 ,s2=2:15 , s3=3:00 ,s4= 3:45
+ s5=4:30 , s6=5:15 ,s7= 6:00 ,s8=6:45
+s9=7:30 ,s10=8:15,s11=9:00 ,s12= 9:45
+s13=10:30,s14= 11:15,s=15 12:00,s16- 12,45
+
+
+- **Slot (`s mod 4`) → `MinArrow`:**
+  - `s1` (`s mod 4 = 1`, `:30`) → `↓`
+  - `s2` (`s mod 4 = 2`, `:15`) → `→`
+  - `s3` (`s mod 4 = 3`, `:00`) → `↑`
+  - `s0` (`s mod 4 = 0`, `:45`) → `←`
+
+### Step 3: Grid Render Rule
+Render the 4×3 grid below using a strict 4-character inner width inside every bracket (`[xxxx]`). Replace **ONLY** the Target Box label (`B1–B12`) with `  <MinArrow> ` (2 spaces + arrow + 1 space) and keep all other boxes unchanged:
+
+Row 1 [ B1 ] | [ B2 ] | [ B3 ]
+Row 2 [ B4 ] | [ B5 ] | [ B6 ]
+Row 3 [ B7 ] | [ B8 ] | [ B9 ]
+Row 4 [ B10] | [ B11] | [ B12]
+
+INPUT TIME: now
+
+
+//
+
+- `T = (H24 × 60) + M` *(If `T < 90`, add `1440`; valid range is `90` to `1529`)*
+- Half-day `h` (`1–2`): `h = 1` if `90 ≤ T ≤ 809`; `h = 2` if `T ≥ 810`
+- Solve `T = 720(h - 1) + 45(s - 1) + 90 + m` *(where `h = 1–2`, `s = 1–16`, `m = 00–44`)*
+
+- **Row (`1–4`):** `Row = floor((s - 1) / 4) + 1`
+
+
+
+**Slot (`s mod 4`) → `MinArrow` & Column:**
+  - `s1` (`s mod 4 = 1`, `:30`) → `↓`
+  - `s2` (`s mod 4 = 2`, `:15`) → `→` 
+  - `s3` (`s mod 4 = 3`, `:00`) → `↑` 
+  - `s0` (`s mod 4 = 0`, `:45`) → `←` 
 
 
 
@@ -15,7 +62,16 @@ if it 809 or 8010 it is h2?
 	• 07:00–09:59 or 19:00–21:59 → Row 3 (B7–B9)
 	• 10:00–12:59 or 22:00–00:59 → Row 4 (B10–B12)
 ### 3. Floor (Round-Down) & Grid Placement Rule (For any `HH:MM`)
-- **Hour (`HH`) → Target Box (`B1–B12`):** Always **round down** to the current hour (`floor`). Ignore the minutes (`MM`) when picking the box (e.g., `01:00` through `01:59` ALL stay in `B1`; `00:00` through `00:59` map to `B12`; `13:00` through `23:59` subtract 12).
+find
+
+ * `T = (H24 × 60) + M` *(If `T < 90`, add `1440`)*
+  * Solve `T = 720(h - 1) + 45(s - 1) + 90 + m` *(where `h = 1–2`, `s = 1–16`, `m = 00–44`)*
+
+Step 1: Find the Hour Box (`B1–B12`) First
+Look ONLY at the hour (`HH`) first—ignore the minutes (`MM`) until Step 2:
+- Convert `HH` to 12-hour format 
+to lock your target Box (`B1–B12`) and Row (`Row 1: B1–B3` | `Row 2: B4–B6` | `Row 3: B7–B9` | `Row 4: B10–B12`).
+
 
 
 - **Slot (`s mod 4`) → `MinArrow`:**
@@ -23,6 +79,8 @@ if it 809 or 8010 it is h2?
   - `s2` (`15`) → `→`
   - `s3` (`00`) → `↑`
   - `s0` (`45`) → `←`
+
+
 
 - **Grid Render Rule:** Render the 4x3 grid below using a strict 4-character inner width inside every bracket (`[xxxx]`). Replace ONLY the Target Box label with `  <MinArrow> ` (2 spaces + arrow + 1 space) and keep all other boxes unchanged:
 
