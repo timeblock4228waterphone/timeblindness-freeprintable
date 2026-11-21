@@ -2,7 +2,7 @@ if you read this means that it still work in progress
 
 
 
-## 16-SLOT / 12-BOX 45-MINUTE ARROW GRID (24h: 00:00–23:59)
+(24h: 00:00–23:59)
 - **Validation:** Invalid time or out-of-range → reply : `AMBIGUOUS`
 1. 
 	• 01:00–03:59 or 13:00–15:59 → Row 1 (B1–B3)
@@ -23,10 +23,10 @@ Row 2 [ B4 ] | [ B5 ] | [ B6 ]
 Row 3 [ B7 ] | [ B8 ] | [ B9 ]
 Row 4 [ B10] | [ B11] | [ B12]
 
-x out the b now
-
 
 **MIN-ARROW (`MinArrow`):** `00–14`=`↑` | `15–29`=`→` | `30–44`=`↓` | `45–59`=`←`.
+
+now what would it be for 1:26
 
 
 ### 1. Math & Slot Lock (`s = 1–16`)
