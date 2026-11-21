@@ -11,6 +11,20 @@ what time is it . it is time to breath . your worth is not tied to producitvity.
 
 
 
+hey due to writing ascII
+in the forthenotecard.txt
+it display
+
+↖ ↑ ↗↙ ↓ ↘
+that because i dont know how to make it look like 
+below
+like Visual Arrow Layout (write as 2 rows on your card):
+↖ ↑ ↗
+↙ ↓ ↘
+(Note: Single-line text/code displays this flat as: ↖ ↑ ↗ ↙ ↓ ↘)
+
+
+
 how did it start. it started with making 2 zine one with hour and the other one was minute. how it was made was i wrote 1 and 7, the next page i wrote 2,8 then 3,9 then 4,10 then 5,11 and lastly 6,12 as the hours
 then the next 
 one hours it would 
