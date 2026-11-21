@@ -11,6 +11,10 @@ what time is it . it is time to breath . your worth is not tied to producitvity.
 
 
 
+this is note for the note card why it was made
+
+this is like a neutral companion that doesn't care that what you do in the time before it reset. it reset in rolling 5 hours and 55 minute reset when you start it.
+
 hey due to writing ascII
 in the forthenotecard.txt
 it display
