@@ -31,7 +31,7 @@ the thing that is there is
 
 ```
  * `T = (H24 × 60) + M` *(If `T < 90`, add `1440`)*
-  * Solve `T = 720(a - 1) + 45(b - 1) + 90 + c` *(where `a = 1–2`, `b = 1–8`, `c = 00–44`)*
+  * Solve `T = 720(a - 1) + 45(b - 1) + 90 + c` *(where `a = 1–2`, `b = 1–16`, `c = 00–44`)*
 * **Template (Slot 1 to Slot 8 = `b`):**
 
 b=mod4
