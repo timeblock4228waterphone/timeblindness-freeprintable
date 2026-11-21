@@ -11,7 +11,7 @@
   - **Below-Right (`[M_BOT]`):** `c = 2` (`35–04`)
 
 ## TEMPLATE 
-Output **ONLY** the block below inside one ```` ```text ```` block. Replace `<input>` with the `HH:MM` time, keep `[   ]` (3 spaces) for empty boxes, and `[ ↙ ]` (1 space padding) for active arrows:
+TEMPLATE what it looks like below the block below inside one ```` ```text ```` block. Replace `<input>` with the `HH:MM` time, keep `[   ]` (3 spaces) for empty boxes, and `[ ↙ ]` (1 space padding) for active arrows:
 
 ```text
     <input>
