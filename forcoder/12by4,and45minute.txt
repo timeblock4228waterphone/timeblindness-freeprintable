@@ -23,6 +23,20 @@ Row 3 [ B7 ] | [ B8 ] | [ B9 ]
 Row 4 [ B10] | [ B11] | [ B12]
 
 
+only have
+
+ * `T = (H24 × 60) + M` *(If `T < 90`, add `1440`)*
+  * Solve `T = 360(a - 1) + 45(b - 1) + 90 + c` *(where `a = 1–4`, `b = 1–8`, `c = 00–44`)*
+* **Template (Slot 1 to Slot 8 = `b`):**
+
+b=mod4
+
+b1=30
+b2=15
+b3=00
+b0=45
+
+
 
 now try 
 
