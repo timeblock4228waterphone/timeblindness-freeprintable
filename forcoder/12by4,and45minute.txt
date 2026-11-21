@@ -12,6 +12,13 @@
 	• 04:00–06:59 or 16:00–18:59 → Row 2 (B4–B6)
 	• 07:00–09:59 or 19:00–21:59 → Row 3 (B7–B9)
 	• 10:00–12:59 or 22:00–00:59 → Row 4 (B10–B12)
+### 2. Box (`B1–B12`), Row (`1–4`) & Arrow (`s mod 4`)
+- **Slot Start Time (`T_slot`):** `T_slot = 45(s - 1) + 90` *(If `T_slot >= 780`, subtract `720`)*
+- **Target Box / Hour (`B1–B12`):** `Box = floor(T_slot / 60)` (`1–12`)
+  - `Row 1:` `B1` (Hour 1) | `B2` (Hour 2) | `B3` (Hour 3)
+  - `Row 2:` `B4` (Hour 4) | `B5` (Hour 5) | `B6` (Hour 6)
+  - `Row 3:` `B7` (Hour 7) | `B8` (Hour 8) | `B9` (Hour 9)
+  - `Row 4:` `B10` (Hour 10) | `B11` (Hour 11) | `B12` (Hour 12)
 
 
 ### 1. Math & Slot Lock (`s = 1–16`)
@@ -21,13 +28,6 @@
 - `s = floor((U - 720(k - 1)) / 45) + 1` *(45-min slot: `1–16`)*
 - `c = (U - 720(k - 1)) - 45(s - 1)` *(leftover minutes in slot: `0–44`)*
 
-### 2. Box (`B1–B12`), Row (`1–4`) & Arrow (`s mod 4`)
-- **Slot Start Time (`T_slot`):** `T_slot = 45(s - 1) + 90` *(If `T_slot >= 780`, subtract `720`)*
-- **Target Box / Hour (`B1–B12`):** `Box = floor(T_slot / 60)` (`1–12`)
-  - `Row 1:` `B1` (Hour 1) | `B2` (Hour 2) | `B3` (Hour 3)
-  - `Row 2:` `B4` (Hour 4) | `B5` (Hour 5) | `B6` (Hour 6)
-  - `Row 3:` `B7` (Hour 7) | `B8` (Hour 8) | `B9` (Hour 9)
-  - `Row 4:` `B10` (Hour 10) | `B11` (Hour 11) | `B12` (Hour 12)
 - **Active Arrow (`s mod 4`):**
   - `s mod 4 = 1` (`:30`) → `↓` *(Slots 1, 5, 9, 13 → B1, B4, B7, B10)*
   - `s mod 4 = 2` (`:15`) → `→` *(Slots 2, 6, 10, 14 → B2, B5, B8, B11)*
