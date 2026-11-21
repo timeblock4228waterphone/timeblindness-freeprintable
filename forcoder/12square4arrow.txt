@@ -7,7 +7,7 @@ PART 1: JUST WHY HOURS
 	• 04:00–06:59 or 16:00–18:59 → Row 2 (B4–B6)
 	• 07:00–09:59 or 19:00–21:59 → Row 3 (B7–B9)
 	• 10:00–12:59 or 22:00–00:59 → Row 4 (B10–B12)
-### 3. Floor (Round-Down) & Grid Placement Rule (For any `HH:MM`)
+### 2. Floor (Round-Down) & Grid Placement Rule (For any `HH:MM`)
 - **Hour (`HH`) → Target Box (`B1–B12`):** Always **round down** to the current hour (`floor`). Ignore the minutes (`MM`) when picking the box (e.g., `01:00` through `01:59` ALL stay in `B1`; `00:00` through `00:59` map to `B12`; `13:00` through `23:59` subtract 12).
 - **Minutes (`MM`) → `MinArrow`:** Always **round down** into 15-minute buckets (`floor(MM / 15)`):
   - `00–14` (`0`) → `↑`
@@ -23,4 +23,3 @@ Row 4 [ B10] | [ B11] | [ B12]
 
 
 
-**MIN-ARROW (`MinArrow`):** `00–14`=`↑` | `15–29`=`→` | `30–44`=`↓` | `45–59`=`←`.
