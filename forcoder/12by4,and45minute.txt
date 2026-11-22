@@ -14,6 +14,11 @@
   - `s2` (`s mod 4 = 2`, `:15`) → `→`
   - `s3` (`s mod 4 = 3`, `:00`) → `↑`
   - `s0` (`s mod 4 = 0`, `:45`) → `←`
+### Step 2: Solve the Slot Hour (`SlotHour = 1–12`)
+- Find the slot's start time: `SlotStart = 45(s - 1) + 90`
+- `SlotHour = floor(SlotStart / 60)` *(If `SlotHour > 12`, subtract `12`)*
+- `TargetBox = B<SlotHour>` *(Example: `s = 5` starts at `4:30`, so `SlotHour = 4` → `B4`)*
+
 
 ### Step 3: Grid Render Rule
 Render the 4×3 grid below using a strict 4-character inner width inside every bracket (`[xxxx]`). Replace **ONLY** the Target Box label (`B1–B12`) with `  <MinArrow> ` (2 spaces + arrow + 1 space) and keep all other boxes unchanged:
