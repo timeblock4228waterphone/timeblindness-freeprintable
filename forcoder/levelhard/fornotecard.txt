@@ -18,7 +18,10 @@ Never calculate and draw at the same time. For every input (`24:xx = 00:xx`), fo
      - `R2:` `07–12` (`a=2`) → `H2` | `19–24` (`a=4`) → `H4`
    - **Step B — Solve `b = H - 6(a - 1)` (`1–6`) & Select `HourArrow`:**
      - `b=1` (`↖`) | `b=2` (`↑`) | `b=3` (`↗`) | `b=4` (`↙`) | `b=5` (`↓`) | `b=6` (`↘`)
-2. **MINUTE (`Mxx`):** Solve `M = 5m + r` (`m=0–11`, `r=0–4`); format box as `M` + 2-digit `5m` (`M00`–`M55`).
+2. **MINUTE (`Mxx`) & `MinArrow`:**
+   - `A15 = 15 * floor(M / 15)` (`00`=`↑`, `15`=`→`, `30`=`↓`, `45`=`←`)
+   - `R15 = M - A15` (`0–14`), `S5 = 5 * floor(R15 / 5)` (`0,5,10`), `r = R15 - S5` (`0–4`)
+   - `Mxx = A15 + S5` (`M00`–`M55`)
    - **M-Grid Map (4×3):** `R1:` M05, M10, M15 | `R2:` M20, M25, M30 | `R3:` M35, M40, M45 | `R4:` M50, M55, M00.
 3. **MIN-ARROW (`MinArrow`):** `00–14`=`↑` | `15–29`=`→` | `30–44`=`↓` | `45–59`=`←`.
 4. **A-Grid Map (2×3, by `b`):** `R1:` `b=1`→A1, `b=2`→A2, `b=3`→A3 | `R2:` `b=4`→A4, `b=5`→A5, `b=6`→A6.
