@@ -30,7 +30,7 @@ it is for
 [(5) what does the arrow means.txt](./whatdoesthearrowmean.txt)
 
 
-(6) steve time arrow .txt
+[(6) steve time arrow .txt](./forcoder/stevetimearrow.txt)
 
 
 
