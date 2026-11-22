@@ -14,7 +14,7 @@ there is 6 .txt
 files that is better explain 
 it is for
 
-[ (1) coder to understand]
+[ (1) coder to understand](./forcodertounderstand.txt)
 
 (1) coder to understand .txt
 
