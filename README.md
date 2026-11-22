@@ -20,7 +20,7 @@ it is for
 
 
 
-(2)12 by 4 and 45 minute .txt
+[(2)12 by 4 and 45 minute](./forcoder/12by4,and45minute.txt)
 
 
 (3)2 by 3 grid .txt
