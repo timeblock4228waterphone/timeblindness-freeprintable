@@ -21,3 +21,15 @@ TEMPLATE what it looks like below the block below inside one ```` ```text ```` b
 ```
 
 INPUT TIME: now
+
+
+/ part2 only do part 1 first now second part
+
+Use 24-hour H (00–23). If H = 00, treat as 24.
+Solve H = 6(a - 1) + b (a = 1–4, b = 1–6).
+
+Round M down to the nearest 5 (M5: 00, 05, 10... 55). If M5 = 00, treat as 60.
+Solve M5 = 30(c - 1) + 5d (c = 1–2, d = 1–6).
+layout in this exact format:
+a|b|c|d
+INPUT TIME: now
