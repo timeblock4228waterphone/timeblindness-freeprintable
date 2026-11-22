@@ -16,8 +16,6 @@ it is for
 
 [ (1) coder to understand](./forcodertounderstand.txt)
 
-(1) coder to understand .txt
-
 
 
 [(2)12 by 4 and 45 minute](./forcoder/12by4,and45minute.txt)
