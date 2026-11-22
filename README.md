@@ -24,7 +24,7 @@ it is for
 [(3)2 by 3 grid .txt](./forcoder/2by3grid.txt)
 
 
-[(4) for note card .txt](9./forcoder/levelhard/fornotecard.txt)
+[(4) for note card .txt](./forcoder/levelhard/fornotecard.txt)
 
 
 [(5) what does the arrow means.txt](./whatdoesthearrowmean.txt)
