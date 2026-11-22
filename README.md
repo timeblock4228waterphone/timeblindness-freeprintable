@@ -12,11 +12,26 @@ what time is it . it is time to breath . your worth is not tied to producitvity.
 
 there is 6 .txt 
 files that is better explain 
-it is for(1) coder to understand .txt
+it is for
+
+[ (1) coder to understand]
+
+(1) coder to understand .txt
+
+
+
 (2)12 by 4 and 45 minute .txt
+
+
 (3)2 by 3 grid .txt
+
+
 (4) for note card .txt
+
+
 (5) what does the arrow means.txt
+
+
 (6) steve time arrow .txt
 
 
