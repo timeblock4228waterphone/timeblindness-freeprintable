@@ -4,13 +4,11 @@ Never calculate and draw at the same time. For every input (`24:xx = 00:xx`), fo
    - **Hour (Quadrant First, Math Second):** Find quadrant `Ha` (`a=1–4`) from the hour range first, then solve `b = H - 6(a - 1)` (`1–6`).
    - **Minute & CODGRID:** Solve `m`, `r`, `T`, `U`, `q`, `R`, `d`, `c`.
 2. **Lock** values in `Calc:` (and `Merge:` for multi-input) before touching the template.
-3. **Locate** remaining destination boxes strictly from the **Coordinate Maps** below (never infer positions from visual order alone).
-4. **Select** symbols using the **Single-Job Symbol Lock**:
-   - **H-Grid (`Ha`):** `HourArrow` ONLY (`↖ ↑ ↗ ↙ ↓ ↘`).
-   - **M-Grid (`Mxx`):** `HourArrow` ONLY (`↖ ↑ ↗ ↙ ↓ ↘`).
-   - **A-Grid (`Ab`):** `MinArrow` ONLY (`← ↑ ↓ →`).
-   - **CODGRID (`Cd`):** `[ X ]` at box `d` ONLY (never `q` or `c`).
-5. **Place** symbols into the template.
+3. **Locate & Lock Box Coordinates:** Map every calculated ID to its exact Row/Column from the Coordinate Maps and lock it in `Map:`:
+   - Format: `Map: Ha=R[x]C[y] (HourArrow) | Mxx=R[x]C[y] (HourArrow) | Ab=R[x]C[y] (MinArrow) | Cd=R[x]C[y] ([ X ])`
+4. **Select & Place:** Insert locked symbols into the template using ONLY the `Map:` coordinates (never infer from visual order).
+5. **Visible Audit:** Output an `Audit:` line confirming every active box's Row/Column, symbol type, and character width before rendering the template:
+   - Format: `Audit: H-Grid[R_,C_=HourArrow OK] | M-Grid[R_,C_=HourArrow OK] | A-Grid[R_,C_=MinArrow OK] | CODGRID[R_,C_=X OK]`
 6. **Audit** placement before outputting.
 
 ## GRID RULES & AUTHORITATIVE COORDINATES
