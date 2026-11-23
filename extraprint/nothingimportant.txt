@@ -8,6 +8,13 @@ or
  [↗ ↑] | [↗ ←] | [↙ ↓] | [↓ →]
 
 
+## STEP 2: PLACE SYMBOLS (Skip if variable is `_`)
+1. **HourArrow (`B`):** `1`=`↖` | `2`=`↑` | `3`=`↗` | `4`=`↙` | `5`=`↓` | `6`=`↘` | `_`=`•`
+2. **Grids:** Put `HourArrow` in `H[A]` and `M[M5]` (2-digit `M5`). Put `MinArrow` (`00–10`=`↑`, `15–25`=`→`, `30–40`=`↓`, `45–55`=`←`) in `A[B]`.
+3. **CODGRID (skip if any `_`):** `T = t` (`+1440` if `< 90`), `U = T - 90`, `R = U mod 360`, `k = floor(R / 45) + 1`. Put `[ X ]` in `C[k]`.
+
+
+
 ## EXECUTION PIPELINE
 INPUT -> CALCULATE -> VERIFY -> LOCK -> MAP -> AUDIT -> RENDER -> VERIFY
 
