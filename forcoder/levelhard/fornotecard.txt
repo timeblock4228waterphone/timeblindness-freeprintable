@@ -1,4 +1,3 @@
-## EXECUTION & SYMBOL LOCK (STRICT 6-STEP ORDER)
 Never calculate and draw at the same time. For every input (`24:xx = 00:xx`), follow this exact sequence:
 1. **Locate & Calculate:**
    - **Hour (Quadrant First, Math Second):** Find quadrant `Ha` (`a=1–4`) from the hour range first, then solve `b = H - 6(a - 1)` (`1–6`).
@@ -6,9 +5,9 @@ Never calculate and draw at the same time. For every input (`24:xx = 00:xx`), fo
 2. **Lock** values in `Calc:` (and `Merge:` for multi-input) before touching the template.
 3. **Locate & Lock Box Coordinates:** Map every calculated ID to its exact Row/Column from the Coordinate Maps and lock it in `Map:`:
    - Format: `Map: Ha=R[x]C[y] (HourArrow) | Mxx=R[x]C[y] (HourArrow) | Ab=R[x]C[y] (MinArrow) | Cd=R[x]C[y] ([ X ])`
-4. **Select & Place:** Insert locked symbols into the template using ONLY the `Map:` coordinates (never infer from visual order).
-5. **Visible Audit:** Output an `Audit:` line confirming every active box's Row/Column, symbol type, and character width before rendering the template:
+4. **Visible Audit:** Output an `Audit:` line confirming every active box's Row/Column, symbol type, and interior width before drawing the template:
    - Format: `Audit: H-Grid[R_,C_=HourArrow OK] | M-Grid[R_,C_=HourArrow OK] | A-Grid[R_,C_=MinArrow OK] | CODGRID[R_,C_=X OK]`
+5. **Render & Verify:** Place the locked symbols into the template using ONLY the `Map:` coordinates, and verify that the rendered template matches the `Audit:` line and keeps all vertical `|` bars aligned.
 6. **Audit** placement before outputting.
 
 ## GRID RULES & AUTHORITATIVE COORDINATES
@@ -38,14 +37,14 @@ Never calculate and draw at the same time. For every input (`24:xx = 00:xx`), fo
 - **MODE: SHORT:** Output **ONLY** `Calc:` line(s) and check line(s) (`Time -> HourArrow in Ha, Mxx, Cd, Ab (MinArrow) (+r mins)`).
 - **MODE: FULL:** Output `Calc:` line(s), **1 check line** per input, then filled TEMPLATE inside **ONE** ```` ```text ```` block (strip `01|`–`14|`; keep exact spaces/layout).
 - **Boxes & Cleanup:**
-  - **CODGRID (`C1–C8`, 3-char):** active `[ X ]`, empty `[   ]`.
-  - **A-Grid (always 4-char, `MinArrow` only):** `0`=`[    ]`, `1`=`[ ↑  ]`, `2`=`[ ←→ ]`, `3`=`[ ←↑→]`, `4`=`[←↑↓→]`.
-  - **M-Grid & H-Grid Standard (4-char when all `M` & `H` boxes hold 0–4 arrows, `HourArrow` only):** `0`=`[    ]`, `1`=`[ ↖  ]`, `2`=`[ ↖↘ ]`, `3`=`[ ↖↑↗]`, `4`=`[↖↑↗↘]`.
-  - **M-Grid & H-Grid Expanded (6-char for ALL `M` & `H` boxes if any single box holds 5 or 6 arrows; shift right-side headers & grids `+6 spaces`):** `0`=`[      ]`, `1`=`[  ↖   ]`, `2`=`[  ↖↘  ]`, `3`=`[ ↖↑↗  ]`, `4`=`[ ↖↑↗↘ ]`, `5`=`[↖↑↗↙↓ ]`, `6`=`[↖↑↗↙↓↘]`.
+  - **Interior Widths (Never Shift `|` Bars):**
+    - **CODGRID (`C1–C8`):** 3-char interior (`[ X ]` or `[   ]`).
+    - **A-Grid (`A1–A6`):** 4-char interior (`[ →  ]` or `[    ]`).
+    - **M-Grid & H-Grid:** 4-char interior (`[ ↑  ]` or `[    ]`). If any single `M` or `H` box holds 5–6 arrows, expand ALL `M` and `H` boxes to 6-char interior (`[  ↑   ]` or `[      ]`) and shift `HOUR QUADRANT` and `ARROW GRID` +6 spaces right.
+  - **A-Grid Arrow Padding (4-char):** `0`=`[    ]`, `1`=`[ ↑  ]`, `2`=`[ ←→ ]`, `3`=`[ ←↑→]`, `4`=`[←↑↓→]`.
+  - **M-Grid & H-Grid Arrow Padding (4-char):** `0`=`[    ]`, `1`=`[ ↖  ]`, `2`=`[ ↖↘ ]`, `3`=`[ ↖↑↗]`, `4`=`[↖↑↗↘]`.
+  - **M-Grid & H-Grid Arrow Padding (6-char Expanded):** `0`=`[      ]`, `1`=`[  ↖   ]`, `2`=`[  ↖↘  ]`, `3`=`[ ↖↑↗  ]`, `4`=`[ ↖↑↗↘ ]`, `5`=`[↖↑↗↙↓ ]`, `6`=`[↖↑↗↙↓↘]`.
   - **Cleanup:** Replace all unused placeholders with blank spaces.
-- **Multi-Input:** Calculate independently; place in ONE shared template without overwriting. Keep `[ X ]` in shared `C`; combine and deduplicate arrows **only when multiple inputs land in the exact same destination box**, then sort `M` & `H` (`↖ ↑ ↗ ↙ ↓ ↘`) and `A` (`← ↑ ↓ →`).
-- **Clock:** Never alter `(00)`, `(45)`, `(15)`, `(30)`. Replace `<input>` with input time(s).
-- **Silent Audit Before Output:** Verify H-grid `Ha` (2×2 quadrant) & `HourArrow` only; M-grid Row/Col & `HourArrow` only; A-grid `Ab` & `MinArrow` only; CODGRID `Cd` (`d`, not `q`/`c`).
 
 ## TEMPLATE (Strip `01|`–`14|`; keep exact spaces & layout)
 01|You are here and that enough
@@ -68,4 +67,5 @@ If `INPUT TIME` is `now`, use the user's current local 24-hour `HH:MM` time (or 
 
 MODE: FULL
 INPUT TIME: now
+
 
