@@ -1,3 +1,6 @@
+
+if you see this note it means it is still work in progress.
+
 Never calculate and draw at the same time. For every input (`24:xx = 00:xx`), follow this exact sequence:
 1. **Locate & Calculate:**
    - **Hour (Quadrant First, Math Second):** Find quadrant `Ha` (`a=1–4`) from the hour range first, then solve `b = H - 6(a - 1)` (`1–6`).
