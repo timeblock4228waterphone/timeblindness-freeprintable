@@ -72,12 +72,7 @@ MODE: FULL
 INPUT TIME: now'
 
 
-5. **CODGRID (`B|C|D` -> `C[k]`, 2×4 — skip if `B`, `C`, or `D` is `_`):**
-   - **Fast Lookup (`B|C|D` -> `k`, where `:00`=`2|6`, `:30`=`1|6`, `:55`=`2|5`):**
-     - **R1:** `C1` (`R1C1`): `1|1|6`–`2|1|2` | `C2` (`R1C2`): `2|1|3`–`2|2|5` | `C3` (`R1C3`): `3|2|6`–`3|2|2` | `C4` (`R1C4`): `3|2|3`–`4|1|5`
-     - **R2:** `C5` (`R2C1`): `4|1|6`–`5|1|2` | `C6` (`R2C2`): `5|1|3`–`5|2|5` | `C7` (`R2C3`): `6|2|6`–`6|2|2` | `C8` (`R2C4`): `6|2|3`–`1|1|5`
-   - **Algebra Lock (if `A` is known):** Verify `T = 90 + 360q + 45(k - 1) + c` (with `T = t + 1440` if `t < 90`, `q = 0–3`, and `0 <= c <= 44`).
-   - Place `[ X ]` in `C[k]`.
+
 
 
 
@@ -117,12 +112,12 @@ INPUT TIME: now'
 4. **ARROW GRID (`B` -> `A[B]`, `M5` -> `MinArrow`, 2×3):**
    - **Box (`B`):** `1`=`A1` (`R1C1`), `2`=`A2` (`R1C2`), `3`=`A3` (`R1C3`), `4`=`A4` (`R2C1`), `5`=`A5` (`R2C2`), `6`=`A6` (`R2C3`) | `_`=blank
    - **MinArrow (`M5`):** `00–10`=`↑` | `15–25`=`→` | `30–40`=`↓` | `45–55`=`←` | `_`=blank
-5. **CODGRID (`C[k]`, 2×4 — skip if `A`, `B`, `C`, or `D` is `_`):**
-   - Set `T = t` (if `T < 90`, add `1440`). `U = T - 90`.
-   - `q = floor(U / 360)` (`0–3`), `R = U - 360q` (`0–359`).
-   - Calculate `k` and `c` **strictly from `R`, never directly from `U`**: `k = floor(R / 45) + 1` (`1–8`), `c = R mod 45` (`0–44`).
-   - Verify `90 + 360q + 45(k - 1) + c = T`, then place `[ X ]` in `C[k]`.
-   - **CODGRID Map (2×4):** `R1:` `C1` (`R1C1`), `C2` (`R1C2`), `C3` (`R1C3`), `C4` (`R1C4`) | `R2:` `C5` (`R2C1`), `C6` (`R2C2`), `C7` (`R2C3`), `C8` (`R2C4`).
+5. **CODGRID (`B|C|D` -> `C[k]`, 2×4 — skip if `B`, `C`, or `D` is `_`):**
+   - **Fast Lookup (`B|C|D` -> `k`, where `:00`=`2|6`, `:30`=`1|6`, `:55`=`2|5`):**
+     - **R1:** `C1` (`R1C1`): `1|1|6`–`2|1|2` | `C2` (`R1C2`): `2|1|3`–`2|2|5` | `C3` (`R1C3`): `3|2|6`–`3|2|2` | `C4` (`R1C4`): `3|2|3`–`4|1|5`
+     - **R2:** `C5` (`R2C1`): `4|1|6`–`5|1|2` | `C6` (`R2C2`): `5|1|3`–`5|2|5` | `C7` (`R2C3`): `6|2|6`–`6|2|2` | `C8` (`R2C4`): `6|2|3`–`1|1|5`
+   - **Algebra Lock (if `A` is known):** Verify `T = 90 + 360q + 45(k - 1) + c` (with `T = t + 1440` if `t < 90`, `q = 0–3`, and `0 <= c <= 44`).
+   - Place `[ X ]` in `C[k]`.
 
 ## FORMAT, MULTI-INPUT & LOCKS
 - **Multi-Input Merge:** Process each input independently, merge into ONE template, deduplicate arrows, and sort `H`/`M` (`↖ ↑ ↗ ↙ ↓ ↘ •`) and `A` (`← ↑ ↓ →`).
