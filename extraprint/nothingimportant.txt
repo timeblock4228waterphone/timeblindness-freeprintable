@@ -15,11 +15,12 @@ Never calculate and draw at the same time:
 1. **INPUT:** Accept `HH:MM`, `now` (24-hour), or `A|B|C|D` seed (`_` allowed for missing parts).
 2. **CALCULATE:** Solve `A|B|C|D`, `t` (`H`, `M5`), `U`, `q`, `R`, `k`, and `c`.
 3. **VERIFY (Math):** Confirm `90 + 360q + 45(k - 1) + c = T` (and `24->00` / `60->00` resets).
-4. **LOCK:** Freeze values on `Seed:` / `Calc:` (and `Merge:` if multi-input) before touching any grid.
-5. **MAP:** Lock exact `R_C_` coordinates for all active boxes on `Map:`.
-6. **AUDIT:** Output `Audit:` confirming every active box's `R_C_`, symbol, and interior width.
+4. **LOCK:** Freeze all verified calculation values on `Seed:` / `Calc:` (and `Merge:` if multi-input). No recalculation or modification during `MAP` or `RENDER`. If a discrepancy is found, stop and return to `CALCULATE`—never patch the grid to hide a calculation error.
+5. **MAP:** Determine exact `R_C_` coordinates for all active boxes on `Map:` before drawing.
+6. **AUDIT:** Inspect and output `Audit:` confirming every active box's `R_C_`, symbol, and interior width.
 7. **RENDER:** Fill fixed-width template slots inside ONE ```` ```text ```` block using ONLY `Map:`.
-8. **VERIFY (Visual):** Confirm rendered grid matches `Audit:` and all `|` bars stay aligned.
+8. **VERIFY (Visual):** Compare the final rendered grid against `Audit:` and confirm all `|` bars stay aligned. If any mismatch appears, return to `CALCULATE` or `MAP` rather than patching the output.
+
 
 
 t=60[6(a-1)+b]+[30(c-1)+5d] if 24=00 and 60 =00
