@@ -19,6 +19,8 @@ thank you for staying.
 
 
 okay now that you read this the meeat is part 1 -6
+
+t=35-(a-1)+45(b-1)+90+10c+d
 _________________________
 
 
