@@ -31,12 +31,17 @@
 4. **ARROW GRID (`B` -> `A[B]`, `M5` -> `MinArrow`, 2×3):**
    - **Box (`B`):** `1`=`A1` (`R1C1`), `2`=`A2` (`R1C2`), `3`=`A3` (`R1C3`), `4`=`A4` (`R2C1`), `5`=`A5` (`R2C2`), `6`=`A6` (`R2C3`) | `_`=blank
    - **MinArrow (`M5`):** `00–10`=`↑` | `15–25`=`→` | `30–40`=`↓` | `45–55`=`←` | `_`=blank
-5. **CODGRID (`B|C|D` -> `C[k]`, 2×4 — skip if `B`, `C`, or `D` is `_`):**
-   - **Fast Lookup (`B|C|D` -> `k`, where `:00`=`2|6`, `:30`=`1|6`, `:55`=`2|5`):**
-     - **R1:** `C1` (`R1C1`): `1|1|6`–`2|1|2` | `C2` (`R1C2`): `2|1|3`–`2|2|5` | `C3` (`R1C3`): `3|2|6`–`3|2|2` | `C4` (`R1C4`): `3|2|3`–`4|1|5`
-     - **R2:** `C5` (`R2C1`): `4|1|6`–`5|1|2` | `C6` (`R2C2`): `5|1|3`–`5|2|5` | `C7` (`R2C3`): `6|2|6`–`6|2|2` | `C8` (`R2C4`): `6|2|3`–`1|1|5`
-   - **Algebra Lock (if `A` is known):** Verify `T = 90 + 360q + 45(k - 1) + c` (with `T = t + 1440` if `t < 90`, `q = 0–3`, and `0 <= c <= 44`).
-   - Place `[ X ]` in `C[k]`.
+5. **CODGRID (`B|C|D` -> `C[k]`, 2×4):**
+   - **STOP RULE:** If `B`, `C`, or `D` is `_` or missing, stop immediately and leave the grid blank.
+   - **STEP 1 (Calculate 6-Hour Offset `t_cod`):**
+     - `M = 30(C - 1) + 5D` *(if `M = 60`, set `M = 0`)*
+     - `t_cod = 60B + M` *(if `t_cod < 90`, add `360`)*
+   - **STEP 2 (Verify & Match `t_cod` to Box & Coordinate):**
+     - First print `Math: M=[M], t_cod=[t_cod] -> C[k] (R_C_)`, then match `t_cod`:
+     - **Row 1 (`R1`):** `90–134` -> **`C1` (`R1C1`)** | `135–179` -> **`C2` (`R1C2`)** | `180–224` -> **`C3` (`R1C3`)** | `225–269` -> **`C4` (`R1C4`)**
+     - **Row 2 (`R2`):** `270–314` -> **`C5` (`R2C1`)** | `315–359` -> **`C6` (`R2C2`)** | `360–404` -> **`C7` (`R2C3`)** | `405–449` -> **`C8` (`R2C4`)**
+   - **PLOT:** Place `[ X ]` in `C[k]` (`R_C_`).
+
 
 ## FORMAT, MULTI-INPUT & LOCKS
 - **Multi-Input Merge:** Process each input independently, merge into ONE template by exact coordinate, deduplicate arrows, and sort `H`/`M` (`↖ ↑ ↗ ↙ ↓ ↘ •`) and `A` (`← ↑ ↓ →`).
