@@ -40,27 +40,20 @@ Vars:
 Row 1: 1:30 | 2:15 | 3:00 | 3:45
 Row 2: 4:30 | 5:15 | 6:00 | 6:45
 ```
-H (00–23). If H = 00, treat as 24.
-Solve H = 6(a - 1) + b (a = 1–4, b = 1–6).
-Round M down to the nearest 5 (M5: 00, 05, 10... 55). If M5 = 00, treat as 60.
-Solve M5 = 30(c - 1) + 5d (c = 1–2, d = 1–6).
-## 2. SPACE JAMMER
 
-Use 24-hour.
-Round M down to the nearest 5 (M5: 00, 05, 10... 55). If M5 = 00, treat as 60.
-Solve M5 = 30(c - 1) + 5d (c = 1–2, d = 1–6).
-layout in this exact format:
-a|b|c|d
-
-**SPACE JAMMER (`A|B|C|D` -> 4×3 Grid):**
-- **Left Number (`A|B` -> Hour `1–12`):**
-  - **If `A = 1` or `3` (`R1–R2`):** `B=1` -> `1` (`R1C1`) | `B=2` -> `2` (`R1C2`) | `B=3` -> `3` (`R1C3`) | `B=4` -> `4` (`R2C1`) | `B=5` -> `5` (`R2C2`) | `B=6` -> `6` (`R2C3`)
-  - **If `A = 2` or `4` (`R3–R4`):** `B=1` -> `7` (`R3C1`) | `B=2` -> `8` (`R3C2`) | `B=3` -> `9` (`R3C3`) | `B=4` -> `10` (`R4C1`) | `B=5` -> `11` (`R4C2`) | `B=6` -> `12` (`R4C3`)
-- **Right Number (`C|D` -> Minute `05–00`):**
-  - **If `C = 1` (`R1–R2`):** `D=1` -> `05` (`R1C1`) | `D=2` -> `10` (`R1C2`) | `D=3` -> `15` (`R1C3`) | `D=4` -> `20` (`R2C1`) | `D=5` -> `25` (`R2C2`) | `D=6` -> `30` (`R2C3`)
-  - **If `C = 2` (`R3–R4`):** `D=1` -> `35` (`R3C1`) | `D=2` -> `40` (`R3C2`) | `D=3` -> `45` (`R3C3`) | `D=4` -> `50` (`R4C1`) | `D=5` -> `55` (`R4C2`) | `D=6` -> `00` (`R4C3`)
-
-x out now
+## 2. SPACE JAMMER (`A|B|C|D` -> 4×3 Grid)
+* **Seed Math (24-Hour):**
+  * Treat `H24 = 00` as `24`. Solve `H24 = 6(A - 1) + B` *(where `A = 1–4`, `B = 1–6`)*.
+  * Round `M` down to the nearest 5 (`M5: 00, 05, 10... 55`). Treat `M5 = 00` as `60`. Solve `M5 = 30(C - 1) + 5D` *(where `C = 1–2`, `D = 1–6`)*.
+  * Output seed in exact format: `A|B|C|D`
+* **Rule:** Replace the active hour number with `X` *(use `X ` with a trailing space for `10`, `11`, or `12`)* and replace the active minute number with `X `; preserve all inactive numbers and spacing.
+* **Coordinate Map:**
+  * **Left Number (`A|B` -> Hour `1–12`):**
+    * **If `A = 1` or `3` (`R1–R2`):** `B=1` -> `1` (`R1C1`) | `B=2` -> `2` (`R1C2`) | `B=3` -> `3` (`R1C3`) | `B=4` -> `4` (`R2C1`) | `B=5` -> `5` (`R2C2`) | `B=6` -> `6` (`R2C3`)
+    * **If `A = 2` or `4` (`R3–R4`):** `B=1` -> `7` (`R3C1`) | `B=2` -> `8` (`R3C2`) | `B=3` -> `9` (`R3C3`) | `B=4` -> `10` (`R4C1`) | `B=5` -> `11` (`R4C2`) | `B=6` -> `12` (`R4C3`)
+  * **Right Number (`C|D` -> Minute `05–00`):**
+    * **If `C = 1` (`R1–R2`):** `D=1` -> `05` (`R1C1`) | `D=2` -> `10` (`R1C2`) | `D=3` -> `15` (`R1C3`) | `D=4` -> `20` (`R2C1`) | `D=5` -> `25` (`R2C2`) | `D=6` -> `30` (`R2C3`)
+    * **If `C = 2` (`R3–R4`):** `D=1` -> `35` (`R3C1`) | `D=2` -> `40` (`R3C2`) | `D=3` -> `45` (`R3C3`) | `D=4` -> `50` (`R4C1`) | `D=5` -> `55` (`R4C2`) | `D=6` -> `00` (`R4C3`)
 * **Template:**
 ```text
 [1, 05] | [2, 10] | [3, 15]
@@ -68,6 +61,9 @@ x out now
 [7, 35] | [8, 40] | [9, 45]
 [10, 50] | [11, 55] | [12, 00]
 ```
+
+
+
 
 ## 3. 4 PART 2 PART
 * **Rule:** Replace the active `H24` range and active `M` range independently with `[ X ]` (`24 = 00`, `60 = 00`). Preserve inactive ranges.
