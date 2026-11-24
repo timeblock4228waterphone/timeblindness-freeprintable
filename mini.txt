@@ -31,6 +31,14 @@
   - `Audit: Q[A][R_,C_=MinArrow OK]`
 - **Cleanup:** Never modify `(1)`, `(2)`, `(3)`, `(4)`. Replace `<input>` with input time(s)/seed(s). Replace all unused `[A|B ]` placeholders with `[    ]`.
 
+1. **Shared Hour Arrow (`B`):**
+   - `1`=`↖` | `2`=`↑` | `3`=`↗` | `4`=`↙` | `5`=`↓` | `6`=`↘` | `_`=`•`
+3. **5-Minute Grid (`C|D` -> `Mxx`, 4×3):**
+   - `C=1` (`R1–R2`): `D1`=`M05` (`R1C1`), `D2`=`M10` (`R1C2`), `D3`=`M15` (`R1C3`), `D4`=`M20` (`R2C1`), `D5`=`M25` (`R2C2`), `D6`=`M30` (`R2C3`)
+   - `C=2` (`R3–R4`): `D1`=`M35` (`R3C1`), `D2`=`M40` (`R3C2`), `D3`=`M45` (`R3C3`), `D4`=`M50` (`R4C1`), `D5`=`M55` (`R4C2`), `D6`=`M00` (`R4C3`)
+   - If `C` or `D` is `_`, leave blank. Places `HourArrow` (`B`).
+
+
 ## TEMPLATE (Strip `01|`–`08|` prefixes; keep exact spaces & layout)
 01|<input>
 02|(1)                        (3)
