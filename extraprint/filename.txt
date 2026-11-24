@@ -7,6 +7,20 @@ Fill the template inside ONE code block. Combine all inputs onto one card.
 - **Seed (`A|B|C|D`):** `A` (1–4, 6-hr quadrant), `B` (1–6, hour slot), `C` (1–2, half-hour), `D` (1–6, 5-min step). Use `_` for intentionally missing parts.
 - **Total Minutes (`t`):** `t = 60[6(A - 1) + B] + [30(C - 1) + 5D]` (if first bracket = `24` -> `00`; if second bracket = `60` -> `00`).
 
+
+5. **CODGRID (`B|C|D` -> `C[k]`, 2×4):**
+   - **STOP RULE:** If `B`, `C`, or `D` is `_` or missing, stop immediately and leave the grid blank.
+   - **STEP 1 (Calculate 6-Hour Offset `t_cod`):**
+     - `M = 30(C - 1) + 5D` *(if `M = 60`, set `M = 0`)*
+     - `t_cod = 60B + M` *(if `t_cod < 90`, add `360`)*
+   - **STEP 2 (Verify & Match `t_cod` to Range):**
+     - First print `Math: M=[M], t_cod=[t_cod] -> C[k]`, then match `t_cod`:
+     - `90–134` -> **`C1`** | `135–179` -> **`C2`** | `180–224` -> **`C3`** | `225–269` -> **`C4`**
+     - `270–314` -> **`C5`** | `315–359` -> **`C6`** | `360–404` -> **`C7`** | `405–449` -> **`C8`**
+   - **PLOT:** Place `[ X ]` in `C[k]` (`R1`: `C1`–`C4`, `R2`: `C5`–`C8`).
+
+
+
 ## EXECUTION SEQUENCE (NEVER CALCULATE AND DRAW AT THE SAME TIME)
 1. **Solve & Lock (`Seed:`):** Convert `HH:MM` (or `now` in 24-hour format) to `A|B|C|D` and `t`, or read a given `A|B|C|D` seed directly. Lock values before touching any grid.
 2. **Placement List (`Map:`):** Build a complete placement list mapping every input's active boxes to their exact Row/Column (`R_C_`).
@@ -36,8 +50,8 @@ Fill the template inside ONE code block. Combine all inputs onto one card.
 4. **ARROW GRID (`B` -> `A[B]`, `M5` -> `MinArrow`, 2×3):**
    - **Box (`B`):** `1`=`A1` (`R1C1`), `2`=`A2` (`R1C2`), `3`=`A3` (`R1C3`), `4`=`A4` (`R2C1`), `5`=`A5` (`R2C2`), `6`=`A6` (`R2C3`) | `_`=blank
    - **MinArrow (`M5`):** `00–10`=`↑` | `15–25`=`→` | `30–40`=`↓` | `45–55`=`←` | `_`=blank
-5. **CODGRID (`A|B|C|D` -> `C[k]`, 2×4):**
-   - **STOP RULE:** If `B`, `C`, or `D` is `_` or missing, stop immediately and leave the grid blank. *(Ignore `A`—it does not change the box.)*
+5. **CODGRID (`B|C|D` -> `C[k]`, 2×4):**
+   - **STOP RULE:** If `B`, `C`, or `D` is `_` or missing, stop immediately and leave the grid blank.
    - **STEP 1 (Calculate 6-Hour Offset `t_cod`):**
      - `M = 30(C - 1) + 5D` *(if `M = 60`, set `M = 0`)*
      - `t_cod = 60B + M` *(if `t_cod < 90`, add `360`)*
