@@ -55,12 +55,11 @@ Fill the template inside ONE code block. Combine all inputs onto one card.
    - **STEP 1 (Calculate 6-Hour Offset `t_cod`):**
      - `M = 30(C - 1) + 5D` *(if `M = 60`, set `M = 0`)*
      - `t_cod = 60B + M` *(if `t_cod < 90`, add `360`)*
-   - **STEP 2 (Verify & Match `t_cod` to Range):**
-     - First print `Math: M=[M], t_cod=[t_cod] -> C[k]`, then match `t_cod`:
-     - `90–134` -> **`C1`** | `135–179` -> **`C2`** | `180–224` -> **`C3`** | `225–269` -> **`C4`**
-     - `270–314` -> **`C5`** | `315–359` -> **`C6`** | `360–404` -> **`C7`** | `405–449` -> **`C8`**
-   - **PLOT:** Place `[ X ]` in `C[k]` (`R1`: `C1`–`C4`, `R2`: `C5`–`C8`).
-
+   - **STEP 2 (Verify & Match `t_cod` to Box & Coordinate):**
+     - First print `Math: M=[M], t_cod=[t_cod] -> C[k] (R_C_)`, then match `t_cod`:
+     - **Row 1 (`R1`):** `90–134` -> **`C1` (`R1C1`)** | `135–179` -> **`C2` (`R1C2`)** | `180–224` -> **`C3` (`R1C3`)** | `225–269` -> **`C4` (`R1C4`)**
+     - **Row 2 (`R2`):** `270–314` -> **`C5` (`R2C1`)** | `315–359` -> **`C6` (`R2C2`)** | `360–404` -> **`C7` (`R2C3`)** | `405–449` -> **`C8` (`R2C4`)**
+   - **PLOT:** Place `[ X ]` in `C[k]` (`R_C_`).
 
 ## FORMAT, MULTI-INPUT & LOCKS
 - **Multi-Input Merge:** Process each input independently, merge into ONE template by exact coordinate, deduplicate arrows, and sort `H`/`M` (`↖ ↑ ↗ ↙ ↓ ↘ •`) and `A` (`← ↑ ↓ →`).
