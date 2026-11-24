@@ -86,14 +86,14 @@ H24: [1–6] | [7–12] | [13–18] | [19–24]
 M: [1–30] | [31–60]
 ```
 
-## 4. GRID MAP
-* **Rule:** In Box `Hour_Pos`, replace the matching hour (`1–12`) with `X` *(pad with a space `X ` if 2 digits)*. In Box `Min_Pos`, replace the matching 5-minute value (`05–00`) with `X `. If both land in the same box, replace both like `[ X,7 / X ,35 ]`. Preserve all inactive numbers.
-* **Math:**
-  * **Hour:** Solve `H24 = 6a - 6 + b` *(where `a = 1–4`, `b = 1–6`; if `00`, use `24`)*. `Hour_Pos = b`. Display hour as `1–12` *(if `12` or `24`, match `12`)*.
-  * **Minute:** Round `M` down to nearest 5 *(if `00–04`, use `60`)*. Solve `M = 30(c - 1) + 5d` *(where `c = 1–2`, `d = 1–6`)*. `Min_Pos = d` *(if `M = 60`, match `00`)*.
+## 4. GRID MAP (`A|B|C|D` -> 2×3)
+* **Rule:**
+  * **Hour (`A|B`):** Go to Box **`B`** (`1–6`). If **`A = 1` or `3`**, replace the **left hour** (`1–6`) with `X`. If **`A = 2` or `4`**, replace the **right hour** (`7–12`) with `X` *(use `X ` with a trailing space only when replacing `10`, `11`, or `12`)*.
+  * **Minute (`C|D`):** Go to Box **`D`** (`1–6`). If **`C = 1`**, replace the **left minute** (`05–30`) with `X `. If **`C = 2`**, replace the **right minute** (`35–00`) with `X `.
+  * **Same Box (`B = D`):** Apply both the hour replacement and the minute replacement inside that same box. Keep all other numbers unchanged.
 * **Grid Layout Reference:**
-  * Row 1: `[ b1 / d1 ] | [ b2 / d2 ] | [ b3 / d3 ]`
-  * Row 2: `[ b4 / d4 ] | [ b5 / d5 ] | [ b6 / d6 ]`
+  * Row 1: `[ B1 / D1 ] | [ B2 / D2 ] | [ B3 / D3 ]`
+  * Row 2: `[ B4 / D4 ] | [ B5 / D5 ] | [ B6 / D6 ]`
 * **Template (Boxes 1–6):**
 ```text
 [ 1,7 / 05,35 ] | [ 2,8 / 10,40 ] | [ 3,9 / 15,45 ]
