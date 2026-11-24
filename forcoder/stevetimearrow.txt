@@ -23,7 +23,7 @@ TEMPLATE what it looks like below the block below inside one ```` ```text ```` b
 INPUT TIME: now
 
 
-/ part2 only do part 1 first now second part
+/ part2 
 
 Use 24-hour H (00–23). If H = 00, treat as 24.
 Solve H = 6(a - 1) + b (a = 1–4, b = 1–6).
