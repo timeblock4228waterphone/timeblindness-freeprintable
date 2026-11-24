@@ -85,9 +85,9 @@ INPUT TIME: now'
 
 ## EXECUTION SEQUENCE (NEVER CALCULATE AND DRAW AT THE SAME TIME)
 1. **Solve & Lock (`Seed:`):** Convert `HH:MM` (or `now` in 24-hour format) to `A|B|C|D` and `t`, or read a given `A|B|C|D` seed directly. Lock values before touching any grid.
-2. **Locate Coordinates (`Map:`):** Map every active box to its exact Row/Column (`R_C_`).
-3. **Visible Audit (`Audit:`):** Confirm every active box's Row/Column, symbol, and interior width before rendering.
-4. **Render Template:** Place ONLY locked symbols into the template inside **ONE** ```` ```text ```` block, keeping all vertical `|` bars aligned.
+2. **Placement List (`Map:`):** Build a complete placement list mapping every input's active boxes to their exact Row/Column (`R_C_`).
+3. **Merge & Audit (`Audit:`):** From the complete `Map:` list, merge all placements by exact coordinate (`Grid[R_,C_]`), deduplicate/sort symbols, confirm 4-char vs. 6-char width, and lock final padded strings before rendering.
+4. **Render Template:** Place ONLY locked strings into the template inside **ONE** ```` ```text ```` block, keeping all vertical `|` bars aligned.
 
 ## STEP 1: ALGEBRA (CLOCK <-> A|B|C|D -> t)
 - **From Clock (`HH:MM`):**
@@ -120,15 +120,15 @@ INPUT TIME: now'
    - Place `[ X ]` in `C[k]`.
 
 ## FORMAT, MULTI-INPUT & LOCKS
-- **Multi-Input Merge:** Process each input independently, merge into ONE template, deduplicate arrows, and sort `H`/`M` (`↖ ↑ ↗ ↙ ↓ ↘ •`) and `A` (`← ↑ ↓ →`).
+- **Multi-Input Merge:** Process each input independently, merge into ONE template by exact coordinate, deduplicate arrows, and sort `H`/`M` (`↖ ↑ ↗ ↙ ↓ ↘ •`) and `A` (`← ↑ ↓ →`).
 - **Box Interior Widths (Never Shift `|` Bars):**
   - **CODGRID (`C1–C8`):** 3-char interior (`[ X ]` or `[   ]`).
   - **ARROW GRID (`A1–A6`):** 4-char interior (`0`=`[    ]`, `1`=`[ ↑  ]`, `2`=`[ ←→ ]`, `3`=`[ ←↑→]`, `4`=`[←↑↓→]`).
   - **M-Grid & H-Grid (4-char default):** `0`=`[    ]`, `1`=`[ ↖  ]`, `2`=`[ ↖↘ ]`, `3`=`[ ↖↑↗]`, `4`=`[↖↑↗↘]`.
   - **M-Grid & H-Grid (6-char expansion):** If any `M` or `H` box has 5–6 arrows, expand ALL `M` and `H` boxes to 6-char (`5`=`[↖↑↗↙↓ ]`, `6`=`[↖↑↗↙↓↘]`) and shift `HOUR QUADRANT` and `ARROW GRID` +6 spaces right.
 - **Locks (Required Before Template):**
-  - `Map: H[A]=R_C_ (HourArrow) | Mxx=R_C_ (HourArrow) | A[B]=R_C_ (MinArrow) | C[k]=R_C_ ([ X ])`
-  - `Audit: H-Grid[R_,C_=HourArrow OK] | M-Grid[R_,C_=HourArrow OK] | A-Grid[R_,C_=MinArrow OK] | CODGRID[R_,C_=X OK]`
+  - `Map: [Input] -> H[A]=R_C_ (HourArrow) | Mxx=R_C_ (HourArrow) | A[B]=R_C_ (MinArrow) | C[k]=R_C_ ([ X ])`
+  - `Audit (Merged by Coordinate): H-Grid[R_,C_=[padded] OK] | M-Grid[R_,C_=[padded] OK] | A-Grid[R_,C_=[padded] OK] | CODGRID[R_,C_=[ X ] OK]`
 - **Cleanup:** Never modify `(00)`, `(45)`, `(15)`, `(30)`. Replace `<input>` with input time(s)/seed(s). Replace all unused boxes with spaces.
 
 ## TEMPLATE (Strip `01|`–`14|` prefixes; keep exact spaces & layout)
@@ -150,6 +150,3 @@ INPUT TIME: now'
 ## EXECUTION TRIGGER
 - **MODE:** FULL
 - **INPUT:** now
-
-
-
