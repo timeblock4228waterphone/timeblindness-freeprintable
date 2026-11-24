@@ -1,16 +1,16 @@
 ## SYSTEM OVERVIEW
 - **Seed (`A|B|C|D`):** `A` (1–4, 6-hr quadrant), `B` (1–6, hour slot), `C` (1–2, half-hour), `D` (1–6, 5-min step). Use `_` for missing parts.
 
-## EXECUTION SEQUENCE (CALCULATE FIRST, DRAW LAST)
-1. **Solve (`Seed:`):** Convert `HH:MM` (or `now` in 24-hr) to `A|B|C|D`, or read seed directly.
-2. **Lock (`Lock:`):** Confirm coordinates, symbols, and box widths before rendering.
-3. **Render:** Place locked symbols into the template inside **ONE** ```` ```text ```` block, keeping all `|` bars aligned.
+## EXECUTION SEQUENCE (CALCULATE & MERGE FIRST, DRAW LAST)
+1. **Solve (`Seed:`):** Convert each input (`HH:MM` or `now` in 24-hr) to `A|B|C|D` and list its target coordinates.
+2. **Merge & Lock (`Lock:`):** Group all placements by exact coordinate, deduplicate/sort symbols, and verify box widths before rendering.
+3. **Render:** Place ONLY locked strings into the template inside **ONE** ```` ```text ```` block, keeping all `|` bars aligned.
 
 ## STEP 1: ALGEBRA (CLOCK <-> A|B|C|D)
 - **From Clock (`HH:MM`):** Use 24-hr `H` (`00` -> `24`); solve `H = 6(A - 1) + B` (`A=1–4`, `B=1–6`). Round `M` down to nearest 5 (`M5`; `00` -> `60`); solve `M5 = 30(C - 1) + 5D` (`C=1–2`, `D=1–6`).
 - **From Seed (`A|B|C|D`):** `H = 6(A - 1) + B` (`24` -> `00`); `M5 = 30(C - 1) + 5D` (`60` -> `00`).
 - **Quarter (`A15`):** `15 * floor(M5 / 15)` (`00, 15, 30, 45`; `_` if `C` or `D` is `_`).
-- **Output:** `Seed: A|B|C|D (H=[H], M5=[M5], A15=[A15])`
+- **Per-Input Output:** `Seed: A|B|C|D (H=[H], M5=[M5], A15=[A15]) -> Q[A] R_C_:[MinArrow], Mxx R_C_:[HourArrow]`
 
 ## STEP 2: COORDINATES, SYMBOLS & WIDTHS
 - **Symbols:**
@@ -22,9 +22,10 @@
 - **5-Minute Grid (`C|D` -> `Mxx`, 4×3, places `HourArrow`, skip if `C` or `D` is `_`):**
   - `C=1`: `D1`=`M05` (`R1C1`), `D2`=`M10` (`R1C2`), `D3`=`M15` (`R1C3`), `D4`=`M20` (`R2C1`), `D5`=`M25` (`R2C2`), `D6`=`M30` (`R2C3`)
   - `C=2`: `D1`=`M35` (`R3C1`), `D2`=`M40` (`R3C2`), `D3`=`M45` (`R3C3`), `D4`=`M50` (`R4C1`), `D5`=`M55` (`R4C2`), `D6`=`M00` (`R4C3`)
-- **Multi-Input Merge:** Process independently, merge into ONE template, deduplicate arrows, sort `Q[A]` (`← ↑ ↓ → •`) and `Mxx` (`↖ ↑ ↗ ↙ ↓ ↘ •`).
-- **4-Char Box Widths (Never Shift `|` Bars):** `0`=`[    ]`, `1`=`[ ↑  ]`, `2`=`[ ←→ ]`, `3`=`[ ←↑→]`, `4`=`[←↑↓→]`. *(Expand all `Mxx` boxes to 6-char `[↖↑↗↙↓ ]` / `[↖↑↗↙↓↘]` only if an `Mxx` box holds 5–6 arrows.)*
-- **Combined Lock:** `Lock: Q[A] R_C_=[MinArrow] (4ch OK) | Mxx R_C_=[HourArrow] (4ch OK)`
+- **Coordinate Merge & Widths (Never Shift `|` Bars):**
+  - Group all `Seed:` outputs by exact box (`Q[A] R_C_` or `Mxx R_C_`), deduplicate arrows, and sort `Q[A]` (`← ↑ ↓ → •`) and `Mxx` (`↖ ↑ ↗ ↙ ↓ ↘ •`).
+  - **4-Char Default:** `0`=`[    ]`, `1`=`[ ↑  ]`, `2`=`[ ←→ ]`, `3`=`[ ←↑→]`, `4`=`[←↑↓→]`. *(Expand all `Mxx` boxes to 6-char `[↖↑↗↙↓ ]` / `[↖↑↗↙↓↘]` only if an `Mxx` box holds 5–6 arrows.)*
+- **Merged Lock Output:** `Lock: Q[A] R_C_=[MinArrows] (4ch OK) | Mxx R_C_=[HourArrows] (4ch OK)`
 - **Cleanup:** Keep `(1)`, `(2)`, `(3)`, `(4)`, and `5-Minute Grid` intact. Replace `<input>` with input(s), and unused `[A|B ]`/`[Mxx ]` with `[    ]`.
 
 ## TEMPLATE (Strip `01|`–`08|` prefixes; keep exact spaces & layout)
@@ -40,3 +41,4 @@
 ## EXECUTION TRIGGER
 - **MODE:** FULL
 - **INPUT:** now
+
