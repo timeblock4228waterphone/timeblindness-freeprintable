@@ -7,17 +7,32 @@ or
 • [↘ ↑] | [↘ ←] | [↖ ↓] | [↑ →]
  [↗ ↑] | [↗ ←] | [↙ ↓] | [↓ →]
 
+- **From Seed (`A|B|C|D`):**
+  - `H = 6(A - 1) + B` (if `24`, reset to `00`).
+  - `M5 = 30(C - 1) + 5D` (if `60`, reset to `00`).
+- **Lock Output:** `Seed: A|B|C|D (H=[H], M5=[M5])`
+
+## STEP 2: GRID RULES & COORDINATE MAPS
+1. **Quadrant Placement (`A`):**
+   - `1` = Top-Left | `2` = Bottom-Left | `3` = Top-Right | `4` = Bottom-Right | `_` = skip
+2. **Slot Placement inside Quadrant `A` (`B`):**
+   - `1` = `R1C1` | `2` = `R1C2` | `3` = `R1C3`
+   - `4` = `R2C1` | `5` = `R2C2` | `6` = `R2C3` | `_` = skip
+- **Cleanup:** Never modify `(1)`, `(2)`, `(3)`, `(4)`. Replace `<input>` with input time(s)/seed(s). Replace all unused `[A|B ]` placeholders with `[    ]`.
 
 
+draw an x
 
-|1                       3
-03|[a1  ]|[a2  ]|[a3  ]    [a13 ]|[a14 ]|[a15 ]
-04|[a4  ]|[a5  ]|[a6  ]    [a16 ]|[a17 ]|[a18 ]
+
+## TEMPLATE (Strip `01|`–`08|` prefixes; keep exact spaces & layout)
+01|<input>
+02|1                          3
+03|[1|1 ] | [1|2 ] | [1|3 ]   [3|1 ] | [3|2 ] | [3|3 ]
+04|[1|4 ] | [1|5 ] | [1|6 ]   [3|4 ] | [3|5 ] | [3|6 ]
 05|
-06|2                       4
-07|[a7  ]|[a8  ]|[a9  ]    [a19 ]|[a20 ]|[a21 ]
-08|[a10 ]|[a11 ]|[a12 ]    [a22 ]|[a23 ]|[a24 ]
-
+06|2                          4
+07|[2|1 ] | [2|2 ] | [2|3 ]   [4|1 ] | [4|2 ] | [4|3 ]
+08|[2|4 ] | [2|5 ] | [2|6 ]   [4|4 ] | [4|5 ] | [4|6 ]
 
 
 ## STEP 2: PLACE SYMBOLS (Skip if variable is `_`)
