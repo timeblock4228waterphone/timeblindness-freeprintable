@@ -30,16 +30,11 @@ Vars:
 - Midnight/Zero rules: For 00:xx, treat H24 as 24 in Grids 3, 4, and 6 (keep label as 00 in Grid 6). For M=00–04, treat M5 as 00 in Grid 2, and treat M as 60 in Grids 3 and 4.
 ---
 
-## 1. 45 minute
-* **Rule:** Replace **only** the matching 4-character time anchor at Slot `b` with `[X ]`; preserve all inactive time labels and spacing.
-* **Math:** 
-  * `T = (H24 × 60) + M` *(If `T < 90`, add `1440`)*
-  * Solve `T = 360(a - 1) + 45(b - 1) + 90 + c` *(where `a = 1–4`, `b = 1–8`, `c = 00–44`)*
-* **Template (Slot 1 to Slot 8 = `b`):**
-```text
-Row 1: 1:30 | 2:15 | 3:00 | 3:45
-Row 2: 4:30 | 5:15 | 6:00 | 6:45
 ```
+* **Seed Math (24-Hour):**
+  * Treat `H24 = 00` as `24`. Solve `H24 = 6(A - 1) + B` *(where `A = 1–4`, `B = 1–6`)*.
+  * Round `M` down to the nearest 5 (`M5: 00, 05, 10... 55`). Treat `M5 = 00` as `60`. Solve `M5 = 30(C - 1) + 5D` *(where `C = 1–2`, `D = 1–6`)*.
+  * Output seed in exact format: `A|B|C|D`
 
 ## 1. 45 minute (`B|C|D` -> Slot `b`, 1–8)
 * **Rule:** Replace **only** the matching 4-character time anchor at Slot `b` with `[X ]`; preserve all inactive time labels and spacing.
@@ -55,10 +50,7 @@ Row 2: 4:30 | 5:15 | 6:00 | 6:45
 ```
 
 ## 2. SPACE JAMMER (`A|B|C|D` -> 4×3 Grid)
-* **Seed Math (24-Hour):**
-  * Treat `H24 = 00` as `24`. Solve `H24 = 6(A - 1) + B` *(where `A = 1–4`, `B = 1–6`)*.
-  * Round `M` down to the nearest 5 (`M5: 00, 05, 10... 55`). Treat `M5 = 00` as `60`. Solve `M5 = 30(C - 1) + 5D` *(where `C = 1–2`, `D = 1–6`)*.
-  * Output seed in exact format: `A|B|C|D`
+`
 * **Rule:** Replace the active hour number with `X` *(use `X ` with a trailing space for `10`, `11`, or `12`)* and replace the active minute number with `X `; preserve all inactive numbers and spacing.
 * **Coordinate Map:**
   * **Left Number (`A|B` -> Hour `1–12`):**
