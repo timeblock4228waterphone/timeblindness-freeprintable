@@ -1,3 +1,5 @@
+- **Positional Lock 
+  - `A=[1st] (×360m) | B=[2nd] (×60m) | C=[3rd] (×30m half-hr: 1=+0, 2=+30) | D=[4th] (×5m step)`
 
 - **Current Time Rule:** If `INPUT TIME` is `now`, use the user's current local 24-hour `HH:MM` time.
 
