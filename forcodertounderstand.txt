@@ -47,34 +47,37 @@ Solve M5 = 30(c - 1) + 5d (c = 1–2, d = 1–6).
 ## 2. SPACE JAMMER
 
 Use 24-hour.
-
 Round M down to the nearest 5 (M5: 00, 05, 10... 55). If M5 = 00, treat as 60.
 Solve M5 = 30(c - 1) + 5d (c = 1–2, d = 1–6).
 layout in this exact format:
 a|b|c|d
 
-A|B -> Hour (12-hr):
-A (AM/PM) \ B |  1   |  2   |  3   |  4   |  5   |  6
---------------+------+------+------+------+------+------
-A = 1 / 3     | hr1  | hr2  | hr3  | hr4  | hr5  | hr6
-A = 2 / 4     | hr7  | hr8  | hr9  | hr10 | hr11 | hr12
+
+24-Hour -> Hour Slot:
+01, 13 = hr1    07, 19 = hr7
+02, 14 = hr2    08, 20 = hr8
+03, 15 = hr3    09, 21 = hr9
+04, 16 = hr4    10, 22 = hr10
+05, 17 = hr5    11, 23 = hr11
+06, 18 = hr6    12, 00 = hr12
+
 
 C|D -> Minute:
-C \ D |  1  |  2  |  3  |  4  |  5  |  6
-------+-----+-----+-----+-----+-----+-----
-C = 1 | m05 | m10 | m15 | m20 | m25 | m30
-C = 2 | m35 | m40 | m45 | m50 | m55 | m00
+1|1 = m05   2|1 = m35
+1|2 = m10   2|2 = m40
+1|3 = m15   2|3 = m45
+1|4 = m20   2|4 = m50
+1|5 = m25   2|5 = m55
+1|6 = m30   2|6 = m00
 
 
 
-* **Rule:** Replace active `HXX` HXX=hrs .on the **left** of the comma with `X` *(pad with a space `X ` if 2 digits to preserve alignment)*, and active `MXX` on the **right** of the comma with `X `. If both land in the same bracket, replace both like `[X , X ]`. Preserve all inactive numbers.
-MXX=5[m/5] 
 
 [hr01, m05] | [hr02, m10] | [hr03, m15]
 [hr04, m20] | [hr05, m25] | [hr06, m30]
 [hr07, m35] | [hr08, m40] | [hr09, m45]
 [hr10, m50] | [hr11, m55] | [hr12, m00]
-
+x out now
 * **Template:**
 ```text
 [1, 05] | [2, 10] | [3, 15]
