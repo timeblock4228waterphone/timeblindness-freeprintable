@@ -3,6 +3,10 @@ nothing important here
 Fill the template inside ONE code block. Combine all inputs onto one card.
 
 
+* **Math:** 
+  * `T = (H24 × 60) + M` *(If `T < 90`, add `1440`)*
+  * Solve `T = 360(a - 1) + 45(b - 1) + 90 + c` *(where `a = 1–4`, `b = 1–8`, `c = 00–44`)*
+
 ## SYSTEM OVERVIEW
 - **Seed (`A|B|C|D`):** `A` (1–4, 6-hr quadrant), `B` (1–6, hour slot), `C` (1–2, half-hour), `D` (1–6, 5-min step). Use `_` for intentionally missing parts.
 - **Total Minutes (`t`):** `t = 60[6(A - 1) + B] + [30(C - 1) + 5D]` (if first bracket = `24` -> `00`; if second bracket = `60` -> `00`).
