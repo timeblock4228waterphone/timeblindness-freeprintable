@@ -13,21 +13,19 @@ or
      - `270–314` -> **`C5`** | `315–359` -> **`C6`** | `360–404` -> **`C7`** | `405–449` -> **`C8`**
    - **PLOT:** Place `[ X ]` in `C[k]` (`R1`: `C1`–`C4`, `R2`: `C5`–`C8`).
 
-- **From Seed (`A|B|C|D`):**
-  - `H = 6(A - 1) + B` (if `24`, reset to `00`).
-  - `M5 = 30(C - 1) + 5D` (if `60`, reset to `00`).
-- **Lock Output:** `Seed: A|B|C|D (H=[H], M5=[M5])`
 
-5. **CODGRID (`A|B|C|D` -> `C[k]`, 2×4):**
-   - **STOP RULE:** If `B`, `C`, or `D` is `_` or missing, stop immediately and leave the grid blank. *(Ignore `A`—it does not change the box.)*
-   - **STEP 1 (Calculate `t`):**
+
+5. **CODGRID (`B|C|D` -> `C[k]`, 2×4):**
+   - **STOP RULE:** If `B`, `C`, or `D` is `_` or missing, stop immediately and leave the grid blank.
+   - **STEP 1 (Calculate 6-Hour Offset `t_cod`):**
      - `M = 30(C - 1) + 5D` *(if `M = 60`, set `M = 0`)*
-     - `t = 60B + M` *(if `t < 90`, add `360`)*
-   - **STEP 2 (Verify & Match `t` to Range):**
-     - First print `Math: M=[M], t=[t] -> C[k]`, then match `t`:
-     - `90–134` -> **`C1`** | `135–179` -> **`C2`** | `180–224` -> **`C3`** | `225–269` -> **`C4`**
-     - `270–314` -> **`C5`** | `315–359` -> **`C6`** | `360–404` -> **`C7`** | `405–449` -> **`C8`**
-   - **PLOT:** Place `[ X ]` in `C[k]` (`R1`: `C1`–`C4`, `R2`: `C5`–`C8`).
+     - `t_cod = 60B + M` *(if `t_cod < 90`, add `360`)*
+   - **STEP 2 (Verify & Match `t_cod` to Box & Coordinate):**
+     - First print `Math: M=[M], t_cod=[t_cod] -> C[k] (R_C_)`, then match `t_cod`:
+     - **Row 1 (`R1`):** `90–134` -> **`C1` (`R1C1`)** | `135–179` -> **`C2` (`R1C2`)** | `180–224` -> **`C3` (`R1C3`)** | `225–269` -> **`C4` (`R1C4`)**
+     - **Row 2 (`R2`):** `270–314` -> **`C5` (`R2C1`)** | `315–359` -> **`C6` (`R2C2`)** | `360–404` -> **`C7` (`R2C3`)** | `405–449` -> **`C8` (`R2C4`)**
+   - **PLOT:** Place `[ X ]` in `C[k]` (`R_C_`).
+
 
 
 ## SYSTEM OVERVIEW
