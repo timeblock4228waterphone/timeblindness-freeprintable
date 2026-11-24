@@ -71,4 +71,4 @@ If `INPUT TIME` is `now`, use the user's current local 24-hour `HH:MM` time (or 
 
 ## EXECUTION TRIGGER
 - **MODE:** FULL
-- **INPUT TIME:** not do it
+- **INPUT TIME:** now
