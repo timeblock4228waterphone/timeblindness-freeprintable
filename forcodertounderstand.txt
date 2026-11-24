@@ -41,6 +41,19 @@ Row 1: 1:30 | 2:15 | 3:00 | 3:45
 Row 2: 4:30 | 5:15 | 6:00 | 6:45
 ```
 
+## 1. 45 minute (`B|C|D` -> Slot `b`, 1–8)
+* **Rule:** Replace **only** the matching 4-character time anchor at Slot `b` with `[X ]`; preserve all inactive time labels and spacing.
+* **Math:**
+  * `t_cod = 60B + M5` *(where `M5 = 00` for `:00`; if `t_cod < 90`, add `360`)*
+  * **Match `t_cod` to Slot `b`:**
+    * **Row 1:** `90–134` -> **`1`** (`1:30`) | `135–179` -> **`2`** (`2:15`) | `180–224` -> **`3`** (`3:00`) | `225–269` -> **`4`** (`3:45`)
+    * **Row 2:** `270–314` -> **`5`** (`4:30`) | `315–359` -> **`6`** (`5:15`) | `360–404` -> **`7`** (`6:00`) | `405–449` -> **`8`** (`6:45`)
+* **Template (Slot 1 to Slot 8 = `b`):**
+```text
+Row 1: 1:30 | 2:15 | 3:00 | 3:45
+Row 2: 4:30 | 5:15 | 6:00 | 6:45
+```
+
 ## 2. SPACE JAMMER (`A|B|C|D` -> 4×3 Grid)
 * **Seed Math (24-Hour):**
   * Treat `H24 = 00` as `24`. Solve `H24 = 6(A - 1) + B` *(where `A = 1–4`, `B = 1–6`)*.
