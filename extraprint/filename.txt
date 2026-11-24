@@ -1,6 +1,21 @@
-
+nothing important here
 
 Fill the template inside ONE code block. Combine all inputs onto one card.
+
+
+5. **CODGRID (`A|B|C|D` -> `C[k]`, 2×4):**
+   - **STOP RULE:** If `B`, `C`, or `D` is `_` or missing, stop immediately and leave the grid blank. *(Ignore `A`—it does not change the box.)*
+   - **STEP 1 (Calculate `t`):**
+     - `M = 30(C - 1) + 5D` *(if `M = 60`, set `M = 0`)*
+     - `t = 60B + M` *(if `t < 90`, add `360`)*
+   - **STEP 2 (Verify & Match `t` to Range):**
+     - First print `Math: M=[M], t=[t] -> C[k]`, then match `t`:
+     - `90–134` -> **`C1`** | `135–179` -> **`C2`** | `180–224` -> **`C3`** | `225–269` -> **`C4`**
+     - `270–314` -> **`C5`** | `315–359` -> **`C6`** | `360–404` -> **`C7`** | `405–449` -> **`C8`**
+   - **PLOT:** Place `[ X ]` in `C[k]` (`R1`: `C1`–`C4`, `R2`: `C5`–`C8`).
+
+
+
 
 1. 5-MIN ARROW GRID (Replace matching 5m with H_Arrow [60->00], others -> __):
 - Hour (00->24): H = 6(a-1)+b [a=1–4, b=1–6] -> H_Arrow: 1:↖ 2:↑ 3:↗ 4:↙ 5:↓ 6:↘ (by b)
