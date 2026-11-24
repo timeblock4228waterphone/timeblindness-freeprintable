@@ -13,7 +13,14 @@ or
      - `270–314` -> **`C5`** | `315–359` -> **`C6`** | `360–404` -> **`C7`** | `405–449` -> **`C8`**
    - **PLOT:** Place `[ X ]` in `C[k]` (`R1`: `C1`–`C4`, `R2`: `C5`–`C8`).
 
+Use 24-hour H (00–23). If H = 00, treat as 24.
+Solve H = 6(a - 1) + b (a = 1–4, b = 1–6).
 
+Round M down to the nearest 5 (M5: 00, 05, 10... 55). If M5 = 00, treat as 60.
+Solve M5 = 30(c - 1) + 5d (c = 1–2, d = 1–6).
+layout in this exact format:
+a|b|c|d
+INPUT TIME: now
 
 5. **CODGRID (`B|C|D` -> `C[k]`, 2×4):**
    - **STOP RULE:** If `B`, `C`, or `D` is `_` or missing, stop immediately and leave the grid blank.
