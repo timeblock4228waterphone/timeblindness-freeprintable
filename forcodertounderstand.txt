@@ -40,8 +40,33 @@ Vars:
 Row 1: 1:30 | 2:15 | 3:00 | 3:45
 Row 2: 4:30 | 5:15 | 6:00 | 6:45
 ```
-
+H (00–23). If H = 00, treat as 24.
+Solve H = 6(a - 1) + b (a = 1–4, b = 1–6).
+Round M down to the nearest 5 (M5: 00, 05, 10... 55). If M5 = 00, treat as 60.
+Solve M5 = 30(c - 1) + 5d (c = 1–2, d = 1–6).
 ## 2. SPACE JAMMER
+
+Use 24-hour.
+
+Round M down to the nearest 5 (M5: 00, 05, 10... 55). If M5 = 00, treat as 60.
+Solve M5 = 30(c - 1) + 5d (c = 1–2, d = 1–6).
+layout in this exact format:
+a|b|c|d
+
+A|B -> Hour (12-hr):
+A (AM/PM) \ B |  1   |  2   |  3   |  4   |  5   |  6
+--------------+------+------+------+------+------+------
+A = 1 / 3     | hr1  | hr2  | hr3  | hr4  | hr5  | hr6
+A = 2 / 4     | hr7  | hr8  | hr9  | hr10 | hr11 | hr12
+
+C|D -> Minute:
+C \ D |  1  |  2  |  3  |  4  |  5  |  6
+------+-----+-----+-----+-----+-----+-----
+C = 1 | m05 | m10 | m15 | m20 | m25 | m30
+C = 2 | m35 | m40 | m45 | m50 | m55 | m00
+
+
+
 * **Rule:** Replace active `HXX` HXX=hrs .on the **left** of the comma with `X` *(pad with a space `X ` if 2 digits to preserve alignment)*, and active `MXX` on the **right** of the comma with `X `. If both land in the same bracket, replace both like `[X , X ]`. Preserve all inactive numbers.
 MXX=5[m/5] 
 
