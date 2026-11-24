@@ -36,14 +36,14 @@ Vars:
   * Round `M` down to the nearest 5 (`M5: 00, 05, 10... 55`). Treat `M5 = 00` as `60`. Solve `M5 = 30(C - 1) + 5D` *(where `C = 1–2`, `D = 1–6`)*.
   * Output seed in exact format: `A|B|C|D`
 
-## 1. 45 minute (`B|C|D` -> Slot `b`, 1–8)
-* **Rule:** Replace **only** the matching 4-character time anchor at Slot `b` with `[X ]`; preserve all inactive time labels and spacing.
+# 1. 45 minute (`B|C|D` -> Slot `k`, 1–8)
+* **Rule:** Replace **only** the matching 4-character time anchor at Slot `k` with `[X ]`; preserve all inactive time labels and spacing.
 * **Math:**
-  * `t_cod = 60B + M5` *(where `M5 = 00` for `:00`; if `t_cod < 90`, add `360`)*
-  * **Match `t_cod` to Slot `b`:**
-    * **Row 1:** `90–134` -> **`1`** (`1:30`) | `135–179` -> **`2`** (`2:15`) | `180–224` -> **`3`** (`3:00`) | `225–269` -> **`4`** (`3:45`)
-    * **Row 2:** `270–314` -> **`5`** (`4:30`) | `315–359` -> **`6`** (`5:15`) | `360–404` -> **`7`** (`6:00`) | `405–449` -> **`8`** (`6:45`)
-* **Template (Slot 1 to Slot 8 = `b`):**
+  * `t_cod = 60B + M5` *(where `B` is from `A|B|C|D` and `M5 = 00` for `:00`; if `t_cod < 90`, add `360`)*
+  * **Match `t_cod` to Slot `k`:**
+    * **Row 1:** `90–134` -> **`k=1`** (`1:30`) | `135–179` -> **`k=2`** (`2:15`) | `180–224` -> **`k=3`** (`3:00`) | `225–269` -> **`k=4`** (`3:45`)
+    * **Row 2:** `270–314` -> **`k=5`** (`4:30`) | `315–359` -> **`k=6`** (`5:15`) | `360–404` -> **`k=7`** (`6:00`) | `405–449` -> **`k=8`** (`6:45`)
+* **Template (Slot 1 to Slot 8 = `k`):**
 ```text
 Row 1: 1:30 | 2:15 | 3:00 | 3:45
 Row 2: 4:30 | 5:15 | 6:00 | 6:45
