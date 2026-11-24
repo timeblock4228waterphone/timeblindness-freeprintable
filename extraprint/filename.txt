@@ -3,6 +3,39 @@ nothing important here
 Fill the template inside ONE code block. Combine all inputs onto one card.
 
 
+## SYSTEM OVERVIEW
+- **Seed (`A|B|C|D`):** `A` (1–4, 6-hr quadrant), `B` (1–6, hour slot), `C` (1–2, half-hour), `D` (1–6, 5-min step). Use `_` for intentionally missing parts.
+- **Total Minutes (`t`):** `t = 60[6(A - 1) + B] + [30(C - 1) + 5D]` (if first bracket = `24` -> `00`; if second bracket = `60` -> `00`).
+
+## EXECUTION SEQUENCE (NEVER CALCULATE AND DRAW AT THE SAME TIME)
+1. **Solve & Lock (`Seed:`):** Convert `HH:MM` (or `now` in 24-hour format) to `A|B|C|D` and `t`, or read a given `A|B|C|D` seed directly. Lock values before touching any grid.
+2. **Placement List (`Map:`):** Build a complete placement list mapping every input's active boxes to their exact Row/Column (`R_C_`).
+3. **Merge & Audit (`Audit:`):** From the complete `Map:` list, merge all placements by exact coordinate (`Grid[R_,C_]`), deduplicate/sort symbols, confirm 4-char vs. 6-char width, and lock final padded strings before rendering.
+4. **Render Template:** Place ONLY locked strings into the template inside **ONE** ```` ```text ```` block, keeping all vertical `|` bars aligned.
+
+## STEP 1: ALGEBRA (CLOCK <-> A|B|C|D -> t)
+- **From Clock (`HH:MM`):**
+  - Use 24-hour `H` (`00–23`). If `H = 00`, treat as `24`. Solve `H = 6(A - 1) + B` (`A = 1–4`, `B = 1–6`).
+  - Round `M` down to nearest 5 (`M5`: `00, 05, 10... 55`). If `M5 = 00`, treat as `60`. Solve `M5 = 30(C - 1) + 5D` (`C = 1–2`, `D = 1–6`).
+- **From Seed (`A|B|C|D` -> `t`):**
+  - `H = 6(A - 1) + B` (if `24`, reset to `00`).
+  - `M5 = 30(C - 1) + 5D` (if `60`, reset to `00`).
+  - `t = 60(H) + M5` (leave `t` blank if any digit is `_`).
+- **Lock Output:** `Seed: A|B|C|D | t=[t] (H=[H], M5=[M5])`
+
+## STEP 2: GRID RULES & COORDINATE MAPS
+1. **Shared Hour Arrow (`B`):**
+   - `1`=`↖` | `2`=`↑` | `3`=`↗` | `4`=`↙` | `5`=`↓` | `6`=`↘` | `_`=`•`
+2. **HOUR QUADRANT (`A` -> `H[A]`, 2×2):**
+   - `1`=`H1` (`R1C1`) | `2`=`H2` (`R2C1`) | `3`=`H3` (`R1C2`) | `4`=`H4` (`R2C2`) | `_`=blank
+   - Places `HourArrow` (`B`).
+3. **5-Minute Grid (`C|D` -> `Mxx`, 4×3):**
+   - `C=1` (`R1–R2`): `D1`=`M05` (`R1C1`), `D2`=`M10` (`R1C2`), `D3`=`M15` (`R1C3`), `D4`=`M20` (`R2C1`), `D5`=`M25` (`R2C2`), `D6`=`M30` (`R2C3`)
+   - `C=2` (`R3–R4`): `D1`=`M35` (`R3C1`), `D2`=`M40` (`R3C2`), `D3`=`M45` (`R3C3`), `D4`=`M50` (`R4C1`), `D5`=`M55` (`R4C2`), `D6`=`M00` (`R4C3`)
+   - If `C` or `D` is `_`, leave blank. Places `HourArrow` (`B`).
+4. **ARROW GRID (`B` -> `A[B]`, `M5` -> `MinArrow`, 2×3):**
+   - **Box (`B`):** `1`=`A1` (`R1C1`), `2`=`A2` (`R1C2`), `3`=`A3` (`R1C3`), `4`=`A4` (`R2C1`), `5`=`A5` (`R2C2`), `6`=`A6` (`R2C3`) | `_`=blank
+   - **MinArrow (`M5`):** `00–10`=`↑` | `15–25`=`→` | `30–40`=`↓` | `45–55`=`←` | `_`=blank
 5. **CODGRID (`A|B|C|D` -> `C[k]`, 2×4):**
    - **STOP RULE:** If `B`, `C`, or `D` is `_` or missing, stop immediately and leave the grid blank. *(Ignore `A`—it does not change the box.)*
    - **STEP 1 (Calculate `t`):**
@@ -13,6 +46,58 @@ Fill the template inside ONE code block. Combine all inputs onto one card.
      - `90–134` -> **`C1`** | `135–179` -> **`C2`** | `180–224` -> **`C3`** | `225–269` -> **`C4`**
      - `270–314` -> **`C5`** | `315–359` -> **`C6`** | `360–404` -> **`C7`** | `405–449` -> **`C8`**
    - **PLOT:** Place `[ X ]` in `C[k]` (`R1`: `C1`–`C4`, `R2`: `C5`–`C8`).
+   - **Algebra Lock (if `A` is known):** Verify `T = 90 + 360q + 45(k - 1) + c` (with `T = t + 1440` if `t < 90`, `q = 0–3`, and `0 <= c <= 44`).
+   - Place `[ X ]` in `C[k]`.
+
+## FORMAT, MULTI-INPUT & LOCKS
+- **Multi-Input Merge:** Process each input independently, merge into ONE template by exact coordinate, deduplicate arrows, and sort `H`/`M` (`↖ ↑ ↗ ↙ ↓ ↘ •`) and `A` (`← ↑ ↓ →`).
+- **Box Interior Widths (Never Shift `|` Bars):**
+  - **CODGRID (`C1–C8`):** 3-char interior (`[ X ]` or `[   ]`).
+  - **ARROW GRID (`A1–A6`):** 4-char interior (`0`=`[    ]`, `1`=`[ ↑  ]`, `2`=`[ ←→ ]`, `3`=`[ ←↑→]`, `4`=`[←↑↓→]`).
+  - **M-Grid & H-Grid (4-char default):** `0`=`[    ]`, `1`=`[ ↖  ]`, `2`=`[ ↖↘ ]`, `3`=`[ ↖↑↗]`, `4`=`[↖↑↗↘]`.
+  - **M-Grid & H-Grid (6-char expansion):** If any `M` or `H` box has 5–6 arrows, expand ALL `M` and `H` boxes to 6-char (`5`=`[↖↑↗↙↓ ]`, `6`=`[↖↑↗↙↓↘]`) and shift `HOUR QUADRANT` and `ARROW GRID` +6 spaces right.
+- **Locks (Required Before Template):**
+  - `Map: [Input] -> H[A]=R_C_ (HourArrow) | Mxx=R_C_ (HourArrow) | A[B]=R_C_ (MinArrow) | C[k]=R_C_ ([ X ])`
+  - `Audit (Merged by Coordinate): H-Grid[R_,C_=[padded] OK] | M-Grid[R_,C_=[padded] OK] | A-Grid[R_,C_=[padded] OK] | CODGRID[R_,C_=[ X ] OK]`
+- **Cleanup:** Never modify `(00)`, `(45)`, `(15)`, `(30)`. Replace `<input>` with input time(s)/seed(s). Replace all unused boxes with spaces.
+
+## TEMPLATE (Strip `01|`–`14|` prefixes; keep exact spaces & layout)
+01|You are here and that enough
+02|
+03|                       CODGRID
+04|         (00) 
+05|   (45)   |   (15)      [C1 ] | [C2 ] | [C3 ] | [C4 ]
+06|         (30)           [C5 ] | [C6 ] | [C7 ] | [C8 ]
+07|       <input>
+08|5-Minute Grid                 HOUR QUADRANT
+09|[M05 ] | [M10 ] | [M15 ]    [H1  ] | [H3  ]
+10|[M20 ] | [M25 ] | [M30 ]    [H2  ] | [H4  ]
+11|[M35 ] | [M40 ] | [M45 ]
+12|[M50 ] | [M55 ] | [M00 ]    ARROW GRID
+13|                            [A1  ] | [A2  ] | [A3  ]
+14|                            [A4  ] | [A5  ] | [A6  ]
+
+## CURRENT TIME RULE
+If `INPUT TIME` is `now`, use the user's current local 24-hour `HH:MM` time (or ask if unavailable).
+
+## EXECUTION TRIGGER
+- **MODE:** FULL
+- **INPUT TIME:** now
+
+
+//
+
+
+5. **CODGRID (`A|B|C|D` -> `C[k]`, 2×4):**
+   - **STOP RULE:** If `B`, `C`, or `D` is `_` or missing, stop immediately and leave the grid blank. *(Ignore `A`—it does not change the box.)*
+   - **STEP 1 (Calculate `t`):**
+     - `M = 30(C - 1) + 5D` *(if `M = 60`, set `M = 0`)*
+     - `t = 60B + M` *(if `t < 90`, add `360`)*
+   - **STEP 2 (Verify & Match `t` to Range):**
+     - First print `Math: M=[M], t=[t] -> C[k]`, then match `t`:
+     - `90–134` -> **`C1`** | `135–179` -> **`C2`** | `180–224` -> **`C3`** | `225–269` -> **`C4`**
+     - `270–314` -> **`C5`** | `315–359` -> **`C6`** | `360–404` -> **`C7`** | `405–449` -> **`C8`**
+   - **PLOT:** Place `[ X ]` in `C[k]` (`R1`: `C1`–`C4`, `R2`: `c5`–`C8`).
 
 
 
