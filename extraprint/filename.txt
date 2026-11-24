@@ -38,16 +38,15 @@ Fill the template inside ONE code block. Combine all inputs onto one card.
    - **MinArrow (`M5`):** `00–10`=`↑` | `15–25`=`→` | `30–40`=`↓` | `45–55`=`←` | `_`=blank
 5. **CODGRID (`A|B|C|D` -> `C[k]`, 2×4):**
    - **STOP RULE:** If `B`, `C`, or `D` is `_` or missing, stop immediately and leave the grid blank. *(Ignore `A`—it does not change the box.)*
-   - **STEP 1 (Calculate `t`):**
+   - **STEP 1 (Calculate 6-Hour Offset `t_cod`):**
      - `M = 30(C - 1) + 5D` *(if `M = 60`, set `M = 0`)*
-     - `t = 60B + M` *(if `t < 90`, add `360`)*
-   - **STEP 2 (Verify & Match `t` to Range):**
-     - First print `Math: M=[M], t=[t] -> C[k]`, then match `t`:
+     - `t_cod = 60B + M` *(if `t_cod < 90`, add `360`)*
+   - **STEP 2 (Verify & Match `t_cod` to Range):**
+     - First print `Math: M=[M], t_cod=[t_cod] -> C[k]`, then match `t_cod`:
      - `90–134` -> **`C1`** | `135–179` -> **`C2`** | `180–224` -> **`C3`** | `225–269` -> **`C4`**
      - `270–314` -> **`C5`** | `315–359` -> **`C6`** | `360–404` -> **`C7`** | `405–449` -> **`C8`**
    - **PLOT:** Place `[ X ]` in `C[k]` (`R1`: `C1`–`C4`, `R2`: `C5`–`C8`).
-   - **Algebra Lock (if `A` is known):** Verify `T = 90 + 360q + 45(k - 1) + c` (with `T = t + 1440` if `t < 90`, `q = 0–3`, and `0 <= c <= 44`).
-   - Place `[ X ]` in `C[k]`.
+
 
 ## FORMAT, MULTI-INPUT & LOCKS
 - **Multi-Input Merge:** Process each input independently, merge into ONE template by exact coordinate, deduplicate arrows, and sort `H`/`M` (`↖ ↑ ↗ ↙ ↓ ↘ •`) and `A` (`← ↑ ↓ →`).
