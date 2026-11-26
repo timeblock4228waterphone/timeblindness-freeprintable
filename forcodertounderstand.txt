@@ -59,7 +59,6 @@ Row 2: 4:30 | 5:15 | 6:00 | 6:45
 ```
 
 ## 2. SPACE JAMMER (`A|B|C|D` -> 4×3 Grid)
-`
 * **Rule:** Replace the active hour number with `X` *(use `X ` with a trailing space for `10`, `11`, or `12`)* and replace the active minute number with `X `; preserve all inactive numbers and spacing.
 * **Coordinate Map:**
   * **Left Number (`A|B` -> Hour `1–12`):**
@@ -70,12 +69,11 @@ Row 2: 4:30 | 5:15 | 6:00 | 6:45
     * **If `C = 2` (`R3–R4`):** `D=1` -> `35` (`R3C1`) | `D=2` -> `40` (`R3C2`) | `D=3` -> `45` (`R3C3`) | `D=4` -> `50` (`R4C1`) | `D=5` -> `55` (`R4C2`) | `D=6` -> `00` (`R4C3`)
 * **Template:**
 ```text
-[1, 05] | [2, 10] | [3, 15]
-[4, 20] | [5, 25] | [6, 30]
-[7, 35] | [8, 40] | [9, 45]
+[1, 05]  | [2, 10]  | [3, 15]
+[4, 20]  | [5, 25]  | [6, 30]
+[7, 35]  | [8, 40]  | [9, 45]
 [10, 50] | [11, 55] | [12, 00]
 ```
-
 
 
 
