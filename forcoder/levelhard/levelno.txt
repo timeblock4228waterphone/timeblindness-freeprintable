@@ -14,6 +14,15 @@
 ↗ (Top-Right) 16:30 17:15 18:00 18:45
 ↘ (Bottom-Right) 22:30 23:15 00:00 00:45 top
 
+
+↖ =1: 01:30–07:29 
+
+↙ = 2: 07:30–13:29 
+
+↗ = 3: 13:30–19:29 
+
+↘ = 4: 19:30–01:29 
+
 - **Seed (`A|B|C|D`):** `A` (1–4, 6-hr quadrant), `B` (1–6, hour slot), `C` (1–2, half-hour), `D` (1–6, 5-min step). Use `_` for intentionally missing parts.
 - **Total Minutes (`t`):** `t = 60[6(A - 1) + B] + [30(C - 1) + 5D]` (if first bracket = `24` -> `00`; if second bracket = `60` -> `00`).
 
