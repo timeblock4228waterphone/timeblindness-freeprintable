@@ -4,7 +4,10 @@
 
 - T = 360(a - 1) + 45(b - 1) + 90 + c  [a=1–4, b=1–8, c=0–44]
 - Active Slot = b
-
+ - **STOP RULE:** If `B`, `C`, or `D` is `_` or missing, stop immediately and leave the grid blank.
+   - **STEP 1 (Calculate 6-Hour Offset `t_cod`):**
+     - `M = 30(C - 1) + 5D` *(if `M = 60`, set `M = 0`)*
+     - `t_cod = 60B + M` *(if `t_cod < 90`, add `1440`)*
 
 TOP (Slots b = 1 to 4)
 [ a=1,b=1 (0090) ][ a=3,b=1 (0810) ] | [ a=1,b=2 (0135) ][ a=3,b=2 (0855) ] | [ a=1,b=3 (0180) ][ a=3,b=3 (0900) ] | [ a=1,b=4 (0225) ][ a=3,b=4 (0945) ]
