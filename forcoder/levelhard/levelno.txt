@@ -1,3 +1,16 @@
+   Box b=1          Box b=2          Box b=3          Box b=4
+[ ↖ ][ ↗ ]   |   [ ↖ ][ ↗ ]   |   [ ↖ ][ ↗ ]   |   [ ↖ ][ ↗ ]
+[ ↙ ][ ↘ ]   |   [ ↙ ][ ↘ ]   |   [ ↙ ][ ↘ ]   |   [ ↙ ][ ↘ ]
+
+
+   Box b=5          Box b=6          Box b=7          Box b=8
+[ ↖ ][ ↗ ]   |   [ ↖ ][ ↗ ]   |   [ ↖ ][ ↗ ]   |   [ ↖ ][ ↗ ]
+[ ↙ ][ ↘ ]   |   [ ↙ ][ ↘ ]   |   [ ↙ ][ ↘ ]   |   [ ↙ ][ ↘ ]
+
+
+"Render a blank 2×4 grid where each of the 8 boxes has 4 empty corner slots (↖ ↗ on top, ↙ ↘ on bottom). Leave all 32 slots blank by default, and only display and highlight the single active arrow for the current time."
+
+
 
 ↖ (Top-Left)  01:30 02:15 03:00 03:45 
 
