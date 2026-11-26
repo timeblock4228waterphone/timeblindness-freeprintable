@@ -1,5 +1,5 @@
 1. CODGRID (Finds total minutes T for slot b):
-- T = 360(a - 1) + 45(b - 1) + 90 + c  [a=1–4, b=1–8, c=00–44]
+- T = 360(a - 1) + 45(b - 1) + 90 + c  [a=1–4, b=1–8, c=0–44]
 - Active Slot = b
 
 2. HOUR POSITION & DIAGONAL ARROW (Finds grid spot e):
