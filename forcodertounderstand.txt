@@ -6,6 +6,13 @@ next there will be thing called notecardtxt and steve time arrow those are the b
 
 
 ║ 
+TOP
+[ ↖ ][ ↗ ] ║ [ ↖ ][ ↗ ] ║ [ ↖ ][ ↗ ] ║ [ ↖ ][ ↗ ]
+[ ↙ ][ ↘ ] ║ [ ↙ ][ ↘ ] ║ [ ↙ ][ ↘ ] ║ [ ↙ ][ ↘ ]
+
+BOTTOM
+[ ↖ ][ ↗ ] ║ [ ↖ ][ ↗ ] ║ [ ↖ ][ ↗ ] ║ [ ↖ ][ ↗ ]
+[ ↙ ][ ↘ ] ║ [ ↙ ][ ↘ ] ║ [ ↙ ][ ↘ ] ║ [ ↙ ][ ↘ ]
 
 
 below is the cheat shee
